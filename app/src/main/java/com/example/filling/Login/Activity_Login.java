@@ -13,6 +13,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.filling.MainActivity;
+import com.example.filling.MainActivity2;
 import com.example.filling.R;
 import com.google.android.material.textfield.TextInputLayout;
 
@@ -67,7 +68,7 @@ public class Activity_Login extends AppCompatActivity {
 //            Toast.makeText(getApplicationContext(), "로그인에 실패하였습니다", Toast.LENGTH_SHORT).show();
 //        }
 
-        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        Intent intent = new Intent(getApplicationContext(), MainActivity2.class);
         startActivity(intent);
 
     }

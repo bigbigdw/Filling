@@ -8,12 +8,14 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/logo_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
->
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity2"
+            android:label="@string/title_activity_main2"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
-
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Login.Activity_Login"
             android:theme="@style/LoginTheme">
@@ -23,19 +25,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".Login.Activity_CardPW"
+        <activity
+            android:name=".Login.Activity_CardPW"
             android:label="@string/page_cardPW"
             android:theme="@style/FindTheme" />
-
-        <activity android:name=".Login.Activity_Find"
+        <activity
+            android:name=".Login.Activity_Find"
             android:label="@string/Find_Title"
             android:theme="@style/FindTheme" />
-
-        <activity android:name=".Login.Activity_Register"
-            android:theme="@style/LoginTheme"/>
-
-        <activity android:name=".Login.Activity_Splash"
+        <activity
+            android:name=".Login.Activity_Register"
+            android:theme="@style/LoginTheme" />
+        <activity
+            android:name=".Login.Activity_Splash"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
     </application>
 
