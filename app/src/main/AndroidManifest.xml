@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity3"
-            android:label="@string/title_activity_main3"></activity>
+            android:label="@string/title_activity_main3" />
         <activity
             android:name=".MainActivity2"
             android:label="@string/title_activity_main2"
@@ -33,12 +33,17 @@
             android:label="@string/page_cardPW"
             android:theme="@style/FindTheme" />
         <activity
-            android:name=".Login.Activity_Find"
-            android:label="@string/Find_Title"
+            android:name=".Login.Activity_FindPW"
+            android:label=""
+            android:theme="@style/FindTheme" />
+        <activity
+            android:name=".Login.Activity_FindID"
+            android:label=""
             android:theme="@style/FindTheme" />
         <activity
             android:name=".Login.Activity_Register"
-            android:theme="@style/LoginTheme" />
+            android:label=""
+            android:theme="@style/FindTheme"  />
         <activity
             android:name=".Login.Activity_Splash"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />

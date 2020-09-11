@@ -24,7 +24,7 @@
     <string name="CardPW_PWinput2">다시 한번 비밀번호 6자리를 입력해주세요</string>
     <string name="CardPW_PWinput3">가입이 완료되었습니다!</string>
     <!-- ID/PW 설정 -->
-    <string name="Find_Title">ID/PW찾기</string>
+    <string name="Find_FindBar">|</string>
     <string name="Find_InputPhone">휴대폰 번호 입력</string>
     <string name="Find_InputPhone_NO">올바른 핸드폰 번호가 아닙니다.</string>
     <string name="Find_InputNum">인증번호 입력</string>
@@ -32,4 +32,11 @@
     <string name="Find_YourID">회원님의 아이디는</string>
     <string name="Find_ID">kdw0310@ajou.ac.kr</string>
     <string name="Find_SendTempPW">임시비밀번호 보내기</string>
+    <!-- 아이디 찾기 -->
+    <string name="Find_FindID">아이디 찾기</string>
+    <string name="FindID_Guide">※ 회원가입 시 등록한 휴대폰 번호를 입력해주세요.</string>
+    <string name="FindID_ID">등록한 아이디</string>
+    <!-- 비밀번호 찾기 -->
+    <string name="Find_FindPW">비밀번호 찾기</string>
+    <string name="FindPW_Guide">※ 회원가입 시 등록한 아이디를 입력해주세요.</string>
 </resources>

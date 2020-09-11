@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
@@ -11,6 +12,7 @@ import android.widget.Toast;
 
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import com.example.filling.R;
 import com.google.android.material.textfield.TextInputLayout;
@@ -27,7 +29,9 @@ public class Activity_Register extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_register);
-
+        Toolbar mToolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(mToolbar);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
         inputID = (TextInputLayout) findViewById(R.id.inputID);
         inputPW = (TextInputLayout) findViewById(R.id.inputPW);
         inputPWcheck = (TextInputLayout) findViewById(R.id.inputPWcheck);
@@ -110,6 +114,14 @@ public class Activity_Register extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void onClickPhone(View v) {
+        Toast.makeText(getApplicationContext(),"인증번호가 전송되었습니다", Toast.LENGTH_SHORT).show();
+    }
+
+    public void onClickNum(View v) {
+        Toast.makeText(getApplicationContext(),"인증이 완료되었습니다", Toast.LENGTH_SHORT).show();
+    }
+
     public void onClickRegister(View v) {
 
         if(promise1.isChecked() && promise2.isChecked()){
@@ -119,6 +131,15 @@ public class Activity_Register extends AppCompatActivity {
         } else {
             Toast.makeText(getApplicationContext(), "회원가입이 완료되지 않았습니다.", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {//toolbar의 back키 눌렀을 때 동작
+            finish();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 }

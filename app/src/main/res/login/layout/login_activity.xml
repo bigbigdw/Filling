@@ -45,7 +45,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:textColorHint="#70ffffff"
-            app:startIconDrawable="@drawable/login_icon_id"
+            app:startIconDrawable="@drawable/ic_icon_id"
             app:startIconTint="#ffffff">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -64,7 +64,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColorHint="#70FFFFFF"
-            app:startIconDrawable="@drawable/login_icon_pw"
+            app:startIconDrawable="@drawable/ic_icon_password"
             app:startIconTint="#ffffff">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -81,51 +81,89 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="120dp"
-            android:onClick="btnFindCheck"
+            android:gravity="center"
             android:orientation="horizontal">
 
             <CheckBox
                 android:id="@+id/AutoLogin"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:buttonTint="#FFFFFF"
                 android:text="@string/LoginMain_AutoLogin"
                 android:textColor="#FFFFFF" />
 
-            <TextView
-                android:id="@+id/LoginMain_Find"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="6dp"
-                android:layout_weight="1"
-                android:text="@string/LoginMain_Find"
-                android:textAlignment="viewEnd"
-                android:textColor="#FFFFFF" />
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/LoginMain_FindID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:text="@string/Find_FindID"
+                    android:onClick="onClickFindID"
+                    android:textAlignment="textStart"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:text="@string/Find_FindBar"
+                    android:textAlignment="textStart"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/LoginMain_Find"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:text="@string/Find_FindPW"
+                    android:onClick="onClickFindPW"
+                    android:textAlignment="textStart"
+                    android:textColor="#FFFFFF" />
+            </LinearLayout>
 
         </LinearLayout>
 
-        <Button
-            android:id="@+id/LoginBtn"
-            style="@style/Widget.AppCompat.Button.Colored"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:backgroundTint="#4971EF"
-            android:onClick="onClickLogin"
-            android:text="@string/LoginMain_LoginBtn" />
+            android:layout_height="match_parent">
 
-        <Button
-            android:id="@+id/RegisterBtn"
-            style="@style/Widget.AppCompat.Button.Borderless.Colored"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#FFFFFF"
-            android:onClick="onClickRegister"
-            android:text="@string/Register"
-            android:textColor="#FFFFFF"
-            android:textSize="14sp"
-            app:strokeColor="@color/colorPrimary"
-            app:strokeWidth="10dp" />
+            <Button
+                android:id="@+id/RegisterBtn"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="#FFFFFF"
+                android:onClick="onClickRegister"
+                android:text="@string/Register"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:strokeColor="@color/colorPrimary"
+                app:strokeWidth="10dp" />
+
+            <Button
+                android:id="@+id/LoginBtn"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="#4971EF"
+                android:onClick="onClickLogin"
+
+                android:text="@string/LoginMain_LoginBtn"
+                app:layout_constraintBottom_toTopOf="@+id/RegisterBtn"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
 

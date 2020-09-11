@@ -50,10 +50,18 @@ public class Activity_Login extends AppCompatActivity {
         );
     }
 
-    public void btnFindCheck(View v) {
-        Intent intent = new Intent(getApplicationContext(), Activity_Find.class);
+    public void onClickFindID(View v) {
+        Toast.makeText(getApplicationContext(), "아이디 찾기로 이동합니다.", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(getApplicationContext(), Activity_FindID.class);
         startActivity(intent);
     }
+
+    public void onClickFindPW(View v) {
+        Toast.makeText(getApplicationContext(), "비밀번호 찾기로 이동합니다.", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(getApplicationContext(), Activity_FindPW.class);
+        startActivity(intent);
+    }
+
 
     public void onClickLogin(View v) {
         idCheck = Objects.requireNonNull(IDtext.getEditText()).getText();
