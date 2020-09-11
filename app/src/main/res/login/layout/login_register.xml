@@ -103,16 +103,16 @@
                 android:inputType="textPassword"
                 android:textColor="#000000" />
 
-            <LinearLayout
+            <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true">
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/Phone"
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="6"
                     android:textColorHint="#70888888"
                     app:startIconDrawable="@drawable/ic_icon_phone"
                     app:startIconTint="#888888">
@@ -131,28 +131,34 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <Button
-                    android:id="@+id/onClickPhone"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:id="@+id/button1"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center|end"
+                    android:background="?android:attr/selectableItemBackground"
                     android:onClick="onClickPhone"
                     android:text="@string/CUI_Confirm"
                     android:textColor="#4971EF"
                     android:textSize="14sp"
                     android:textStyle="bold" />
+            </FrameLayout>
 
-            </LinearLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-            <LinearLayout
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true">
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/Num"
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="6"
                     app:startIconDrawable="@drawable/ic_icon_comfirmnum"
                     app:startIconTint="#888888"
                     android:textColorHint="#70888888">
@@ -171,15 +177,17 @@
 
                 <Button
                     android:id="@+id/button"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center|end"
+                    android:background="?android:attr/selectableItemBackground"
                     android:onClick="onClickNum"
                     android:text="@string/CUI_Confirm"
                     android:textColor="#4971EF"
                     android:textSize="14sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
+                    android:textStyle="bold"
+                    />
+            </FrameLayout>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -199,7 +207,7 @@
             app:layout_constraintStart_toStartOf="parent">
 
             <TextView
-                android:id="@+id/Register_Weslcome"
+                android:id="@+id/Register_Welcome"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="50dp"
@@ -291,7 +299,7 @@
                     android:layout_weight="1"
                     android:background="#4F9BF0"
                     android:onClick="onClickRegister"
-                    android:text="@string/Register"
+                    android:text="@string/Register_Continue"
                     android:textColor="#FFFFFF"
                     android:textStyle="bold" />
             </LinearLayout>

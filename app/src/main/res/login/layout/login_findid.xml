@@ -79,17 +79,15 @@
             android:paddingTop="60dp"
             android:paddingRight="22dp">
 
-            <LinearLayout
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content">
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/Phone"
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
-                    android:layout_weight="6"
                     android:textColorHint="#70888888"
                     app:startIconDrawable="@drawable/ic_icon_phone"
                     app:startIconTint="#888888">
@@ -109,28 +107,27 @@
 
                 <Button
                     android:id="@+id/onClickPhone"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:onClick="onClickPhone"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center|end"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:onClick="onClickNum"
                     android:text="@string/CUI_Confirm"
                     android:textColor="#4971EF"
                     android:textSize="14sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    />
+            </FrameLayout>
 
-            </LinearLayout>
-
-            <LinearLayout
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content">
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/Num"
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
-                    android:layout_weight="6"
                     android:textColorHint="#70888888"
                     app:startIconDrawable="@drawable/ic_icon_comfirmnum"
                     app:startIconTint="#888888">
@@ -149,15 +146,18 @@
 
                 <Button
                     android:id="@+id/button"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center|end"
+                    android:background="?android:attr/selectableItemBackground"
                     android:onClick="onClickNum"
                     android:text="@string/CUI_Confirm"
                     android:textColor="#4971EF"
                     android:textSize="14sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
+                    android:textStyle="bold"
+                    />
+            </FrameLayout>
+
 
             <TextView
                 android:id="@+id/textView3"

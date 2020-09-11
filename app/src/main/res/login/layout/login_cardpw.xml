@@ -42,146 +42,152 @@
 
         </com.google.android.material.appbar.AppBarLayout>
 
-        <LinearLayout
-            android:id="@+id/RegisterBefore"
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            tools:visibility="visible">
+            android:layout_height="match_parent">
 
             <LinearLayout
+                android:id="@+id/RegisterDone"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:gravity="center_horizontal"
                 android:orientation="vertical"
-                tools:visibility="visible">
+                android:visibility="gone"
+                tools:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="255dp"
+                    android:layout_height="255dp"
+                    android:layout_marginTop="44dp"
+                    android:contentDescription="@string/TODO"
+                    app:srcCompat="@drawable/login_done" />
 
                 <TextView
-                    android:id="@+id/Title"
+                    android:id="@+id/textView13"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="44dp"
-                    android:text="@string/CardPW_Title"
+                    android:layout_marginTop="40dp"
+                    android:text="@string/CardPW_PWinput3"
                     android:textAlignment="center"
                     android:textColor="#000000"
                     android:textSize="25sp"
                     android:textStyle="bold"
                     tools:visibility="visible" />
 
-                <TextView
-                    android:id="@+id/PwText1"
-                    android:layout_width="match_parent"
+                <Button
+                    android:id="@+id/completeBtn"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/CardPW_PWinput"
-                    android:textAlignment="center"
-                    android:textColor="#000000"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
-                    tools:visibility="visible" />
-
-                <TextView
-                    android:id="@+id/PwText2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/CardPW_PWinput2"
-                    android:textAlignment="center"
-                    android:textColor="#000000"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
-                    android:visibility="gone"
-                    tools:visibility="visible" />
+                    android:layout_marginTop="10dp"
+                    android:onClick="onClickRegister"
+                    android:text="@string/CUI_Confirm"
+                    android:textColor="#4971EF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/RegisterBefore"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:paddingLeft="90dp"
-                android:paddingRight="90dp">
+                tools:visibility="visible">
 
-                <EditText
-                    android:id="@+id/pwFirst"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="72dp"
-                    android:ems="10"
-                    android:focusableInTouchMode="true"
-                    android:hint="@string/TODO"
-                    android:importantForAutofill="no"
-                    android:inputType="number|numberPassword"
-                    android:maxLength="6"
-                    android:nextFocusDown="@+id/editTextNumber2"
-                    android:textAlignment="center"
-                    android:textColor="#4971EF"
-                    android:textSize="55sp"
-                    android:textStyle="bold"
-                    android:visibility="visible"
-                    tools:visibility="visible" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    tools:visibility="visible">
 
-                <EditText
-                    android:id="@+id/pwSecond"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="72dp"
-                    android:background="@android:color/transparent"
-                    android:ems="10"
-                    android:hint="@string/TODO"
-                    android:importantForAutofill="no"
-                    android:inputType="number|numberPassword"
-                    android:maxLength="7"
-                    android:nextFocusDown="@+id/completeBtn"
-                    android:textAlignment="center"
-                    android:textColor="#4971EF"
-                    android:textSize="55sp"
-                    android:textStyle="bold"
-                    tools:visibility="visible" />
+                    <TextView
+                        android:id="@+id/Title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="44dp"
+                        android:text="@string/CardPW_Title"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        tools:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/PwText1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/CardPW_PWinput"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        tools:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/PwText2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/CardPW_PWinput2"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        tools:visibility="visible" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingLeft="90dp"
+                    android:paddingRight="90dp">
+
+                    <EditText
+                        android:id="@+id/pwFirst"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="72dp"
+                        android:ems="10"
+                        android:focusableInTouchMode="true"
+                        android:hint="@string/TODO"
+                        android:importantForAutofill="no"
+                        android:inputType="number|numberPassword"
+                        android:maxLength="6"
+                        android:nextFocusDown="@+id/editTextNumber2"
+                        android:textAlignment="center"
+                        android:textColor="#4971EF"
+                        android:textSize="55sp"
+                        android:textStyle="bold"
+                        android:visibility="visible"
+                        tools:visibility="visible" />
+
+                    <EditText
+                        android:id="@+id/pwSecond"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="72dp"
+                        android:background="@android:color/transparent"
+                        android:ems="10"
+                        android:hint="@string/TODO"
+                        android:importantForAutofill="no"
+                        android:inputType="number|numberPassword"
+                        android:maxLength="7"
+                        android:nextFocusDown="@+id/completeBtn"
+                        android:textAlignment="center"
+                        android:textColor="#4971EF"
+                        android:textSize="55sp"
+                        android:textStyle="bold"
+                        tools:visibility="visible" />
+
+                </LinearLayout>
 
             </LinearLayout>
+        </FrameLayout>
 
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/RegisterDone"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_horizontal"
-            android:orientation="vertical"
-            android:visibility="gone"
-            tools:visibility="gone">
-
-            <ImageView
-                android:id="@+id/imageView5"
-                android:layout_width="255dp"
-                android:layout_height="255dp"
-                android:layout_marginTop="44dp"
-                android:contentDescription="@string/TODO"
-                app:srcCompat="@drawable/login_done" />
-
-            <TextView
-                android:id="@+id/textView13"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
-                android:text="@string/CardPW_PWinput3"
-                android:textAlignment="center"
-                android:textColor="#000000"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                tools:visibility="visible" />
-
-            <Button
-                android:id="@+id/completeBtn"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:onClick="onClickRegister"
-                android:text="@string/CUI_Confirm"
-                android:textColor="#4971EF"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-        </LinearLayout>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
