@@ -30,7 +30,7 @@
         </activity>
         <activity
             android:name=".Login.Activity_CardPW"
-            android:label="@string/page_cardPW"
+            android:label=""
             android:theme="@style/FindTheme" />
         <activity
             android:name=".Login.Activity_FindPW"
