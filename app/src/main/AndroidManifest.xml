@@ -14,7 +14,7 @@
             android:label="@string/title_activity_main3" />
         <activity
             android:name=".MainActivity2"
-            android:label="@string/title_activity_main2"
+            android:label=""
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".MainActivity"
