@@ -3,18 +3,58 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="@string/menu_home" />
-        <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_gallery" />
-        <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
-    </group>
+    <item
+        android:id="@+id/nav_sldideshow"
+        android:title="@string/menu_slideshow">
+        <menu>
+            <group
+                android:checkableBehavior="single"
+                android:title="@string/menu_home">
+                <item
+                    android:id="@+id/nav_home"
+                    android:icon="@drawable/icon_sidemenu_cash_charge"
+                    android:title="@string/Drawer_Menu_CashCharge" />
+                <item
+                    android:id="@+id/nav_gallery"
+                    android:icon="@drawable/icon_sidemenu_cash_present"
+                    android:title="@string/Drawer_Menu_CashPresent" />
+                <item
+                    android:id="@+id/nav_slideshow"
+                    android:icon="@drawable/icon_sidemenu_cash_exchange"
+                    android:title="@string/Drawer_Menu_CashExchange" />
+            </group>
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/nav_sldideshdow"
+        android:title="@string/menu_slideshow">
+        <menu>
+            <group
+                android:checkableBehavior="single"
+                android:title="@string/Drawer_Menu_Etc">
+                <item
+                    android:id="@+id/nav_hom4e"
+                    android:icon="@drawable/icon_sidemenu_info"
+                    android:title="@string/Drawer_Menu_Info" />
+                <item
+                    android:id="@+id/nav_gall4ery"
+                    android:icon="@drawable/icon_sidemenu_alert"
+                    android:title="@string/Drawer_Menu_Alert" />
+                <item
+                    android:id="@+id/nav_slides4how"
+                    android:icon="@drawable/icon_sidemenu_faq"
+                    android:title="@string/Drawer_Menu_FAQ" />
+                <item
+                    android:id="@+id/nav_4gall4ery"
+                    android:icon="@drawable/icon_sidemenu_system"
+                    android:title="@string/Drawer_Menu_System" />
+                <item
+                    android:id="@+id/nav_slid4es4how"
+                    android:icon="@drawable/icon_sidemenu_policy"
+                    android:title="@string/Drawer_Menu_Policy" />
+            </group>
+        </menu>
+    </item>
+
 </menu>
