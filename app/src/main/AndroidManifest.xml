@@ -19,6 +19,13 @@
         <activity
             android:name=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".Test"
+            android:theme="@style/LoginTheme">
+
+        </activity>
+
         <activity
             android:name=".Login.Activity_Login"
             android:theme="@style/LoginTheme">
