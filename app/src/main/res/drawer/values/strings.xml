@@ -3,13 +3,13 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
-    <!--    드로워 상단-->
+    <!--드로워 상단-->
     <string name="Drawer_ID">kdw0310@ajou.ac.kr</string>
     <string name="Drawer_Cash">Cash</string>
     <string name="Drawer_Cash_Count">12,325,000 Cash</string>
     <string name="Drawer_Mileage">마일리지</string>
     <string name="Drawer_Mileage_Count">14,952,000 Points</string>
-    <!--    드로워 상단-->
+    <!--드로워 메뉴-->
     <string name="Drawer_Menu_Revive">Revive Cash</string>
     <string name="Drawer_Menu_CashCharge">Cash 충전</string>
     <string name="Drawer_Menu_CashPresent">Cash 선물</string>
@@ -20,4 +20,9 @@
     <string name="Drawer_Menu_FAQ">FAQ</string>
     <string name="Drawer_Menu_System">시스템 정보</string>
     <string name="Drawer_Menu_Policy">이용약관</string>
+    <!--바텀 네비게이션-->
+    <string name="Bottom_Filling">필링</string>
+    <string name="Bottom_Dongmu">동무마트</string>
+    <string name="Bottom_Coupon">상품권</string>
+    <string name="Bottom_Info">내 정보</string>
 </resources>
