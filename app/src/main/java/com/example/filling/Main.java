@@ -12,7 +12,10 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.navigation.NavController;
+import androidx.navigation.NavDestination;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
@@ -59,6 +62,21 @@ public class Main extends AppCompatActivity {
                 R.id.bottom_filling, R.id.nav_gallery, R.id.nav_slideshow, R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications)
                 .build();
         NavigationUI.setupWithNavController(navView, navController);
+
+        navController.addOnDestinationChangedListener(new NavController.OnDestinationChangedListener() {
+            @Override
+            public void onDestinationChanged(@NonNull NavController controller,
+                                             @NonNull NavDestination destination, @Nullable Bundle arguments) {
+                if(destination.getId() == R.id.nav_gallery) {
+//                    toolbar.setVisibility(View.GONE);
+                    navView.setVisibility(View.GONE);
+                } else {
+//                    toolbar.setVisibility(View.VISIBLE);
+                    navView.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
 
         Main_Popup = new Main_Popup(this,positiveListener,negativeListener);
         Main_Popup.show();

@@ -11,6 +11,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 
 import com.example.filling.R;
@@ -38,7 +39,6 @@ public class Bottom_FillingFragment extends Fragment {
         filling_carousel = root.findViewById(R.id.filling_carousel);
         filling_carousel.setPageCount(sampleImages.length);
         filling_carousel.setImageListener(imageListener);
-
 
         listView = root.findViewById(R.id.filling_list);
         adapter = new SingerAdapter();

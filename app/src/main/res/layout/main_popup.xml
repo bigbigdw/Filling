@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="50"
             android:background="#888888"
-            android:text="@string/Filling_PopupBtn"
+            android:text="@string/Filling_PopupBtn1"
             android:textColor="#FFFFFF"
             android:textSize="15sp"
             android:textStyle="bold" />
@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="50"
             android:background="#4F9BF0"
-            android:text="@string/CUI_Confirm"
+            android:text="@string/Filling_PopupBtn2"
             android:textColor="#FFFFFF"
             android:textSize="15sp"
             android:textStyle="bold" />
