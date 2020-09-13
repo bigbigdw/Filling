@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
+import android.widget.Toast;
 
 import com.example.filling.Login.Activity_Splash;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -22,11 +23,12 @@ import androidx.appcompat.widget.Toolbar;
 public class Main extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
+    private Main_Popup Main_Popup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.main);
         Intent intent = new Intent(this, Activity_Splash.class);
         startActivity(intent);
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -57,7 +59,25 @@ public class Main extends AppCompatActivity {
                 R.id.bottom_filling, R.id.nav_gallery, R.id.nav_slideshow, R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications)
                 .build();
         NavigationUI.setupWithNavController(navView, navController);
+
+        Main_Popup = new Main_Popup(this,positiveListener,negativeListener);
+        Main_Popup.show();
     }
+
+    private View.OnClickListener positiveListener = new View.OnClickListener() {
+        public void onClick(View v) {
+            Toast.makeText(getApplicationContext(), "확인버튼이 눌렸습니다.",Toast.LENGTH_SHORT).show();
+            Main_Popup.dismiss();
+        }
+    };
+
+    private View.OnClickListener negativeListener = new View.OnClickListener() {
+        public void onClick(View v) {
+            Toast.makeText(getApplicationContext(), "취소버튼이 눌렸습니다.",Toast.LENGTH_SHORT).show();
+            Main_Popup.dismiss();
+        }
+    };
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -72,4 +92,6 @@ public class Main extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
+
 }

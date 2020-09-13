@@ -10,9 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity3"
-            android:label="@string/title_activity_main3" />
-        <activity
             android:name=".Main"
             android:label=""
             android:theme="@style/AppTheme.NoActionBar" >
