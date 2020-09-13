@@ -13,7 +13,7 @@
             android:name=".MainActivity3"
             android:label="@string/title_activity_main3" />
         <activity
-            android:name=".MainActivity2"
+            android:name=".Main"
             android:label=""
             android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
