@@ -66,14 +66,14 @@ public class Main extends AppCompatActivity {
 
     private View.OnClickListener positiveListener = new View.OnClickListener() {
         public void onClick(View v) {
-            Toast.makeText(getApplicationContext(), "확인버튼이 눌렸습니다.",Toast.LENGTH_SHORT).show();
+//            Toast.makeText(getApplicationContext(), "확인버튼이 눌렸습니다.",Toast.LENGTH_SHORT).show();
             Main_Popup.dismiss();
         }
     };
 
     private View.OnClickListener negativeListener = new View.OnClickListener() {
         public void onClick(View v) {
-            Toast.makeText(getApplicationContext(), "취소버튼이 눌렸습니다.",Toast.LENGTH_SHORT).show();
+//            Toast.makeText(getApplicationContext(), "취소버튼이 눌렸습니다.",Toast.LENGTH_SHORT).show();
             Main_Popup.dismiss();
         }
     };

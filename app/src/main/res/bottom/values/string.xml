@@ -17,4 +17,5 @@
     <string name="Filling_AD">광고</string>
     <string name="Filling_Alert">공지사항</string>
     <string name="Filling_Alert_More">더보기</string>
+    <string name="Filling_PopupBtn">다시 보지 않기</string>
 </resources>
