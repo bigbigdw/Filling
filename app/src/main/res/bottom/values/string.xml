@@ -15,4 +15,6 @@
     <string name="Filling_Fund">펀드</string>
     <string name="Filling_Free">무료충전</string>
     <string name="Filling_AD">광고</string>
+    <string name="Filling_Alert">공지사항</string>
+    <string name="Filling_Alert_More">더보기</string>
 </resources>

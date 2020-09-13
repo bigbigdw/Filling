@@ -67,17 +67,17 @@ public class Activity_Login extends AppCompatActivity {
         idCheck = Objects.requireNonNull(IDtext.getEditText()).getText();
         pwCheck = Objects.requireNonNull(PWtext.getEditText()).getText();
 
-//        if(idCheck.toString().equals("kdw0310@ajou.ac.kr") && pwCheck.toString().equals("bigbigdw")){
-//            Toast.makeText(getApplicationContext(), "환영합니다 김대우님!", Toast.LENGTH_SHORT).show();
-//            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-//            startActivity(intent);
-////            System.out.println("hello");
-//        }else{
-//            Toast.makeText(getApplicationContext(), "로그인에 실패하였습니다", Toast.LENGTH_SHORT).show();
-//        }
+        if(idCheck.toString().equals("kdw0310@ajou.ac.kr") && pwCheck.toString().equals("bigbigdw")){
+            Toast.makeText(getApplicationContext(), "환영합니다 김대우님!", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+            startActivity(intent);
+//            System.out.println("hello");
+        }else{
+            Toast.makeText(getApplicationContext(), "로그인에 실패하였습니다", Toast.LENGTH_SHORT).show();
+        }
 
-        Intent intent = new Intent(getApplicationContext(), MainActivity2.class);
-        startActivity(intent);
+//        Intent intent = new Intent(getApplicationContext(), MainActivity2.class);
+//        startActivity(intent);
 
     }
 

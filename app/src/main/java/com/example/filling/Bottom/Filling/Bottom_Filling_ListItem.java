@@ -2,29 +2,19 @@ package com.example.filling.Bottom.Filling;
 
 public class Bottom_Filling_ListItem {
 
-    String name;
-    String mobile;
-    int age;
+    String Contents;
+    String Date;
     int resId;
 
-    public Bottom_Filling_ListItem(String name, String mobile) {
-        this.name = name;
-        this.mobile = mobile;
+    public Bottom_Filling_ListItem(String Contents, String Date) {
+        this.Contents = Contents;
+        this.Date = Date;
     }
 
-    public Bottom_Filling_ListItem(String name, String mobile, int age, int resId) {
-        this.name = name;
-        this.mobile = mobile;
-        this.age = age;
+    public Bottom_Filling_ListItem(String Contents, String Date, int resId) {
+        this.Contents = Contents;
+        this.Date = Date;
         this.resId = resId;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
     }
 
     public int getResId() {
@@ -35,19 +25,19 @@ public class Bottom_Filling_ListItem {
         this.resId = resId;
     }
 
-    public String getMobile() {
-        return mobile;
+    public String getDate() {
+        return Date;
     }
 
-    public void setMobile(String mobile) {
-        this.mobile = mobile;
+    public void setDate(String Date) {
+        this.Date = Date;
     }
 
-    public String getName() {
-        return name;
+    public String getContents() {
+        return Contents;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setContents(String Contents) {
+        this.Contents = Contents;
     }
 }
