@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--필링-->
-    <string name="Filling_abc">필링DW</string>
+    <string name="Filling_Dongmu">동무마트</string>
+    <string name="Filling_Coupon">모바일 상품권</string>
+    <string name="Filling_Shopping">쇼핑몰</string>
+    <string name="Filling_Drive">대리운전</string>
+    <string name="Filling_Lecture">강좌</string>
+    <string name="Filling_Media">동영상</string>
+    <string name="Filling_Webtoon">웹툰</string>
+    <string name="Filling_News">뉴스</string>
+    <string name="Filling_Flower">꽃배달</string>
+    <string name="Filling_Talk">전문상담</string>
+    <string name="Filling_Donation">기부</string>
+    <string name="Filling_Fund">펀드</string>
+    <string name="Filling_Free">무료충전</string>
+    <string name="Filling_AD">광고</string>
 </resources>
