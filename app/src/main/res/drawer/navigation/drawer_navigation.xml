@@ -41,4 +41,10 @@
         android:name="com.example.filling.ui.slideshow.SlideshowFragment"
         android:label=""
         tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/Drawer_CashCharge"
+        android:name="com.example.filling.Drawer.Cash_Charge.Drawer_CashChargeFragment"
+        android:label=""
+        tools:layout="@layout/drawer_cash_charge" />
 </navigation>

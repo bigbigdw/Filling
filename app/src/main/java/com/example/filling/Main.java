@@ -2,27 +2,23 @@ package com.example.filling;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuItem;
-import android.view.View;
 import android.view.Menu;
-import android.widget.Toast;
-
-import com.example.filling.Login.Activity_Splash;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-import com.google.android.material.navigation.NavigationView;
+import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
 import androidx.navigation.NavDestination;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
-import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
+
+import com.example.filling.Login.Activity_Splash;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationView;
 
 public class Main extends AppCompatActivity {
 
@@ -50,7 +46,7 @@ public class Main extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.bottom_filling,R.id.nav_gallery, R.id.nav_slideshow,R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications)
+                R.id.Drawer_CashCharge, R.id.bottom_filling,R.id.nav_gallery, R.id.nav_slideshow,R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
@@ -60,7 +56,7 @@ public class Main extends AppCompatActivity {
 
         BottomNavigationView navView = findViewById(R.id.nav_vi);
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.bottom_filling, R.id.nav_gallery, R.id.nav_slideshow, R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications)
+                R.id.Drawer_CashCharge,R.id.bottom_filling, R.id.nav_gallery, R.id.nav_slideshow, R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications)
                 .build();
         NavigationUI.setupWithNavController(navView, navController);
 
