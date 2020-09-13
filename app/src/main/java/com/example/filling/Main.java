@@ -2,6 +2,7 @@ package com.example.filling;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
 import android.widget.Toast;
@@ -67,11 +68,9 @@ public class Main extends AppCompatActivity {
             @Override
             public void onDestinationChanged(@NonNull NavController controller,
                                              @NonNull NavDestination destination, @Nullable Bundle arguments) {
-                if(destination.getId() == R.id.nav_gallery) {
-//                    toolbar.setVisibility(View.GONE);
+                if (destination.getId() == R.id.nav_gallery) {
                     navView.setVisibility(View.GONE);
                 } else {
-//                    toolbar.setVisibility(View.VISIBLE);
                     navView.setVisibility(View.VISIBLE);
                 }
             }
@@ -101,6 +100,7 @@ public class Main extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.bottom_nav_menu, menu);
         return true;
     }
 
