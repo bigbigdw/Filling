@@ -66,8 +66,10 @@ public class Main extends AppCompatActivity {
                                              @NonNull NavDestination destination, @Nullable Bundle arguments) {
                 if (destination.getId() == R.id.bottom_filling || destination.getId() == R.id.navigation_dashboard || destination.getId() == R.id.navigation_notifications || destination.getId() == R.id.navigation_home) {
                     navView.setVisibility(View.VISIBLE);
+                    toolbar.setVisibility(View.VISIBLE);
                 } else {
                     navView.setVisibility(View.GONE);
+                    toolbar.setVisibility(View.GONE);
                 }
             }
         });
@@ -96,7 +98,6 @@ public class Main extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
-        getMenuInflater().inflate(R.menu.bottom_nav_menu, menu);
         return true;
     }
 

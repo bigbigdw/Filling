@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--바텀 네비게이션-->
+    <string name="Bottom_Filling">필링</string>
+    <string name="Bottom_Dongmu">동무마트</string>
+    <string name="Bottom_Coupon">상품권</string>
+    <string name="Bottom_Info">내 정보</string>
     <!--필링-->
     <string name="Filling_Dongmu">동무마트</string>
     <string name="Filling_Coupon">모바일 상품권</string>
@@ -19,4 +24,5 @@
     <string name="Filling_Alert_More">더보기</string>
     <string name="Filling_PopupBtn1">다시 보지 않기</string>
     <string name="Filling_PopupBtn2">닫기</string>
+
 </resources>

@@ -10,7 +10,26 @@
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#4971EF"
         android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarfragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/CashCharge_Tile"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </androidx.appcompat.widget.Toolbar>
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabs"
@@ -23,7 +42,11 @@
             app:tabIndicatorColor="#4971EF"
             app:tabSelectedTextColor="#4971EF"
             app:tabTextColor="#000000" />
+
+
     </com.google.android.material.appbar.AppBarLayout>
+
+
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/view_pager"

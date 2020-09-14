@@ -20,9 +20,18 @@
     <string name="Drawer_Menu_FAQ">FAQ</string>
     <string name="Drawer_Menu_System">시스템 정보</string>
     <string name="Drawer_Menu_Policy">이용약관</string>
-    <!--바텀 네비게이션-->
-    <string name="Bottom_Filling">필링</string>
-    <string name="Bottom_Dongmu">동무마트</string>
-    <string name="Bottom_Coupon">상품권</string>
-    <string name="Bottom_Info">내 정보</string>
+    <!--Cash 충전-->
+    <string name="CashCharge_Tile">Cash 충전</string>
+    <string name="CashCharge_CoinTile">이더리움비트코인</string>
+    <string name="CashCharge_Coin">2,450,000.00</string>
+    <string name="CashCharge_CoinCount">Coin</string>
+    <string name="CashCharge_Rate">1coin  =  10원  /  4,500,000원  /  A +</string>
+    <string name="CashCharge_RechargeTitle">충전 액수</string>
+    <string name="CashCharge_Cash">충전할 Cash</string>
+    <string name="CashCharge_RechargeCashCount">Cash</string>
+    <string name="CashCharge_RechargedCoin">환전된 Coin</string>
+    <string name="CashCharge_Won">원</string>
+    <string name="CashCharge_PurchasedCoin">Cash 충전</string>
+    <string name="CashCharge_BtnContinue">계속하기</string>
+    <string name="CashCharge_PurchaseCoin">결제코인</string>
 </resources>
