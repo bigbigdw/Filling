@@ -192,6 +192,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/CashDone_Tile"
+                        android:layout_marginBottom="16dp"
                         android:textAlignment="center"
                         android:textColor="#333742"
                         android:textSize="32sp"

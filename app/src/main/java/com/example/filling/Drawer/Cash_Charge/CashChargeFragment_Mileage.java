@@ -25,16 +25,17 @@ import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.Objects;
 
-public class CashChargeFragment_Coin extends Fragment {
+public class CashChargeFragment_Mileage extends Fragment {
 
     LinearLayout Before,After,BtnBefore,BtnAfter;
     TextInputLayout EditCharge, TransCharge, PurchaseCharge;
     Editable EditChargeString;
     Button onClickNext, onClickCancel, onClickPurchase;
     TextView CashCount,PurchaseCount;
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.cashcharge_coin, container, false);
+        View root = inflater.inflate(R.layout.cashcharge_mileage, container, false);
 
         Before = root.findViewById(R.id.Before);
         After = root.findViewById(R.id.After);
@@ -88,7 +89,7 @@ public class CashChargeFragment_Coin extends Fragment {
                 // 입력되는 텍스트에 변화가 있을 때
                 TransChargeText.setText(EditChargeString.toString());
                 PurchaseChargeText.setText(EditChargeString.toString());
-                CashCount.setText(String.format("%s coin", EditChargeString));
+                CashCount.setText(String.format("%s points", EditChargeString));
                 PurchaseCount.setText(String.format("%s원", EditChargeString));
             }
 

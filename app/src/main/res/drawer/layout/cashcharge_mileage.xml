@@ -63,7 +63,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:text="@string/CashCharge_Coin"
+                        android:text="@string/CashCharge_Mileage"
                         android:textColor="#000000"
                         android:textSize="36sp"
                         android:textStyle="bold" />
@@ -75,7 +75,7 @@
                         android:layout_gravity="bottom"
                         android:layout_marginStart="4dp"
                         android:layout_marginBottom="3dp"
-                        android:text="@string/CashCharge_CoinCount" />
+                        android:text="@string/CashCharge_Points" />
                 </LinearLayout>
 
                 <TextView
@@ -84,7 +84,7 @@
                     android:layout_height="0dp"
                     android:layout_marginBottom="22dp"
                     android:layout_weight="1"
-                    android:text="@string/CashCharge_Rate" />
+                    android:text="@string/CashCharge_RateMileage" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -143,18 +143,18 @@
                         android:layout_height="match_parent"
                         android:layout_marginTop="30dp"
                         android:background="#DBDBDB"
-                        app:suffixText="@string/CashCharge_PurchasedCoin">
+                        app:suffixText="@string/CashCharge_Points">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="@string/CashCharge_RechargedCoin"
+                            android:hint="@string/CashCharge_RechargedMileage"
                             android:inputType="none"
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
                             android:textColor="#888888"
                             android:textStyle="bold"
-                            app:suffixText="@string/CashCharge_PurchasedCoin" />
+                            app:suffixText="@string/CashCharge_Points" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
@@ -163,18 +163,27 @@
                         android:layout_height="match_parent"
                         android:layout_marginTop="38dp"
                         android:background="#FEF3F3"
-                        app:suffixText="@string/CashCharge_CoinCount">
+                        app:suffixText="@string/CashCharge_Points">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="@string/CashCharge_PurchaseCoin"
+                            android:hint="@string/CashCharge_PurchaseMilage"
                             android:inputType="none"
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
                             android:textColor="#000000"
                             android:textStyle="bold" />
                     </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:id="@+id/textView40"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:drawablePadding="8dp"
+                        android:text="@string/CashCharge_MileageTip"
+                        app:drawableLeftCompat="@drawable/ic_icon_tip" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -192,8 +201,8 @@
                         android:id="@+id/textView23"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/CashDone_Tile"
                         android:layout_marginBottom="16dp"
+                        android:text="@string/CashDone_Tile"
                         android:textAlignment="center"
                         android:textColor="#333742"
                         android:textSize="32sp"
@@ -209,7 +218,7 @@
                             android:id="@+id/textView37"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/CashDone_Use"
+                            android:text="@string/CashCharge_UseMileage"
                             android:textColor="#333742"
                             android:textSize="15sp" />
 
@@ -218,8 +227,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="5dp"
-                            android:text="@string/CashDone_Coin"
                             android:layout_marginRight="5dp"
+                            android:text="@string/CashDone_Coin"
                             android:textColor="#4971EF"
                             android:textStyle="bold" />
 
@@ -244,7 +253,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="5dp"
                             android:layout_marginRight="5dp"
-                            android:text="@string/CashDone_ExchangeCoin"
+                            android:text="@string/CashDone_ExchangeMileage"
                             android:textColor="#333742"
                             android:textSize="15sp" />
 
@@ -285,7 +294,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="5dp"
                             android:layout_marginRight="5dp"
-                            android:text="@string/CashDone_PurchaseCoin"
+                            android:text="@string/CashDone_PurchaseMileage"
                             android:textColor="#4971EF"
                             android:textStyle="bold" />
 

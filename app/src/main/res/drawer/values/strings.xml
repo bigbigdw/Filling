@@ -66,4 +66,16 @@
     <string name="CashDone_sendCopy">계좌복사</string>
     <string name="CashDone_sendNum">우리은행 1002–645–41002</string>
     <string name="CashDone_sendTip">송금이 확인되는 즉시 해당 거래가 완료되고 처리결과가 문자로 발송됩니다.</string>
+    <!--Cash 충전 마일리지-->
+    <string name="CashCharge_RechargedMileage">환전된 마일리지</string>
+    <string name="CashCharge_PurchaseMilage">결제할 마일리지</string>
+    <string name="CashCharge_MileageTip">마일리지는 최소 10,000 포인트에서 환전 가능하며, 1000포인트씩 환전할 수 있습니다.</string>
+    <string name="CashCharge_RateMileage">1point  =  10원</string>
+    <string name="CashCharge_Mileage">14,952,000</string>
+    <string name="CashCharge_Points">Points</string>
+    <string name="CashCharge_UseMileage">사용 마일리지는</string>
+    <string name="CashCharge_PurchaseMileage">결제할 코인</string>
+    <string name="CashDone_PurchaseMileage"> 마일리지로 충전</string>
+    <string name="CashDone_ExchangeMileage">결제 마일리지는</string>
+
 </resources>
