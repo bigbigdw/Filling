@@ -24,6 +24,7 @@
     <string name="CardPW_PWinput">결제 비밀번호 6자리를 설정해주세요</string>
     <string name="CardPW_PWinput2">다시 한번 비밀번호 6자리를 입력해주세요</string>
     <string name="CardPW_PWinput3">가입이 완료되었습니다!</string>
+    <string name="CardPW_PWinput4">확인 버튼을 누르시면 로그인 페이지로 돌아갑니다</string>
     <!-- ID/PW 설정 -->
     <string name="Find_FindBar">|</string>
     <string name="Find_InputPhone">휴대폰 번호 입력</string>

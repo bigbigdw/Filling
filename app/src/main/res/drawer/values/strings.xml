@@ -20,6 +20,17 @@
     <string name="Drawer_Menu_FAQ">FAQ</string>
     <string name="Drawer_Menu_System">시스템 정보</string>
     <string name="Drawer_Menu_Policy">이용약관</string>
+    <!--Cash-->
+    <string name="CashDone_Tile">충전 내역 확인</string>
+    <string name="CashDone_Coin">2,000 points</string>
+    <string name="CashDone_And">이며,</string>
+    <string name="CashDone_Won">20,000원</string>
+    <string name="CashDone_And2">이고,</string>
+    <string name="CashDone_Purchase">결제 방법은</string>
+    <string name="CashDone_Done"> 입니다.</string>
+    <string name="CashDone_BtnCancel">취소</string>
+    <string name="CashDone_BtnDone">결제하기</string>
+
     <!--Cash 충전-->
     <string name="CashCharge_Tile">Cash 충전</string>
     <string name="CashCharge_CoinTile">이더리움비트코인</string>
@@ -34,4 +45,7 @@
     <string name="CashCharge_PurchasedCoin">Cash 충전</string>
     <string name="CashCharge_BtnContinue">계속하기</string>
     <string name="CashCharge_PurchaseCoin">결제코인</string>
+    <string name="CashDone_PurchaseCoin">Coin으로 충전</string>
+    <string name="CashDone_ExchangeCoin">환전 Coin은</string>
+    <string name="CashDone_UseCoin">사용 Coin는</string>
 </resources>

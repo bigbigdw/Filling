@@ -1,6 +1,7 @@
 package com.example.filling.Drawer.Cash_Charge;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -11,6 +12,7 @@ import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,25 +26,48 @@ import java.util.Objects;
 
 public class CashChargeFragment_Coin extends Fragment {
 
+    LinearLayout Before,After,BtnBefore,BtnAfter;
     TextInputLayout EditCharge, TransCharge, PurchaseCharge;
     Editable EditChargeString;
-    Button button8;
+    Button onClickNext, onClickCancel, onClickPurchase;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.cashcharge_coin, container, false);
         final TextView textView = root.findViewById(R.id.text_dashboard);
 
+        Before = root.findViewById(R.id.Before);
+        After = root.findViewById(R.id.After);
+        BtnBefore = root.findViewById(R.id.BtnBefore);
+        BtnAfter = root.findViewById(R.id.BtnAfter);
+
         EditCharge = root.findViewById(R.id.EditCharge);
         TransCharge = root.findViewById(R.id.TransCharge);
         PurchaseCharge = root.findViewById(R.id.PurchaseCharge);
-        button8 = root.findViewById(R.id.button8);
-        button8.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(requireContext().getApplicationContext(), "비밀번호 찾기로 이동합니다.", Toast.LENGTH_SHORT).show();
-            }
+
+        onClickNext= root.findViewById(R.id.onClickNext);
+        onClickNext.setOnClickListener(v -> {
+            Before.setVisibility(View.GONE);
+            BtnBefore.setVisibility(View.GONE);
+            After.setVisibility(View.VISIBLE);
+            BtnAfter.setVisibility(View.VISIBLE);
         });
+
+        onClickCancel = root.findViewById(R.id.onClickCancel);
+        onClickCancel.setOnClickListener(v -> {
+            Before.setVisibility(View.VISIBLE);
+            BtnBefore.setVisibility(View.VISIBLE);
+            After.setVisibility(View.GONE);
+            BtnAfter.setVisibility(View.GONE);
+        });
+
+        onClickPurchase = root.findViewById(R.id.onClickPurchase);
+        onClickPurchase.setOnClickListener(v -> {
+            Toast.makeText(requireContext().getApplicationContext(), "결제 화면으로 이동합니다", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(requireContext().getApplicationContext(), Cash_Purchase.class);
+            startActivity(intent);
+        });
+
 
         EditText EditChargeText = EditCharge.getEditText();
         EditText TransChargeText = TransCharge.getEditText();
@@ -75,19 +100,15 @@ public class CashChargeFragment_Coin extends Fragment {
             }
         });
 
-        EditChargeText.setOnKeyListener(new View.OnKeyListener() {
-            public boolean onKey(View v, int keyCode, KeyEvent event) {
-                if ((event.getAction() == KeyEvent.ACTION_DOWN) && (keyCode == KeyEvent.KEYCODE_ENTER)) {
-                    InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Activity.INPUT_METHOD_SERVICE);
-                    imm.hideSoftInputFromWindow(EditChargeText.getWindowToken(), 0);
-                    return true;
-                }
-                return false;
+        EditChargeText.setOnKeyListener((v, keyCode, event) -> {
+            if ((event.getAction() == KeyEvent.ACTION_DOWN) && (keyCode == KeyEvent.KEYCODE_ENTER)) {
+                InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Activity.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(EditChargeText.getWindowToken(), 0);
+                return true;
             }
+            return false;
         });
-
 
         return root;
     }
-
 }

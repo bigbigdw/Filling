@@ -17,7 +17,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginBottom="0dp"
             android:background="#FFFFFF"
             android:gravity="center_horizontal"
@@ -99,12 +99,15 @@
                 android:layout_height="match_parent">
 
                 <LinearLayout
+                    android:id="@+id/Before"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="16dp"
+                    android:layout_marginLeft="24dp"
                     android:layout_marginTop="40dp"
-                    android:layout_marginRight="16dp"
-                    android:orientation="vertical">
+                    android:layout_marginRight="24dp"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    tools:visibility="visible">
 
                     <TextView
                         android:id="@+id/textView25"
@@ -127,6 +130,8 @@
                             android:layout_height="wrap_content"
                             android:hint="@string/CashCharge_Cash"
                             android:inputType="number"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
                             android:textAlignment="textStart"
                             android:textColor="#4971EF"
                             android:textStyle="bold" />
@@ -145,6 +150,8 @@
                             android:layout_height="wrap_content"
                             android:hint="@string/CashCharge_RechargedCoin"
                             android:inputType="none"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
                             android:textColor="#888888"
                             android:textStyle="bold"
                             app:suffixText="@string/CashCharge_PurchasedCoin" />
@@ -163,9 +170,132 @@
                             android:layout_height="wrap_content"
                             android:hint="@string/CashCharge_PurchaseCoin"
                             android:inputType="none"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
                             android:textColor="#000000"
                             android:textStyle="bold" />
                     </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/After"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginRight="24dp"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    tools:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/textView23"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/CashDone_Tile"
+                        android:textAlignment="center"
+                        android:textColor="#333742"
+                        android:textSize="32sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView37"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/CashDone_UseCoin"
+                            android:textColor="#333742"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/textView39"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:text="@string/CashDone_Coin"
+                            android:textColor="#4971EF"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textView38"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/CashDone_And"
+                            android:textColor="#333742"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView34"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:text="@string/CashDone_ExchangeCoin"
+                            android:textColor="#333742"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/textView36"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/CashDone_Won"
+                            android:textColor="#4971EF"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textView35"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/CashDone_And2"
+                            android:textColor="#333742"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView24"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/CashDone_Purchase"
+                            android:textColor="#333742"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/textView28"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:text="@string/CashDone_PurchaseCoin"
+                            android:textColor="#4971EF"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textView29"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/CashDone_Done"
+                            android:textColor="#333742"
+                            android:textSize="15sp" />
+                    </LinearLayout>
                 </LinearLayout>
 
             </FrameLayout>
@@ -180,25 +310,61 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
+            android:id="@+id/BtnBefore"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent">
 
             <Button
-                android:id="@+id/button8"
+                android:id="@+id/onClickNext"
                 style="@style/Widget.AppCompat.Button"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="#4F9BF0"
-                android:onClick="cccc"
+                android:onClick="onClickNext"
                 android:text="@string/CashCharge_BtnContinue"
                 android:textColor="#FFFFFF"
                 android:textStyle="bold" />
         </LinearLayout>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:id="@+id/BtnAfter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:visibility="gone">
 
+            <Button
+                android:id="@+id/onClickCancel"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#888888"
+                android:onClick="onClickCancel"
+                android:text="@string/CashDone_BtnCancel"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/onClickPurchase"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#4F9BF0"
+                android:onClick="onClickPurchase"
+                android:text="@string/CashDone_BtnDone"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
