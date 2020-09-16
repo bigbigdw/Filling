@@ -1,4 +1,4 @@
-package com.example.filling.Login;
+package com.example.filling.Drawer;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -10,54 +10,41 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import com.example.filling.Main;
 import com.example.filling.R;
 
 import java.util.Objects;
 
+public class Cash_Purchase extends AppCompatActivity {
 
-public class Activity_CardPW extends AppCompatActivity {
-
-    EditText pwFirst, pwSecond;
-    TextView PwText1, PwText2;
+    EditText pwSecond;
     Button onClickDone , onClickNext;
     LinearLayout Done, Before;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.login_cardpw);
+        setContentView(R.layout.cash_purchase);
         Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
-        pwFirst = (EditText) findViewById(R.id.pwFirst);
-        pwSecond = (EditText) findViewById(R.id.pwSecond);
-        PwText1 = (TextView) findViewById(R.id.PwText1);
-        PwText2 = (TextView) findViewById(R.id.PwText2);
         Done = (LinearLayout) findViewById(R.id.RegisterDone);
         Before = (LinearLayout) findViewById(R.id.RegisterBefore);
         onClickNext = findViewById(R.id.onClickNext);
         onClickDone =  findViewById(R.id.onClickDone);
-
-        pwSecond.setOnFocusChangeListener((v, hasFocus) -> {
-            if (hasFocus) {
-                PwText1.setVisibility(View.GONE);
-                pwFirst.setVisibility(View.GONE);
-                PwText2.setVisibility(View.VISIBLE);
-                onClickNext.setVisibility(View.VISIBLE);
-            }
-        });
+        pwSecond = findViewById(R.id.pwSecond);
 
         pwSecond.setOnKeyListener((v, keyCode, event) -> {
             if ((event.getAction() == KeyEvent.ACTION_DOWN) && (keyCode == KeyEvent.KEYCODE_ENTER)) {
                 InputMethodManager imm = (InputMethodManager) getSystemService(Activity.INPUT_METHOD_SERVICE);
                 imm.hideSoftInputFromWindow(pwSecond.getWindowToken(), 0);
+                onClickNext.setVisibility(View.VISIBLE);
                 return true;
             }
             return false;
@@ -82,8 +69,8 @@ public class Activity_CardPW extends AppCompatActivity {
     }
 
     public void onClickDone(View v) {
-        Toast.makeText(getApplicationContext(), "필링에 가입하신 것을 환영합니다", Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(getApplicationContext(), Activity_Login.class);
+        Toast.makeText(getApplicationContext(), "결제가 완료되었습니다", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(getApplicationContext(), Main.class);
         startActivity(intent);
     }
 

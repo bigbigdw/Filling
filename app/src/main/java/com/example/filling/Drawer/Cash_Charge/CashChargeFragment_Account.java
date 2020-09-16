@@ -25,29 +25,30 @@ import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.Objects;
 
-public class CashChargeFragment_Coin extends Fragment {
+public class CashChargeFragment_Account extends Fragment {
 
-    LinearLayout Before,After,BtnBefore,BtnAfter;
-    TextInputLayout EditCharge, TransCharge, PurchaseCharge;
+    LinearLayout Before, After, BtnBefore, BtnAfter;
+    TextInputLayout EditCharge, PurchaseCharge, Copy;
     Editable EditChargeString;
-    Button onClickNext, onClickCancel, onClickPurchase;
-    TextView CashCount,PurchaseCount;
+    Button onClickNext, onClickCancel, onClickPurchase, onClickCopy;
+    TextView CashCount, PurchaseCount;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.cashcharge_coin, container, false);
+        View root = inflater.inflate(R.layout.cashcharge_account, container, false);
 
         Before = root.findViewById(R.id.Before);
         After = root.findViewById(R.id.After);
         BtnBefore = root.findViewById(R.id.BtnBefore);
         BtnAfter = root.findViewById(R.id.BtnAfter);
+
         CashCount = root.findViewById(R.id.CashCount);
         PurchaseCount = root.findViewById(R.id.PurchaseCount);
         EditCharge = root.findViewById(R.id.EditCharge);
-        TransCharge = root.findViewById(R.id.TransCharge);
         PurchaseCharge = root.findViewById(R.id.PurchaseCharge);
+        Copy = root.findViewById(R.id.Copy);
 
-        onClickNext= root.findViewById(R.id.onClickNext);
+        onClickNext = root.findViewById(R.id.onClickNext);
         onClickNext.setOnClickListener(v -> {
             Before.setVisibility(View.GONE);
             BtnBefore.setVisibility(View.GONE);
@@ -63,6 +64,9 @@ public class CashChargeFragment_Coin extends Fragment {
             BtnAfter.setVisibility(View.GONE);
         });
 
+        onClickCopy = root.findViewById(R.id.onClickCopy);
+        onClickCopy.setOnClickListener(v -> Toast.makeText(requireContext().getApplicationContext(), "계좌가 복사되었습니다", Toast.LENGTH_SHORT).show());
+
         onClickPurchase = root.findViewById(R.id.onClickPurchase);
         onClickPurchase.setOnClickListener(v -> {
             Toast.makeText(requireContext().getApplicationContext(), "결제 화면으로 이동합니다", Toast.LENGTH_SHORT).show();
@@ -70,15 +74,24 @@ public class CashChargeFragment_Coin extends Fragment {
             startActivity(intent);
         });
 
+        EditCharge.setOnKeyListener((v, keyCode, event) -> {
+            if ((event.getAction() == KeyEvent.ACTION_DOWN) && (keyCode == KeyEvent.KEYCODE_ENTER)) {
+                InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Activity.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(EditCharge.getWindowToken(), 0);
+                onClickNext.setVisibility(View.VISIBLE);
+                return true;
+            }
+            return false;
+        });
+
 
         EditText EditChargeText = EditCharge.getEditText();
-        EditText TransChargeText = TransCharge.getEditText();
         EditText PurchaseChargeText = PurchaseCharge.getEditText();
 
-        TransChargeText.setClickable(false);
-        TransChargeText.setFocusable(false);
         PurchaseChargeText.setClickable(false);
         PurchaseChargeText.setFocusable(false);
+        Copy.setClickable(false);
+        Copy.setFocusable(false);
 
         EditChargeString = Objects.requireNonNull(EditCharge.getEditText()).getText();
 
@@ -87,9 +100,8 @@ public class CashChargeFragment_Coin extends Fragment {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 // 입력되는 텍스트에 변화가 있을 때
-                TransChargeText.setText(EditChargeString.toString());
                 PurchaseChargeText.setText(EditChargeString.toString());
-                CashCount.setText(String.format("%s points", EditChargeString));
+                CashCount.setText(String.format("%s원", EditChargeString));
                 PurchaseCount.setText(String.format("%s원", EditChargeString));
             }
 

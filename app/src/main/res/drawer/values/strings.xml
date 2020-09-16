@@ -22,6 +22,7 @@
     <string name="Drawer_Menu_Policy">이용약관</string>
     <!--Cash-->
     <string name="CashDone_Tile">충전 내역 확인</string>
+    <string name="CashDone_Use">충전할 Cash는</string>
     <string name="CashDone_Coin">2,000 points</string>
     <string name="CashDone_And">이며,</string>
     <string name="CashDone_Won">20,000원</string>
@@ -30,7 +31,12 @@
     <string name="CashDone_Done"> 입니다.</string>
     <string name="CashDone_BtnCancel">취소</string>
     <string name="CashDone_BtnDone">결제하기</string>
-
+    <!--Cash 결제-->
+    <string name="CashPurchase_Page">Cash 결제</string>
+    <string name="CashPurchase_Title">결제 비밀번호</string>
+    <string name="CashPurchase_Text">결제 비밀번호 6자리를 입력해주세요</string>
+    <string name="CashPurchase_TitleDone">결제가 완료되었습니다</string>
+    <string name="CashPurchase_TextDone">확인 버튼을 누르면 메인 페이지로 이동합니다</string>
     <!--Cash 충전-->
     <string name="CashCharge_Tile">Cash 충전</string>
     <string name="CashCharge_CoinTile">이더리움비트코인</string>
@@ -44,8 +50,20 @@
     <string name="CashCharge_Won">원</string>
     <string name="CashCharge_PurchasedCoin">Cash 충전</string>
     <string name="CashCharge_BtnContinue">계속하기</string>
-    <string name="CashCharge_PurchaseCoin">결제코인</string>
+    <string name="CashCharge_PurchaseCoin">결제할 코인</string>
     <string name="CashDone_PurchaseCoin">Coin으로 충전</string>
     <string name="CashDone_ExchangeCoin">환전 Coin은</string>
-    <string name="CashDone_UseCoin">사용 Coin는</string>
+    <!--Cash 충전 무통장-->
+    <string name="CashCharge_AccountTile">내 통장</string>
+    <string name="CashCharge_Account">45,521,000</string>
+    <string name="CashCharge_WonCount">원</string>
+    <string name="CashCharge_PurchaseAccount">결제할 금액</string>
+    <string name="CashDone_Account">2,000원</string>
+    <string name="CashDone_PurchaseAccount">무통장 입금</string>
+    <string name="CashDone_ExchangeAccount">결제 금액은</string>
+    <string name="CashDone_sendTitle">송금자 정보 입력</string>
+    <string name="CashDone_sendName">송금자명 입력</string>
+    <string name="CashDone_sendCopy">계좌복사</string>
+    <string name="CashDone_sendNum">우리은행 1002–645–41002</string>
+    <string name="CashDone_sendTip">송금이 확인되는 즉시 해당 거래가 완료되고 처리결과가 문자로 발송됩니다.</string>
 </resources>

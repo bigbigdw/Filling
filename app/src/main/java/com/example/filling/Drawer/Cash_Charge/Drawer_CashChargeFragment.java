@@ -18,6 +18,7 @@ import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Drawer_CashChargeFragment extends Fragment {
 
@@ -34,7 +35,7 @@ public class Drawer_CashChargeFragment extends Fragment {
 //        toolbar.setTitle("");
 //        ((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
 
-        ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        Objects.requireNonNull(((AppCompatActivity) getActivity()).getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
         viewPager = (ViewPager) root.findViewById(R.id.view_pager);
         setupViewPager(viewPager);
@@ -48,7 +49,7 @@ public class Drawer_CashChargeFragment extends Fragment {
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getFragmentManager());
         adapter.addFragment(new CashChargeFragment_Coin(), "Coin");
-        adapter.addFragment(new CashChargeFragment_Coin(), "무통장");
+        adapter.addFragment(new CashChargeFragment_Account(), "무통장");
         adapter.addFragment(new CashChargeFragment_Coin(), "마일리지");
         viewPager.setAdapter(adapter);
     }
@@ -61,6 +62,7 @@ public class Drawer_CashChargeFragment extends Fragment {
             super(manager);
         }
 
+        @NonNull
         @Override
         public Fragment getItem(int position) {
             return mFragmentList.get(position);
