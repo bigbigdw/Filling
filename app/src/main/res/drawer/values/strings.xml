@@ -77,5 +77,6 @@
     <string name="CashCharge_PurchaseMileage">결제할 코인</string>
     <string name="CashDone_PurchaseMileage"> 마일리지로 충전</string>
     <string name="CashDone_ExchangeMileage">결제 마일리지는</string>
+    <string name="CashCharge_MileageTile">내 마일리지</string>
 
 </resources>
