@@ -43,6 +43,12 @@
         tools:layout="@layout/fragment_slideshow" />
 
     <fragment
+        android:id="@+id/Drawer_CashGift"
+        android:name="com.example.filling.Drawer.Cash_Gift.Drawer_CashGiftFragment"
+        android:label=""
+        tools:layout="@layout/drawer_cash_charge" />
+
+    <fragment
         android:id="@+id/Drawer_CashCharge"
         android:name="com.example.filling.Drawer.Cash_Charge.Drawer_CashChargeFragment"
         android:label=""

@@ -123,6 +123,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginTop="25dp"
+                        app:suffixTextColor="#4971EF"
                         app:suffixText="@string/CashCharge_RechargeCashCount">
 
                         <com.google.android.material.textfield.TextInputEditText
@@ -138,41 +139,24 @@
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/TransCharge"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginTop="30dp"
-                        android:background="#DBDBDB"
-                        app:suffixText="@string/CashCharge_Points">
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/CashCharge_RechargedMileage"
-                            android:inputType="none"
-                            android:paddingLeft="10dp"
-                            android:paddingRight="10dp"
-                            android:textColor="#888888"
-                            android:textStyle="bold"
-                            app:suffixText="@string/CashCharge_Points" />
-                    </com.google.android.material.textfield.TextInputLayout>
-
-                    <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/PurchaseCharge"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginTop="38dp"
-                        android:background="#FEF3F3"
-                        app:suffixText="@string/CashCharge_Points">
+                        android:textColorHint="#E24F39"
+                        app:suffixText="@string/CashCharge_Points"
+                        app:suffixTextColor="#E24F39">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:backgroundTint="#E24F39"
+                            android:foregroundTint="#FFFFFF"
                             android:hint="@string/CashCharge_PurchaseMilage"
                             android:inputType="none"
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
-                            android:textColor="#000000"
+                            android:textColor="#E24F39"
                             android:textStyle="bold" />
                     </com.google.android.material.textfield.TextInputLayout>
 

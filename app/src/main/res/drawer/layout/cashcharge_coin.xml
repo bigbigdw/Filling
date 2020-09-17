@@ -107,7 +107,7 @@
                     android:layout_marginRight="24dp"
                     android:orientation="vertical"
                     android:visibility="visible"
-                    tools:visibility="gone">
+                    tools:visibility="visible">
 
                     <TextView
                         android:id="@+id/textView25"
@@ -123,6 +123,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginTop="25dp"
+                        app:suffixTextColor="#4971EF"
                         app:suffixText="@string/CashCharge_RechargeCashCount">
 
                         <com.google.android.material.textfield.TextInputEditText
@@ -142,17 +143,19 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginTop="30dp"
-                        android:background="#DBDBDB"
+                        android:textColorHint="#DBDBDB"
+                        app:suffixTextColor="#DBDBDB"
                         app:suffixText="@string/CashCharge_PurchasedCoin">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:backgroundTint="#DBDBDB"
                             android:hint="@string/CashCharge_RechargedCoin"
                             android:inputType="none"
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
-                            android:textColor="#888888"
+                            android:textColor="#DBDBDB"
                             android:textStyle="bold"
                             app:suffixText="@string/CashCharge_PurchasedCoin" />
                     </com.google.android.material.textfield.TextInputLayout>
@@ -162,17 +165,20 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginTop="38dp"
-                        android:background="#FEF3F3"
-                        app:suffixText="@string/CashCharge_CoinCount">
+                        android:textColorHint="#E24F39"
+                        app:suffixText="@string/CashCharge_Won"
+                        app:suffixTextColor="#E24F39">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:backgroundTint="#E24F39"
+                            android:foregroundTint="#FFFFFF"
                             android:hint="@string/CashCharge_PurchaseCoin"
                             android:inputType="none"
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
-                            android:textColor="#000000"
+                            android:textColor="#E24F39"
                             android:textStyle="bold" />
                     </com.google.android.material.textfield.TextInputLayout>
                 </LinearLayout>
@@ -186,14 +192,14 @@
                     android:layout_marginRight="24dp"
                     android:orientation="vertical"
                     android:visibility="gone"
-                    tools:visibility="visible">
+                    tools:visibility="gone">
 
                     <TextView
                         android:id="@+id/textView23"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/CashDone_Tile"
                         android:layout_marginBottom="16dp"
+                        android:text="@string/CashDone_Tile"
                         android:textAlignment="center"
                         android:textColor="#333742"
                         android:textSize="32sp"
@@ -216,11 +222,12 @@
                         <TextView
                             android:id="@+id/CashCount"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:layout_marginLeft="5dp"
-                            android:text="@string/CashDone_Coin"
                             android:layout_marginRight="5dp"
+                            android:text="@string/CashDone_Coin"
                             android:textColor="#4971EF"
+                            android:textSize="15sp"
                             android:textStyle="bold" />
 
                         <TextView
@@ -254,6 +261,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/CashDone_Won"
                             android:textColor="#4971EF"
+                            android:textSize="15sp"
                             android:textStyle="bold" />
 
                         <TextView
@@ -287,6 +295,7 @@
                             android:layout_marginRight="5dp"
                             android:text="@string/CashDone_PurchaseCoin"
                             android:textColor="#4971EF"
+                            android:textSize="15sp"
                             android:textStyle="bold" />
 
                         <TextView

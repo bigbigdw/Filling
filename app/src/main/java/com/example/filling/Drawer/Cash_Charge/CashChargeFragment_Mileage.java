@@ -28,7 +28,7 @@ import java.util.Objects;
 public class CashChargeFragment_Mileage extends Fragment {
 
     LinearLayout Before,After,BtnBefore,BtnAfter;
-    TextInputLayout EditCharge, TransCharge, PurchaseCharge;
+    TextInputLayout EditCharge, PurchaseCharge;
     Editable EditChargeString;
     Button onClickNext, onClickCancel, onClickPurchase;
     TextView CashCount,PurchaseCount;
@@ -44,7 +44,6 @@ public class CashChargeFragment_Mileage extends Fragment {
         CashCount = root.findViewById(R.id.CashCount);
         PurchaseCount = root.findViewById(R.id.PurchaseCount);
         EditCharge = root.findViewById(R.id.EditCharge);
-        TransCharge = root.findViewById(R.id.TransCharge);
         PurchaseCharge = root.findViewById(R.id.PurchaseCharge);
 
         onClickNext= root.findViewById(R.id.onClickNext);
@@ -72,11 +71,8 @@ public class CashChargeFragment_Mileage extends Fragment {
 
 
         EditText EditChargeText = EditCharge.getEditText();
-        EditText TransChargeText = TransCharge.getEditText();
         EditText PurchaseChargeText = PurchaseCharge.getEditText();
 
-        TransChargeText.setClickable(false);
-        TransChargeText.setFocusable(false);
         PurchaseChargeText.setClickable(false);
         PurchaseChargeText.setFocusable(false);
 
@@ -87,7 +83,6 @@ public class CashChargeFragment_Mileage extends Fragment {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 // 입력되는 텍스트에 변화가 있을 때
-                TransChargeText.setText(EditChargeString.toString());
                 PurchaseChargeText.setText(EditChargeString.toString());
                 CashCount.setText(String.format("%s points", EditChargeString));
                 PurchaseCount.setText(String.format("%s원", EditChargeString));

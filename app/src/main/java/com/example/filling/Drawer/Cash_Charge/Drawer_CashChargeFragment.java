@@ -52,7 +52,7 @@ public class Drawer_CashChargeFragment extends Fragment {
         viewPager.setAdapter(adapter);
     }
 
-    static class ViewPagerAdapter extends FragmentPagerAdapter {
+    public static class ViewPagerAdapter extends FragmentPagerAdapter {
         private final List<Fragment> mFragmentList = new ArrayList<>();
         private final List<String> mFragmentTitleList = new ArrayList<>();
 
