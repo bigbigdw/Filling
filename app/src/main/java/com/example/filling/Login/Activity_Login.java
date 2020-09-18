@@ -5,12 +5,11 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.view.View;
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.filling.MainActivity;
+import com.example.filling.Main;
 import com.example.filling.R;
 import com.google.android.material.textfield.TextInputLayout;
 
@@ -34,14 +33,11 @@ public class Activity_Login extends AppCompatActivity {
         startActivity(intent);
 
         AutoLogin.setOnCheckedChangeListener(
-                new CompoundButton.OnCheckedChangeListener() {
-                    @Override
-                    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                        if (AutoLogin.isChecked()) {
-                            Toast.makeText(getApplicationContext(), "자동로그인이 활성화 되었습니다", Toast.LENGTH_SHORT).show();
-                        } else {
-                            Toast.makeText(getApplicationContext(), "자동로그인이 비활성화 되었습니다", Toast.LENGTH_SHORT).show();
-                        }
+                (buttonView, isChecked) -> {
+                    if (AutoLogin.isChecked()) {
+                        Toast.makeText(getApplicationContext(), "자동로그인이 활성화 되었습니다", Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(getApplicationContext(), "자동로그인이 비활성화 되었습니다", Toast.LENGTH_SHORT).show();
                     }
                 }
         );
@@ -66,7 +62,7 @@ public class Activity_Login extends AppCompatActivity {
 
         if(idCheck.toString().equals("kdw0310@ajou.ac.kr") && pwCheck.toString().equals("bigbigdw")){
             Toast.makeText(getApplicationContext(), "환영합니다 김대우님!", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+            Intent intent = new Intent(getApplicationContext(), Main.class);
             startActivity(intent);
 //            System.out.println("hello");
         }else{

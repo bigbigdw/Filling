@@ -1,25 +1,24 @@
 package com.example.filling.Bottom.Filling;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.fragment.NavHostFragment;
 
+import com.example.filling.Drawer.Alert.Alert_Detail;
 import com.example.filling.R;
 import com.synnapps.carouselview.CarouselView;
 import com.synnapps.carouselview.ImageListener;
 
 import java.util.ArrayList;
-import java.util.Objects;
 
 public class Bottom_FillingFragment extends Fragment {
 
@@ -48,14 +47,18 @@ public class Bottom_FillingFragment extends Fragment {
 
         listView.setAdapter(adapter);
 
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-                Bottom_Filling_ListItem item = (Bottom_Filling_ListItem) adapter.getItem(position);
-                Toast.makeText(requireContext().getApplicationContext(), "선택 : " + item.getContents(), Toast.LENGTH_SHORT).show();
-            }
+        listView.setOnItemClickListener((adapterView, view, position, id) -> {
+//                Bottom_Filling_ListItem item = (Bottom_Filling_ListItem) adapter.getItem(position);
+//                Toast.makeText(requireContext().getApplicationContext(), "선택 : " + item.getContents(), Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(requireContext().getApplicationContext(), Alert_Detail.class);
+            startActivity(intent);
         });
 
+        root.findViewById(R.id.AlertSeeMore).setOnClickListener(view -> {
+            NavHostFragment.findNavController(Bottom_FillingFragment.this)
+                    .navigate(R.id.action_bottom_filling_to_Drawer_Alert);
+            Toast.makeText(requireContext().getApplicationContext(), "공지사항 페이지로 이동합니다" , Toast.LENGTH_SHORT).show();
+        });
         return root;
 
     }
@@ -94,11 +97,5 @@ public class Bottom_FillingFragment extends Fragment {
         }
     }
 
-
-    ImageListener imageListener = new ImageListener() {
-        @Override
-        public void setImageForPosition(int position, ImageView imageView) {
-            imageView.setImageResource(sampleImages[position]);
-        }
-    };
+    ImageListener imageListener = (position, imageView) -> imageView.setImageResource(sampleImages[position]);
 }

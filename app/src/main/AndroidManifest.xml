@@ -20,36 +20,24 @@
             </intent-filter>
 
         </activity>
-
+        <activity
+            android:name=".Drawer.Alert.Alert_Detail"
+            android:label=""
+            android:theme="@style/FindTheme" />
         <activity
             android:name=".Drawer.CashGift_Purchase"
             android:label=""
-            android:theme="@style/FindTheme" >
-        </activity>
-
+            android:theme="@style/FindTheme" />
         <activity
             android:name=".Drawer.Cash_Purchase"
             android:label=""
-            android:theme="@style/FindTheme" >
-        </activity>
-
-        <activity
-            android:name=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
-
+            android:theme="@style/FindTheme" />
         <activity
             android:name=".Test"
-            android:theme="@style/LoginTheme">
-
-        </activity>
-
+            android:theme="@style/LoginTheme"/>
         <activity
             android:name=".Login.Activity_Login"
-            android:theme="@style/LoginTheme">
-
-        </activity>
-
+            android:theme="@style/LoginTheme"/>
         <activity
             android:name=".Login.Activity_CardPW"
             android:label=""

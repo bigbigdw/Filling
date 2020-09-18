@@ -15,7 +15,11 @@
         android:id="@+id/bottom_filling"
         android:name="com.example.filling.Bottom.Filling.Bottom_FillingFragment"
         android:label=""
-        tools:layout="@layout/bottom_filling" />
+        tools:layout="@layout/bottom_filling" >
+        <action
+            android:id="@+id/action_bottom_filling_to_Drawer_Alert"
+            app:destination="@id/Drawer_Alert" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_dashboard"
