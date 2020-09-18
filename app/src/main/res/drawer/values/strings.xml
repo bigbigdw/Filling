@@ -98,10 +98,27 @@
     <!--Cash 선물 결제-->
     <string name="CashGift_PurchaseTitle">Cash 선물 결제</string>
     <string name="CashGift_PurchaseText1">선물 대상자는</string>
-    <string name="CashGift_PurchaseText2">010-3304-9425 (김대우)</string>
+    <string name="CashGift_PurchaseText2">010–3304–9425 (김대우)</string>
     <string name="CashGift_PurchaseText3">이며</string>
     <string name="CashGift_PurchaseText4">선물할 Cash는</string>
     <string name="CashGift_PurchaseText5">1,000 Cash</string>
     <string name="CashGift_PurchaseText6">입니다.</string>
     <string name="CashGift_PurchaseDone">언제나 필링을 이용해주셔서 감사합니다</string>
+    <!--Cash 환전-->
+    <string name="CashExchange_Title">Cash 환전하기</string>
+    <string name="CashExchange_Exchange">환전할 Cash</string>
+    <string name="CashExchange_Exchanged">환전된 Cash</string>
+    <string name="CashExchange_ExchangedCost">환전된 금액</string>
+    <string name="CashExchange_ExchangedCoin">환전된 Coin</string>
+    <string name="CashExchange_Coin">Coin</string>
+    <string name="CashExchange_AfterTitle">환전 내역 확인</string>
+    <string name="CashExchange_AfterText1">Revive Cash의</string>
+    <string name="CashExchange_AfterText2">2,000 Cash</string>
+    <string name="CashExchange_AfterText3"> 를</string>
+    <string name="CashExchange_AfterText4">이더리움 비트코인의</string>
+    <string name="CashExchange_AfterText5">20,000 Coin</string>
+    <string name="CashExchange_AfterText6">으로,</string>
+    <string name="CashExchange_AfterText7">환전을 신청합니다</string>
+    <string name="CashExchange_BtnExchange">환전하기</string>
+
 </resources>

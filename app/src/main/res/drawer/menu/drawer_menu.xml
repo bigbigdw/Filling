@@ -18,14 +18,9 @@
                     android:icon="@drawable/icon_sidemenu_cash_present"
                     android:title="@string/Drawer_Menu_CashPresent" />
                 <item
-                    android:id="@+id/nav_slideshow"
+                    android:id="@+id/Drawer_CashExchange"
                     android:icon="@drawable/icon_sidemenu_cash_exchange"
                     android:title="@string/Drawer_Menu_CashExchange" />
-<!--                <item-->
-<!--                    android:id="@+id/nav_slidesh2ow"-->
-<!--                    android:icon="@drawable/icon_sidemenu_cash_exchange"-->
-<!--                    android:title="@string/Drawer_Menu_CashExchange" />-->
-
             </group>
         </menu>
     </item>
@@ -37,7 +32,7 @@
                 android:checkableBehavior="single"
                 android:title="@string/Drawer_Menu_Etc">
                 <item
-                    android:id="@+id/nav_hom4e"
+                    android:id="@+id/nav_slideshow"
                     android:icon="@drawable/icon_sidemenu_info"
                     android:title="@string/Drawer_Menu_Info" />
                 <item

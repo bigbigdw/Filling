@@ -84,7 +84,7 @@ public class CashChargeFragment_Mileage extends Fragment {
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 // 입력되는 텍스트에 변화가 있을 때
                 PurchaseChargeText.setText(EditChargeString.toString());
-                CashCount.setText(String.format("%s points", EditChargeString));
+                CashCount.setText(String.format("%s Points", EditChargeString));
                 PurchaseCount.setText(String.format("%s원", EditChargeString));
             }
 

@@ -88,7 +88,7 @@ public class CashChargeFragment_Coin extends Fragment {
                 // 입력되는 텍스트에 변화가 있을 때
                 TransChargeText.setText(EditChargeString.toString());
                 PurchaseChargeText.setText(EditChargeString.toString());
-                CashCount.setText(String.format("%s coin", EditChargeString));
+                CashCount.setText(String.format("%s" + "Coin", EditChargeString));
                 PurchaseCount.setText(String.format("%s원", EditChargeString));
             }
 

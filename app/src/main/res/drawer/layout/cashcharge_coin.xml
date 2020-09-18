@@ -142,7 +142,7 @@
                         android:id="@+id/TransCharge"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginTop="30dp"
+                        android:layout_marginTop="20dp"
                         android:textColorHint="#DBDBDB"
                         app:suffixTextColor="#DBDBDB"
                         app:suffixText="@string/CashCharge_PurchasedCoin">
@@ -164,7 +164,7 @@
                         android:id="@+id/PurchaseCharge"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginTop="38dp"
+                        android:layout_marginTop="20dp"
                         android:textColorHint="#E24F39"
                         app:suffixText="@string/CashCharge_Won"
                         app:suffixTextColor="#E24F39">

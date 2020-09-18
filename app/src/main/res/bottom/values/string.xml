@@ -24,5 +24,16 @@
     <string name="Filling_Alert_More">더보기</string>
     <string name="Filling_PopupBtn1">다시 보지 않기</string>
     <string name="Filling_PopupBtn2">닫기</string>
+    <!--필링 푸터-->
+    <string name="Footer_Section1">사업자 정보확인</string>
+    <string name="Footer_Section2">이용약관</string>
+    <string name="Footer_Section3">개인정보처리방침</string>
+    <string name="Footer_Middle1">(망) 더필홀딩스 | 대표자명 : 김대우 | 이메일 : kdw0310@ajou.ac.kr</string>
+    <string name="Footer_Middle2">통신판매업신고 : 서울시 강남구 테헤란로 143 고운빌딩6층</string>
+    <string name="Footer_Middle3">사업자등록번호 : 123–45–65478 | 고객센터 : 1588–1234</string>
+    <string name="Footer_Middle4">오전9시~오후6시, 토/공휴일 휴무</string>
+    <string name="Footer_Bottom1">필링은 통신판매중개자도 아니고 통신판매의 당사자가 아닙니다.</string>
+    <string name="Footer_Bottom2">이에 필링은 상품거래정보 및 거래에 대하여 책임을 지지 않습니다.</string>
+    <string name="Footer_Bottom3">Copyright ⓒ2020 Daewoo Kim. All rights reserved.</string>
 
 </resources>
