@@ -43,6 +43,12 @@
         tools:layout="@layout/fragment_slideshow" />
 
     <fragment
+        android:id="@+id/Drawer_Alert"
+        android:name="com.example.filling.Drawer.Alert.Drawer_AlertFragment"
+        android:label=""
+        tools:layout="@layout/drawer_alert" />
+
+    <fragment
         android:id="@+id/Drawer_CashExchange"
         android:name="com.example.filling.Drawer.Cash_Exchange.Drawer_CashExchangeFragment"
         android:label=""

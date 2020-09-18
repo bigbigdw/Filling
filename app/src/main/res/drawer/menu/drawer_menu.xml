@@ -32,7 +32,7 @@
                 android:checkableBehavior="single"
                 android:title="@string/Drawer_Menu_Etc">
                 <item
-                    android:id="@+id/nav_slideshow"
+                    android:id="@+id/Drawer_Alert"
                     android:icon="@drawable/icon_sidemenu_info"
                     android:title="@string/Drawer_Menu_Info" />
                 <item
@@ -40,7 +40,7 @@
                     android:icon="@drawable/icon_sidemenu_alert"
                     android:title="@string/Drawer_Menu_Alert" />
                 <item
-                    android:id="@+id/nav_slides4how"
+                    android:id="@+id/nav_slideshow"
                     android:icon="@drawable/icon_sidemenu_faq"
                     android:title="@string/Drawer_Menu_FAQ" />
                 <item
