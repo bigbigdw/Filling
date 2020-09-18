@@ -87,5 +87,21 @@
     <string name="CashGift_Given">선물하셨습니다</string>
     <string name="CashGift_BtnLeft">확인</string>
     <string name="CashGift_BtnRight">지금 받기</string>
-
+    <!--Cash 선물-->
+    <string name="CashGift_Title">Cash 선물하기</string>
+    <string name="CashGift_CashTitle">나의 Cash</string>
+    <string name="CashGift_CashMount">12,325,000</string>
+    <string name="CashGift_CashCount">Cash</string>
+    <string name="CashGift_CashRate">1cash = 10원</string>
+    <string name="CashGift_CashSectionTitle">1cash = 10원</string>
+    <string name="CashGift_CashMessage">메세지를 입력해주세요</string>
+    <!--Cash 선물 결제-->
+    <string name="CashGift_PurchaseTitle">Cash 선물 결제</string>
+    <string name="CashGift_PurchaseText1">선물 대상자는</string>
+    <string name="CashGift_PurchaseText2">010-3304-9425 (김대우)</string>
+    <string name="CashGift_PurchaseText3">이며</string>
+    <string name="CashGift_PurchaseText4">선물할 Cash는</string>
+    <string name="CashGift_PurchaseText5">1,000 Cash</string>
+    <string name="CashGift_PurchaseText6">입니다.</string>
+    <string name="CashGift_PurchaseDone">언제나 필링을 이용해주셔서 감사합니다</string>
 </resources>

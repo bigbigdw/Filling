@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#4971EF"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarfragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/CashGift_Title"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        android:background="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:background="#FFFFFF"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+
+            <LinearLayout
+                android:id="@+id/Line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/CashGift_CashTitle"
+                    android:textColor="#888888"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#eeeeee"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/CashGift_CashMount"
+                        android:textColor="#000000"
+                        android:textSize="36sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView21"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginBottom="3dp"
+                        android:text="@string/CashGift_CashCount" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="22dp"
+                    android:layout_weight="1"
+                    android:text="@string/CashGift_CashRate" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#eeeeee"
+                    android:orientation="vertical" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="30dp">
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/Phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="#70888888"
+                        app:startIconDrawable="@drawable/ic_icon_phone"
+                        app:startIconTint="#888888">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:backgroundTint="#888888"
+                            android:drawableTint="#888888"
+                            android:ems="10"
+                            android:hint="@string/Find_InputPhone"
+                            android:inputType="phone"
+                            android:maxLength="12"
+                            android:textColor="#000000" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Button
+                        android:id="@+id/BtnPhoneConfirm"
+                        android:layout_width="50dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center|end"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:onClick="onClickPhone"
+                        android:text="@string/CUI_Confirm"
+                        android:textColor="#4971EF"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </FrameLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/Message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:textColorHint="#70888888"
+                    app:startIconDrawable="@drawable/ic_icon_message"
+                    app:startIconTint="#888888">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_weight="10"
+                        android:backgroundTint="#888888"
+                        android:drawableTint="#888888"
+                        android:ems="10"
+                        android:hint="@string/CashGift_CashMessage"
+                        android:inputType="phone"
+                        android:maxLength="12"
+                        android:textColor="#000000" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/EditCharge"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    app:suffixText="@string/CashCharge_RechargeCashCount"
+                    app:suffixTextColor="#4971EF">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/CashCharge_Cash"
+                        android:inputType="number"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textAlignment="textStart"
+                        android:textColor="#4971EF"
+                        android:textStyle="bold" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/PurchaseCharge"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:textColorHint="#E24F39"
+                    app:suffixText="@string/CashCharge_WonCount"
+                    app:suffixTextColor="#E24F39">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#E24F39"
+                        android:foregroundTint="#FFFFFF"
+                        android:hint="@string/CashCharge_PurchaseAccount"
+                        android:inputType="none"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textColor="#E24F39"
+                        android:textStyle="bold" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:id="@+id/BtnBefore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <Button
+                android:id="@+id/onClickNext"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#4F9BF0"
+                android:onClick="onClickNext"
+                android:text="@string/CashCharge_BtnContinue"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:visibility="gone"
+                tools:visibility="visible" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

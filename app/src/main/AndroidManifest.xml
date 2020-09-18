@@ -22,6 +22,12 @@
         </activity>
 
         <activity
+            android:name=".Drawer.CashGift_Purchase"
+            android:label=""
+            android:theme="@style/FindTheme" >
+        </activity>
+
+        <activity
             android:name=".Drawer.Cash_Purchase"
             android:label=""
             android:theme="@style/FindTheme" >

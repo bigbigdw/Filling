@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#4971EF"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:popupTheme="@style/AppTheme.PopupOverlay">
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/CashGift_PurchaseTitle"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </androidx.appcompat.widget.Toolbar>
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/RegisterBefore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible"
+                tools:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    tools:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/Title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="44dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/CashPurchase_Title"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        tools:visibility="visible" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView24"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/CashGift_PurchaseText1"
+                            android:textColor="#333742"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/textView28"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:text="@string/CashGift_PurchaseText2"
+                            android:textColor="#4971EF"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textView29"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/CashGift_PurchaseText3"
+                            android:textColor="#333742"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView214"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/CashGift_PurchaseText4"
+                            android:textColor="#333742"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/textView328"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:text="@string/CashGift_PurchaseText5"
+                            android:textColor="#4971EF"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textView219"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/CashGift_PurchaseText6"
+                            android:textColor="#333742"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/pwSecond"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="90dp"
+                    android:layout_marginTop="72dp"
+                    android:layout_marginRight="90dp"
+                    android:ems="10"
+                    android:hint="@string/TODO"
+                    android:importantForAutofill="no"
+                    android:inputType="number|numberPassword"
+                    android:maxLength="7"
+                    android:textAlignment="center"
+                    android:textColor="#4971EF"
+                    android:textSize="55sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/RegisterDone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <TextView
+                    android:id="@+id/TitleDone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="44dp"
+                    android:text="@string/CashPurchase_TitleDone"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    tools:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/DoneText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/CashPurchase_TextDone"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    tools:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="255dp"
+                    android:layout_height="255dp"
+                    android:layout_marginTop="44dp"
+                    android:contentDescription="@string/TODO"
+                    app:srcCompat="@drawable/icon_purchase_gift" />
+
+                <TextView
+                    android:id="@+id/DoneText2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="41dp"
+                    android:text="@string/CashGift_PurchaseDone"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    tools:visibility="visible" />
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <LinearLayout
+                    android:id="@+id/Btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <Button
+                        android:id="@+id/onClickNext"
+                        style="@style/Widget.AppCompat.Button"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#4F9BF0"
+                        android:onClick="onClickNext"
+                        android:text="@string/CashCharge_BtnContinue"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        tools:visibility="gone" />
+
+                    <Button
+                        android:id="@+id/onClickDone"
+                        style="@style/Widget.AppCompat.Button"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#4F9BF0"
+                        android:onClick="onClickDone"
+                        android:text="@string/CUI_Confirm"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        tools:visibility="visible" />
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
