@@ -27,6 +27,6 @@
     <string name="Complain_HintTitle">제목</string>
     <string name="Complain_BtnResult">문의 결과 보기</string>
     <string name="Complain_BtnSubmit">접수하기</string>
-
-
+    <!--불편신고 문의 결과-->
+    <string name="ComplainResult_Title">불편신고 문의 결과</string>
 </resources>

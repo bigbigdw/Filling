@@ -1,6 +1,5 @@
 package com.example.filling.Drawer.Complain;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,7 +10,6 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import com.example.filling.Drawer.Cash_Purchase;
 import com.example.filling.R;
 
 public class Drawer_ComplainFragment extends Fragment {
@@ -31,8 +29,8 @@ public class Drawer_ComplainFragment extends Fragment {
         });
 
         Complain_BtnResult.setOnClickListener(v -> {
-            Intent intent = new Intent(requireContext().getApplicationContext(), Cash_Purchase.class);
-            startActivity(intent);
+//            Intent intent = new Intent(requireContext().getApplicationContext(), Complain_Result.class);
+//            startActivity(intent);
         });
 
         return root;

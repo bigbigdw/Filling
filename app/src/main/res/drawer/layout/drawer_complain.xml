@@ -166,7 +166,8 @@
                 android:background="#888888"
                 android:text="@string/Complain_BtnResult"
                 android:textColor="#FFFFFF"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/Complain_BtnSubmit"
