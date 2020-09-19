@@ -53,6 +53,7 @@ public class Drawer_AlertFragment extends Fragment {
         });
 
         return root;
+
     }
 
     class AlertAdapter extends BaseAdapter {

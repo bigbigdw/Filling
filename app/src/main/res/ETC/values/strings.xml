@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--공지사항-->
+    <string name="Alert_Title">공지사항</string>
+    <!--공지사항 상세-->
+    <string name="AlertDetail_Title">[공지] 개인정보 열람 및 수정에 관한 안내</string>
+    <string name="AlertDetail_Date">2020–09–19 06:41</string>
+    <string name="AlertDetail1">개인정보 열림 및 수정에 관한 안내입니다.</string>
+    <string name="AlertDetail2">동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세 무궁화 삼천리 화려 강산 대한 사람 대한으로 길이 보전하세 남산 위에 저 소나무 철갑을 두른 듯 바람 서리 불변함은 우리 기상일세 무궁화 삼천리 화려 강산
+    대한 사람 대한으로 길이 보전하세</string>
+    <string name="AlertDetail3">가을 하늘 공활한데 높고 구름 없이 밝은 달은 우리 가슴 일편단심일세
+    무궁화 삼천리 화려 강산 대한 사람 대한으로 길이 보전하세 이 기상과 이 맘으로 충성을 다하여 괴로우나 즐거우나 나라 사랑하세 무궁화 삼천리 화려 강산 대한 사람 대한으로
+    길이 보전하세</string>
+    <string name="AlertDetail4">동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세 무궁화 삼천리 화려 강산 대한 사람 대한으로 길이 보전하세 남산 위에 저 소나무 철갑을 두른 듯 바람 서리
+    불변함은 우리 기상일세 무궁화 삼천리 화려 강산
+    대한 사람 대한으로 길이 보전하세</string>
+    <string name="AlertDetail5">가을 하늘 공활한데 높고 구름 없이 밝은 달은 우리 가슴 일편단심일세
+    무궁화 삼천리 화려 강산 대한 사람 대한으로 길이 보전하세 이 기상과 이 맘으로 충성을 다하여 괴로우나 즐거우나 나라 사랑하세 무궁화 삼천리 화려 강산 대한 사람 대한으로
+    길이 보전하세</string>
+    <string name="AlertDetail6">감사합니다.</string>
+    <!--불편신고-->
+    <string name="Complain_Title">불편신고</string>
+    <string name="Complain_Tip1Accent">더필홀딩스</string>
+    <string name="Complain_Tip1">사용 시 불편사항을 신고해주세요.</string>
+    <string name="Complain_Tip2">등록하신 사항에 대한 답편은 최대한 빠른 시일에 처리해 드리겠습니다.</string>
+    <string name="Complain_Hint">불편사항을 적어주세요</string>
+    <string name="Complain_HintTitle">제목</string>
+    <string name="Complain_BtnResult">문의 결과 보기</string>
+    <string name="Complain_BtnSubmit">접수하기</string>
+
+
+</resources>

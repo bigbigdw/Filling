@@ -22,7 +22,7 @@ android {
     sourceSets {
         main {
             res {
-                srcDirs 'src/main/res', 'src/main/res/login', 'src/main/res/Login', 'src/main/res/Screens', 'src/main/res/drawer', 'src/main/res/bottom', 'src/main/res/2'
+                srcDirs 'src/main/res', 'src/main/res/login', 'src/main/res/Login', 'src/main/res/Screens', 'src/main/res/drawer', 'src/main/res/bottom', 'src/main/res/2', 'src/main/res/Cash', 'src/main/res/ETC'
             }
         }
     }
@@ -41,7 +41,7 @@ dependencies {
     implementation 'androidx.navigation:navigation-ui:2.3.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
-    implementation  'com.synnapps:carouselview:0.1.5'
+    implementation 'com.synnapps:carouselview:0.1.5'
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
     testImplementation 'junit:junit:4.12'

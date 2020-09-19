@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/Before"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="24dp"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView25"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/CashCharge_RechargeTitle"
+            android:textColor="#333742"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/EditCharge"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="25dp"
+            app:suffixText="@string/CashCharge_RechargeCashCount"
+            app:suffixTextColor="#4971EF">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/CashCharge_Cash"
+                android:inputType="number"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textAlignment="textStart"
+                android:textColor="#4971EF"
+                android:textStyle="bold" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TransCharge"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:textColorHint="#DBDBDB"
+            app:suffixText="@string/CashCharge_PurchasedCoin"
+            app:suffixTextColor="#DBDBDB">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#DBDBDB"
+                android:hint="@string/CashCharge_RechargedCoin"
+                android:inputType="none"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="#DBDBDB"
+                android:textStyle="bold"
+                app:suffixText="@string/CashCharge_PurchasedCoin" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/PurchaseCharge"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:textColorHint="#E24F39"
+            app:suffixText="@string/CashCharge_Won"
+            app:suffixTextColor="#E24F39">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#E24F39"
+                android:foregroundTint="#FFFFFF"
+                android:hint="@string/CashCharge_PurchaseCoin"
+                android:inputType="none"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="#E24F39"
+                android:textStyle="bold" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

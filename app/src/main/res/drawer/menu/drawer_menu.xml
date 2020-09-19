@@ -36,7 +36,7 @@
                     android:icon="@drawable/icon_sidemenu_info"
                     android:title="@string/Drawer_Menu_Info" />
                 <item
-                    android:id="@+id/nav_gallery"
+                    android:id="@+id/Drawer_Complain"
                     android:icon="@drawable/icon_sidemenu_alert"
                     android:title="@string/Drawer_Menu_Alert" />
                 <item
