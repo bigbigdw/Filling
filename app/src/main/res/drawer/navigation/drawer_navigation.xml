@@ -47,6 +47,12 @@
         tools:layout="@layout/fragment_slideshow" />
 
     <fragment
+        android:id="@+id/Drawer_FAQ"
+        android:name="com.example.filling.Drawer.FAQ.Drawer_FAQFragment"
+        android:label=""
+        tools:layout="@layout/drawer_faq" />
+
+    <fragment
         android:id="@+id/Drawer_Complain"
         android:name="com.example.filling.Drawer.Complain.Drawer_ComplainFragment"
         android:label=""

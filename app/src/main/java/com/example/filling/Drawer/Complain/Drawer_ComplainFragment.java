@@ -25,7 +25,7 @@ public class Drawer_ComplainFragment extends Fragment {
         Complain_BtnSubmit = root.findViewById(R.id.Complain_BtnSubmit);
 
         Complain_BtnSubmit.setOnClickListener(v -> {
-            Toast.makeText(requireContext().getApplicationContext(), "접수가 완료되었습니다", Toast.LENGTH_SHORT).show();
+            Toast.makeText(requireContext().getApplicationContext(), "접수가 완료되었습니다. 결과는 메일로 전송됩니다.", Toast.LENGTH_SHORT).show();
         });
 
         Complain_BtnResult.setOnClickListener(v -> {
