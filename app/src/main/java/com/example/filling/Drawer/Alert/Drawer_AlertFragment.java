@@ -10,6 +10,7 @@ import android.widget.ListView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.filling.R;
 
@@ -50,6 +51,14 @@ public class Drawer_AlertFragment extends Fragment {
 //                Toast.makeText(requireContext().getApplicationContext(), "선택 : " + item.getContents(), Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(requireContext().getApplicationContext(), Alert_Detail.class);
             startActivity(intent);
+        });
+
+        root.findViewById(R.id.TooolbarBack).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(Drawer_AlertFragment.this)
+                        .navigate(R.id.action_Drawer_Alert_to_bottom_filling);
+            }
         });
 
         return root;

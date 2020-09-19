@@ -17,6 +17,20 @@
             android:layout_height="wrap_content"
             app:popupTheme="@style/AppTheme.PopupOverlay">
 
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="30dp"
+                android:layout_height="30dp">
+
+                <ImageView
+                    android:id="@+id/TooolbarBack"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="?attr/homeAsUpIndicator"
+                    android:contentDescription="@string/TODO" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
             <TextView
                 android:id="@+id/textView5"
                 android:layout_width="wrap_content"

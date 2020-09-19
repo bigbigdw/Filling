@@ -8,6 +8,7 @@ import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.filling.R;
 import com.github.aakira.expandablelayout.ExpandableRelativeLayout;
@@ -62,6 +63,14 @@ public class Drawer_FAQFragment extends Fragment {
         Btn7.setOnClickListener(v -> {
             Expand7 = (ExpandableRelativeLayout) root.findViewById(R.id.Expand7);
             Expand7.toggle(); // toggle expand and collapse
+        });
+
+        root.findViewById(R.id.TooolbarBack).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(Drawer_FAQFragment.this)
+                        .navigate(R.id.action_Drawer_FAQ_to_bottom_filling);
+            }
         });
 
         return root;

@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.filling.R;
 
@@ -31,6 +32,14 @@ public class Drawer_ComplainFragment extends Fragment {
         Complain_BtnResult.setOnClickListener(v -> {
 //            Intent intent = new Intent(requireContext().getApplicationContext(), Complain_Result.class);
 //            startActivity(intent);
+        });
+
+        root.findViewById(R.id.TooolbarBack).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(Drawer_ComplainFragment.this)
+                        .navigate(R.id.action_Drawer_Complain_to_bottom_filling);
+            }
         });
 
         return root;

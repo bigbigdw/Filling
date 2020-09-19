@@ -11,6 +11,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.navigation.fragment.NavHostFragment;
 import androidx.viewpager.widget.ViewPager;
 
 import com.example.filling.R;
@@ -40,6 +41,14 @@ public class Drawer_CashChargeFragment extends Fragment {
 
         tabLayout = (TabLayout) root.findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
+
+        root.findViewById(R.id.TooolbarBack).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(Drawer_CashChargeFragment.this)
+                        .navigate(R.id.action_Drawer_CashCharge_to_bottom_filling );
+            }
+        });
 
         return root;
     }

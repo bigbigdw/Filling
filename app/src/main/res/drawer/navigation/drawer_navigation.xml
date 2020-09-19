@@ -56,41 +56,69 @@
         android:id="@+id/Drawer_SystemInfo"
         android:name="com.example.filling.Drawer.SystemInfo.Drawer_SystemInfoFragment"
         android:label=""
-        tools:layout="@layout/drawer_systeminfo" />
+        tools:layout="@layout/drawer_systeminfo" >
+        <action
+            android:id="@+id/action_Drawer_SystemInfo_to_bottom_filling"
+            app:destination="@id/bottom_filling" />
+    </fragment>
 
     <fragment
         android:id="@+id/Drawer_FAQ"
         android:name="com.example.filling.Drawer.FAQ.Drawer_FAQFragment"
         android:label=""
-        tools:layout="@layout/drawer_faq" />
+        tools:layout="@layout/drawer_faq" >
+        <action
+            android:id="@+id/action_Drawer_FAQ_to_bottom_filling"
+            app:destination="@id/bottom_filling" />
+    </fragment>
 
     <fragment
         android:id="@+id/Drawer_Complain"
         android:name="com.example.filling.Drawer.Complain.Drawer_ComplainFragment"
         android:label=""
-        tools:layout="@layout/drawer_complain" />
+        tools:layout="@layout/drawer_complain" >
+        <action
+            android:id="@+id/action_Drawer_Complain_to_bottom_filling"
+            app:destination="@id/bottom_filling" />
+    </fragment>
 
     <fragment
         android:id="@+id/Drawer_Alert"
         android:name="com.example.filling.Drawer.Alert.Drawer_AlertFragment"
         android:label=""
-        tools:layout="@layout/drawer_alert" />
+        tools:layout="@layout/drawer_alert" >
+        <action
+            android:id="@+id/action_Drawer_Alert_to_bottom_filling"
+            app:destination="@id/bottom_filling" />
+    </fragment>
 
     <fragment
         android:id="@+id/Drawer_CashExchange"
         android:name="com.example.filling.Drawer.Cash_Exchange.Drawer_CashExchangeFragment"
         android:label=""
-        tools:layout="@layout/drawer_cashexchange" />
+        tools:layout="@layout/drawer_cashexchange" >
+        <action
+            android:id="@+id/action_Drawer_CashExchange_to_bottom_filling"
+            app:destination="@id/bottom_filling" />
+    </fragment>
 
     <fragment
         android:id="@+id/Drawer_CashGift"
         android:name="com.example.filling.Drawer.Cash_Gift.Drawer_CashGiftFragment"
         android:label=""
-        tools:layout="@layout/drawer_cash_charge" />
+        tools:layout="@layout/drawer_cash_charge" >
+        <action
+            android:id="@+id/action_Drawer_CashGift_to_bottom_filling"
+            app:destination="@id/bottom_filling" />
+    </fragment>
 
     <fragment
         android:id="@+id/Drawer_CashCharge"
         android:name="com.example.filling.Drawer.Cash_Charge.Drawer_CashChargeFragment"
         android:label=""
-        tools:layout="@layout/drawer_cash_charge" />
+        tools:layout="@layout/drawer_cash_charge" >
+        <action
+            android:id="@+id/action_Drawer_CashCharge_to_bottom_filling"
+            app:destination="@id/bottom_filling" />
+    </fragment>
 </navigation>

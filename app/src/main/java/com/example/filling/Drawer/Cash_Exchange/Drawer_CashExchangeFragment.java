@@ -18,6 +18,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.filling.Drawer.Cash_Purchase;
 import com.example.filling.R;
@@ -116,6 +117,14 @@ public class Drawer_CashExchangeFragment extends Fragment {
                 return true;
             }
             return false;
+        });
+
+        root.findViewById(R.id.TooolbarBack).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(Drawer_CashExchangeFragment.this)
+                        .navigate(R.id.action_Drawer_CashExchange_to_bottom_filling);
+            }
         });
 
         return root;
