@@ -241,6 +241,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:onClick="onCLickPolicy"
                     android:text="@string/Register_Checkbox_Detail"
                     android:textAlignment="viewEnd"
                     android:textColor="#4F9BF0" />
@@ -271,6 +272,7 @@
                     android:layout_weight="1"
                     android:text="@string/Register_Checkbox_Detail"
                     android:textAlignment="viewEnd"
+                    android:onClick="onCLickPolicy"
                     android:textColor="#4F9BF0" />
             </LinearLayout>
 

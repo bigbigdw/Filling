@@ -14,6 +14,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import com.example.filling.Policy.Policy;
 import com.example.filling.R;
 import com.google.android.material.textfield.TextInputLayout;
 
@@ -120,6 +121,11 @@ public class Activity_Register extends AppCompatActivity {
 
     public void onClickNum(View v) {
         Toast.makeText(getApplicationContext(),"인증이 완료되었습니다", Toast.LENGTH_SHORT).show();
+    }
+
+    public void onCLickPolicy(View v) {
+        Intent intent = new Intent(getApplicationContext(), Policy.class);
+        startActivity(intent);
     }
 
     public void onClickRegister(View v) {

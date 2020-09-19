@@ -47,6 +47,18 @@
         tools:layout="@layout/fragment_slideshow" />
 
     <fragment
+        android:id="@+id/Drawer_Policy"
+        android:name="com.example.filling.Policy.Drawer_PolicyFragment"
+        android:label=""
+        tools:layout="@layout/policy" />
+
+    <fragment
+        android:id="@+id/Drawer_SystemInfo"
+        android:name="com.example.filling.Drawer.SystemInfo.Drawer_SystemInfoFragment"
+        android:label=""
+        tools:layout="@layout/drawer_systeminfo" />
+
+    <fragment
         android:id="@+id/Drawer_FAQ"
         android:name="com.example.filling.Drawer.FAQ.Drawer_FAQFragment"
         android:label=""

@@ -44,11 +44,11 @@
                     android:icon="@drawable/icon_sidemenu_faq"
                     android:title="@string/Drawer_Menu_FAQ" />
                 <item
-                    android:id="@+id/nav_slideshow"
+                    android:id="@+id/Drawer_SystemInfo"
                     android:icon="@drawable/icon_sidemenu_system"
                     android:title="@string/Drawer_Menu_System" />
                 <item
-                    android:id="@+id/nav_gallery"
+                    android:id="@+id/Drawer_Policy"
                     android:icon="@drawable/icon_sidemenu_policy"
                     android:title="@string/Drawer_Menu_Policy" />
             </group>

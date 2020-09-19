@@ -21,6 +21,10 @@
 
         </activity>
         <activity
+            android:name=".Policy.Policy"
+            android:label=""
+            android:theme="@style/FindTheme" />
+        <activity
             android:name=".Drawer.Alert.Alert_Detail"
             android:label=""
             android:theme="@style/FindTheme" />
