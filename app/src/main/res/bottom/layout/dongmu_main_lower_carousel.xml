@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="172dp"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/Dongmu_Lower_Img"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:contentDescription="@string/TODO"
+                android:scaleType="centerCrop"
+                android:src="@drawable/dongmu_lower_ex01" />
+
+            <LinearLayout
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/dongmu_lower_markbg"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/Dongmu_Lower_MarkText"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/DongmuLowerCarosel_Mark"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="13sp" />
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageView20"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="0dp"
+                android:contentDescription="@string/TODO"
+                android:src="@drawable/donmu_lower_fav_on" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#333742"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/Dongmu_Lower_Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/DongmuLowerCarosel_Title"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|end"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageView18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:contentDescription="@string/TODO"
+                        android:fillColor="#ffffff"
+                        app:srcCompat="@drawable/ic_icon_message" />
+
+                    <TextView
+                        android:id="@+id/Dongmu_Lower_Comment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:text="@string/DongmuLowerCarosel_Recommend"
+                        android:textColor="#FFFFFF" />
+
+                    <ImageView
+                        android:id="@+id/imageView19"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginEnd="8dp"
+                        android:contentDescription="@string/TODO"
+                        android:fillColor="#ffffff"
+                        app:srcCompat="@drawable/ic_icon_recommend" />
+
+                    <TextView
+                        android:id="@+id/Dongmu_Lower_Recommend"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/DongmuLowerCarosel_Comment"
+                        android:textColor="#FFFFFF" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/Dongmu_Lower_Tag1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/DongmuLowerCarosel_Tag1"
+                    android:textColor="#888888" />
+
+                <TextView
+                    android:id="@+id/Dongmu_Lower_Tag2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/DongmuLowerCarosel_Tag2"
+                    android:textColor="#888888" />
+
+                <TextView
+                    android:id="@+id/Dongmu_Lower_Tag3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/DongmuLowerCarosel_Tag3"
+                    android:textColor="#888888" />
+
+                <TextView
+                    android:id="@+id/Dongmu_Lower_Tag4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/DongmuLowerCarosel_Tag3"
+                    android:textColor="#888888" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#DBDBDB"
+            android:orientation="vertical" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

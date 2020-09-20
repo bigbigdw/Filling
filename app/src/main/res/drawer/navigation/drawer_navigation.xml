@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/drawer_navigation"
-    app:startDestination="@+id/bottom_filling">
+    app:startDestination="@+id/Bottom_filling">
 
     <fragment
         android:id="@+id/navigation_home"
@@ -12,7 +12,7 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/bottom_filling"
+        android:id="@+id/Bottom_filling"
         android:name="com.example.filling.Bottom.Filling.Bottom_FillingFragment"
         android:label=""
         tools:layout="@layout/bottom_filling" >
@@ -47,10 +47,20 @@
         tools:layout="@layout/fragment_slideshow" />
 
     <fragment
+        android:id="@+id/Bottom_Dongmu"
+        android:name="com.example.filling.Bottom.Dongmu.Bottom_DongmuFragment"
+        android:label=""
+        tools:layout="@layout/bottom_dongmu" />
+
+    <fragment
         android:id="@+id/Drawer_Policy"
         android:name="com.example.filling.Policy.Drawer_PolicyFragment"
         android:label=""
-        tools:layout="@layout/policy" />
+        tools:layout="@layout/policy" >
+        <action
+            android:id="@+id/action_Drawer_Policy_to_Bottom_filling"
+            app:destination="@id/Bottom_filling" />
+    </fragment>
 
     <fragment
         android:id="@+id/Drawer_SystemInfo"
@@ -59,7 +69,7 @@
         tools:layout="@layout/drawer_systeminfo" >
         <action
             android:id="@+id/action_Drawer_SystemInfo_to_bottom_filling"
-            app:destination="@id/bottom_filling" />
+            app:destination="@id/Bottom_filling" />
     </fragment>
 
     <fragment
@@ -69,7 +79,7 @@
         tools:layout="@layout/drawer_faq" >
         <action
             android:id="@+id/action_Drawer_FAQ_to_bottom_filling"
-            app:destination="@id/bottom_filling" />
+            app:destination="@id/Bottom_filling" />
     </fragment>
 
     <fragment
@@ -79,7 +89,7 @@
         tools:layout="@layout/drawer_complain" >
         <action
             android:id="@+id/action_Drawer_Complain_to_bottom_filling"
-            app:destination="@id/bottom_filling" />
+            app:destination="@id/Bottom_filling" />
     </fragment>
 
     <fragment
@@ -89,7 +99,7 @@
         tools:layout="@layout/drawer_alert" >
         <action
             android:id="@+id/action_Drawer_Alert_to_bottom_filling"
-            app:destination="@id/bottom_filling" />
+            app:destination="@id/Bottom_filling" />
     </fragment>
 
     <fragment
@@ -99,7 +109,7 @@
         tools:layout="@layout/drawer_cashexchange" >
         <action
             android:id="@+id/action_Drawer_CashExchange_to_bottom_filling"
-            app:destination="@id/bottom_filling" />
+            app:destination="@id/Bottom_filling" />
     </fragment>
 
     <fragment
@@ -109,7 +119,7 @@
         tools:layout="@layout/drawer_cash_charge" >
         <action
             android:id="@+id/action_Drawer_CashGift_to_bottom_filling"
-            app:destination="@id/bottom_filling" />
+            app:destination="@id/Bottom_filling" />
     </fragment>
 
     <fragment
@@ -119,6 +129,6 @@
         tools:layout="@layout/drawer_cash_charge" >
         <action
             android:id="@+id/action_Drawer_CashCharge_to_bottom_filling"
-            app:destination="@id/bottom_filling" />
+            app:destination="@id/Bottom_filling" />
     </fragment>
 </navigation>

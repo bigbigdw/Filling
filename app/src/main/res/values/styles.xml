@@ -15,4 +15,9 @@
     </style>
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="MaterialTheme.Bridge" parent="Theme.MaterialComponents.Bridge" />
+    <style name="MaterialTheme.Light.Bridge" parent="Theme.MaterialComponents.Light.Bridge" />
+    <style name="MaterialTheme.NoActionBar.Bridge" parent="Theme.MaterialComponents.NoActionBar.Bridge" />
+    <style name="MaterialTheme.Light.NoActionBar.Bridge" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge" />
+    <style name="MaterialTheme.Light.DarkActionBar.Bridge" parent="Theme.MaterialComponents.Light.DarkActionBar.Bridge" />
 </resources>

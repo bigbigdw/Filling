@@ -9,6 +9,7 @@ import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.filling.Main;
 import com.example.filling.R;
@@ -27,6 +28,10 @@ public class Drawer_PolicyFragment extends Fragment {
             Intent intent = new Intent(requireContext().getApplicationContext(), Main.class);
             startActivity(intent);
         });
+
+        root.findViewById(R.id.TooolbarBack).setOnClickListener(view -> NavHostFragment.findNavController(Drawer_PolicyFragment.this)
+                .navigate(R.id.action_Drawer_Policy_to_Bottom_filling));
+
 
         return root;
     }

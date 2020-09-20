@@ -5,13 +5,10 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
-import androidx.navigation.NavDestination;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
@@ -46,7 +43,7 @@ public class Main extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.Drawer_SystemInfo, R.id.Drawer_Policy, R.id.Drawer_FAQ, R.id.Drawer_Alert, R.id.Drawer_CashExchange, R.id.Drawer_CashCharge, R.id.Drawer_CashGift, R.id.bottom_filling, R.id.Drawer_Complain)
+                R.id.Bottom_Dongmu, R.id.Drawer_SystemInfo, R.id.Drawer_Policy, R.id.Drawer_FAQ, R.id.Drawer_Alert, R.id.Drawer_CashExchange, R.id.Drawer_CashCharge, R.id.Drawer_CashGift, R.id.Bottom_filling, R.id.Drawer_Complain)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
@@ -56,21 +53,17 @@ public class Main extends AppCompatActivity {
 
         BottomNavigationView navView = findViewById(R.id.nav_vi);
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.Drawer_SystemInfo, R.id.Drawer_Policy, R.id.Drawer_FAQ, R.id.Drawer_Alert, R.id.Drawer_CashExchange, R.id.Drawer_CashCharge, R.id.Drawer_CashGift, R.id.bottom_filling, R.id.Drawer_Complain)
+                R.id.Bottom_Dongmu, R.id.Drawer_SystemInfo, R.id.Drawer_Policy, R.id.Drawer_FAQ, R.id.Drawer_Alert, R.id.Drawer_CashExchange, R.id.Drawer_CashCharge, R.id.Drawer_CashGift, R.id.Bottom_filling, R.id.Drawer_Complain)
                 .build();
         NavigationUI.setupWithNavController(navView, navController);
 
-        navController.addOnDestinationChangedListener(new NavController.OnDestinationChangedListener() {
-            @Override
-            public void onDestinationChanged(@NonNull NavController controller,
-                                             @NonNull NavDestination destination, @Nullable Bundle arguments) {
-                if (destination.getId() == R.id.bottom_filling || destination.getId() == R.id.navigation_dashboard || destination.getId() == R.id.navigation_notifications || destination.getId() == R.id.navigation_home) {
-                    navView.setVisibility(View.VISIBLE);
-                    toolbar.setVisibility(View.VISIBLE);
-                } else {
-                    navView.setVisibility(View.GONE);
-                    toolbar.setVisibility(View.GONE);
-                }
+        navController.addOnDestinationChangedListener((controller, destination, arguments) -> {
+            if (destination.getId() == R.id.Bottom_filling || destination.getId() == R.id.Bottom_Dongmu) {
+                navView.setVisibility(View.VISIBLE);
+                toolbar.setVisibility(View.VISIBLE);
+            } else {
+                navView.setVisibility(View.GONE);
+                toolbar.setVisibility(View.GONE);
             }
         });
 

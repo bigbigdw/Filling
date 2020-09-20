@@ -6,17 +6,4 @@
     android:layout_height="match_parent"
     android:background="#DD0180">
 
-    <com.synnapps.carouselview.CarouselView
-        android:id="@+id/customCarouselView"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        app:disableAutoPlayOnUserInteraction="true"
-        app:fillColor="#FFFFFFFF"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:pageColor="#00000000"
-        app:radius="6dp"
-        app:strokeColor="#FF777777"
-        app:strokeWidth="1dp" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
