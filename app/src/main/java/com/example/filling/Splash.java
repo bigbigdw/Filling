@@ -1,16 +1,14 @@
-package com.example.filling.Login;
+package com.example.filling;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
 
-import com.example.filling.R;
-
-public class Activity_Splash extends Activity {
+public class Splash extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.login_splash);
+        setContentView(R.layout.splash);
         startLoading();
     }
     private void startLoading() {
@@ -23,3 +21,4 @@ public class Activity_Splash extends Activity {
         }, 2000);
     }
 }
+

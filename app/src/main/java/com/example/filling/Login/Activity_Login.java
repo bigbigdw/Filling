@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.filling.Main;
 import com.example.filling.R;
+import com.example.filling.Splash;
 import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.Objects;
@@ -29,7 +30,7 @@ public class Activity_Login extends AppCompatActivity {
         PWtext = findViewById(R.id.PWtext);
         final CheckBox AutoLogin = findViewById(R.id.AutoLogin);
 
-        Intent intent = new Intent(this, Activity_Splash.class);
+        Intent intent = new Intent(this, Splash.class);
         startActivity(intent);
 
         AutoLogin.setOnCheckedChangeListener(

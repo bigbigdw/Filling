@@ -32,6 +32,15 @@
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
+            <ImageView
+                android:id="@+id/TooolbarBack"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="?attr/homeAsUpIndicator"
+                android:contentDescription="@string/TODO" />
+
         </androidx.appcompat.widget.Toolbar>
 
     </com.google.android.material.appbar.AppBarLayout>

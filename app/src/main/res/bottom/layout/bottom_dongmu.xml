@@ -18,19 +18,20 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:visibility="visible">
 
-            <com.synnapps.carouselview.CarouselView
-                android:id="@+id/Dongmu_Upper_carousel"
-                android:layout_width="match_parent"
-                android:layout_height="175dp"
-                app:disableAutoPlayOnUserInteraction="false"
-                app:fillColor="#00FFFFFF"
-                app:pageColor="#00000000"
-                app:radius="6dp"
-                app:strokeColor="#00777777"
-                app:strokeWidth="1dp"
-                tools:visibility="gone" />
+<!--            <com.synnapps.carouselview.CarouselView-->
+<!--                android:id="@+id/Dongmu_Upper_carousel"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="175dp"-->
+<!--                android:visibility="gone"-->
+<!--                app:disableAutoPlayOnUserInteraction="false"-->
+<!--                app:fillColor="#00FFFFFF"-->
+<!--                app:pageColor="#00000000"-->
+<!--                app:radius="6dp"-->
+<!--                app:strokeColor="#00777777"-->
+<!--                app:strokeWidth="1dp" />-->
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -39,8 +40,7 @@
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
                 android:paddingLeft="16dp"
-                android:paddingRight="16dp"
-                tools:visibility="gone">
+                android:paddingRight="16dp">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -97,40 +97,18 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <include
-                layout="@layout/dongmu_main_horizontal_scroll"
-                tools:visibility="gone" />
+            <include layout="@layout/dongmu_main_horizontal_scroll" />
 
             <include
                 layout="@layout/dongmu_main_table"
                 tools:visibility="gone" />
 
-            <com.google.android.material.tabs.TabLayout
-                android:id="@+id/tabs"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:background="#FFFFFF"
-                app:itemBackground="@android:color/transparent"
-                app:itemIconTint="@color/drawer_item"
-                app:itemTextColor="@color/drawer_item"
-                app:tabIndicatorColor="#4971EF"
-                app:tabSelectedTextColor="#4971EF"
-                app:tabTextColor="#000000"
-                tools:visibility="gone" />
-
-            <androidx.viewpager.widget.ViewPager
-                android:id="@+id/view_pager"
-                android:layout_width="match_parent"
-                android:layout_height="820dp"
-                app:layout_behavior="@string/appbar_scrolling_view_behavior"
-                tools:visibility="gone">
-
-            </androidx.viewpager.widget.ViewPager>
+            <!--            <include-->
+            <!--                layout="@layout/dongmu_main_tabs" />-->
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="21dp"
                 android:layout_marginBottom="19dp"
                 android:gravity="center_horizontal"
@@ -205,7 +183,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginBottom="19dp"
                 android:gravity="center_horizontal"
                 android:orientation="horizontal">
@@ -240,9 +218,10 @@
             <ListView
                 android:id="@+id/Dongmu_Bottom_List"
                 android:layout_width="match_parent"
-                android:layout_height="700dp"
+                android:layout_height="1400dp"
                 android:layout_marginTop="8dp"
                 android:background="#FFFFFF"
+                android:drawSelectorOnTop="true"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 

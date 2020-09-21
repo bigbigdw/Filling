@@ -12,7 +12,7 @@
         android:title="@string/Bottom_Dongmu" />
 
     <item
-        android:id="@+id/navigation_notifications"
+        android:id="@+id/Bottom_Coupon"
         android:icon="@drawable/icon_bottom_coupon"
         android:title="@string/Bottom_Coupon" />
 

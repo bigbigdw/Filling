@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.synnapps.carouselview.CarouselView
+                android:id="@+id/Coupon_Carousel"
+                android:layout_width="match_parent"
+                android:layout_height="175dp"
+                android:background="#F44336"
+                app:disableAutoPlayOnUserInteraction="false"
+                app:fillColor="#00FFFFFF"
+                app:pageColor="#00000000"
+                app:radius="6dp"
+                app:strokeColor="#00777777"
+                app:strokeWidth="1dp"
+                tools:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="19dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                tools:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="@string/Coupon_BestText3"
+                    android:textAlignment="center"
+                    android:textColor="#333742"
+                    android:textSize="32sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Coupon_BestText4"
+                    android:textColor="#333742"
+                    android:textSize="25sp" />
+
+            </LinearLayout>
+
+            <include
+                layout="@layout/coupon_main_category"
+                tools:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="19dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="@string/Coupon_BestText1"
+                    android:textAlignment="center"
+                    android:textColor="#333742"
+                    android:textSize="32sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Coupon_BestText2"
+                    android:textColor="#333742"
+                    android:textSize="25sp" />
+
+            </LinearLayout>
+
+            <include layout="@layout/coupon_main_table" />
+
+            <ImageView
+                android:id="@+id/imageView14"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:contentDescription="@string/TODO"
+                app:srcCompat="@drawable/filling_ad11" />
+
+            <ImageView
+                android:id="@+id/imageView17"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:contentDescription="@string/TODO"
+                app:srcCompat="@drawable/filling_ad12" />
+
+            <include layout="@layout/footer" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

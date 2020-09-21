@@ -59,7 +59,7 @@
             android:label=""
             android:theme="@style/FindTheme"  />
         <activity
-            android:name=".Login.Activity_Splash"
+            android:name=".Splash"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
     </application>
 

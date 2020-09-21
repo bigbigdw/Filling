@@ -47,6 +47,12 @@
         tools:layout="@layout/fragment_slideshow" />
 
     <fragment
+        android:id="@+id/Bottom_Coupon"
+        android:name="com.example.filling.Bottom.Coupon.Bottom_CouponFragment"
+        android:label=""
+        tools:layout="@layout/bottom_coupon" />
+
+    <fragment
         android:id="@+id/Bottom_Dongmu"
         android:name="com.example.filling.Bottom.Dongmu.Bottom_DongmuFragment"
         android:label=""

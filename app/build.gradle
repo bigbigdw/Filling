@@ -47,6 +47,7 @@ dependencies {
     implementation 'net.cachapa.expandablelayout:expandablelayout:2.9.2'
     implementation 'androidx.recyclerview:recyclerview:1.2.0-alpha05'
     implementation 'com.github.aakira:expandable-layout:1.4.2@aar'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'

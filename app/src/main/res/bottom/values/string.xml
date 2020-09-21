@@ -50,6 +50,7 @@
     <string name="Dongmu_Category09">이사/화물</string>
     <string name="Dongmu_Category10">펼쳐보기</string>
     <string name="Dongmu_Category11">접기</string>
+    <string name="Dongmu_Category00">전체보기</string>
     <string name="Dongmu_Bottom1Text1">오늘은</string>
     <string name="Dongmu_Bottom1Text2">여기</string>
     <string name="Dongmu_Bottom1Text3">어때?</string>
@@ -77,4 +78,28 @@
     <string name="DongmuLowerCarosel_Tag2">#앙념치킨</string>
     <string name="DongmuLowerCarosel_Tag3">#마늘치킨</string>
     <string name="DongmuLowerCarosel_Tag4">#간장치킨</string>
+    <!--모바일 상품권-->
+    <string name="Coupon_Category01">아이스크림</string>
+    <string name="Coupon_Category02">피자</string>
+    <string name="Coupon_Category03">편의점</string>
+    <string name="Coupon_Category04">KT</string>
+    <string name="Coupon_Category05">주방</string>
+    <string name="Coupon_Category06">도넛</string>
+    <string name="Coupon_Category07">커피</string>
+    <string name="Coupon_Category08">건강/식품</string>
+    <string name="Coupon_Category09">영화</string>
+    <string name="Coupon_Category10">화장품</string>
+    <string name="Coupon_Category11">치킨</string>
+    <string name="Coupon_Category12">햄버거</string>
+    <string name="Coupon_Category13">음악</string>
+    <string name="Coupon_Category14">도서</string>
+    <string name="Coupon_Category15">외식</string>
+    <string name="Coupon_Category16">용역</string>
+    <string name="Coupon_BestText1">베스트</string>
+    <string name="Coupon_BestText2">상품권</string>
+    <string name="Coupon_BestText3">브랜드</string>
+    <string name="Coupon_BestText4">카테고리</string>
+    <string name="Coupon_CategoryList">스타벅스</string>
+    <string name="Coupon_CategoryListTitle">아이스 카페아메리카노 Tall</string>
+    <string name="Coupon_CategoryListPrice">4100원</string>
 </resources>
