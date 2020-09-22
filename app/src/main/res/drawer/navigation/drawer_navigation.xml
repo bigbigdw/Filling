@@ -6,12 +6,6 @@
     app:startDestination="@+id/Bottom_filling">
 
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.example.filling.ui.home.HomeFragment"
-        android:label=""
-        tools:layout="@layout/fragment_home" />
-
-    <fragment
         android:id="@+id/Bottom_filling"
         android:name="com.example.filling.Bottom.Filling.Bottom_FillingFragment"
         android:label=""
@@ -22,35 +16,16 @@
     </fragment>
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.example.filling.ui.dashboard.DashboardFragment"
-        android:label=""
-        tools:layout="@layout/fragment_dashboard" />
-
-    <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.example.filling.ui.notifications.NotificationsFragment"
-        android:label=""
-        tools:layout="@layout/fragment_notifications" />
-
-    <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.filling.ui.gallery.GalleryFragment"
-        android:label=""
-        tools:layout="@layout/fragment_gallery" >
-    </fragment>
-
-    <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.filling.ui.slideshow.SlideshowFragment"
-        android:label=""
-        tools:layout="@layout/fragment_slideshow" />
-
-    <fragment
         android:id="@+id/Bottom_Coupon"
         android:name="com.example.filling.Bottom.Coupon.Bottom_CouponFragment"
         android:label=""
         tools:layout="@layout/bottom_coupon" />
+
+    <fragment
+        android:id="@+id/Bottom_Myinfo"
+        android:name="com.example.filling.Bottom.MyInfo.Bottom_MyInfoFragment"
+        android:label=""
+        tools:layout="@layout/bottom_myinfo" />
 
     <fragment
         android:id="@+id/Bottom_Dongmu"

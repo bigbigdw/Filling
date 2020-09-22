@@ -42,7 +42,7 @@ public class Main extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.Bottom_Coupon, R.id.Bottom_Dongmu, R.id.Drawer_SystemInfo, R.id.Drawer_Policy, R.id.Drawer_FAQ, R.id.Drawer_Alert, R.id.Drawer_CashExchange, R.id.Drawer_CashCharge, R.id.Drawer_CashGift, R.id.Bottom_filling, R.id.Drawer_Complain)
+                R.id.Bottom_Myinfo, R.id.Bottom_Coupon, R.id.Bottom_Dongmu, R.id.Drawer_SystemInfo, R.id.Drawer_Policy, R.id.Drawer_FAQ, R.id.Drawer_Alert, R.id.Drawer_CashExchange, R.id.Drawer_CashCharge, R.id.Drawer_CashGift, R.id.Bottom_filling, R.id.Drawer_Complain)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
@@ -52,12 +52,12 @@ public class Main extends AppCompatActivity {
 
         BottomNavigationView navView = findViewById(R.id.nav_vi);
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.Bottom_Coupon, R.id.Bottom_Dongmu, R.id.Drawer_SystemInfo, R.id.Drawer_Policy, R.id.Drawer_FAQ, R.id.Drawer_Alert, R.id.Drawer_CashExchange, R.id.Drawer_CashCharge, R.id.Drawer_CashGift, R.id.Bottom_filling, R.id.Drawer_Complain)
+                R.id.Bottom_Myinfo,R.id.Bottom_Coupon, R.id.Bottom_Dongmu, R.id.Drawer_SystemInfo, R.id.Drawer_Policy, R.id.Drawer_FAQ, R.id.Drawer_Alert, R.id.Drawer_CashExchange, R.id.Drawer_CashCharge, R.id.Drawer_CashGift, R.id.Bottom_filling, R.id.Drawer_Complain)
                 .build();
         NavigationUI.setupWithNavController(navView, navController);
 
         navController.addOnDestinationChangedListener((controller, destination, arguments) -> {
-            if (destination.getId() == R.id.Bottom_filling || destination.getId() == R.id.Bottom_Dongmu || destination.getId() == R.id.Bottom_Coupon) {
+            if (destination.getId() == R.id.Bottom_filling || destination.getId() == R.id.Bottom_Dongmu || destination.getId() == R.id.Bottom_Coupon|| destination.getId() == R.id.Bottom_Myinfo) {
                 navView.setVisibility(View.VISIBLE);
                 toolbar.setVisibility(View.VISIBLE);
             } else {

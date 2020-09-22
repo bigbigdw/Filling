@@ -17,7 +17,7 @@
         android:title="@string/Bottom_Coupon" />
 
     <item
-        android:id="@+id/navigation_home"
+        android:id="@+id/Bottom_Myinfo"
         android:icon="@drawable/icon_bottom_info"
         android:title="@string/Bottom_Info" />
 

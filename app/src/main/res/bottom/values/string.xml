@@ -102,4 +102,11 @@
     <string name="Coupon_CategoryList">스타벅스</string>
     <string name="Coupon_CategoryListTitle">아이스 카페아메리카노 Tall</string>
     <string name="Coupon_CategoryListPrice">4100원</string>
+    <!--내 정보-->
+    <string name="Myinfo_Text1">내 정보</string>
+    <string name="Myinfo_Text2">비밀번호</string>
+    <string name="Myinfo_Text3">카드 비밀번호</string>
+    <string name="Myinfo_Text4">내 쿠폰함</string>
+    <string name="Myinfo_Text5">Cash</string>
+    <string name="Myinfo_Text6">마일리지</string>
 </resources>
