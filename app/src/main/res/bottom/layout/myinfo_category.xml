@@ -32,7 +32,7 @@
                     android:layout_height="40dp"
                     android:layout_marginBottom="10dp"
                     android:contentDescription="@string/TODO"
-                    app:srcCompat="@drawable/ic_icon_editinfo" />
+                    app:srcCompat="@drawable/myinfo_myinfo" />
 
                 <Space
                     android:layout_width="match_parent"
@@ -62,7 +62,7 @@
                     android:layout_height="40dp"
                     android:layout_marginBottom="10dp"
                     android:contentDescription="@string/TODO"
-                    app:srcCompat="@drawable/ic_icon_password2" />
+                    app:srcCompat="@drawable/myinfo_password" />
 
                 <Space
                     android:layout_width="match_parent"
@@ -90,7 +90,7 @@
                     android:layout_height="40dp"
                     android:layout_marginBottom="10dp"
                     android:contentDescription="@string/TODO"
-                    app:srcCompat="@drawable/ic_icon_cardpw"  />
+                    app:srcCompat="@drawable/myinfo_purchase" />
 
                 <Space
                     android:layout_width="match_parent"
@@ -124,7 +124,7 @@
                     android:layout_height="40dp"
                     android:layout_marginBottom="10dp"
                     android:contentDescription="@string/TODO"
-                    app:srcCompat="@drawable/ic_icon_coupon" />
+                    app:srcCompat="@drawable/myinfo_coupon" />
 
                 <Space
                     android:layout_width="match_parent"
@@ -153,7 +153,7 @@
                     android:layout_height="40dp"
                     android:layout_marginBottom="10dp"
                     android:contentDescription="@string/TODO"
-                    app:srcCompat="@drawable/ic_icon_reportcash" />
+                    app:srcCompat="@drawable/myinfo_case" />
 
                 <Space
                     android:layout_width="match_parent"
@@ -182,7 +182,7 @@
                     android:layout_height="40dp"
                     android:layout_marginBottom="10dp"
                     android:contentDescription="@string/TODO"
-                    app:srcCompat="@drawable/ic_icon_reportmileage" />
+                    app:srcCompat="@drawable/myinfo_mileage" />
 
                 <Space
                     android:layout_width="match_parent"
