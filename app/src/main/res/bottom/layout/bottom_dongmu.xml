@@ -33,69 +33,7 @@
 <!--                app:strokeColor="#00777777"-->
 <!--                app:strokeWidth="1dp" />-->
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:baselineAligned="false"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="12dp"
-                        android:layout_height="17dp"
-                        android:contentDescription="@string/TODO"
-                        app:srcCompat="@drawable/icon_dongmu_location" />
-
-                    <Space
-                        android:layout_width="8dp"
-                        android:layout_height="wrap_content" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/Dongmu_Location"
-                        android:textColor="#333742" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center_vertical|end"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="15dp"
-                        android:layout_height="15dp"
-                        android:contentDescription="@string/TODO"
-                        app:srcCompat="@drawable/icon_dongmu_weather" />
-
-                    <Space
-                        android:layout_width="8dp"
-                        android:layout_height="wrap_content" />
-
-                    <TextView
-                        android:id="@+id/textView78"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/Dongmu_Weather1" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:text="@string/Dongmu_Weather2"
-                        android:textColor="#333742"
-                        android:textStyle="bold" />
-                </LinearLayout>
-            </LinearLayout>
+            <include layout="@layout/dongmu_location" />
 
             <include layout="@layout/dongmu_main_horizontal_scroll" />
 
@@ -152,6 +90,7 @@
                 app:strokeWidth="1dp" />
 
             <LinearLayout
+                android:id="@+id/DongmuSearch"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginBottom="35dp"
@@ -161,19 +100,18 @@
                 android:paddingRight="16dp">
 
                 <EditText
-                    android:id="@+id/editTextTextPersonName3"
+                    android:id="@+id/DongmuSearchText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
                     android:autofillHints=""
                     android:ems="10"
                     android:hint="@string/Dongmu_SearchText"
-                    android:inputType="none|textPersonName"
                     android:paddingStart="16dp"
                     android:paddingEnd="1dp" />
 
                 <ImageView
-                    android:id="@+id/imageView21"
+                    android:id="@+id/onClickSearch"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_weight="1"

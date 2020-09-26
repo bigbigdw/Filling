@@ -1,11 +1,16 @@
 package com.example.filling.Bottom.Dongmu;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.BaseAdapter;
+import android.widget.EditText;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -17,6 +22,9 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
+import com.example.filling.Dongmu.Dongmu_List;
+import com.example.filling.Dongmu.Dongmu_Search;
+import com.example.filling.Drawer.Alert.Alert_Detail;
 import com.example.filling.R;
 import com.google.android.material.tabs.TabLayout;
 import com.synnapps.carouselview.CarouselView;
@@ -27,19 +35,23 @@ import java.util.ArrayList;
 public class Bottom_DongmuFragment extends Fragment {
 
     ListView listView;
-    Bottom_DongmuFragment.AlertAdapter adapter;
+    Bottom_DongmuFragment.DongmuAdapter adapter;
 
     HorizontalScrollView ScrollBefore;
     TableLayout ScrollAfter;
-    LinearLayout onClickUnfold, onClickFold;
+    LinearLayout onClickUnfold, onClickFold, DongmuList01, DongmuSearch;
 
     CarouselView Dongmu_Upper_carousel, Dongmu_Lower_carousel;
+
+    ImageView onClickSearch;
+
+    EditText DongmuSearchText;
 
     private TabLayout tabLayout;
     private ViewPager viewPager;
 
-    int[] UpperImages = {R.drawable.carousel_dongmu02, R.drawable.carousel_dongmu03,R.drawable.carousel_dongmu04, R.drawable.carousel_dongmu05, R.drawable.carousel_dongmu06, R.drawable.carousel_dongmu07};
-    int[] LowerImages = {R.drawable.dongmu_lower_ex01, R.drawable.dongmu_lower_ex01,R.drawable.dongmu_lower_ex01, R.drawable.dongmu_lower_ex01, R.drawable.dongmu_lower_ex01};
+    int[] UpperImages = {R.drawable.carousel_dongmu02, R.drawable.carousel_dongmu03, R.drawable.carousel_dongmu04, R.drawable.carousel_dongmu05, R.drawable.carousel_dongmu06, R.drawable.carousel_dongmu07};
+    int[] LowerImages = {R.drawable.dongmu_lower_ex01, R.drawable.dongmu_lower_ex01, R.drawable.dongmu_lower_ex01, R.drawable.dongmu_lower_ex01, R.drawable.dongmu_lower_ex01};
     String[] MarkText = {"단골 맛집", "술집", "고깃집", "밥집", "분식집"};
     String[] Title = {"꼬꼬치킨", "대두네 순두부", "제육볶음", "오리주물럭", "김바압천국"};
     String[] Comment = {"1562", "452", "4651", "489", "1465"};
@@ -55,7 +67,7 @@ public class Bottom_DongmuFragment extends Fragment {
         View root = inflater.inflate(R.layout.bottom_dongmu, container, false);
 
         listView = root.findViewById(R.id.Dongmu_Bottom_List);
-        adapter = new Bottom_DongmuFragment.AlertAdapter();
+        adapter = new Bottom_DongmuFragment.DongmuAdapter();
         adapter.addItem(new Dongmu_Bottom_ListItem(R.drawable.dongmu_main_bottom_ex01, R.drawable.dongmu_bottomlist_ad_on, R.drawable.dongmu_bottomlist_coupon_red, R.drawable.dongmu_bottomlist_donation_on, R.drawable.dongmu_bottomlist_present_on, "맛집", "35M", "더차이나", "서울특별시 강남구 테헤란로 1..."));
         adapter.addItem(new Dongmu_Bottom_ListItem(R.drawable.dongmu_main_bottom_ex01, R.drawable.dongmu_bottomlist_ad_red, R.drawable.dongmu_bottomlist_coupon_on, R.drawable.dongmu_bottomlist_donation_red, R.drawable.dongmu_bottomlist_present_on, "맛집", "35M", "더차이나", "서울특별시 강남구 테헤란로 1..."));
         adapter.addItem(new Dongmu_Bottom_ListItem(R.drawable.dongmu_main_bottom_ex01, R.drawable.dongmu_bottomlist_ad_on, R.drawable.dongmu_bottomlist_coupon_on, R.drawable.dongmu_bottomlist_donation_off, R.drawable.dongmu_bottomlist_present_red, "맛집", "35M", "더차이나", "서울특별시 강남구 테헤란로 1..."));
@@ -88,6 +100,22 @@ public class Bottom_DongmuFragment extends Fragment {
             ScrollAfter.setVisibility(View.GONE);
             ScrollBefore.setVisibility(View.VISIBLE);
         });
+        DongmuList01 = root.findViewById(R.id.DongmuList01);
+        DongmuList01.setOnClickListener(v -> {
+            Intent intent = new Intent(requireContext().getApplicationContext(), Dongmu_List.class);
+            startActivity(intent);
+        });
+
+        DongmuSearch = root.findViewById(R.id.DongmuSearch);
+        DongmuSearch.setOnClickListener(v -> {
+            Intent intent = new Intent(requireContext().getApplicationContext(), Dongmu_Search.class);
+            startActivity(intent);
+        });
+
+        DongmuSearchText = root.findViewById(R.id.DongmuSearchText);
+        DongmuSearchText.setClickable(false);
+        DongmuSearchText.setFocusable(false);
+
 
 //        viewPager = (ViewPager) root.findViewById(R.id.view_pager);
 //        setupViewPager(viewPager);
@@ -107,14 +135,14 @@ public class Bottom_DongmuFragment extends Fragment {
             View customView = getLayoutInflater().inflate(R.layout.dongmu_main_lower_carousel, null);
 
             TextView Dongmu_Lower_MarkText = customView.findViewById(R.id.Dongmu_Lower_MarkText);
-            TextView Dongmu_Lower_Comment =  customView.findViewById(R.id.Dongmu_Lower_Comment);
+            TextView Dongmu_Lower_Comment = customView.findViewById(R.id.Dongmu_Lower_Comment);
             TextView Dongmu_Lower_Recommend = customView.findViewById(R.id.Dongmu_Lower_Recommend);
             TextView Dongmu_Lower_Title = customView.findViewById(R.id.Dongmu_Lower_Title);
-            TextView Dongmu_Lower_Tag1 =  customView.findViewById(R.id.Dongmu_Lower_Tag1);
-            TextView Dongmu_Lower_Tag2 =  customView.findViewById(R.id.Dongmu_Lower_Tag2);
-            TextView Dongmu_Lower_Tag3 =  customView.findViewById(R.id.Dongmu_Lower_Tag3);
-            TextView Dongmu_Lower_Tag4 =  customView.findViewById(R.id.Dongmu_Lower_Tag4);
-            ImageView Images =  customView.findViewById(R.id.Dongmu_Lower_Img);
+            TextView Dongmu_Lower_Tag1 = customView.findViewById(R.id.Dongmu_Lower_Tag1);
+            TextView Dongmu_Lower_Tag2 = customView.findViewById(R.id.Dongmu_Lower_Tag2);
+            TextView Dongmu_Lower_Tag3 = customView.findViewById(R.id.Dongmu_Lower_Tag3);
+            TextView Dongmu_Lower_Tag4 = customView.findViewById(R.id.Dongmu_Lower_Tag4);
+            ImageView Images = customView.findViewById(R.id.Dongmu_Lower_Img);
 
             Images.setImageResource(LowerImages[position]);
             Dongmu_Lower_Title.setText(Title[position]);
@@ -126,7 +154,7 @@ public class Bottom_DongmuFragment extends Fragment {
             Dongmu_Lower_Tag3.setText(Tag3[position]);
             Dongmu_Lower_Tag4.setText(Tag4[position]);
 
-            Dongmu_Lower_carousel.setIndicatorGravity(Gravity.CENTER_HORIZONTAL|Gravity.TOP);
+            Dongmu_Lower_carousel.setIndicatorGravity(Gravity.CENTER_HORIZONTAL | Gravity.TOP);
 
             return customView;
         }
@@ -170,7 +198,7 @@ public class Bottom_DongmuFragment extends Fragment {
 //        }
 //    }
 
-    class AlertAdapter extends BaseAdapter {
+    class DongmuAdapter extends BaseAdapter {
         ArrayList<Dongmu_Bottom_ListItem> items = new ArrayList<>();
 
         @Override

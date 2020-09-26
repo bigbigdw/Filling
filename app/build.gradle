@@ -22,7 +22,7 @@ android {
     sourceSets {
         main {
             res {
-                srcDirs 'src/main/res', 'src/main/res/login', 'src/main/res/Login', 'src/main/res/Screens', 'src/main/res/drawer', 'src/main/res/bottom', 'src/main/res/2', 'src/main/res/Cash', 'src/main/res/ETC'
+                srcDirs 'src/main/res', 'src/main/res/login', 'src/main/res/Login', 'src/main/res/Screens', 'src/main/res/drawer', 'src/main/res/bottom', 'src/main/res/2', 'src/main/res/Cash', 'src/main/res/ETC', 'src/main/res/dongmu'
             }
         }
     }
@@ -30,6 +30,7 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    buildToolsVersion '30.0.2'
 }
 
 dependencies {

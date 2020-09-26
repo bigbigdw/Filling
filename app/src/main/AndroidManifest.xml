@@ -18,8 +18,15 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
+        <activity
+            android:name=".Dongmu.Dongmu_Search"
+            android:label=""
+            android:theme="@style/FindTheme" />
+        <activity
+            android:name=".Dongmu.Dongmu_List"
+            android:label=""
+            android:theme="@style/FindTheme" />
         <activity
             android:name=".Policy.Policy"
             android:label=""

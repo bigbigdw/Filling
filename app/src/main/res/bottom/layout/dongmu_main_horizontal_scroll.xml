@@ -16,12 +16,14 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
+            android:id="@+id/DongmuList01"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:baselineAligned="false"
             android:orientation="horizontal">
 
             <LinearLayout
+                android:id="@+id/onClickDongmuList"
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -270,6 +272,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
+                android:onClick="onClickUnfold"
                 android:orientation="vertical">
 
                 <ImageView

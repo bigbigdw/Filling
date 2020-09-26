@@ -26,7 +26,7 @@ public class Bottom_Filling_List extends LinearLayout {
 
     public void init(Context context) {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        inflater.inflate(R.layout.bottom_filling_list, this, true);
+        inflater.inflate(R.layout.filling_list, this, true);
 
         textView = findViewById(R.id.Contents);
         textView2 = findViewById(R.id.Date);
