@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Dongmu_List">동무마트 리스트</string>
+    <string name="Dongmu_Search">동무마트 검색</string>
+    <string name="Dongmu_SearchHint">찾으시는 매장을 검색해 주세요</string>
+    <string name="Dongmu_SearchResult">검색 결과가 없습니다.</string>
+    <string name="Dongmu_SearchResult1">￮ 단어의 철자가 정확한지 확인해주세요.</string>
+    <string name="Dongmu_SearchResult2">￮ 검색 단어 수를 줄이거나, 다른 검색어로 검색해주세요.</string>
+    <string name="Dongmu_SearchResult3">￮ 보다 일반적인 검색어로 다시 검색해보세요.</string>
+</resources>
