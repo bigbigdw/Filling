@@ -74,6 +74,7 @@
                     android:hint="@string/Dongmu_SearchHint"
                     android:inputType="textPersonName"
                     android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
                     android:textColor="#FFFFFF"
                     android:textColorHighlight="#FFFFFF"
                     android:textColorHint="#80FFFFFF"
