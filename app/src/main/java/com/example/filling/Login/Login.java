@@ -16,7 +16,7 @@ import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.Objects;
 
-public class Activity_Login extends AppCompatActivity {
+public class Login extends AppCompatActivity {
 
     TextInputLayout IDtext, PWtext;
     Editable idCheck, pwCheck;
@@ -24,7 +24,7 @@ public class Activity_Login extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.login_activity);
+        setContentView(R.layout.login_main);
 
         IDtext = findViewById(R.id.IDtext);
         PWtext = findViewById(R.id.PWtext);
@@ -46,13 +46,13 @@ public class Activity_Login extends AppCompatActivity {
 
     public void onClickFindID(View v) {
         Toast.makeText(getApplicationContext(), "아이디 찾기로 이동합니다.", Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(getApplicationContext(), Activity_FindID.class);
+        Intent intent = new Intent(getApplicationContext(), Login_FindID.class);
         startActivity(intent);
     }
 
     public void onClickFindPW(View v) {
         Toast.makeText(getApplicationContext(), "비밀번호 찾기로 이동합니다.", Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(getApplicationContext(), Activity_FindPW.class);
+        Intent intent = new Intent(getApplicationContext(), Login_FindPW.class);
         startActivity(intent);
     }
 
@@ -77,7 +77,7 @@ public class Activity_Login extends AppCompatActivity {
 
     public void onClickRegister(View v) {
         Toast.makeText(getApplicationContext(), "필링은 처음이신가요? 환영합니다.", Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(getApplicationContext(), Activity_Register.class);
+        Intent intent = new Intent(getApplicationContext(), Login_Register.class);
         startActivity(intent);
     }
 }

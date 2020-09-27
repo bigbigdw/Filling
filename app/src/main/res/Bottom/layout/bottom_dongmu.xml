@@ -108,7 +108,8 @@
                     android:ems="10"
                     android:hint="@string/Dongmu_SearchText"
                     android:paddingStart="16dp"
-                    android:paddingEnd="1dp" />
+                    android:paddingEnd="1dp"
+                    android:inputType="none" />
 
                 <ImageView
                     android:id="@+id/onClickSearch"

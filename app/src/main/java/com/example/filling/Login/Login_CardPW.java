@@ -20,8 +20,7 @@ import com.example.filling.R;
 
 import java.util.Objects;
 
-
-public class Activity_CardPW extends AppCompatActivity {
+public class Login_CardPW extends AppCompatActivity {
 
     EditText pwFirst, pwSecond;
     TextView PwText1, PwText2;
@@ -32,16 +31,16 @@ public class Activity_CardPW extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_cardpw);
-        Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar mToolbar = findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
-        pwFirst = (EditText) findViewById(R.id.pwFirst);
-        pwSecond = (EditText) findViewById(R.id.pwSecond);
-        PwText1 = (TextView) findViewById(R.id.PwText1);
-        PwText2 = (TextView) findViewById(R.id.PwText2);
-        Done = (LinearLayout) findViewById(R.id.RegisterDone);
-        Before = (LinearLayout) findViewById(R.id.RegisterBefore);
+        pwFirst = findViewById(R.id.pwFirst);
+        pwSecond = findViewById(R.id.pwSecond);
+        PwText1 = findViewById(R.id.PwText1);
+        PwText2 = findViewById(R.id.PwText2);
+        Done = findViewById(R.id.RegisterDone);
+        Before = findViewById(R.id.RegisterBefore);
         onClickNext = findViewById(R.id.onClickNext);
         onClickDone =  findViewById(R.id.onClickDone);
 
@@ -83,7 +82,7 @@ public class Activity_CardPW extends AppCompatActivity {
 
     public void onClickDone(View v) {
         Toast.makeText(getApplicationContext(), "필링에 가입하신 것을 환영합니다", Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(getApplicationContext(), Activity_Login.class);
+        Intent intent = new Intent(getApplicationContext(), Login.class);
         startActivity(intent);
     }
 

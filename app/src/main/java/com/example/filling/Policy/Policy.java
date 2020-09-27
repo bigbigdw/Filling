@@ -8,7 +8,7 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import com.example.filling.Login.Activity_Register;
+import com.example.filling.Login.Login_Register;
 import com.example.filling.R;
 
 import java.util.Objects;
@@ -35,7 +35,7 @@ public class Policy extends AppCompatActivity {
     }
 
     public void BtnBack(View v) {
-        Intent intent = new Intent(getApplicationContext(), Activity_Register.class);
+        Intent intent = new Intent(getApplicationContext(), Login_Register.class);
         startActivity(intent);
     }
 

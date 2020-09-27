@@ -6,36 +6,31 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+
 import com.example.filling.R;
 import com.google.android.material.textfield.TextInputLayout;
 
-
-
 import java.util.Objects;
 
-
-public class Activity_FindID extends AppCompatActivity {
+public class Login_FindPW extends AppCompatActivity {
 
     TextInputLayout Phone, Num;
-    TextView ID;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.login_findid);
+        setContentView(R.layout.login_findpw);
         Toolbar mToolbar = findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
         Phone =  findViewById(R.id.Phone);
         Num =  findViewById(R.id.Num);
-        ID = findViewById(R.id.ID);
 
         Objects.requireNonNull(Phone.getEditText()).addTextChangedListener((new TextWatcher() {
             @Override
@@ -83,22 +78,25 @@ public class Activity_FindID extends AppCompatActivity {
         }));
     }
 
+    public void onClickID(View v) {
+        Toast.makeText(getApplicationContext(),"유효한 아이디입니다", Toast.LENGTH_SHORT).show();
+    }
+
     public void onClickPhone(View v) {
         Toast.makeText(getApplicationContext(),"인증번호가 전송되었습니다", Toast.LENGTH_SHORT).show();
     }
 
     public void onClickNum(View v) {
-        Toast.makeText(getApplicationContext(),"인증이 완료되었습니다", Toast.LENGTH_SHORT).show();
-        ID.setVisibility(View.VISIBLE);
+        Toast.makeText(getApplicationContext(),"임시 비밀번호가 전송되었습니다", Toast.LENGTH_SHORT).show();
     }
 
-    public void onClickFindPW(View v) {
-        Intent intent = new Intent(getApplicationContext(), Activity_FindPW.class);
+    public void onClickFindID(View v) {
+        Intent intent = new Intent(getApplicationContext(), Login_FindID.class);
         startActivity(intent);
     }
 
     public void onClickBack(View v) {
-        Intent intent = new Intent(getApplicationContext(), Activity_Login.class);
+        Intent intent = new Intent(getApplicationContext(), Login.class);
         startActivity(intent);
     }
 

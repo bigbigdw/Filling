@@ -20,6 +20,10 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".Myinfo.MyInfo"
+            android:label=""
+            android:theme="@style/FindTheme" />
+        <activity
             android:name=".Dongmu.Dongmu_Search"
             android:label=""
             android:theme="@style/FindTheme" />
@@ -47,22 +51,22 @@
             android:name=".Test"
             android:theme="@style/LoginTheme"/>
         <activity
-            android:name=".Login.Activity_Login"
+            android:name=".Login.Login"
             android:theme="@style/LoginTheme"/>
         <activity
-            android:name=".Login.Activity_CardPW"
+            android:name=".Login.Login_CardPW"
             android:label=""
             android:theme="@style/FindTheme" />
         <activity
-            android:name=".Login.Activity_FindPW"
+            android:name=".Login.Login_FindPW"
             android:label=""
             android:theme="@style/FindTheme" />
         <activity
-            android:name=".Login.Activity_FindID"
+            android:name=".Login.Login_FindID"
             android:label=""
             android:theme="@style/FindTheme" />
         <activity
-            android:name=".Login.Activity_Register"
+            android:name=".Login.Login_Register"
             android:label=""
             android:theme="@style/FindTheme"  />
         <activity

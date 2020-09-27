@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--내 정보-->
+    <string name="MyInfo_MyInfoTitle">내 정보</string>
+    <string name="MyInfo_MyInfoText1">kdw0310@ajou.ac.kr</string>
+    <string name="MyInfo_MyInfoText2">01033049425</string>
+    <string name="MyInfo_MyInfoBtnL">로그아웃</string>
+    <string name="MyInfo_MyInfoBtnR">적용</string>
+</resources>

@@ -10,7 +10,6 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.Toast;
 
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
@@ -20,7 +19,7 @@ import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.Objects;
 
-public class Activity_Register extends AppCompatActivity {
+public class Login_Register extends AppCompatActivity {
 
     TextInputLayout inputPW, inputPWcheck, inputID;
     Editable initPW;
@@ -33,12 +32,12 @@ public class Activity_Register extends AppCompatActivity {
         Toolbar mToolbar = findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
-        inputID = (TextInputLayout) findViewById(R.id.inputID);
-        inputPW = (TextInputLayout) findViewById(R.id.inputPW);
-        inputPWcheck = (TextInputLayout) findViewById(R.id.inputPWcheck);
+        inputID = findViewById(R.id.inputID);
+        inputPW = findViewById(R.id.inputPW);
+        inputPWcheck = findViewById(R.id.inputPWcheck);
         initPW = Objects.requireNonNull(inputPW.getEditText()).getText();
-        promise1 = (CheckBox) findViewById(R.id.promise1);
-        promise2 = (CheckBox) findViewById(R.id.promise2);
+        promise1 = findViewById(R.id.promise1);
+        promise2 = findViewById(R.id.promise2);
 
         Objects.requireNonNull(inputID.getEditText()).addTextChangedListener(new TextWatcher() {
             @Override
@@ -85,23 +84,17 @@ public class Activity_Register extends AppCompatActivity {
         });
 
         promise1.setOnCheckedChangeListener(
-                new CompoundButton.OnCheckedChangeListener() {
-                    @Override
-                    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                        if ( promise1.isChecked()) {
-                            Toast.makeText(getApplicationContext(), "이용약관에 동의하셨습니다", Toast.LENGTH_SHORT).show();
-                        }
+                (buttonView, isChecked) -> {
+                    if ( promise1.isChecked()) {
+                        Toast.makeText(getApplicationContext(), "이용약관에 동의하셨습니다", Toast.LENGTH_SHORT).show();
                     }
                 }
         );
 
         promise2.setOnCheckedChangeListener(
-                new CompoundButton.OnCheckedChangeListener() {
-                    @Override
-                    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                        if ( promise2.isChecked()) {
-                            Toast.makeText(getApplicationContext(), "개인정보 및 수집 이용에 동의하셨습니다", Toast.LENGTH_SHORT).show();
-                        }
+                (buttonView, isChecked) -> {
+                    if ( promise2.isChecked()) {
+                        Toast.makeText(getApplicationContext(), "개인정보 및 수집 이용에 동의하셨습니다", Toast.LENGTH_SHORT).show();
                     }
                 }
         );
@@ -111,7 +104,7 @@ public class Activity_Register extends AppCompatActivity {
 
     public void onClickBack(View V) {
         Toast.makeText(getApplicationContext(), "로그인 화면으로 돌아갑니다", Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(getApplicationContext(), Activity_Login.class);
+        Intent intent = new Intent(getApplicationContext(), Login.class);
         startActivity(intent);
     }
 
@@ -132,7 +125,7 @@ public class Activity_Register extends AppCompatActivity {
 
         if(promise1.isChecked() && promise2.isChecked()){
             Toast.makeText(getApplicationContext(), "카드 비밀번호 설정으로 이동합니다.", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(getApplicationContext(), Activity_CardPW.class);
+            Intent intent = new Intent(getApplicationContext(), Login_CardPW.class);
             startActivity(intent);
         } else {
             Toast.makeText(getApplicationContext(), "회원가입이 완료되지 않았습니다.", Toast.LENGTH_SHORT).show();
