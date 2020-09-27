@@ -19,8 +19,6 @@ import java.util.Objects;
 
 public class MyInfo extends AppCompatActivity {
 
-    Button BtnLogout;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
