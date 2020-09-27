@@ -13,6 +13,11 @@
     <string name="MyCoupon_Title">스타벅스</string>
     <string name="MyCoupon_GoodsName">아이스 카페아메리카노 Tall</string>
     <string name="MyCoupon_Date">2019.01.07</string>
-
-
+    <!--내 쿠폰함 팝업-->
+    <string name="MyCouponPopup_Title">쿠폰 상세 정보</string>
+    <string name="MyCouponPopup_Price">4100원</string>
+    <string name="MyCouponPopup_BuyDate">구매날짜:</string>
+    <string name="MyCouponPopup_Date">2019.01.03</string>
+    <string name="MyCouponPopup_UseDate">사용날짜:</string>
+    <string name="MyCouponPopup_Use">2019.01.10</string>
 </resources>
