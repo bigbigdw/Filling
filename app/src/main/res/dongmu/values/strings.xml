@@ -14,4 +14,24 @@
     <string name="DongmuDetail_TitleLocation">서울특별시 강남구 테헤란로 123, 102호</string>
     <string name="DongmuDetail_TitleTime">영업시간 | 11:00 ~ 23:00</string>
     <string name="DongmuDetail_TitleTag">#커피  #커피맛집  #아메리카노  #케이크 </string>
+    <string name="DongmuDetail_Intro">저희 Little Place 카페는 30년 전통의 비법을 5대째 전수받아 원조 감자탕의 명성을 이어가고있습니다. 매일 새벽에 들어오는 신선한 돼지 감자 뼈와 24시간 우려낸 커피를 사용합니다. </string>
+    <string name="DongmuDetail_CarouselText1">카페라떼</string>
+    <string name="DongmuDetail_CarouselText2">4,500원</string>
+    <string name="DongmuDetail_CarouselText3">팬케이크</string>
+    <string name="DongmuDetail_CarouselText4">6,500원</string>
+    <string name="DongmuDetail_CarouselText5">티라미수</string>
+    <string name="DongmuDetail_CarouselText6">6,000원</string>
+    <string name="DongmuDetail_RecommendTex1">오늘의</string>
+    <string name="DongmuDetail_RecommendTex2">추천</string>
+    <string name="DongmuDetail_RecommendTex3">메뉴</string>
+    <string name="DongmuDetail_Intro1">주차</string>
+    <string name="DongmuDetail_Intro2">휴무일</string>
+    <string name="DongmuDetail_Intro3">사업자 정보</string>
+    <string name="DongmuDetail_Intro4">방송 출연</string>
+    <string name="DongmuDetail_IntroText1">2시간 무료 / 상가 내 지하주차장 2,3층 이용가능</string>
+    <string name="DongmuDetail_IntroText2">매주 월요일 휴무 </string>
+    <string name="DongmuDetail_IntroText3">대표자명 : 김대우</string>
+    <string name="DongmuDetail_IntroText4">사업자번호 : 123–120–10292–10202</string>
+    <string name="DongmuDetail_IntroText5">2018년 8월 12일 KBS VJ특공대 맛집 소개편 출연</string>
+    <string name="DongmuDetail_IntroText6">2018년 8월 24일 JTBC 맛있는녀석들 카페 맛집 편 출연</string>
 </resources>

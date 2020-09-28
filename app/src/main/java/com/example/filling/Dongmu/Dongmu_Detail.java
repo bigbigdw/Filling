@@ -3,7 +3,6 @@ package com.example.filling.Dongmu;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
@@ -12,8 +11,6 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import com.example.filling.Bottom.Dongmu.Dongmu_Main_Tab1;
-import com.example.filling.Bottom.Dongmu.Dongmu_Main_Tab2;
-import com.example.filling.Bottom.Dongmu.Dongmu_Main_Tab3;
 import com.example.filling.R;
 import com.google.android.material.tabs.TabLayout;
 
@@ -44,8 +41,8 @@ public class Dongmu_Detail extends AppCompatActivity {
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new Dongmu_Main_Tab1(), "상품 소개");
-        adapter.addFragment(new Dongmu_Main_Tab1(), "가게 정보");
+        adapter.addFragment(new Dongmu_Detail_Tab1(), "가게 정보");
+        adapter.addFragment(new Dongmu_Detail_Tab2(), "상품 소개");
         adapter.addFragment(new Dongmu_Main_Tab1(), "리뷰");
         viewPager.setAdapter(adapter);
     }

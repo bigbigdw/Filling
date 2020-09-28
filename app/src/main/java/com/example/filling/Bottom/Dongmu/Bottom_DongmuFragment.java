@@ -27,6 +27,7 @@ import com.example.filling.Dongmu.Dongmu_List;
 import com.example.filling.Dongmu.Dongmu_Search;
 import com.example.filling.Drawer.Alert.Alert_Detail;
 import com.example.filling.R;
+import com.example.filling.Test;
 import com.google.android.material.tabs.TabLayout;
 import com.synnapps.carouselview.CarouselView;
 import com.synnapps.carouselview.ImageClickListener;
@@ -43,16 +44,10 @@ public class Bottom_DongmuFragment extends Fragment {
     TableLayout ScrollAfter;
     LinearLayout onClickUnfold, onClickFold, DongmuList01, DongmuSearch;
 
-    CarouselView Dongmu_Upper_carousel, Dongmu_Lower_carousel;
-
-    ImageView onClickSearch;
+    CarouselView  Dongmu_Lower_carousel;
 
     EditText DongmuSearchText;
 
-    private TabLayout tabLayout;
-    private ViewPager viewPager;
-
-    int[] UpperImages = {R.drawable.carousel_dongmu02, R.drawable.carousel_dongmu03, R.drawable.carousel_dongmu04, R.drawable.carousel_dongmu05, R.drawable.carousel_dongmu06, R.drawable.carousel_dongmu07};
     int[] LowerImages = {R.drawable.dongmu_lower_ex01, R.drawable.dongmu_lower_ex01, R.drawable.dongmu_lower_ex01, R.drawable.dongmu_lower_ex01, R.drawable.dongmu_lower_ex01};
     String[] MarkText = {"단골 맛집", "술집", "고깃집", "밥집", "분식집"};
     String[] Title = {"꼬꼬치킨", "대두네 순두부", "제육볶음", "오리주물럭", "김바압천국"};
@@ -95,13 +90,10 @@ public class Bottom_DongmuFragment extends Fragment {
             @Override
             public void onClick(int position) {
                 Intent intent = new Intent(requireContext().getApplicationContext(), Dongmu_Detail.class);
+//              Intent intent = new Intent(requireContext().getApplicationContext(), Test.class);
                 startActivity(intent);
             }
         });
-
-//        Dongmu_Upper_carousel = root.findViewById(R.id.Dongmu_Upper_carousel);
-//        Dongmu_Upper_carousel.setPageCount(UpperImages.length);
-//        Dongmu_Upper_carousel.setImageListener(imageListener);
 
         ScrollBefore = root.findViewById(R.id.ScrollBefore);
         ScrollAfter = root.findViewById(R.id.ScrollAfter);
@@ -131,17 +123,9 @@ public class Bottom_DongmuFragment extends Fragment {
         DongmuSearchText.setClickable(false);
         DongmuSearchText.setFocusable(false);
 
-
-//        viewPager = (ViewPager) root.findViewById(R.id.view_pager);
-//        setupViewPager(viewPager);
-
-//        tabLayout = (TabLayout) root.findViewById(R.id.tabs);
-//        tabLayout.setupWithViewPager(viewPager);
-
         return root;
     }
 
-//    ImageListener imageListener = (position, imageView) -> imageView.setImageResource(UpperImages[position]);
 
     ViewListener viewListener = new ViewListener() {
         @Override
@@ -174,44 +158,6 @@ public class Bottom_DongmuFragment extends Fragment {
             return customView;
         }
     };
-
-//    private void setupViewPager(ViewPager viewPager) {
-//        Bottom_DongmuFragment.ViewPagerAdapter adapter = new Bottom_DongmuFragment.ViewPagerAdapter(getChildFragmentManager());
-//        adapter.addFragment(new Dongmu_Main_Tab1(), "내 주변");
-//        adapter.addFragment(new Dongmu_Main_Tab2(), "자주 방문한 매장");
-//        adapter.addFragment(new Dongmu_Main_Tab3(), "브랜드");
-//        viewPager.setAdapter(adapter);
-//    }
-
-//    public static class ViewPagerAdapter extends FragmentPagerAdapter {
-//        private final List<Fragment> mFragmentList = new ArrayList<>();
-//        private final List<String> mFragmentTitleList = new ArrayList<>();
-//
-//        public ViewPagerAdapter(FragmentManager manager) {
-//            super(manager);
-//        }
-//
-//        @NonNull
-//        @Override
-//        public Fragment getItem(int position) {
-//            return mFragmentList.get(position);
-//        }
-//
-//        @Override
-//        public int getCount() {
-//            return mFragmentList.size();
-//        }
-//
-//        public void addFragment(Fragment fragment, String title) {
-//            mFragmentList.add(fragment);
-//            mFragmentTitleList.add(title);
-//        }
-//
-//        @Override
-//        public CharSequence getPageTitle(int position) {
-//            return mFragmentTitleList.get(position);
-//        }
-//    }
 
     class DongmuAdapter extends BaseAdapter {
         ArrayList<Dongmu_Bottom_ListItem> items = new ArrayList<>();

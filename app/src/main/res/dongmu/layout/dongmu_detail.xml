@@ -3,7 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbar"
@@ -13,7 +14,7 @@
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="255dp"
             app:contentScrim="#4971EF"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
@@ -85,10 +86,7 @@
                             android:textColor="#ffffff" />
                     </LinearLayout>
                 </androidx.constraintlayout.widget.ConstraintLayout>
-
             </FrameLayout>
-
-            <!--    layout_collapseMode        스크롤되는 것을 시간차로 되기-->
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
@@ -110,17 +108,14 @@
                 app:layout_collapseMode="pin" />
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
-
     </com.google.android.material.appbar.AppBarLayout>
 
 
-    <androidx.core.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
             android:orientation="vertical">
 
             <com.google.android.material.tabs.TabLayout
@@ -135,22 +130,33 @@
                 app:tabSelectedTextColor="#4971EF"
                 app:tabTextColor="#000000" />
 
-            <androidx.viewpager.widget.ViewPager
-                android:id="@+id/view_pager"
+            <androidx.core.widget.NestedScrollView
                 android:layout_width="match_parent"
-                android:layout_height="820dp"
-                app:layout_behavior="@string/appbar_scrolling_view_behavior">
-            </androidx.viewpager.widget.ViewPager>
-        </LinearLayout>
-    </androidx.core.widget.NestedScrollView>
+                android:layout_height="match_parent"
+                android:fillViewport="true">
 
-<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginRight="16dp"-->
-<!--        android:backgroundTint="@color/colorPrimary"-->
-<!--        android:src="@android:drawable/ic_menu_send"-->
-<!--        app:fabSize="mini"-->
-<!--        app:layout_anchor="@id/appbar"-->
-<!--        app:layout_anchorGravity="bottom|right" />-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/view_pager"
+                        android:layout_width="match_parent"
+                        android:layout_height="820dp"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior"></androidx.viewpager.widget.ViewPager>
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
+
+    <!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginRight="16dp"-->
+    <!--        android:backgroundTint="@color/colorPrimary"-->
+    <!--        android:src="@android:drawable/ic_menu_send"-->
+    <!--        app:fabSize="mini"-->
+    <!--        app:layout_anchor="@id/appbar"-->
+    <!--        app:layout_anchorGravity="bottom|right" />-->
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
