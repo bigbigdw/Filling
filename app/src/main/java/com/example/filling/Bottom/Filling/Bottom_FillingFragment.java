@@ -48,8 +48,6 @@ public class Bottom_FillingFragment extends Fragment {
         listView.setAdapter(adapter);
 
         listView.setOnItemClickListener((adapterView, view, position, id) -> {
-//                Bottom_Filling_ListItem item = (Bottom_Filling_ListItem) adapter.getItem(position);
-//                Toast.makeText(requireContext().getApplicationContext(), "선택 : " + item.getContents(), Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(requireContext().getApplicationContext(), Alert_Detail.class);
             startActivity(intent);
         });

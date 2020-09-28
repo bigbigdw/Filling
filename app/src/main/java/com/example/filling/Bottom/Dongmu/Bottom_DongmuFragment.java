@@ -22,12 +22,14 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
+import com.example.filling.Dongmu.Dongmu_Detail;
 import com.example.filling.Dongmu.Dongmu_List;
 import com.example.filling.Dongmu.Dongmu_Search;
 import com.example.filling.Drawer.Alert.Alert_Detail;
 import com.example.filling.R;
 import com.google.android.material.tabs.TabLayout;
 import com.synnapps.carouselview.CarouselView;
+import com.synnapps.carouselview.ImageClickListener;
 import com.synnapps.carouselview.ViewListener;
 
 import java.util.ArrayList;
@@ -80,9 +82,22 @@ public class Bottom_DongmuFragment extends Fragment {
         adapter.addItem(new Dongmu_Bottom_ListItem(R.drawable.dongmu_main_bottom_ex01, R.drawable.dongmu_bottomlist_ad_on, R.drawable.dongmu_bottomlist_coupon_off, R.drawable.dongmu_bottomlist_donation_red, R.drawable.dongmu_bottomlist_present_off, "맛집", "35M", "더차이나", "서울특별시 강남구 테헤란로 1..."));
         listView.setAdapter(adapter);
 
+        listView.setOnItemClickListener((adapterView, view, position, id) -> {
+            Intent intent = new Intent(requireContext().getApplicationContext(), Dongmu_Detail.class);
+            startActivity(intent);
+        });
+
         Dongmu_Lower_carousel = root.findViewById(R.id.Dongmu_Lower_carousel);
         Dongmu_Lower_carousel.setPageCount(LowerImages.length);
         Dongmu_Lower_carousel.setViewListener(viewListener);
+
+        Dongmu_Lower_carousel.setImageClickListener(new ImageClickListener() {
+            @Override
+            public void onClick(int position) {
+                Intent intent = new Intent(requireContext().getApplicationContext(), Dongmu_Detail.class);
+                startActivity(intent);
+            }
+        });
 
 //        Dongmu_Upper_carousel = root.findViewById(R.id.Dongmu_Upper_carousel);
 //        Dongmu_Upper_carousel.setPageCount(UpperImages.length);
