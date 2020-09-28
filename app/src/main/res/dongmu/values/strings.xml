@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--동무마트 리스트-->
     <string name="Dongmu_List">동무마트 리스트</string>
     <string name="Dongmu_Search">동무마트 검색</string>
     <string name="Dongmu_SearchHint">찾으시는 매장을 검색해 주세요</string>
@@ -7,4 +8,10 @@
     <string name="Dongmu_SearchResult1">￮ 단어의 철자가 정확한지 확인해주세요.</string>
     <string name="Dongmu_SearchResult2">￮ 검색 단어 수를 줄이거나, 다른 검색어로 검색해주세요.</string>
     <string name="Dongmu_SearchResult3">￮ 보다 일반적인 검색어로 다시 검색해보세요.</string>
+    <!--동무마트 리스트-->
+    <string name="DongmuDetail_Title">동무마트 상세</string>
+    <string name="DongmuDetail_TitleMarket">Little Place 카페</string>
+    <string name="DongmuDetail_TitleLocation">서울특별시 강남구 테헤란로 123, 102호</string>
+    <string name="DongmuDetail_TitleTime">영업시간 | 11:00 ~ 23:00</string>
+    <string name="DongmuDetail_TitleTag">#커피  #커피맛집  #아메리카노  #케이크 </string>
 </resources>

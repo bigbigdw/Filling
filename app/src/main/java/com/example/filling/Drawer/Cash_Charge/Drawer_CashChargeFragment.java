@@ -54,7 +54,7 @@ public class Drawer_CashChargeFragment extends Fragment {
     }
 
     private void setupViewPager(ViewPager viewPager) {
-        ViewPagerAdapter adapter = new ViewPagerAdapter(getChildFragmentManager());
+        ViewPagerAdapter adapter = new ViewPagerAdapter(getFragmentManager());
         adapter.addFragment(new CashChargeFragment_Coin(), "Coin");
         adapter.addFragment(new CashChargeFragment_Account(), "무통장");
         adapter.addFragment(new CashChargeFragment_Mileage(), "마일리지");
