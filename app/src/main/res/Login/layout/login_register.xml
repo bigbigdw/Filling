@@ -48,8 +48,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="22dp"
-            android:layout_marginRight="22dp"
             android:layout_marginTop="45dp"
+            android:layout_marginRight="22dp"
             android:textColorHint="#70888888"
             app:startIconDrawable="@drawable/ic_icon_id"
             app:startIconTint="#888888">
@@ -68,9 +68,9 @@
             android:id="@+id/inputPW"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColorHint="#70888888"
             android:layout_marginLeft="22dp"
             android:layout_marginRight="22dp"
+            android:textColorHint="#70888888"
             app:startIconDrawable="@drawable/ic_icon_password"
             app:startIconTint="#888888">
 
@@ -88,9 +88,9 @@
             android:id="@+id/inputPWcheck"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColorHint="#70888888"
             android:layout_marginLeft="22dp"
             android:layout_marginRight="22dp"
+            android:textColorHint="#70888888"
             app:startIconDrawable="@drawable/ic_icon_password"
             app:startIconTint="#888888">
 
@@ -103,93 +103,88 @@
                 android:inputType="textPassword"
                 android:textColor="#000000" />
 
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true">
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/Phone"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColorHint="#70888888"
-                    app:startIconDrawable="@drawable/ic_icon_phone"
-                    app:startIconTint="#888888">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:layout_weight="10"
-                        android:backgroundTint="#888888"
-                        android:drawableTint="#888888"
-                        android:ems="10"
-                        android:hint="@string/Find_InputPhone"
-                        android:inputType="phone"
-                        android:maxLength="12"
-                        android:textColor="#000000" />
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <Button
-                    android:id="@+id/button1"
-                    android:layout_width="50dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center|end"
-                    android:background="?android:attr/selectableItemBackground"
-                    android:onClick="onClickPhone"
-                    android:text="@string/CUI_Confirm"
-                    android:textColor="#4971EF"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-            </FrameLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true">
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/Num"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:startIconDrawable="@drawable/ic_icon_comfirmnum"
-                    app:startIconTint="#888888"
-                    android:textColorHint="#70888888">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:backgroundTint="#888888"
-                        android:drawableTint="#888888"
-                        android:ems="10"
-                        android:hint="@string/Find_InputNum"
-                        android:inputType="numberSigned"
-                        android:maxLength="7"
-                        android:textColor="#000000" />
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <Button
-                    android:id="@+id/button"
-                    android:layout_width="50dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center|end"
-                    android:background="?android:attr/selectableItemBackground"
-                    android:onClick="onClickNum"
-                    android:text="@string/CUI_Confirm"
-                    android:textColor="#4971EF"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
-                    />
-            </FrameLayout>
-
         </com.google.android.material.textfield.TextInputLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/Num"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="#70888888"
+                app:startIconDrawable="@drawable/ic_icon_comfirmnum"
+                android:layout_marginLeft="22dp"
+                android:layout_marginRight="22dp"
+                app:startIconTint="#888888">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:backgroundTint="#888888"
+                    android:drawableTint="#888888"
+                    android:ems="10"
+                    android:hint="@string/Find_InputNum"
+                    android:inputType="numberSigned"
+                    android:maxLength="7"
+                    android:textColor="#000000" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center|end"
+                android:background="?android:attr/selectableItemBackground"
+                android:onClick="onClickNum"
+                android:text="@string/CUI_Confirm"
+                android:textColor="#4971EF"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/Phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="#70888888"
+                android:layout_marginLeft="22dp"
+                android:layout_marginRight="22dp"
+                app:startIconDrawable="@drawable/ic_icon_phone"
+                app:startIconTint="#888888">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="10"
+                    android:backgroundTint="#888888"
+                    android:drawableTint="#888888"
+                    android:ems="10"
+                    android:hint="@string/Find_InputPhone"
+                    android:inputType="phone"
+                    android:maxLength="12"
+                    android:textColor="#000000" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center|end"
+                android:background="?android:attr/selectableItemBackground"
+                android:onClick="onClickPhone"
+                android:text="@string/CUI_Confirm"
+                android:textColor="#4971EF"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </FrameLayout>
 
     </LinearLayout>
 

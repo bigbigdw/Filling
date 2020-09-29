@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:contentDescription="@string/TODO"
-            app:srcCompat="@drawable/icon_sidemenu_logo" />
+            app:srcCompat="@drawable/icon_bar_logo" />
     </LinearLayout>
 
     <LinearLayout

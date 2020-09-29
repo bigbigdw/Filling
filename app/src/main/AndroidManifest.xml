@@ -20,6 +20,10 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".Myinfo.ChangePW"
+            android:label=""
+            android:theme="@style/FindTheme" />
+        <activity
             android:name=".Myinfo.MyCoupon"
             android:label=""
             android:theme="@style/FindTheme" />

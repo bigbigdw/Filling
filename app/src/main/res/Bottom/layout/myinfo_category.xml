@@ -83,11 +83,10 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-
+                android:id="@+id/ChangePW"
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/imageView9"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_marginBottom="10dp"
@@ -99,7 +98,6 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
-                    android:id="@+id/textView13"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/Myinfo_Text2"

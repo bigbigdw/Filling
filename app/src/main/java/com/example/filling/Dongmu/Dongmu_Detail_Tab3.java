@@ -9,10 +9,6 @@ import android.widget.ListView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-
-import com.example.filling.Drawer.Alert.Drawer_AlertFragment;
-import com.example.filling.Drawer.Alert.Drawer_Alert_List;
-import com.example.filling.Drawer.Alert.Drawer_Alert_ListItem;
 import com.example.filling.R;
 
 import java.util.ArrayList;

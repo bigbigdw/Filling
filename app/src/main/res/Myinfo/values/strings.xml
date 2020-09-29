@@ -6,6 +6,10 @@
     <string name="MyInfo_MyInfoText2">01033049425</string>
     <string name="MyInfo_MyInfoBtnL">로그아웃</string>
     <string name="MyInfo_MyInfoBtnR">적용</string>
+    <string name="MyInfo_MyInfoRankTitle">고객님의 등급은</string>
+    <string name="MyInfo_MyInfoRank">필링마스터</string>
+    <string name="MyInfo_MyInfoRankText1">입니다</string>
+    <string name="MyInfo_MyInfoRankText2">제일 높은 등급은 -마스터-등급입니다</string>
     <!--내 쿠폰함-->
     <string name="MyCoupon_MyInfoTitle">내 쿠폰함</string>
     <string name="MyCoupon_MyInfoTip">※ 내 쿠폰함은 최근 한달 내에 구매한 쿠폰들만 표시됩니다.</string>
@@ -20,4 +24,8 @@
     <string name="MyCouponPopup_Date">2019.01.03</string>
     <string name="MyCouponPopup_UseDate">사용날짜:</string>
     <string name="MyCouponPopup_Use">2019.01.10</string>
+    <!--내 쿠폰함 팝업-->
+    <string name="ChagePW_Title">비밀번호 변경</string>
+    <string name="ChagePW_CurrentPW">현재 비밀번호 입력</string>
+    <string name="ChagePW_NewPW">새로운 비밀번호 설정</string>
 </resources>
