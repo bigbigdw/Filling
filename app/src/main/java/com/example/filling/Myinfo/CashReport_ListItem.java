@@ -1,6 +1,6 @@
 package com.example.filling.Myinfo;
 
-public class Cash_Report_ListItem {
+public class CashReport_ListItem {
 
     String Name;
     String Date;
@@ -8,14 +8,14 @@ public class Cash_Report_ListItem {
     String Rest;
     int ImgID;
 
-    public Cash_Report_ListItem(String Name, String Date, String Count, String Rest) {
+    public CashReport_ListItem(String Name, String Date, String Count, String Rest) {
         this.Name = Name;
         this.Date = Date;
         this.Count = Count;
         this.Rest = Rest;
     }
 
-    public Cash_Report_ListItem(String Name, String Date, String Count,String Rest, int ImgID) {
+    public CashReport_ListItem(String Name, String Date, String Count, String Rest, int ImgID) {
         this.Name = Name;
         this.Date = Date;
         this.Count = Count;

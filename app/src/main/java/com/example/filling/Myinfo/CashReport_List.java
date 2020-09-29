@@ -9,24 +9,24 @@ import android.widget.TextView;
 
 import com.example.filling.R;
 
-public class Cash_Report_List extends LinearLayout {
+public class CashReport_List extends LinearLayout {
 
     TextView NameText, DateText, CountText, RestText;
     ImageView Img;
 
-    public Cash_Report_List(Context context){
+    public CashReport_List(Context context){
         super(context);
         init(context);
     }
 
-    public Cash_Report_List(Context context, AttributeSet attrs) {
+    public CashReport_List(Context context, AttributeSet attrs) {
         super(context, attrs);
         init(context);
     }
 
     private void init(Context context) {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        inflater.inflate(R.layout.cash_report_list, this, true);
+        inflater.inflate(R.layout.cashreport_list, this, true);
 
         NameText = findViewById(R.id.Name);
         DateText = findViewById(R.id.Date);

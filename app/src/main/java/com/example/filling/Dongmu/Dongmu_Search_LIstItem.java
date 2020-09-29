@@ -1,6 +1,6 @@
-package com.example.filling.Bottom.Dongmu;
+package com.example.filling.Dongmu;
 
-public class Dongmu_Main_ListItem {
+public class Dongmu_Search_LIstItem {
 
     String Category;
     String Distance;
@@ -16,7 +16,7 @@ public class Dongmu_Main_ListItem {
     int ImgTag3resId;
     int ImgTag4resId;
 
-    public Dongmu_Main_ListItem(String Category, String Distance, String Title, String Tag1, String Tag2, String Tag3, String Tag4) {
+    public Dongmu_Search_LIstItem(String Category, String Distance, String Title, String Tag1, String Tag2, String Tag3, String Tag4) {
         this.Category = Category;
         this.Distance = Distance;
         this.Title = Title;
@@ -26,7 +26,7 @@ public class Dongmu_Main_ListItem {
         this.Tag4 = Tag4;
     }
 
-    public Dongmu_Main_ListItem( int FoodImgresId, int ImgTag1resId, int ImgTag2resId, int ImgTag3resId, int ImgTag4resId, String Category, String Distance, String Title, String Tag1, String Tag2, String Tag3, String Tag4) {
+    public Dongmu_Search_LIstItem( int FoodImgresId, int ImgTag1resId, int ImgTag2resId, int ImgTag3resId, int ImgTag4resId, String Category, String Distance, String Title, String Tag1, String Tag2, String Tag3, String Tag4) {
         this.Category = Category;
         this.Distance = Distance;
         this.Title = Title;
@@ -126,3 +126,4 @@ public class Dongmu_Main_ListItem {
         this.Tag4 = Tag4;
     }
 }
+

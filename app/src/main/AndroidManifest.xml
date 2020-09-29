@@ -20,6 +20,10 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".Myinfo.MileageReport"
+            android:label=""
+            android:theme="@style/FindTheme" />
+        <activity
             android:name=".Myinfo.CashReport"
             android:label=""
             android:theme="@style/FindTheme" />

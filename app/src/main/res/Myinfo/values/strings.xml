@@ -43,4 +43,7 @@
     <string name="Report_CountText">Cash</string>
     <string name="Report_RestText">잔액</string>
     <string name="Report_Rest">265,215,525</string>
+    <!--내 마일리지 내역-->
+    <string name="CashReport_MileageTitle">내 마일리지 내역</string>
+    <string name="Report_CountTextMileage">마일리지</string>
 </resources>

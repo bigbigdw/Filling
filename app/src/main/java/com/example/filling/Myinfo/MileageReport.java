@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class CashReport extends AppCompatActivity {
+public class MileageReport extends AppCompatActivity {
 
     private TabLayout tabLayout;
     private ViewPager viewPager;
@@ -26,7 +26,7 @@ public class CashReport extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.cashreport);
+        setContentView(R.layout.mileagereport);
         Toolbar mToolbar = findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
@@ -40,10 +40,10 @@ public class CashReport extends AppCompatActivity {
     }
 
     private void setupViewPager(ViewPager viewPager) {
-        CashReport.ViewPagerAdapter adapter = new CashReport.ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new CashReport_Tab(), "1개월");
-        adapter.addFragment(new CashReport_Tab(), "3개월");
-        adapter.addFragment(new CashReport_Tab(), "전체");
+        MileageReport.ViewPagerAdapter adapter = new MileageReport.ViewPagerAdapter(getSupportFragmentManager());
+        adapter.addFragment(new Mileage_Tab(), "1개월");
+        adapter.addFragment(new Mileage_Tab(), "3개월");
+        adapter.addFragment(new Mileage_Tab(), "전체");
         viewPager.setAdapter(adapter);
     }
 

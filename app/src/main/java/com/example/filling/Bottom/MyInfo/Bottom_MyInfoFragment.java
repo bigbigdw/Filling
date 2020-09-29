@@ -14,13 +14,14 @@ import androidx.fragment.app.Fragment;
 import com.example.filling.Myinfo.CashReport;
 import com.example.filling.Myinfo.ChangeCardPW;
 import com.example.filling.Myinfo.ChangePW;
+import com.example.filling.Myinfo.MileageReport;
 import com.example.filling.Myinfo.MyCoupon;
 import com.example.filling.Myinfo.MyInfo;
 import com.example.filling.R;
 
 public class Bottom_MyInfoFragment extends Fragment {
 
-    LinearLayout BtnMyInfo, BtnCoupon, ChangePW, ChangeCardPW, CashReport;
+    LinearLayout BtnMyInfo, BtnCoupon, ChangePW, ChangeCardPW, CashReport, MileageReport;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -59,6 +60,13 @@ public class Bottom_MyInfoFragment extends Fragment {
         CashReport.setOnClickListener(v -> {
             Toast.makeText(requireContext().getApplicationContext(), "Cash 이용내역 페이지로 이동합니다" , Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(requireContext().getApplicationContext(), CashReport.class);
+            startActivity(intent);
+        });
+
+        MileageReport = root.findViewById(R.id.MileageReport);
+        MileageReport.setOnClickListener(v -> {
+            Toast.makeText(requireContext().getApplicationContext(), "마일리지 이용내역 페이지로 이동합니다" , Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(requireContext().getApplicationContext(), MileageReport.class);
             startActivity(intent);
         });
 

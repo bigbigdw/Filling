@@ -1,4 +1,4 @@
-package com.example.filling.Bottom.Dongmu;
+package com.example.filling.Dongmu;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -9,24 +9,24 @@ import android.widget.TextView;
 
 import com.example.filling.R;
 
-public class Dongmu_Main_List extends LinearLayout {
+public class Dongmu_Search_List extends LinearLayout {
 
     ImageView ImgFoodImg, ImgTag1, ImgTag2, ImgTag3, ImgTag4;
     TextView TextCategory, TextDistance, TextTitle, TextTag1, TextTag2, TextTag3, TextTag4;
 
-    public Dongmu_Main_List(Context context){
+    public Dongmu_Search_List(Context context){
         super(context);
         init(context);
     }
 
-    public Dongmu_Main_List(Context context, AttributeSet attrs) {
+    public Dongmu_Search_List(Context context, AttributeSet attrs) {
         super(context, attrs);
         init(context);
     }
 
     private void init(Context context) {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        inflater.inflate(R.layout.dongmu_main_list, this, true);
+        inflater.inflate(R.layout.dongmu_search_list, this, true);
 
         ImgFoodImg = findViewById(R.id.FoodImg);
         ImgTag1 = findViewById(R.id.ImgTag1);
@@ -82,3 +82,4 @@ public class Dongmu_Main_List extends LinearLayout {
         ImgTag4.setImageResource(ImgTag4resId);
     }
 }
+
