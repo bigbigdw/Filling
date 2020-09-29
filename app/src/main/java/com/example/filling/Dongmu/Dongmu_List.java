@@ -1,6 +1,7 @@
 package com.example.filling.Dongmu;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -48,6 +49,11 @@ public class Dongmu_List extends AppCompatActivity {
         adapter.addItem(new Dongmu_Bottom_ListItem(R.drawable.dongmu_main_bottom_ex01, R.drawable.dongmu_bottomlist_ad_off, R.drawable.dongmu_bottomlist_coupon_off, R.drawable.dongmu_bottomlist_donation_off, R.drawable.dongmu_bottomlist_present_red, "맛집", "35M", "더차이나", "서울특별시 강남구 테헤란로 1..."));
         adapter.addItem(new Dongmu_Bottom_ListItem(R.drawable.dongmu_main_bottom_ex01, R.drawable.dongmu_bottomlist_ad_on, R.drawable.dongmu_bottomlist_coupon_off, R.drawable.dongmu_bottomlist_donation_red, R.drawable.dongmu_bottomlist_present_off, "맛집", "35M", "더차이나", "서울특별시 강남구 테헤란로 1..."));
         listView.setAdapter(adapter);
+
+        listView.setOnItemClickListener((adapterView, view, position, id) -> {
+            Intent intent = new Intent(getApplicationContext(), Dongmu_Detail.class);
+            startActivity(intent);
+        });
 
         ScrollBefore = findViewById(R.id.ScrollBefore);
         ScrollAfter = findViewById(R.id.ScrollAfter);

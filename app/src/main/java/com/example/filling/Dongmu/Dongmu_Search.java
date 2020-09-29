@@ -1,6 +1,7 @@
 package com.example.filling.Dongmu;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.MenuItem;
@@ -48,6 +49,11 @@ public class Dongmu_Search extends AppCompatActivity {
         adapter.addItem(new Dongmu_Search_LIstItem(R.drawable.dongmu_food_ex01, R.drawable.dongmu_icon_tag01, R.drawable.dongmu_icon_tag02, R.drawable.dongmu_icon_tag03, R.drawable.dongmu_icon_tag04, "갈비집", "140M", "가산 북촌삼대갈비", "#생갈비의", "#맛을", "#느껴", "#보아라"));
 
         listView.setAdapter(adapter);
+
+        listView.setOnItemClickListener((adapterView, view, position, id) -> {
+            Intent intent = new Intent(getApplicationContext(), Dongmu_Detail.class);
+            startActivity(intent);
+        });
 
         DongmuSearchText = findViewById(R.id.DongmuSearchText);
         SearchResult = findViewById(R.id.SearchResult);
