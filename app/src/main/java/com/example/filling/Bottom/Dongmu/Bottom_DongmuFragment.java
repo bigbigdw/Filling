@@ -86,13 +86,9 @@ public class Bottom_DongmuFragment extends Fragment {
         Dongmu_Lower_carousel.setPageCount(LowerImages.length);
         Dongmu_Lower_carousel.setViewListener(viewListener);
 
-        Dongmu_Lower_carousel.setImageClickListener(new ImageClickListener() {
-            @Override
-            public void onClick(int position) {
-                Intent intent = new Intent(requireContext().getApplicationContext(), Dongmu_Detail.class);
-//              Intent intent = new Intent(requireContext().getApplicationContext(), Test.class);
-                startActivity(intent);
-            }
+        Dongmu_Lower_carousel.setImageClickListener(position -> {
+            Intent intent = new Intent(requireContext().getApplicationContext(), Dongmu_Detail.class);
+            startActivity(intent);
         });
 
         ScrollBefore = root.findViewById(R.id.ScrollBefore);

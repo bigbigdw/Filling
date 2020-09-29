@@ -3,14 +3,15 @@ package com.example.filling.Dongmu;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.widget.NestedScrollView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import com.example.filling.Bottom.Dongmu.Dongmu_Main_Tab1;
 import com.example.filling.R;
 import com.google.android.material.tabs.TabLayout;
 
@@ -23,6 +24,7 @@ public class Dongmu_Detail extends AppCompatActivity {
 
     private TabLayout tabLayout;
     private ViewPager viewPager;
+    NestedScrollView View;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,10 +34,10 @@ public class Dongmu_Detail extends AppCompatActivity {
         setSupportActionBar(toolbar);
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
-        viewPager = (ViewPager) findViewById(R.id.view_pager);
+        viewPager = findViewById(R.id.view_pager);
         setupViewPager(viewPager);
 
-        tabLayout = (TabLayout) findViewById(R.id.tabs);
+        tabLayout = findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
     }
 
@@ -43,8 +45,10 @@ public class Dongmu_Detail extends AppCompatActivity {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(new Dongmu_Detail_Tab1(), "가게 정보");
         adapter.addFragment(new Dongmu_Detail_Tab2(), "상품 소개");
-        adapter.addFragment(new Dongmu_Main_Tab1(), "리뷰");
+        adapter.addFragment(new Dongmu_Detail_Tab3(), "리뷰");
         viewPager.setAdapter(adapter);
+        View = findViewById(R.id.View);
+        View.scrollTo(0, 0);
     }
 
     class ViewPagerAdapter extends FragmentPagerAdapter {
@@ -55,6 +59,7 @@ public class Dongmu_Detail extends AppCompatActivity {
             super(manager);
         }
 
+        @NonNull
         @Override
         public Fragment getItem(int position) {
             return mFragmentList.get(position);

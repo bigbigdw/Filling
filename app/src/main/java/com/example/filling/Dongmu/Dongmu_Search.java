@@ -18,7 +18,6 @@ import androidx.core.widget.NestedScrollView;
 
 import com.example.filling.Bottom.Dongmu.Dongmu_Main_List;
 import com.example.filling.Bottom.Dongmu.Dongmu_Main_ListItem;
-import com.example.filling.Bottom.Dongmu.Dongmu_Main_Tab1;
 import com.example.filling.R;
 
 import java.util.ArrayList;

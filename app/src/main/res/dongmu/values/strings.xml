@@ -34,4 +34,7 @@
     <string name="DongmuDetail_IntroText4">사업자번호 : 123–120–10292–10202</string>
     <string name="DongmuDetail_IntroText5">2018년 8월 12일 KBS VJ특공대 맛집 소개편 출연</string>
     <string name="DongmuDetail_IntroText6">2018년 8월 24일 JTBC 맛있는녀석들 카페 맛집 편 출연</string>
+    <string name="DongmuDetail_ReviewGuide">관련없는 글 (비방, 홍보, 도배 등)은 삭제됩니다.</string>
+    <string name="DongmuDetail_ReviewBtn">작성하기</string>
+    <string name="DongmuDetail_Member01">김</string>
 </resources>
