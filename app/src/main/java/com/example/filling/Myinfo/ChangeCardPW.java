@@ -1,0 +1,99 @@
+package com.example.filling.Myinfo;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.KeyEvent;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.widget.Toast;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import com.example.filling.Main;
+import com.example.filling.R;
+
+import java.util.Objects;
+
+public class ChangeCardPW extends AppCompatActivity {
+
+    EditText pwFirst, pwSecond, pwThird;
+    TextView PwText1, PwText2, PwText3;
+    Button onClickDone , onClickNext;
+    LinearLayout Done, Before;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.changecardpw);
+        Toolbar mToolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(mToolbar);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+
+        pwFirst = findViewById(R.id.pwFirst);
+        pwSecond = findViewById(R.id.pwSecond);
+        pwThird = findViewById(R.id.pwThird);
+        PwText1 = findViewById(R.id.PwText1);
+        PwText2 = findViewById(R.id.PwText2);
+        PwText3 = findViewById(R.id.PwText3);
+        Done = findViewById(R.id.ChangeDone);
+        Before = findViewById(R.id.ChangeBefore);
+        onClickNext = findViewById(R.id.onClickNext);
+        onClickDone =  findViewById(R.id.onClickDone);
+
+        pwSecond.setOnFocusChangeListener((v, hasFocus) -> {
+            if (hasFocus) {
+                PwText1.setVisibility(View.GONE);
+                pwFirst.setVisibility(View.GONE);
+                PwText2.setVisibility(View.VISIBLE);
+            }
+        });
+
+        pwThird.setOnFocusChangeListener((v, hasFocus) -> {
+            if (hasFocus) {
+                PwText2.setVisibility(View.GONE);
+                pwSecond.setVisibility(View.GONE);
+                PwText3.setVisibility(View.VISIBLE);
+                onClickNext.setVisibility(View.VISIBLE);
+            }
+        });
+
+        pwThird.setOnKeyListener((v, keyCode, event) -> {
+            if ((event.getAction() == KeyEvent.ACTION_DOWN) && (keyCode == KeyEvent.KEYCODE_ENTER)) {
+                InputMethodManager imm = (InputMethodManager) getSystemService(Activity.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(pwSecond.getWindowToken(), 0);
+                return true;
+            }
+            return false;
+        });
+
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {//toolbar의 back키 눌렀을 때 동작
+            finish();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    public void onClickNext(View v) {
+        Before.setVisibility(View.GONE);
+        onClickNext.setVisibility(View.GONE);
+        Done.setVisibility(View.VISIBLE);
+        onClickDone.setVisibility(View.VISIBLE);
+    }
+
+    public void onClickDone(View v) {
+        Toast.makeText(getApplicationContext(), "카드 비밀번호가 변경되었습니다", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(getApplicationContext(), Main.class);
+        startActivity(intent);
+    }
+
+}
+

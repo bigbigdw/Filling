@@ -24,8 +24,23 @@
     <string name="MyCouponPopup_Date">2019.01.03</string>
     <string name="MyCouponPopup_UseDate">사용날짜:</string>
     <string name="MyCouponPopup_Use">2019.01.10</string>
-    <!--내 쿠폰함 팝업-->
+    <!--비밀번호 변경-->
     <string name="ChagePW_Title">비밀번호 변경</string>
     <string name="ChagePW_CurrentPW">현재 비밀번호 입력</string>
     <string name="ChagePW_NewPW">새로운 비밀번호 설정</string>
+    <!--카드 비밀번호 변경-->
+    <string name="ChageCardPW_Title">카드 비밀번호 변경</string>
+    <string name="ChageCardPW_Text1">기존 비밀번호 6자리를 입력해주세요</string>
+    <string name="ChageCardPW_Text2">새 비밀번호 6자리를 입력해주세요</string>
+    <string name="ChageCardPW_Text3">다시 한번 새 비밀번호 6자리를 입력해주세요</string>
+    <string name="ChageCardPW_DoneText1">카드 비밀번호가 변경되었습니다!</string>
+    <string name="ChageCardPW_DoneText2">확인 버튼을 누르시면 메인 페이지로 돌아갑니다</string>
+    <!--내 Cash 내역-->
+    <string name="CashReport_Title">내 Cash내역</string>
+    <string name="Report_Title">Cash 충전</string>
+    <string name="Report_Date">17:23:06</string>
+    <string name="Report_Count">1,050</string>
+    <string name="Report_CountText">Cash</string>
+    <string name="Report_RestText">잔액</string>
+    <string name="Report_Rest">265,215,525</string>
 </resources>
