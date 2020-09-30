@@ -24,4 +24,14 @@
     <string name="CouponList_Item4">이디야커피</string>
     <!--상품권 검색-->
     <string name="CouponSearch_Title">상품권 검색</string>
+    <!--매장 정보-->
+    <string name="CouponMart_Title">매장 상세정보</string>
+    <string name="CouponMart_IntroText1">스타벅스</string>
+    <string name="CouponMart_IntroText2">특별한 경험, 스타벅스 커피</string>
+    <string name="CouponMart_IntroText3">당신의 취향에 맞는 최고 품질의 커피를 오직 스타벅스에서만 맛보실 수 있습니다.</string>
+    <!--상품권 상세-->
+    <string name="CouponDetail_Title">필링 상품권</string>
+    <string name="CouponDetail_TitleText1">커피/음료</string>
+    <string name="CouponDetail_TitleText2">아이스 카페아메리카노 Tall</string>
+    <string name="CouponDetail_TitleText3">4,100원</string>
 </resources>

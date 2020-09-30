@@ -1,6 +1,7 @@
 package com.example.filling.Coupon;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.MenuItem;
@@ -47,6 +48,12 @@ public class Coupon_Search extends AppCompatActivity {
         });
 
     }
+
+    public void onClickDetail(View v) {
+        Intent intent = new Intent(getApplicationContext(), Coupon_Mart.class);
+        startActivity(intent);
+    }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

@@ -2,11 +2,11 @@
 <resources>
     <!--바텀 네비게이션-->
     <string name="Bottom_Filling">필링</string>
-    <string name="Bottom_Dongmu">필링마트</string>
+    <string name="Bottom_Dongmu">동무마트</string>
     <string name="Bottom_Coupon">상품권</string>
     <string name="Bottom_Info">내 정보</string>
     <!--필링-->
-    <string name="Filling_Dongmu">필링마트</string>
+    <string name="Filling_Dongmu">동무마트</string>
     <string name="Filling_Coupon">모바일 상품권</string>
     <string name="Filling_Shopping">쇼핑몰</string>
     <string name="Filling_Drive">대리운전</string>

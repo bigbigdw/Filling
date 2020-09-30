@@ -4,47 +4,29 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.HorizontalScrollView;
-import android.widget.TableLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import com.example.filling.R;
+
 import java.util.Objects;
 
-public class Coupon_List extends AppCompatActivity {
-
-    HorizontalScrollView ScrollBefore;
-    TableLayout ScrollAfter;
+public class Coupon_Mart extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.coupon_list);
+        setContentView(R.layout.coupon_mart);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
-        ScrollBefore = findViewById(R.id.ScrollBefore);
-        ScrollAfter = findViewById(R.id.ScrollAfter);
-
     }
 
-    public void onClickUnfold(View v) {
-        ScrollAfter.setVisibility(View.VISIBLE);
-        ScrollBefore.setVisibility(View.GONE);
-    }
-
-    public void onClickFold(View v) {
-        ScrollAfter.setVisibility(View.GONE);
-        ScrollBefore.setVisibility(View.VISIBLE);
-    }
-
-    public void onClickDetail(View v) {
-        Intent intent = new Intent(getApplicationContext(), Coupon_Mart.class);
+    public void onClickCouponDetail(View v) {
+        Intent intent = new Intent(getApplicationContext(), Coupon_Detail.class);
         startActivity(intent);
     }
-
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -54,5 +36,5 @@ public class Coupon_List extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-}
 
+}

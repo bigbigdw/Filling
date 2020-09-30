@@ -9,7 +9,7 @@
     <string name="Dongmu_SearchResult2">￮ 검색 단어 수를 줄이거나, 다른 검색어로 검색해주세요.</string>
     <string name="Dongmu_SearchResult3">￮ 보다 일반적인 검색어로 다시 검색해보세요.</string>
     <!--동무마트 리스트-->
-    <string name="DongmuDetail_Title">FEELING</string>
+    <string name="DongmuDetail_Title">동무마트</string>
     <string name="DongmuDetail_TitleMarket">Little Place 카페</string>
     <string name="DongmuDetail_TitleLocation">서울특별시 강남구 테헤란로 123, 102호</string>
     <string name="DongmuDetail_TitleTime">영업시간 | 11:00 ~ 23:00</string>

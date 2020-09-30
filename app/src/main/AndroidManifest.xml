@@ -20,6 +20,14 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".Coupon.Coupon_Detail"
+            android:label=""
+            android:theme="@style/FindTheme" />
+        <activity
+            android:name=".Coupon.Coupon_Mart"
+            android:label=""
+            android:theme="@style/FindTheme" />
+        <activity
             android:name=".Coupon.Coupon_Search"
             android:label=""
             android:theme="@style/FindTheme" />
