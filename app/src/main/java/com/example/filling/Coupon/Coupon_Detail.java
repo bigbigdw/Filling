@@ -2,15 +2,36 @@ package com.example.filling.Coupon;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.LinearLayout;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
+import com.example.filling.Dongmu.Dongmu_Detail;
+import com.example.filling.Dongmu.Dongmu_Detail_Tab1;
+import com.example.filling.Dongmu.Dongmu_Detail_Tab2;
+import com.example.filling.Dongmu.Dongmu_Detail_Tab3;
 import com.example.filling.R;
+import com.github.aakira.expandablelayout.ExpandableRelativeLayout;
+import com.google.android.material.tabs.TabLayout;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class Coupon_Detail extends AppCompatActivity {
+
+    private TabLayout tabLayout;
+    private ViewPager viewPager;
+
+    ExpandableRelativeLayout Expand1;
+    LinearLayout Btn1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +40,18 @@ public class Coupon_Detail extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+
+        viewPager = findViewById(R.id.view_pager);
+        setupViewPager(viewPager);
+
+        tabLayout = findViewById(R.id.tabs);
+        tabLayout.setupWithViewPager(viewPager);
+
+        Btn1 = findViewById(R.id.Btn1);
+        Btn1.setOnClickListener(v -> {
+            Expand1 = (ExpandableRelativeLayout) findViewById(R.id.Expand1);
+            Expand1.toggle(); // toggle expand and collapse
+        });
 
     }
 
@@ -29,6 +62,44 @@ public class Coupon_Detail extends AppCompatActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void setupViewPager(ViewPager viewPager) {
+        Coupon_Detail.ViewPagerAdapter adapter = new Coupon_Detail.ViewPagerAdapter(getSupportFragmentManager());
+        adapter.addFragment(new Coupon_Detail_Tab1(), "유효기간");
+        adapter.addFragment(new Coupon_Detail_Tab2(), "구매취소");
+        adapter.addFragment(new Coupon_Detail_Tab3(), "환불 규정");
+        viewPager.setAdapter(adapter);
+    }
+
+    class ViewPagerAdapter extends FragmentPagerAdapter {
+        private final List<Fragment> mFragmentList = new ArrayList<>();
+        private final List<String> mFragmentTitleList = new ArrayList<>();
+
+        public ViewPagerAdapter(FragmentManager manager) {
+            super(manager);
+        }
+
+        @NonNull
+        @Override
+        public Fragment getItem(int position) {
+            return mFragmentList.get(position);
+        }
+
+        @Override
+        public int getCount() {
+            return mFragmentList.size();
+        }
+
+        public void addFragment(Fragment fragment, String title) {
+            mFragmentList.add(fragment);
+            mFragmentTitleList.add(title);
+        }
+
+        @Override
+        public CharSequence getPageTitle(int position) {
+            return mFragmentTitleList.get(position);
+        }
     }
 
 }
