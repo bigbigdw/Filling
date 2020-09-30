@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--상품권 리스트-->
+    <string name="CouponList_Title">상품권 리스트</string>
+    <string name="CouponList_List01">아이스크림</string>
+    <string name="CouponList_List02">피자</string>
+    <string name="CouponList_List03">편의점</string>
+    <string name="CouponList_List04">KT</string>
+    <string name="CouponList_List05">주방</string>
+    <string name="CouponList_List06">도넛</string>
+    <string name="CouponList_List07">커피/음료</string>
+    <string name="CouponList_List08">건강/식품</string>
+    <string name="CouponList_List09">영화</string>
+    <string name="CouponList_List10">화장품</string>
+    <string name="CouponList_List11">치킨</string>
+    <string name="CouponList_List12">햄버거</string>
+    <string name="CouponList_List13">음악</string>
+    <string name="CouponList_List14">도서</string>
+    <string name="CouponList_List15">외식</string>
+    <string name="CouponList_List16">용역</string>
+    <string name="CouponList_Item1">스타벅스</string>
+    <string name="CouponList_Item2">투썸플레이스</string>
+    <string name="CouponList_Item3">햘리스커피</string>
+    <string name="CouponList_Item4">이디야커피</string>
+    <!--상품권 검색-->
+    <string name="CouponSearch_Title">상품권 검색</string>
+</resources>

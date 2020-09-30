@@ -22,7 +22,7 @@ android {
     sourceSets {
         main {
             res {
-                srcDirs 'src/main/res', 'src/main/res/login', 'src/main/res/Login', 'src/main/res/Screens', 'src/main/res/drawer', 'src/main/res/bottom', 'src/main/res/2', 'src/main/res/Cash', 'src/main/res/ETC', 'src/main/res/dongmu', 'src/main/res/Dongmu', 'src/main/res/Myinfo', 'src/main/res/AAA', 'src/main/res/Bottom', 'src/main/res/AA', 'src/main/res/Drawer'
+                srcDirs 'src/main/res', 'src/main/res/login', 'src/main/res/Login', 'src/main/res/Screens', 'src/main/res/drawer', 'src/main/res/bottom', 'src/main/res/2', 'src/main/res/Cash', 'src/main/res/ETC', 'src/main/res/dongmu', 'src/main/res/Dongmu', 'src/main/res/Myinfo', 'src/main/res/AAA', 'src/main/res/Bottom', 'src/main/res/AA', 'src/main/res/Drawer', 'src/main/res/Coupon'
             }
         }
     }
