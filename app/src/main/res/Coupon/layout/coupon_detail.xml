@@ -143,10 +143,16 @@
                 <androidx.viewpager.widget.ViewPager
                     android:id="@+id/view_pager"
                     android:layout_width="match_parent"
-                    android:layout_height="240dp"
+                    android:layout_height="210dp"
                     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
                 </androidx.viewpager.widget.ViewPager>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#DBDBDB"
+                    android:orientation="vertical" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -211,20 +217,7 @@
                         android:textColor="#333742" />
                 </LinearLayout>
 
-                <com.github.aakira.expandablelayout.ExpandableRelativeLayout
-                    android:id="@+id/Expand1"
-                    android:layout_width="match_parent"
-                    android:layout_height="540dp"
-                    android:background="#FFFFFF"
-                    android:padding="16dp"
-                    app:ael_duration="400"
-                    app:ael_expanded="false"
-                    app:ael_interpolator="accelerate"
-                    app:ael_orientation="vertical">
-
-                    <include layout="@layout/coupon_detail_expand" />
-
-                </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+                <include layout="@layout/coupon_detail_expand" />
 
 
                 <LinearLayout

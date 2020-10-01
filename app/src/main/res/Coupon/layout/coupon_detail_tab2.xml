@@ -7,7 +7,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="210dp"
         android:orientation="vertical"
         android:padding="16dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,7 +20,7 @@
             android:text="@string/CouponDetail_Tab2Text1"
             android:textAlignment="viewStart"
             android:textColor="#888888"
-            android:textSize="14sp"  />
+            android:textSize="14sp" />
 
         <TextView
             android:layout_width="match_parent"
@@ -29,7 +29,7 @@
             android:layout_marginBottom="4dp"
             android:text="@string/CouponDetail_Tab2Text2"
             android:textColor="#888888"
-            android:textSize="14sp"  />
+            android:textSize="14sp" />
 
         <TextView
             android:layout_width="match_parent"
@@ -38,7 +38,7 @@
             android:layout_marginBottom="4dp"
             android:text="@string/CouponDetail_Tab2Text3"
             android:textColor="#888888"
-            android:textSize="14sp"  />
+            android:textSize="14sp" />
 
 
     </LinearLayout>
