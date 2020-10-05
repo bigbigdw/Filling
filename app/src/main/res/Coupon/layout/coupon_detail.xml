@@ -1,237 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF">
-
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
-
-        <com.google.android.material.appbar.CollapsingToolbarLayout
-            android:layout_width="wrap_content"
-            android:layout_height="575dp"
-            app:contentScrim="#4971EF"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed">
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_collapseMode="parallax">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="575dp"
-                    android:background="#4971EF"
-                    android:orientation="vertical" />
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="520dp"
-                        android:background="#eeeeee"
-                        android:orientation="vertical"
-                        android:padding="16dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent">
-
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="16dp"
-                            android:layout_marginBottom="4dp"
-                            android:text="@string/CouponDetail_TitleText1"
-                            android:textColor="#888888"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/CouponDetail_TitleText2"
-                            android:textColor="#333742"
-                            android:layout_marginBottom="4dp"
-                            android:textSize="24sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/CouponDetail_TitleText3"
-                            android:textColor="#333742"
-                            android:textSize="20sp"
-                            android:textStyle="bold" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:gravity="center"
-                            android:orientation="vertical">
-
-                            <ImageView
-                                android:layout_width="240dp"
-                                android:layout_height="330dp"
-                                android:contentDescription="@string/TODO"
-                                android:scaleType="fitXY"
-                                android:src="@drawable/mycoupon_ex01" />
-
-                        </LinearLayout>
-                    </LinearLayout>
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </FrameLayout>
-
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="55dp"
-                app:layout_collapseMode="pin"
-                app:popupTheme="@style/AppTheme.PopupOverlay">
-
-            </androidx.appcompat.widget.Toolbar>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:gravity="center"
-                android:text="@string/CouponDetail_Title"
-                android:textColor="#FFFFFF"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_collapseMode="pin" />
-
-        </com.google.android.material.appbar.CollapsingToolbarLayout>
-    </com.google.android.material.appbar.AppBarLayout>
-
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:gravity="center_horizontal"
         android:orientation="vertical"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tabs"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#FFFFFF"
-            app:itemBackground="@android:color/transparent"
-            app:itemIconTint="@color/drawer_item"
-            app:itemTextColor="@color/drawer_item"
-            app:tabIndicatorColor="#4971EF"
-            app:tabSelectedTextColor="#4971EF"
-            app:tabTextColor="#000000" />
-
-        <androidx.core.widget.NestedScrollView
-            android:id="@+id/View"
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:fillViewport="true">
+            android:background="#FFFFFF">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/AppTheme.AppBarOverlay">
+
+                <com.google.android.material.appbar.CollapsingToolbarLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="575dp"
+                    app:contentScrim="#4971EF"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                    <include layout="@layout/coupon_detail_collapse" />
+
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        app:layout_collapseMode="pin"
+                        app:popupTheme="@style/AppTheme.PopupOverlay">
+
+                    </androidx.appcompat.widget.Toolbar>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:gravity="center"
+                        android:text="@string/CouponDetail_Title"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_collapseMode="pin" />
+
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+            </com.google.android.material.appbar.AppBarLayout>
+
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_marginBottom="60dp"
+                android:orientation="vertical"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-                <androidx.viewpager.widget.ViewPager
-                    android:id="@+id/view_pager"
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabs"
                     android:layout_width="match_parent"
-                    android:layout_height="210dp"
-                    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    app:itemBackground="@android:color/transparent"
+                    app:itemIconTint="@color/drawer_item"
+                    app:itemTextColor="@color/drawer_item"
+                    app:tabIndicatorColor="#4971EF"
+                    app:tabSelectedTextColor="#4971EF"
+                    app:tabTextColor="#000000" />
 
-                </androidx.viewpager.widget.ViewPager>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="#DBDBDB"
-                    android:orientation="vertical" />
-
-                <LinearLayout
+                <androidx.core.widget.NestedScrollView
+                    android:id="@+id/View"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:padding="16dp">
+                    android:fillViewport="true">
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
-                        android:text="@string/CouponDetail_GoodsInfo1"
-                        android:textColor="#333742"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
+                    <include layout="@layout/coupon_detail_contents" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
-                        android:text="@string/CouponDetail_GoodsInfo2"
-                        android:textColor="#888888"
-                        android:textSize="14sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
-                        android:text="@string/CouponDetail_GoodsInfo3"
-                        android:textColor="#333742"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
-                        android:text="@string/CouponDetail_GoodsInfo4"
-                        android:textColor="#888888"
-                        android:textSize="14sp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="#DBDBDB"
-                    android:orientation="vertical" />
-
-                <LinearLayout
-                    android:id="@+id/Btn1"
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:gravity="center_vertical"
-                    android:orientation="vertical"
-                    android:paddingLeft="16dp"
-                    android:paddingRight="16dp">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/CouponDetail_UseInfo_Title"
-                        android:textColor="#333742" />
-                </LinearLayout>
-
-                <include layout="@layout/coupon_detail_expand" />
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="#DBDBDB"
-                    android:orientation="vertical" />
-
-
-
+                </androidx.core.widget.NestedScrollView>
             </LinearLayout>
 
-        </androidx.core.widget.NestedScrollView>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <Button
+                        style="@style/Widget.AppCompat.Button"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#4F9BF0"
+                        android:onClick="onClickPurchase"
+                        android:text="@string/CouponDetail_Buy"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
     </LinearLayout>
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

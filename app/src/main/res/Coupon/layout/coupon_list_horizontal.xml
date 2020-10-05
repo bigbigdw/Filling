@@ -23,6 +23,35 @@
             android:orientation="horizontal">
 
             <LinearLayout
+                android:id="@+id/onClickUnfold"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="onClickUnfold"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="10dp"
+                    android:contentDescription="@string/TODO"
+                    app:srcCompat="@drawable/ic_icon_fold" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Dongmu_Category10"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -453,36 +482,6 @@
                     android:textColor="#FFFFFF"
                     android:textStyle="bold" />
             </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/onClickUnfold"
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:onClick="onClickUnfold"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginBottom="10dp"
-                    android:contentDescription="@string/TODO"
-                    app:srcCompat="@drawable/ic_icon_fold" />
-
-                <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/Dongmu_Category10"
-                    android:textAlignment="center"
-                    android:textColor="#FFFFFF"
-                    android:textStyle="bold" />
-            </LinearLayout>
-
         </LinearLayout>
     </HorizontalScrollView>
 

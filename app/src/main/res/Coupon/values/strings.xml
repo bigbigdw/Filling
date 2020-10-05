@@ -54,4 +54,7 @@
     <string name="CouponDetail_UseInfo_Text32">받으실 분의 핸드폰 or 내 보관함으로 모바일 상품권이 전송됩니다.</string>
     <string name="CouponDetail_UseInfo_Text41">교환처에서 실물 교환</string>
     <string name="CouponDetail_UseInfo_Text42">전송된 상품권은 해당 교환처로 가시면 실물로 교환하실 수 있습니다.</string>
+    <!--상품권 상세-->
+    <string name="CouponDetail_RecommendTitle">비슷한 상품 찾아보기</string>
+    <string name="CouponDetail_Buy">구매하기</string>
 </resources>

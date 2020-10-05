@@ -1,9 +1,14 @@
 package com.example.filling.Coupon;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
+import android.widget.Spinner;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,6 +22,7 @@ import com.example.filling.Dongmu.Dongmu_Detail;
 import com.example.filling.Dongmu.Dongmu_Detail_Tab1;
 import com.example.filling.Dongmu.Dongmu_Detail_Tab2;
 import com.example.filling.Dongmu.Dongmu_Detail_Tab3;
+import com.example.filling.Login.Login;
 import com.example.filling.R;
 import com.github.aakira.expandablelayout.ExpandableRelativeLayout;
 import com.google.android.material.tabs.TabLayout;
@@ -29,9 +35,6 @@ public class Coupon_Detail extends AppCompatActivity {
 
     private TabLayout tabLayout;
     private ViewPager viewPager;
-
-    ExpandableRelativeLayout Expand1;
-    LinearLayout Btn1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,12 +49,6 @@ public class Coupon_Detail extends AppCompatActivity {
 
         tabLayout = findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
-
-        Btn1 = findViewById(R.id.Btn1);
-        Btn1.setOnClickListener(v -> {
-            Expand1 = (ExpandableRelativeLayout) findViewById(R.id.Expand1);
-            Expand1.toggle(); // toggle expand and collapse
-        });
 
     }
 
@@ -100,6 +97,10 @@ public class Coupon_Detail extends AppCompatActivity {
         public CharSequence getPageTitle(int position) {
             return mFragmentTitleList.get(position);
         }
+    }
+
+    public void onClickPurchase(View v) {
+
     }
 
 }

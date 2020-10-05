@@ -125,7 +125,7 @@
                 android:layout_marginEnd="24dp"
                 android:contentDescription="@string/TODO"
                 android:scaleType="fitXY"
-                android:src="@drawable/coupon_detail_use01" />
+                android:src="@drawable/coupon_detail_use03" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -175,7 +175,7 @@
                 android:layout_marginEnd="24dp"
                 android:contentDescription="@string/TODO"
                 android:scaleType="fitXY"
-                android:src="@drawable/coupon_detail_use01" />
+                android:src="@drawable/coupon_detail_use04" />
 
             <LinearLayout
                 android:layout_width="match_parent"
