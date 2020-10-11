@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#4971EF"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:popupTheme="@style/AppTheme.PopupOverlay">
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/CouponPurchase_Title"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </androidx.appcompat.widget.Toolbar>
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:background="#FFFFFF"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="vertical">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/coupon_purchase_list" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#DBDBDB"
+                        android:orientation="vertical" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/CouponPurchase_RadioTitle"
+                            android:textColor="#333742"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <RadioGroup
+                        android:id="@+id/PurchaseRadio"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="16dp">
+
+                        <RadioButton
+                            android:id="@+id/CashBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="#4971EF"
+                            android:text="@string/CouponPurchase_RadioPurchase1"
+                            android:textColor="#333742"
+                            android:textSize="15sp" />
+
+                        <LinearLayout
+                            android:id="@+id/Cash"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/CouponPurchase_RadioPurchaseCash1"
+                                android:textColor="#888888" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/CashText1"
+                                android:layout_width="match_parent"
+                                android:layout_height="53dp"
+                                app:prefixText="@string/CouponPurchase_RadioPurchaseCash4"
+                                app:suffixText="@string/CashCharge_RechargeCashCount"
+                                app:suffixTextColor="#333742">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:inputType="number"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:text="@string/CouponPurchase_RadioPurchaseCash2"
+                                    android:textAlignment="textEnd"
+                                    android:textColor="#333742"
+                                    android:textColorLink="#333742"
+                                    android:textStyle="bold" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/ResultText1"
+                                android:layout_width="match_parent"
+                                android:layout_height="53dp"
+                                app:prefixText="@string/CouponPurchase_RadioPurchaseCash5"
+                                app:prefixTextColor="#4971EF"
+                                app:suffixText="@string/CashCharge_Won"
+                                app:suffixTextColor="#4971EF">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:backgroundTint="#4971EF"
+                                    android:inputType="number"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:text="@string/CouponPurchase_RadioPurchaseCash3"
+                                    android:textAlignment="textEnd"
+                                    android:textColor="#4971EF"
+                                    android:textColorLink="#4971EF"
+                                    android:textStyle="bold" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="#4971EF"
+                            android:text="@string/CouponPurchase_RadioPurchase2"
+                            android:textColor="#333742"
+                            android:textSize="15sp" />
+
+                        <LinearLayout
+                            android:id="@+id/CashMileage"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="16dp"
+                            android:visibility="gone"
+                            tools:visibility="visible">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/CouponPurchase_RadioPurchaseCash1"
+                                android:textColor="#888888" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/CashText2"
+                                android:layout_width="match_parent"
+                                android:layout_height="53dp"
+                                app:prefixText="@string/CouponPurchase_RadioPurchaseCash4"
+                                app:suffixText="@string/CashCharge_RechargeCashCount"
+                                app:suffixTextColor="#333742">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:inputType="number"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:text="@string/CouponPurchase_RadioPurchaseCash2"
+                                    android:textAlignment="textEnd"
+                                    android:textColor="#333742"
+                                    android:textColorLink="#333742"
+                                    android:textStyle="bold" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="16dp"
+                                android:text="@string/CouponPurchase_RadioPurchaseMileage1"
+                                android:textColor="#888888" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/MileageText"
+                                android:layout_width="match_parent"
+                                android:layout_height="53dp"
+                                app:prefixText="@string/CashCharge_PurchaseMilage"
+                                app:suffixText="@string/Drawer_Mileage"
+                                app:suffixTextColor="#333742">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:inputType="number"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:text="@string/CouponPurchase_RadioPurchaseMileage2"
+                                    android:textAlignment="textEnd"
+                                    android:textColor="#333742"
+                                    android:textStyle="bold" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/ResultText2"
+                                android:layout_width="match_parent"
+                                android:layout_height="53dp"
+                                app:prefixText="@string/CouponPurchase_RadioPurchaseCash5"
+                                app:prefixTextColor="#4971EF"
+                                app:suffixText="@string/CashCharge_Won"
+                                app:suffixTextColor="#4971EF">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:backgroundTint="#4971EF"
+                                    android:inputType="number"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:text="@string/CouponPurchase_RadioPurchaseCash3"
+                                    android:textAlignment="textEnd"
+                                    android:textColor="#4971EF"
+                                    android:textColorLink="#4971EF"
+                                    android:textStyle="bold" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+                    </RadioGroup>
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <Button
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#4F9BF0"
+                android:onClick="onClickPurchase"
+                android:text="@string/CouponPurchase_Btn"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -32,29 +32,25 @@ public class Drawer_CashChargeFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.drawer_cash_charge, container, false);
 
-        toolbar = (Toolbar) root.findViewById(R.id.toolbarfragment);
+        toolbar = root.findViewById(R.id.toolbarfragment);
 
         Objects.requireNonNull(((AppCompatActivity) getActivity()).getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
-        viewPager = (ViewPager) root.findViewById(R.id.view_pager);
+        viewPager = root.findViewById(R.id.view_pager);
         setupViewPager(viewPager);
 
-        tabLayout = (TabLayout) root.findViewById(R.id.tabs);
+        tabLayout = root.findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
 
-        root.findViewById(R.id.TooolbarBack).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                NavHostFragment.findNavController(Drawer_CashChargeFragment.this)
-                        .navigate(R.id.action_Drawer_CashCharge_to_bottom_filling );
-            }
-        });
+        root.findViewById(R.id.TooolbarBack).setOnClickListener(
+                view -> NavHostFragment.findNavController(Drawer_CashChargeFragment.this)
+                .navigate(R.id.action_Drawer_CashCharge_to_bottom_filling ));
 
         return root;
     }
 
     private void setupViewPager(ViewPager viewPager) {
-        ViewPagerAdapter adapter = new ViewPagerAdapter(getFragmentManager());
+        ViewPagerAdapter adapter = new ViewPagerAdapter(getChildFragmentManager());
         adapter.addFragment(new CashChargeFragment_Coin(), "Coin");
         adapter.addFragment(new CashChargeFragment_Account(), "무통장");
         adapter.addFragment(new CashChargeFragment_Mileage(), "마일리지");

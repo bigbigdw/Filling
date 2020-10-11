@@ -100,7 +100,9 @@ public class Coupon_Detail extends AppCompatActivity {
     }
 
     public void onClickPurchase(View v) {
-
+        Toast.makeText(getApplicationContext(), "결제화면으로 이동합니다", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(getApplicationContext(), Coupon_Purchase.class);
+        startActivity(intent);
     }
 
 }
