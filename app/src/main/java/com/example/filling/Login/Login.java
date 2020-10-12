@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -36,9 +37,9 @@ public class Login extends AppCompatActivity {
         AutoLogin.setOnCheckedChangeListener(
                 (buttonView, isChecked) -> {
                     if (AutoLogin.isChecked()) {
-                        Toast.makeText(getApplicationContext(), "자동로그인이 활성화 되었습니다", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Login.this.getApplicationContext(), "자동로그인이 활성화 되었습니다", Toast.LENGTH_SHORT).show();
                     } else {
-                        Toast.makeText(getApplicationContext(), "자동로그인이 비활성화 되었습니다", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Login.this.getApplicationContext(), "자동로그인이 비활성화 되었습니다", Toast.LENGTH_SHORT).show();
                     }
                 }
         );

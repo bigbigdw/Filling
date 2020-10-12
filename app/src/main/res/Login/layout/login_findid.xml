@@ -110,7 +110,7 @@
                     android:layout_height="30dp"
                     android:layout_gravity="center|end"
                     android:background="?android:attr/selectableItemBackground"
-                    android:onClick="onClickNum"
+                    android:onClick="onClickPhone"
                     android:text="@string/CUI_Confirm"
                     android:textColor="#4971EF"
                     android:textSize="14sp"

@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_constraintStart_toStartOf="parent"
@@ -31,7 +32,6 @@
                 app:popupTheme="@style/AppTheme.PopupOverlay">
 
                 <TextView
-                    android:id="@+id/textView5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -54,7 +54,6 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -100,7 +99,6 @@
                         android:drawableTint="#888888"
                         android:hint="@string/FindID_ID"
                         android:inputType="text"
-                        android:maxLength="12"
                         android:textColor="#000000" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -114,7 +112,9 @@
                     android:text="@string/CUI_Confirm"
                     android:textColor="#4971EF"
                     android:textSize="14sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
             </FrameLayout>
 
             <FrameLayout
@@ -127,6 +127,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
                     android:textColorHint="#70888888"
+                    android:visibility="visible"
                     app:startIconDrawable="@drawable/ic_icon_phone"
                     app:startIconTint="#888888">
 
@@ -153,7 +154,9 @@
                     android:text="@string/CUI_Confirm"
                     android:textColor="#4971EF"
                     android:textSize="14sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
             </FrameLayout>
 
             <FrameLayout
@@ -166,8 +169,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
                     android:textColorHint="#70888888"
+                    android:visibility="gone"
                     app:startIconDrawable="@drawable/ic_icon_comfirmnum"
-                    app:startIconTint="#888888">
+                    app:startIconTint="#888888"
+                    tools:visibility="visible">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
@@ -182,7 +187,7 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <Button
-                    android:id="@+id/button"
+                    android:id="@+id/onClickNum"
                     android:layout_width="50dp"
                     android:layout_height="30dp"
                     android:layout_gravity="center|end"
@@ -191,7 +196,9 @@
                     android:text="@string/CUI_Confirm"
                     android:textColor="#4971EF"
                     android:textSize="14sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
             </FrameLayout>
 
         </LinearLayout>

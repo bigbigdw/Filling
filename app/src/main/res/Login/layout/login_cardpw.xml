@@ -203,6 +203,7 @@
                     app:layout_constraintStart_toStartOf="parent">
 
                     <Button
+                        android:id="@+id/onClickNext"
                         style="@style/Widget.AppCompat.Button"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -213,9 +214,10 @@
                         android:textColor="#FFFFFF"
                         android:textStyle="bold"
                         android:visibility="gone"
-                        tools:visibility="visible" />
+                        tools:visibility="gone" />
 
                     <Button
+                        android:id="@+id/onClickDone"
                         style="@style/Widget.AppCompat.Button"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -226,7 +228,7 @@
                         android:textColor="#FFFFFF"
                         android:textStyle="bold"
                         android:visibility="gone"
-                        tools:visibility="gone" />
+                        tools:visibility="visible" />
                 </LinearLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>

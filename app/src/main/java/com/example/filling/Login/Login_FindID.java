@@ -42,22 +42,21 @@ public class Login_FindID extends AppCompatActivity {
         Objects.requireNonNull(Phone.getEditText()).addTextChangedListener((new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence text, int start, int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence text, int start, int before, int count) {
                 if (text.toString().length() < 10) {
                     Phone.setError(getString(R.string.Find_InputPhone_NO));
                     Phone.setErrorEnabled(true);
                     onClickPhone.setVisibility(View.GONE);
-                } else if(text.toString().length() >= 11){
+                } else if(text.toString().length() == 11){
                     Phone.setErrorEnabled(false);
                     onClickPhone.setVisibility(View.VISIBLE);
-                    Num.setVisibility(View.VISIBLE);
                 } else {
                     Phone.setErrorEnabled(false);
+                    onClickPhone.setVisibility(View.GONE);
                 }
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-
             }
 
             @Override
@@ -69,24 +68,23 @@ public class Login_FindID extends AppCompatActivity {
         Objects.requireNonNull(Num.getEditText()).addTextChangedListener((new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence text, int start, int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence text, int start, int before, int count) {
                 if (text.toString().length() < 5) {
                     Num.setError(getString(R.string.Find_InputNum_NO));
                     Num.setErrorEnabled(true);
                     onClickNum.setVisibility(View.GONE);
                 }
-             else if(text.toString().length() == 6){
-                Phone.setErrorEnabled(false);
+                else if(text.toString().length() == 6){
+                    Phone.setErrorEnabled(false);
                     onClickNum.setVisibility(View.VISIBLE);
-            }
+                }
                 else {
                     Num.setErrorEnabled(false);
+                    onClickNum.setVisibility(View.GONE);
                 }
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-
             }
 
             @Override
@@ -118,7 +116,7 @@ public class Login_FindID extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == android.R.id.home) {//toolbar의 back키 눌렀을 때 동작
+        if (item.getItemId() == android.R.id.home) {
             finish();
             return true;
         }

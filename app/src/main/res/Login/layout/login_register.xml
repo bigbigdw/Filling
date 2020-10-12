@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/register"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -29,7 +30,6 @@
                 app:popupTheme="@style/AppTheme.PopupOverlay">
 
                 <TextView
-                    android:id="@+id/textView5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -111,46 +111,6 @@
             >
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/Num"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColorHint="#70888888"
-                app:startIconDrawable="@drawable/ic_icon_comfirmnum"
-                android:layout_marginLeft="22dp"
-                android:layout_marginRight="22dp"
-                app:startIconTint="#888888">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:backgroundTint="#888888"
-                    android:drawableTint="#888888"
-                    android:ems="10"
-                    android:hint="@string/Find_InputNum"
-                    android:inputType="numberSigned"
-                    android:maxLength="7"
-                    android:textColor="#000000" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <Button
-                android:id="@+id/button"
-                android:layout_width="50dp"
-                android:layout_height="30dp"
-                android:layout_gravity="center|end"
-                android:background="?android:attr/selectableItemBackground"
-                android:onClick="onClickNum"
-                android:text="@string/CUI_Confirm"
-                android:textColor="#4971EF"
-                android:textSize="14sp"
-                android:textStyle="bold" />
-        </FrameLayout>
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            >
-
-            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/Phone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -174,18 +134,66 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
-                android:id="@+id/button1"
+                android:id="@+id/onClickPhone"
                 android:layout_width="50dp"
                 android:layout_height="30dp"
                 android:layout_gravity="center|end"
+                android:layout_marginEnd="22dp"
                 android:background="?android:attr/selectableItemBackground"
                 android:onClick="onClickPhone"
                 android:text="@string/CUI_Confirm"
                 android:textColor="#4971EF"
                 android:textSize="14sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:visibility="gone"
+                tools:visibility="visible" />
         </FrameLayout>
 
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/Num"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="22dp"
+                android:layout_marginRight="22dp"
+                android:textColorHint="#70888888"
+                android:visibility="gone"
+                app:startIconDrawable="@drawable/ic_icon_comfirmnum"
+                app:startIconTint="#888888"
+                tools:visibility="visible">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:backgroundTint="#888888"
+                    android:drawableTint="#888888"
+                    android:ems="10"
+                    android:hint="@string/Find_InputNum"
+                    android:inputType="numberSigned"
+                    android:maxLength="7"
+                    android:textColor="#000000"
+                    tools:visibility="visible" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/onClickNum"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center|end"
+                android:layout_marginEnd="22dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:onClick="onClickNum"
+                android:text="@string/CUI_Confirm"
+                android:textColor="#4971EF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                tools:visibility="visible" />
+        </FrameLayout>
     </LinearLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -227,9 +235,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:buttonTint="#000000"
+                    android:buttonTint="#333742"
                     android:text="@string/Register_Checkbox2"
-                    android:textColor="#000000" />
+                    android:textColor="#333742" />
 
                 <TextView
                     android:id="@+id/textView2"
@@ -256,9 +264,9 @@
                     android:layout_height="wrap_content"
 
                     android:layout_weight="1"
-                    android:buttonTint="#000000"
+                    android:buttonTint="#333742"
                     android:text="@string/Register_Checkbox1"
-                    android:textColor="#000000" />
+                    android:textColor="#333742" />
 
                 <TextView
                     android:id="@+id/textView"
