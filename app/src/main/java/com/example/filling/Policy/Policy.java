@@ -1,14 +1,10 @@
 package com.example.filling.Policy;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-
-import com.example.filling.Login.Login_Register;
 import com.example.filling.R;
 
 import java.util.Objects;
@@ -33,10 +29,4 @@ public class Policy extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
-    public void BtnBack(View v) {
-        Intent intent = new Intent(getApplicationContext(), Login_Register.class);
-        startActivity(intent);
-    }
-
 }

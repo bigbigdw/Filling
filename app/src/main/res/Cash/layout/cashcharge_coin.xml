@@ -102,7 +102,7 @@
 
                 <include
                     layout="@layout/cashcharge_coin_after"
-                    android:visibility="gone"
+                    android:visibility="visible"
                     tools:visibility="gone" />
 
             </FrameLayout>
