@@ -21,14 +21,12 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/imageView"
             android:layout_width="225dp"
             android:layout_height="67.5dp"
             android:contentDescription="@string/TODO"
             app:srcCompat="@drawable/login_splash_logo" />
 
         <TextView
-            android:id="@+id/ID"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -109,7 +107,6 @@
                     android:textColor="#FFFFFF" />
 
                 <TextView
-                    android:id="@+id/textView4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="6dp"

@@ -65,14 +65,9 @@ public class Login extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "환영합니다 김대우님!", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(getApplicationContext(), Main.class);
             startActivity(intent);
-//            System.out.println("hello");
         }else{
             Toast.makeText(getApplicationContext(), "로그인에 실패하였습니다", Toast.LENGTH_SHORT).show();
         }
-
-//        Intent intent = new Intent(getApplicationContext(), MainActivity2.class);
-//        startActivity(intent);
-
     }
 
     public void onClickRegister(View v) {

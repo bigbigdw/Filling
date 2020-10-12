@@ -14,7 +14,7 @@ public class Drawer_PolicyFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
-        View root = inflater.inflate(R.layout.policy_fragment, container, false);
+        View root = inflater.inflate(R.layout.drawer_policy, container, false);
 
         root.findViewById(R.id.TooolbarBack).setOnClickListener(view -> NavHostFragment.findNavController(Drawer_PolicyFragment.this)
                 .navigate(R.id.action_Drawer_Policy_to_Bottom_filling));
