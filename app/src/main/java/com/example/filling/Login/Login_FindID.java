@@ -46,9 +46,10 @@ public class Login_FindID extends AppCompatActivity {
                     Phone.setError(getString(R.string.Find_InputPhone_NO));
                     Phone.setErrorEnabled(true);
                     onClickPhone.setVisibility(View.GONE);
-                } else if(text.toString().length() == 11){
+                } else if(text.toString().length() >= 11){
                     Phone.setErrorEnabled(false);
                     onClickPhone.setVisibility(View.VISIBLE);
+                    Num.setVisibility(View.VISIBLE);
                 } else {
                     Phone.setErrorEnabled(false);
                 }
