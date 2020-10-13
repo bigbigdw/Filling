@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -13,6 +15,7 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import com.example.filling.Login.Login;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
@@ -20,13 +23,12 @@ public class Main extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private Main_Popup Main_Popup;
+    TextView Logout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-//        Intent intent = new Intent(this, Splash.class);
-//        startActivity(intent);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -42,7 +44,7 @@ public class Main extends AppCompatActivity {
         NavigationUI.setupWithNavController(navigationView, navController);
 
 
-        BottomNavigationView navView = findViewById(R.id.nav_vi);
+        BottomNavigationView navView = findViewById(R.id.nav_bottom);
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.Bottom_Myinfo,R.id.Bottom_Coupon, R.id.Bottom_Dongmu, R.id.Drawer_SystemInfo, R.id.Drawer_Policy, R.id.Drawer_FAQ, R.id.Drawer_Alert, R.id.Drawer_CashExchange, R.id.Drawer_CashCharge, R.id.Drawer_CashGift, R.id.Bottom_filling, R.id.Drawer_Complain)
                 .build();
@@ -61,6 +63,14 @@ public class Main extends AppCompatActivity {
         Main_Popup = new Main_Popup(this, positiveListener, negativeListener);
         Main_Popup.show();
     }
+
+        public void onClickLogout(View v) {
+        Toast.makeText(getApplicationContext(), "로그아웃되었습니다.", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(getApplicationContext(), Login.class);
+        startActivity(intent);
+    }
+
+
 
     private View.OnClickListener positiveListener = new View.OnClickListener() {
         public void onClick(View v) {

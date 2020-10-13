@@ -31,19 +31,20 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/EditCharge"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="53dp"
             android:layout_marginTop="25dp"
+            android:hint="@string/CashCharge_Cash"
+            android:textAlignment="textStart"
             app:suffixText="@string/CashCharge_RechargeCashCount"
             app:suffixTextColor="#4971EF">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/CashCharge_Cash"
+                android:textAlignment="textEnd"
                 android:inputType="number"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
-                android:textAlignment="textStart"
                 android:textColor="#4971EF"
                 android:textStyle="bold" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -51,8 +52,10 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/PurchaseCharge"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="20dp"
+            android:layout_height="53dp"
+            android:layout_marginTop="8dp"
+            android:hint="@string/CashCharge_PurchaseAccount"
+            android:textAlignment="textStart"
             android:textColorHint="#E24F39"
             app:suffixText="@string/CashCharge_WonCount"
             app:suffixTextColor="#E24F39">
@@ -62,7 +65,7 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="#E24F39"
                 android:foregroundTint="#FFFFFF"
-                android:hint="@string/CashCharge_PurchaseAccount"
+                android:textAlignment="textEnd"
                 android:inputType="none"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"

@@ -99,7 +99,6 @@ public class CashChargeFragment_Account extends Fragment {
         EditChargeText.addTextChangedListener(new TextWatcher() {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                // 입력되는 텍스트에 변화가 있을 때
                 PurchaseChargeText.setText(EditChargeString.toString());
                 CashCount.setText(String.format("%s원", EditChargeString));
                 PurchaseCount.setText(String.format("%s원", EditChargeString));
@@ -107,12 +106,10 @@ public class CashChargeFragment_Account extends Fragment {
 
             @Override
             public void afterTextChanged(Editable arg0) {
-                // 입력이 끝났을 때
             }
 
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                // 입력하기 전에
             }
         });
 

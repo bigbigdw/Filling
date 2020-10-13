@@ -15,7 +15,6 @@ import java.util.Objects;
 
 public class CashGift_Popup extends Dialog {
 
-    private View.OnClickListener mPositiveListener;
     private View.OnClickListener mNegativeListener;
 
     public CashGift_Popup(@NonNull Context context) {super(context);}
@@ -31,15 +30,12 @@ public class CashGift_Popup extends Dialog {
 
         setContentView(R.layout.cashgift_popup);
 
-        Button mPositiveButton = findViewById(R.id.BtnLeft);
         Button mNegativeButton = findViewById(R.id.BtnRight);
-        mPositiveButton.setOnClickListener(mPositiveListener);
         mNegativeButton.setOnClickListener(mNegativeListener);
     }
 
-    public CashGift_Popup(@NonNull Context context, View.OnClickListener positiveListener, View.OnClickListener negativeListener) {
+    public CashGift_Popup(@NonNull Context context, View.OnClickListener negativeListener) {
         super(context);
-        this.mPositiveListener = positiveListener;
         this.mNegativeListener = negativeListener;
     }
 }

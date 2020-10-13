@@ -10,6 +10,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -25,6 +26,7 @@ public class CashGift_Purchase extends AppCompatActivity {
     EditText pwSecond;
     Button onClickDone , onClickNext;
     LinearLayout Done, Before;
+    TextView SendCash, SendMessage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,11 +52,19 @@ public class CashGift_Purchase extends AppCompatActivity {
             return false;
         });
 
+        SendCash = findViewById(R.id.SendCash);
+        SendMessage = findViewById(R.id.SendMessage);
+
+        Intent intent = getIntent();
+        String SentCash = intent.getStringExtra("SendCash");
+        SendCash.setText(SentCash);
+        String SentMessage = intent.getStringExtra("SendMessage");
+        SendMessage.setText(SentMessage);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == android.R.id.home) {//toolbar의 back키 눌렀을 때 동작
+        if (item.getItemId() == android.R.id.home) {
             finish();
             return true;
         }

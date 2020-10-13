@@ -40,7 +40,6 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <TextView
-                    android:id="@+id/textView5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -69,7 +68,6 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/textView50"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
@@ -80,7 +78,6 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/textView58"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/Complain_Tip1"
@@ -90,7 +87,6 @@
             </LinearLayout>
 
             <TextView
-                android:id="@+id/textView6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -117,14 +113,13 @@
             android:padding="16dp">
 
             <EditText
-                android:id="@+id/editTextTextPersonName2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:autofillHints=""
                 android:backgroundTint="#FFFFFF"
                 android:ems="10"
                 android:hint="@string/Complain_HintTitle"
-                android:inputType="textMultiLine|textPersonName"
-                android:autofillHints="" />
+                android:inputType="textMultiLine|textPersonName" />
 
         </LinearLayout>
 
@@ -144,14 +139,13 @@
             android:padding="16dp">
 
             <EditText
-                android:id="@+id/editTextTextPersonName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:autofillHints=""
                 android:backgroundTint="#FFFFFF"
                 android:ems="10"
                 android:hint="@string/Complain_Hint"
-                android:inputType="textMultiLine|textPersonName"
-                android:autofillHints="" />
+                android:inputType="textMultiLine|textPersonName" />
 
 
         </LinearLayout>

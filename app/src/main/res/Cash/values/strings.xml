@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--Cash-->
+    <string name="Cash_Default">0</string>
     <string name="CashDone_Tile">충전 내역 확인</string>
     <string name="CashDone_Use">충전할 Cash는</string>
     <string name="CashDone_Coin">2,000 Cash</string>
@@ -61,7 +62,7 @@
     <string name="CashCharge_MileageTile">내 마일리지</string>
     <!--Cash 선물 팝업-->
     <string name="CashGift_PopupTitle">Cash 선물이 도착했습니다!</string>
-    <string name="CashGift_To">To. kdw0310</string>
+    <string name="CashGift_To">To.김대우</string>
     <string name="CashGift_Contents">동해물과 백두산이 마르고 닳도록 하나님이 보우하사 우리 나라 만세</string>
     <string name="CashGift_Cash">+ 5,000 Cash를</string>
     <string name="CashGift_Given">선물하셨습니다</string>
@@ -81,8 +82,11 @@
     <string name="CashGift_PurchaseText2">010–3304–9425 (김대우)</string>
     <string name="CashGift_PurchaseText3">이며</string>
     <string name="CashGift_PurchaseText4">선물할 Cash는</string>
-    <string name="CashGift_PurchaseText5">1,000 Cash</string>
+    <string name="CashGift_PurchaseText5">0 원</string>
     <string name="CashGift_PurchaseText6">입니다.</string>
+    <string name="CashGift_PurchaseText7">전송할 메세지는</string>
+    <string name="CashGift_PurchaseText8">동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세</string>
+    <string name="CashGift_PurchaseText9">입니다.</string>
     <string name="CashGift_PurchaseDone">언제나 필링을 이용해주셔서 감사합니다</string>
     <!--Cash 환전-->
     <string name="CashExchange_Title">Cash 환전하기</string>

@@ -23,6 +23,8 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.filling.Drawer.CashGift_Purchase;
+import com.example.filling.Drawer.Cash_Purchase;
+import com.example.filling.Myinfo.MyInfo;
 import com.example.filling.R;
 import com.google.android.material.textfield.TextInputLayout;
 
@@ -31,10 +33,9 @@ import java.util.Objects;
 public class Drawer_CashGiftFragment extends Fragment {
 
     LinearLayout Before,  BtnBefore;
-    TextInputLayout EditCharge, PurchaseCharge;
-    Editable EditChargeString;
-    Button onClickNext, BtnPhoneConfirm;
-    TextView CashCount, PurchaseCount;
+    TextInputLayout EditCharge, PurchaseCharge, Phone, Message;
+    Editable EditChargeString, MessageString;
+    Button onClickNext, onClickPhone;
     private CashGift_Popup CashGift_Popup;
     private Toolbar toolbar;
 
@@ -47,26 +48,27 @@ public class Drawer_CashGiftFragment extends Fragment {
         Objects.requireNonNull(((AppCompatActivity) getActivity()).getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
 
-        CashGift_Popup = new CashGift_Popup(getActivity(), BtnLeft, negativeListener);
+        CashGift_Popup = new CashGift_Popup(getActivity(), BtnLeft);
         CashGift_Popup.show();
 
         Before = root.findViewById(R.id.Before);
         BtnBefore = root.findViewById(R.id.BtnBefore);
 
-        CashCount = root.findViewById(R.id.CashCount);
-        PurchaseCount = root.findViewById(R.id.PurchaseCount);
+        Phone = root.findViewById(R.id.Phone);
+        Message = root.findViewById(R.id.Message);
+
         EditCharge = root.findViewById(R.id.EditCharge);
         PurchaseCharge = root.findViewById(R.id.PurchaseCharge);
 
-        BtnPhoneConfirm = root.findViewById(R.id.BtnPhoneConfirm);
-        BtnPhoneConfirm.setOnClickListener(v -> {
-            Toast.makeText(requireContext().getApplicationContext(), "유효한 아이디입니다", Toast.LENGTH_SHORT).show();
-        });
+        onClickPhone = root.findViewById(R.id.onClickPhone);
+        onClickPhone.setOnClickListener(v -> Toast.makeText(requireContext().getApplicationContext(), "유효한 번호입니다", Toast.LENGTH_SHORT).show());
 
         onClickNext = root.findViewById(R.id.onClickNext);
         onClickNext.setOnClickListener(v -> {
             Toast.makeText(requireContext().getApplicationContext(), "결제 화면으로 이동합니다", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(requireContext().getApplicationContext(), CashGift_Purchase.class);
+            intent.putExtra("SendCash",String.format("%s Cash", EditChargeString));
+            intent.putExtra("SendMessage",String.format("%s", MessageString));
             startActivity(intent);
         });
 
@@ -88,25 +90,49 @@ public class Drawer_CashGiftFragment extends Fragment {
         PurchaseChargeText.setFocusable(false);
 
         EditChargeString = Objects.requireNonNull(EditCharge.getEditText()).getText();
+        MessageString = Objects.requireNonNull(Message.getEditText()).getText();
 
         assert EditChargeText != null;
         EditChargeText.addTextChangedListener(new TextWatcher() {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                // 입력되는 텍스트에 변화가 있을 때
                 PurchaseChargeText.setText(EditChargeString.toString());
             }
 
             @Override
             public void afterTextChanged(Editable arg0) {
-                // 입력이 끝났을 때
             }
 
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                // 입력하기 전에
             }
         });
+
+        Objects.requireNonNull(Phone.getEditText()).addTextChangedListener((new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence text, int start, int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence text, int start, int before, int count) {
+                if (text.toString().length() < 10) {
+                    Phone.setError(getString(R.string.Find_InputPhone_NO));
+                    Phone.setErrorEnabled(true);
+                    onClickPhone.setVisibility(View.GONE);
+                } else if(text.toString().length() == 11){
+                    Phone.setErrorEnabled(false);
+                    onClickPhone.setVisibility(View.VISIBLE);
+                } else {
+                    Phone.setErrorEnabled(false);
+                    onClickPhone.setVisibility(View.GONE);
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        }));
 
         EditChargeText.setOnKeyListener((v, keyCode, event) -> {
             if ((event.getAction() == KeyEvent.ACTION_DOWN) && (keyCode == KeyEvent.KEYCODE_ENTER)) {
@@ -118,13 +144,8 @@ public class Drawer_CashGiftFragment extends Fragment {
             return false;
         });
 
-        root.findViewById(R.id.TooolbarBack).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                NavHostFragment.findNavController(Drawer_CashGiftFragment.this)
-                        .navigate(R.id.action_Drawer_CashGift_to_bottom_filling);
-            }
-        });
+        root.findViewById(R.id.TooolbarBack).setOnClickListener(view -> NavHostFragment.findNavController(Drawer_CashGiftFragment.this)
+                .navigate(R.id.action_Drawer_CashGift_to_bottom_filling));
 
         return root;
     }
@@ -132,13 +153,6 @@ public class Drawer_CashGiftFragment extends Fragment {
     private View.OnClickListener BtnLeft = new View.OnClickListener() {
         public void onClick(View v) {
             Toast.makeText(requireContext().getApplicationContext(), "선물을 수령하였습니다.",Toast.LENGTH_SHORT).show();
-            CashGift_Popup.dismiss();
-        }
-    };
-
-    private View.OnClickListener negativeListener = new View.OnClickListener() {
-        public void onClick(View v) {
-            Toast.makeText(requireContext().getApplicationContext(), "내 정보 페이지로 이동합니다.",Toast.LENGTH_SHORT).show();
             CashGift_Popup.dismiss();
         }
     };

@@ -21,9 +21,11 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
+            android:id="@+id/LOGO"
             android:layout_width="225dp"
             android:layout_height="67.5dp"
             android:contentDescription="@string/TODO"
+            android:onClick="onClickMain"
             app:srcCompat="@drawable/login_splash_logo" />
 
         <TextView
@@ -143,9 +145,7 @@
                 android:textColor="#FFFFFF"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:strokeColor="@color/colorPrimary"
-                app:strokeWidth="10dp" />
+                app:layout_constraintStart_toStartOf="parent" />
 
             <Button
                 android:id="@+id/LoginBtn"

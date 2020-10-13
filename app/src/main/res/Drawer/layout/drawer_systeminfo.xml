@@ -41,7 +41,6 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <TextView
-                    android:id="@+id/textView5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -62,7 +61,6 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView74"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/SystemInfo_Text"
@@ -71,7 +69,6 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textView73"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/SystemInfo_Text2"
@@ -101,7 +98,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#4f8ff0"
-                android:onClick="BtnBack"
                 android:text="@string/CUI_Back"
                 android:textColor="#FFFFFF"
                 android:textStyle="bold" />

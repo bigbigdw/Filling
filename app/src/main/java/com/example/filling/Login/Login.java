@@ -6,6 +6,7 @@ import android.text.Editable;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,6 +22,7 @@ public class Login extends AppCompatActivity {
 
     TextInputLayout IDtext, PWtext;
     Editable idCheck, pwCheck;
+    ImageView LOGO;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +36,8 @@ public class Login extends AppCompatActivity {
         Intent intent = new Intent(this, Splash.class);
         startActivity(intent);
 
+        LOGO = findViewById(R.id.LOGO);
+
         AutoLogin.setOnCheckedChangeListener(
                 (buttonView, isChecked) -> {
                     if (AutoLogin.isChecked()) {
@@ -43,6 +47,11 @@ public class Login extends AppCompatActivity {
                     }
                 }
         );
+    }
+
+    public void onClickMain(View v) {
+        Intent intent = new Intent(getApplicationContext(), Main.class);
+        startActivity(intent);
     }
 
     public void onClickFindID(View v) {
