@@ -6,7 +6,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TableLayout;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -14,8 +16,10 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.filling.Drawer.Alert.Alert_Detail;
+import com.example.filling.Drawer.SystemInfo.Drawer_SystemInfoFragment;
 import com.example.filling.R;
 import com.synnapps.carouselview.CarouselView;
+import com.synnapps.carouselview.ImageClickListener;
 import com.synnapps.carouselview.ImageListener;
 
 import java.util.ArrayList;
@@ -26,6 +30,8 @@ public class Bottom_FillingFragment extends Fragment {
 
     ListView listView;
     SingerAdapter adapter;
+    TableLayout FillingItem;
+    ImageView FillingAD, FAQImg;
 
     CarouselView filling_carousel;
     int[] sampleImages = {R.drawable.filling_ad01, R.drawable.filling_ad02, R.drawable.filling_ad03};
@@ -51,6 +57,19 @@ public class Bottom_FillingFragment extends Fragment {
             Intent intent = new Intent(requireContext().getApplicationContext(), Alert_Detail.class);
             startActivity(intent);
         });
+
+        FillingItem = root.findViewById(R.id.FillingItem);
+        FillingAD = root.findViewById(R.id.FillingAD);
+        FAQImg = root.findViewById(R.id.FAQImg);
+
+        root.findViewById(R.id.FillingItem).setOnClickListener(view -> Toast.makeText(requireContext().getApplicationContext(), "서비스 준비중입니다." , Toast.LENGTH_SHORT).show());
+
+        filling_carousel.setImageClickListener(position -> Toast.makeText(requireContext().getApplicationContext(), "서비스 준비중입니다." , Toast.LENGTH_SHORT).show());
+
+        root.findViewById(R.id.FillingAD).setOnClickListener(view -> Toast.makeText(requireContext().getApplicationContext(), "이젠 든든하지 않습니다." , Toast.LENGTH_SHORT).show());
+
+        root.findViewById(R.id.FAQImg).setOnClickListener(view -> NavHostFragment.findNavController(Bottom_FillingFragment.this)
+                .navigate(R.id.action_Bottom_filling_to_Drawer_FAQ));
 
         root.findViewById(R.id.AlertSeeMore).setOnClickListener(view -> {
             NavHostFragment.findNavController(Bottom_FillingFragment.this)

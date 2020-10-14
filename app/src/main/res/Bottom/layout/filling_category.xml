@@ -6,6 +6,7 @@
     android:layout_height="match_parent">
 
     <TableLayout
+        android:id="@+id/FillingItem"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,7 +28,6 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/imageView6"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_marginBottom="10dp"
@@ -39,7 +39,6 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
-                    android:id="@+id/textView8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/Filling_Shopping"
@@ -56,7 +55,6 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/imageView7"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_marginBottom="10dp"
@@ -68,7 +66,6 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
-                    android:id="@+id/textView11"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/Filling_Drive"
@@ -85,7 +82,6 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/imageView8"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_marginBottom="10dp"
@@ -97,7 +93,6 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
-                    android:id="@+id/textView12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/Filling_Lecture"
@@ -115,7 +110,6 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/imageView9"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_marginBottom="10dp"
@@ -127,7 +121,6 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
-                    android:id="@+id/textView13"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/Filling_Media"
@@ -152,7 +145,6 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/imageView10"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_marginBottom="10dp"
@@ -164,7 +156,6 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
-                    android:id="@+id/textView16"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/Filling_Webtoon"
@@ -181,7 +172,6 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/imageView11"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_marginBottom="10dp"
@@ -193,7 +183,6 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
-                    android:id="@+id/textView17"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/Filling_News"
@@ -210,7 +199,6 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/imageView15"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_marginBottom="10dp"
@@ -222,7 +210,6 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
-                    android:id="@+id/textView18"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/Filling_Flower"
@@ -240,7 +227,6 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/imageView16"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_marginBottom="10dp"
@@ -252,7 +238,6 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
-                    android:id="@+id/textView19"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/Filling_Talk"
@@ -274,7 +259,6 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/imageView30"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_marginBottom="10dp"
@@ -286,7 +270,6 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
-                    android:id="@+id/textView30"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/Filling_Donation"
@@ -303,7 +286,6 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/imageView31"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_marginBottom="10dp"
@@ -315,7 +297,6 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
-                    android:id="@+id/textView31"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/Filling_Fund"
@@ -332,7 +313,6 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/imageView32"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_marginBottom="10dp"
@@ -344,7 +324,6 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
-                    android:id="@+id/textView32"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/Filling_Free"
@@ -361,7 +340,6 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/imageView33"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_marginBottom="10dp"
@@ -373,7 +351,6 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
-                    android:id="@+id/textView33"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/Filling_AD"

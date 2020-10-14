@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_bottom_filling_to_Drawer_Alert"
             app:destination="@id/Drawer_Alert" />
+        <action
+            android:id="@+id/action_Bottom_filling_to_Drawer_FAQ"
+            app:destination="@id/Drawer_FAQ" />
     </fragment>
 
     <fragment

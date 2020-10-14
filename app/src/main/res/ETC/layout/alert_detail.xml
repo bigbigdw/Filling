@@ -27,10 +27,12 @@
                 app:popupTheme="@style/AppTheme.PopupOverlay">
 
                 <TextView
-                    android:id="@+id/textView5"
+                    android:id="@+id/Title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:maxLines="1"
+                    android:ellipsize="end"
                     android:text="@string/Alert_Title"
                     android:textColor="#FFFFFF"
                     android:textSize="20sp"

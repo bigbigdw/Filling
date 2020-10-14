@@ -2,11 +2,13 @@ package com.example.filling.Drawer.Alert;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -15,11 +17,13 @@ import androidx.navigation.fragment.NavHostFragment;
 import com.example.filling.R;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Drawer_AlertFragment extends Fragment {
 
     ListView listView;
     AlertAdapter adapter;
+    String AlertDetail;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -46,20 +50,18 @@ public class Drawer_AlertFragment extends Fragment {
 
         listView.setAdapter(adapter);
 
+
         listView.setOnItemClickListener((adapterView, view, position, id) -> {
-//                Drawer_Alert_ListItem item = (Drawer_Alert_ListItem) adapter.getItem(position);
-//                Toast.makeText(requireContext().getApplicationContext(), "선택 : " + item.getContents(), Toast.LENGTH_SHORT).show();
+            Drawer_Alert_ListItem item = (Drawer_Alert_ListItem) adapter.getItem(position);
+            Toast.makeText(requireContext().getApplicationContext(), "선택 : " + item.getContents(), Toast.LENGTH_SHORT).show();
+            AlertDetail = item.getContents();
             Intent intent = new Intent(requireContext().getApplicationContext(), Alert_Detail.class);
+            intent.putExtra("AlertDetail", AlertDetail);
             startActivity(intent);
         });
 
-        root.findViewById(R.id.TooolbarBack).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                NavHostFragment.findNavController(Drawer_AlertFragment.this)
-                        .navigate(R.id.action_Drawer_Alert_to_bottom_filling);
-            }
-        });
+        root.findViewById(R.id.TooolbarBack).setOnClickListener(view -> NavHostFragment.findNavController(Drawer_AlertFragment.this)
+                .navigate(R.id.action_Drawer_Alert_to_bottom_filling));
 
         return root;
 
