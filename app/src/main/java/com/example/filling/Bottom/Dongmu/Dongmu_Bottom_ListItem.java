@@ -21,7 +21,7 @@ public class Dongmu_Bottom_ListItem {
 
     }
 
-    public Dongmu_Bottom_ListItem( int FoodImgresId, int ImgTag1resId, int ImgTag2resId, int ImgTag3resId, int ImgTag4resId, String Category, String Distance, String Title, String Location) {
+    public Dongmu_Bottom_ListItem( int FoodImgresId, String Category, String Distance, String Title, String Location, int ImgTag1resId, int ImgTag2resId, int ImgTag3resId, int ImgTag4resId) {
         this.Category = Category;
         this.Distance = Distance;
         this.Title = Title;
@@ -39,34 +39,6 @@ public class Dongmu_Bottom_ListItem {
     }
     public void setFoodImgresId(int FoodImgresId) {
         this.FoodImgresId = FoodImgresId;
-    }
-
-    public int getImgTag1resId() {
-        return ImgTag1resId;
-    }
-    public void setImgTag1resId(int ImgTag1resId) {
-        this.ImgTag1resId = ImgTag1resId;
-    }
-
-    public int getImgTag2resId() {
-        return ImgTag2resId;
-    }
-    public void setImgTag2resId(int ImgTag2resId) {
-        this.ImgTag2resId = ImgTag2resId;
-    }
-
-    public int getImgTag3resId() {
-        return ImgTag3resId;
-    }
-    public void setImgTag3resId(int ImgTag3resId) {
-        this.ImgTag3resId = ImgTag3resId;
-    }
-
-    public int getImgTag4resId() {
-        return ImgTag4resId;
-    }
-    public void setImgTag4resId(int ImgTag4resId) {
-        this.ImgTag4resId = ImgTag4resId;
     }
 
     public String getCategory() {
@@ -95,5 +67,33 @@ public class Dongmu_Bottom_ListItem {
     }
     public void setLocation(String Location) {
         this.Location = Location;
+    }
+
+    public int getImgTag1resId() {
+        return ImgTag1resId;
+    }
+    public void setImgTag1resId(int ImgTag1resId) {
+        this.ImgTag1resId = ImgTag1resId;
+    }
+
+    public int getImgTag2resId() {
+        return ImgTag2resId;
+    }
+    public void setImgTag2resId(int ImgTag2resId) {
+        this.ImgTag2resId = ImgTag2resId;
+    }
+
+    public int getImgTag3resId() {
+        return ImgTag3resId;
+    }
+    public void setImgTag3resId(int ImgTag3resId) {
+        this.ImgTag3resId = ImgTag3resId;
+    }
+
+    public int getImgTag4resId() {
+        return ImgTag4resId;
+    }
+    public void setImgTag4resId(int ImgTag4resId) {
+        this.ImgTag4resId = ImgTag4resId;
     }
 }

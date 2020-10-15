@@ -21,19 +21,8 @@
             android:orientation="vertical"
             android:visibility="visible">
 
-<!--            <com.synnapps.carouselview.CarouselView-->
-<!--                android:id="@+id/Dongmu_Upper_carousel"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="175dp"-->
-<!--                android:visibility="gone"-->
-<!--                app:disableAutoPlayOnUserInteraction="false"-->
-<!--                app:fillColor="#00FFFFFF"-->
-<!--                app:pageColor="#00000000"-->
-<!--                app:radius="6dp"-->
-<!--                app:strokeColor="#00777777"-->
-<!--                app:strokeWidth="1dp" />-->
 
-            <include layout="@layout/dongmu_location" />
+
 
             <include layout="@layout/dongmu_main_horizontal_scroll" />
 
@@ -41,8 +30,7 @@
                 layout="@layout/dongmu_main_table"
                 tools:visibility="gone" />
 
-            <!--            <include-->
-            <!--                layout="@layout/dongmu_main_tabs" />-->
+            <include layout="@layout/dongmu_location" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -157,7 +145,7 @@
             <ListView
                 android:id="@+id/Dongmu_Bottom_List"
                 android:layout_width="match_parent"
-                android:layout_height="1400dp"
+                android:layout_height="1260dp"
                 android:layout_marginTop="8dp"
                 android:background="#FFFFFF"
                 android:drawSelectorOnTop="true"
@@ -165,14 +153,12 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/imageView14"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:contentDescription="@string/TODO"
                 app:srcCompat="@drawable/filling_ad11" />
 
             <ImageView
-                android:id="@+id/imageView17"
                 android:layout_width="match_parent"
                 android:layout_height="140dp"
                 android:contentDescription="@string/TODO"

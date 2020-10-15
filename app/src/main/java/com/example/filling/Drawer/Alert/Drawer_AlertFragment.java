@@ -53,7 +53,6 @@ public class Drawer_AlertFragment extends Fragment {
 
         listView.setOnItemClickListener((adapterView, view, position, id) -> {
             Drawer_Alert_ListItem item = (Drawer_Alert_ListItem) adapter.getItem(position);
-            Toast.makeText(requireContext().getApplicationContext(), "선택 : " + item.getContents(), Toast.LENGTH_SHORT).show();
             AlertDetail = item.getContents();
             Intent intent = new Intent(requireContext().getApplicationContext(), Alert_Detail.class);
             intent.putExtra("AlertDetail", AlertDetail);

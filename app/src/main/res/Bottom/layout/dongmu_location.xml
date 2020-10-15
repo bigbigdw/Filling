@@ -18,12 +18,14 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_weight="1"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
             <ImageView
+                android:id="@+id/ShowLocationButton"
                 android:layout_width="12dp"
                 android:layout_height="17dp"
                 android:contentDescription="@string/TODO"
@@ -34,17 +36,22 @@
                 android:layout_height="wrap_content" />
 
             <TextView
+                android:id="@+id/Address"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:ellipsize="end"
                 android:text="@string/Dongmu_Location"
                 android:textColor="#333742" />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:id="@+id/Weather"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center_vertical|end"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:visibility="visible">
 
             <ImageView
                 android:layout_width="15dp"
@@ -57,7 +64,6 @@
                 android:layout_height="wrap_content" />
 
             <TextView
-                android:id="@+id/textView78"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/Dongmu_Weather1" />
