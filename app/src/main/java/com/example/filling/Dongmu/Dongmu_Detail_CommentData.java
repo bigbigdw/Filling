@@ -1,7 +1,6 @@
 package com.example.filling.Dongmu;
 
-public class Dongmu_Detail_ListItem {
-
+public class Dongmu_Detail_CommentData {
     String Name;
     String ID;
     String Date;
@@ -9,21 +8,12 @@ public class Dongmu_Detail_ListItem {
 
     int ImgNameId;
 
-    public Dongmu_Detail_ListItem(String Name, String ID, String Date, String Text) {
-        this.Name = Name;
-        this.ID = ID;
-        this.Date = Date;
-        this.Text = Text;
-
-    }
-
-    public Dongmu_Detail_ListItem( int ImgNameId,  String Name, String ID, String Date, String Text) {
+    public Dongmu_Detail_CommentData( int ImgNameId,  String Name, String ID, String Date, String Text) {
         this.Name = Name;
         this.ID = ID;
         this.Date = Date;
         this.Text = Text;
         this.ImgNameId = ImgNameId;
-
     }
 
     public int getImgNameId() {

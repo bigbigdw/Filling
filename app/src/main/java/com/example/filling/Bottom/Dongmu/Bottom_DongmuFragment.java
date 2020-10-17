@@ -107,7 +107,7 @@ public class Bottom_DongmuFragment extends Fragment {
 
             textview_address.setText(address);
             Weather.setVisibility(View.GONE);
-            Toast.makeText(requireContext().getApplicationContext(), "현재위치 \n위도 " + latitude + "\n경도 " + longitude, Toast.LENGTH_LONG).show();
+            Toast.makeText(requireContext().getApplicationContext(), "현재위치 \n위도 " + latitude + "\n경도 " + longitude, Toast.LENGTH_SHORT).show();
         });
 
         Fake = root.findViewById(R.id.Fake);

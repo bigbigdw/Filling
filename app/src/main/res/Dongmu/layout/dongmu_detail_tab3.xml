@@ -3,8 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools">
+    android:layout_height="match_parent">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -36,15 +35,18 @@
                 app:strokeWidth="1dp">
 
                 <EditText
-                    android:id="@+id/editTextTextPersonName"
+                    android:id="@+id/Comment"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:autofillHints=""
                     android:backgroundTint="#FFFFFF"
                     android:ems="10"
-                    android:hint="@string/Complain_Hint"
+                    android:gravity="top"
+                    android:hint="@string/DongmuDetail_Comment"
                     android:inputType="textMultiLine|textPersonName"
-                    android:padding="16dp" />
+                    android:padding="16dp"
+                    android:textColor="#333742"
+                    android:textCursorDrawable="@null" />
 
             </com.google.android.material.card.MaterialCardView>
 
@@ -63,7 +65,7 @@
                     android:text="@string/DongmuDetail_ReviewGuide" />
 
                 <Button
-                    android:id="@+id/button2"
+                    android:id="@+id/BtnCommit"
                     style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -73,12 +75,11 @@
                     android:textStyle="bold" />
             </LinearLayout>
 
-            <ListView
-                android:id="@+id/Donngmu_List"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/Dongmu_Detail_Comment"
                 android:layout_width="match_parent"
-                android:layout_height="850dp"
-                android:layout_marginTop="18dp"
-                tools:ignore="NestedScrolling" />
+                android:layout_height="match_parent"
+                android:background="#FFFFFF" />
 
         </LinearLayout>
 

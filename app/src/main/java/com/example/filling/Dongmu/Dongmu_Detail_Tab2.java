@@ -79,6 +79,47 @@ public class Dongmu_Detail_Tab2 extends Fragment {
         data = new Dongmu_Detail_MenuData(R.drawable.dongmu_detail_menu18, R.drawable.dongmu_detail_menu19,"새우 완탕면", "11,000원","야채 완탕면", "10,000원");
         adapter.addItem(data);
 
+        data = new Dongmu_Detail_MenuData(R.drawable.dongmu_detail_menu20, R.drawable.dongmu_detail_menu21,"산라탕", "5,000원(1인분)","게살송이 스프", "5,000원(1인분)");
+        adapter.addItem(data);
+        data = new Dongmu_Detail_MenuData(R.drawable.dongmu_detail_menu22, R.drawable.dongmu_detail_menu23,"채심볶음", "15,000원","그린빈 소고기볶음", "13,000원");
+        adapter.addItem(data);
+        data = new Dongmu_Detail_MenuData(R.drawable.dongmu_detail_menu24, R.drawable.dongmu_detail_menu25,"굴소스 청경채볶음", "12,000원","자파이구", "7,000원");
+        adapter.addItem(data);
+        data = new Dongmu_Detail_MenuData(R.drawable.dongmu_detail_menu26, R.drawable.dongmu_detail_menu27,"비타민볶음", "11,000원","새우야채춘권", "6,000원(2개)");
+        adapter.addItem(data);
+        data = new Dongmu_Detail_MenuData(R.drawable.dongmu_detail_menu28, R.drawable.dongmu_detail_menu29,"라웨이황과", "6,000(중)","멘보샤", "10,000원(5개)");
+        adapter.addItem(data);
+
+        data = new Dongmu_Detail_MenuData(R.drawable.dongmu_detail_menu30, R.drawable.dongmu_detail_menu31,"깐풍기", "26,000원","꿔바로우", "28,000원(중)");
+        adapter.addItem(data);
+        data = new Dongmu_Detail_MenuData(R.drawable.dongmu_detail_menu32, R.drawable.dongmu_detail_menu33,"칠리새우", "32,000원","유린기", "22,000원");
+        adapter.addItem(data);
+        data = new Dongmu_Detail_MenuData(R.drawable.dongmu_detail_menu34, R.drawable.dongmu_detail_menu35,"해물누룽지볶음", "20,000원(소)","XO게살볶음밥", "15,000원");
+        adapter.addItem(data);
+        data = new Dongmu_Detail_MenuData(R.drawable.dongmu_detail_menu36, R.drawable.dongmu_detail_menu37,"새우볶음밥", "12,000원","게살볶음밥", "13,000원");
+        adapter.addItem(data);
+        data = new Dongmu_Detail_MenuData(R.drawable.dongmu_detail_menu38, R.drawable.dongmu_detail_menu39,"계란볶음밥", "8,000원","소고기볶음밥", "12,000원");
+        adapter.addItem(data);
+
+        data = new Dongmu_Detail_MenuData(R.drawable.dongmu_detail_menu40, R.drawable.dongmu_detail_menu41,"파이구 볶음밥", "14,000원","새우고기 볶음밥", "13,000원");
+        adapter.addItem(data);
+        data = new Dongmu_Detail_MenuData(R.drawable.dongmu_detail_menu42, R.drawable.dongmu_detail_menu43,"해물짜장소스", "4,500원","매운닭고기소스", "4,000원");
+        adapter.addItem(data);
+        data = new Dongmu_Detail_MenuData(R.drawable.dongmu_detail_menu44, R.drawable.dongmu_detail_menu45,"해물굴소스", "5,000원","해물사천탕면", "15,000원");
+        adapter.addItem(data);
+        data = new Dongmu_Detail_MenuData(R.drawable.dongmu_detail_menu46, R.drawable.dongmu_detail_menu47,"소고기탕면", "14,000원","우육면", "14,000원");
+        adapter.addItem(data);
+        data = new Dongmu_Detail_MenuData(R.drawable.dongmu_detail_menu48, R.drawable.dongmu_detail_menu49,"우육탕면", "12,000원","새우탕면", "11,000원");
+        adapter.addItem(data);
+
+        data = new Dongmu_Detail_MenuData(R.drawable.dongmu_detail_menu50, R.drawable.dongmu_detail_menu51,"새우볶음면", "11,000원","해물짜장미엔", "9,000원");
+        adapter.addItem(data);
+        data = new Dongmu_Detail_MenuData(R.drawable.dongmu_detail_menu52, R.drawable.dongmu_detail_menu53,"중국식냉면", "12,000원","굴탕면", "14,000원");
+        adapter.addItem(data);
+        data = new Dongmu_Detail_MenuData(R.drawable.dongmu_detail_menu54, R.drawable.dongmu_detail_menu55,"미니단팥바오", "4,500원(4개)","슈크림바오", "5,000원(4개)");
+        adapter.addItem(data);
+        data = new Dongmu_Detail_MenuData(R.drawable.dongmu_detail_menu56, R.drawable.dongmu_detail_menu57,"디저트미니바오콤보", "5,000원(4개)","단팥샤오롱바오", "8,000원(10개)");
+        adapter.addItem(data);
     }
 
     ViewListener viewListener = new ViewListener() {

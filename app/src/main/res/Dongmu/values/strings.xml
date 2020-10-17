@@ -58,4 +58,6 @@
     <string name="DongmuDetail_ReviewGuide">관련없는 글 (비방, 홍보, 도배 등)은 삭제됩니다.</string>
     <string name="DongmuDetail_ReviewBtn">작성하기</string>
     <string name="DongmuDetail_Member01">김</string>
+
+    <string name="DongmuDetail_Comment">리뷰를 작성해주세요</string>
 </resources>

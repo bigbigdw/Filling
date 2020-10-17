@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent">
 
@@ -16,53 +16,61 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <com.google.android.material.appbar.AppBarLayout
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#4971EF"
-            android:theme="@style/AppTheme.AppBarOverlay">
+            android:layout_height="200dp"
+            android:layout_marginTop="8dp"
+            android:layout_margin="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="#FFFFFF"
+            android:theme="@style/Theme.MaterialComponents.Light"
+            app:cardElevation="0dp"
+            app:strokeColor="#DBDBDB"
+            app:strokeWidth="1dp">
 
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
+            <EditText
+                android:id="@+id/editTextTextPersonName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:popupTheme="@style/AppTheme.PopupOverlay">
+                android:autofillHints=""
+                android:backgroundTint="#FFFFFF"
+                android:ems="10"
+                android:hint="@string/Complain_Hint"
+                android:inputType="textMultiLine|textPersonName"
+                android:padding="16dp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="@string/Dongmu_List"
-                    android:textColor="#FFFFFF"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.card.MaterialCardView>
 
 
-        </com.google.android.material.appbar.AppBarLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/DongmuDetail_ReviewGuide" />
+
+            <Button
+                android:id="@+id/button2"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/DongmuDetail_ReviewBtn"
+                android:textColor="#4971EF"
+                android:textStyle="bold" />
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-
-
-                <include layout="@layout/dongmu_main_horizontal_scroll" />
-
-                <include
-                    layout="@layout/dongmu_main_table"
-                    tools:visibility="gone" />
-
-                <include layout="@layout/dongmu_location" />
-
-            </LinearLayout>
 
             <ListView
                 android:id="@+id/Dongmu_Bottom_List"

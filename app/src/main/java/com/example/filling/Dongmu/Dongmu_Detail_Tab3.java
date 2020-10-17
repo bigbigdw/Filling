@@ -1,78 +1,82 @@
 package com.example.filling.Dongmu;
 
+import android.app.Activity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.BaseAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.example.filling.R;
 
 import java.util.ArrayList;
 
 public class Dongmu_Detail_Tab3 extends Fragment {
 
-    ListView listView;
-    Dongmu_Detail_Tab3.DongmuDetailAdapter adapter;
+    Dongmu_Detail_CommentAdapter adapter;
+    EditText Comment;
+    Button BtnCommit;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.dongmu_detail_tab3, container, false);
 
-        listView = root.findViewById(R.id.Donngmu_List);
-        adapter = new Dongmu_Detail_Tab3.DongmuDetailAdapter();
-        adapter.addItem(new Dongmu_Detail_ListItem(R.drawable.dongmu_detail_member01, "김","100***@na","2018.07.28 01:48","12번 허리 30인치인데 무슨 사이즈 입어야 하나요?"));
-        adapter.addItem(new Dongmu_Detail_ListItem(R.drawable.dongmu_detail_member01, "정","whr***@ha","2018.07.28 01:43","주문했습니다 하자없는 상품 부탁드립니다."));
-        adapter.addItem(new Dongmu_Detail_ListItem(R.drawable.dongmu_detail_member01, "유","100***@na","2018.07.28 01:48","12번 허리 30인치인데 무슨 사이즈 입어야 하나요?"));
-        adapter.addItem(new Dongmu_Detail_ListItem(R.drawable.dongmu_detail_member01, "김","whr***@ha","2018.07.28 01:43","주문했습니다 하자없는 상품 부탁드립니다."));
-        adapter.addItem(new Dongmu_Detail_ListItem(R.drawable.dongmu_detail_member01, "진","100***@na","2018.07.28 01:48","12번 허리 30인치인데 무슨 사이즈 입어야 하나요?"));
-        adapter.addItem(new Dongmu_Detail_ListItem(R.drawable.dongmu_detail_member01, "최","whr***@ha","2018.07.28 01:43","주문했습니다 하자없는 상품 부탁드립니다."));
-        adapter.addItem(new Dongmu_Detail_ListItem(R.drawable.dongmu_detail_member01, "현","100***@na","2018.07.28 01:48","12번 허리 30인치인데 무슨 사이즈 입어야 하나요?"));
-        adapter.addItem(new Dongmu_Detail_ListItem(R.drawable.dongmu_detail_member01, "박","whr***@ha","2018.07.28 01:43","주문했습니다 하자없는 상품 부탁드립니다."));
-        adapter.addItem(new Dongmu_Detail_ListItem(R.drawable.dongmu_detail_member01, "김","100***@na","2018.07.28 01:48","12번 허리 30인치인데 무슨 사이즈 입어야 하나요?"));
-        adapter.addItem(new Dongmu_Detail_ListItem(R.drawable.dongmu_detail_member01, "유","whr***@ha","2018.07.28 01:43","주문했습니다 하자없는 상품 부탁드립니다."));
-        listView.setAdapter(adapter);
+        RecyclerView recyclerView = root.findViewById(R.id.Dongmu_Detail_Comment);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(requireContext().getApplicationContext());
+        recyclerView.setLayoutManager(linearLayoutManager);
+        adapter = new Dongmu_Detail_CommentAdapter();
+        recyclerView.setAdapter(adapter);
+
+
+        Comment = root.findViewById(R.id.Comment);
+        BtnCommit = root.findViewById(R.id.BtnCommit);
+
+        BtnCommit.setOnClickListener(view -> {
+            String Name = "김";
+            String ID = "bibib****";
+            String Date = "방금 전";
+            String Text = Comment.getText().toString();
+            Comment.setText("");
+            Dongmu_Detail_CommentData data = new Dongmu_Detail_CommentData(R.drawable.dongmu_detail_member01, Name, ID, Date, Text);
+            adapter.changeItem(data,0);
+        });
+
+        getData();
 
         return root;
     }
 
-    class DongmuDetailAdapter extends BaseAdapter {
-        ArrayList<Dongmu_Detail_ListItem> items = new ArrayList<>();
-
-        @Override
-        public int getCount() {
-            return items.size();
-        }
-
-        public void addItem(Dongmu_Detail_ListItem item) {
-            items.add(item);
-        }
-
-        @Override
-        public Object getItem(int position) {
-            return items.get(position);
-        }
-
-        @Override
-        public long getItemId(int position) {
-            return position;
-        }
-
-        @Override
-        public View getView(int position, View convertView, ViewGroup viewGroup) {
-            Dongmu_Detail_List view = new Dongmu_Detail_List(requireContext().getApplicationContext());
-
-            Dongmu_Detail_ListItem item = items.get(position);
-            view.setImgNameId(item.getImgNameId());
-            view.setName(item.getName());
-            view.setDate(item.getDate());
-            view.setText(item.getText());
-            view.setID(item.getID());
-            return view;
-        }
+    private void getData() {
+        Dongmu_Detail_CommentData data = new Dongmu_Detail_CommentData(R.drawable.dongmu_detail_member01, "김", "bibib****", "2020.11.07 01:48", "치킨이 친절하고 사장님이 맛있어요");
+        adapter.addItem(data);
+        data = new Dongmu_Detail_CommentData(R.drawable.dongmu_detail_member05, "진", "youj****", "2020.10.17 18:27", "아이들 술안주로, 어른들 간식으로 적당하네요^^");
+        adapter.addItem(data);
+        data = new Dongmu_Detail_CommentData(R.drawable.dongmu_detail_member01, "문", "moon****", "2020.08.23 15:48", "가렌이랑 케넨이랑 붙으면 가렌이 이김");
+        adapter.addItem(data);
+        data = new Dongmu_Detail_CommentData(R.drawable.dongmu_detail_member04, "한", "han.su****", "2020.08.13 02:12", "구구가가 구구가가");
+        adapter.addItem(data);
+        data = new Dongmu_Detail_CommentData(R.drawable.dongmu_detail_member02, "정", "hyuck****", "2020.08.06 08:15", "주문했습니다 하자없는 상품 부탁드립니다.");
+        adapter.addItem(data);
+        data = new Dongmu_Detail_CommentData(R.drawable.dongmu_detail_member04, "신", "xxial****", "2020.07.28 05:15", "아아 이것은 [댓글]이리는 것이다. 그것이 댓글이니깐.");
+        adapter.addItem(data);
+        data = new Dongmu_Detail_CommentData(R.drawable.dongmu_detail_member03, "유", "bin****", "2020.06.29 23:09", "테스형도 이게 무슨 앱인지 모르겠다는데요?");
+        adapter.addItem(data);
+        data = new Dongmu_Detail_CommentData(R.drawable.dongmu_detail_member04, "김", "kun.__.s****", "2020.06.08 05:45", "주문했습니다 하자없는 상품 부탁드립니다.");
+        adapter.addItem(data);
+        data = new Dongmu_Detail_CommentData(R.drawable.dongmu_detail_member03, "윤", "die_****", "2020.06.06 19:59", "12번 허리 30인치인데 무슨 사이즈 입어야 하나요?");
+        adapter.addItem(data);
+        data = new Dongmu_Detail_CommentData(R.drawable.dongmu_detail_member05, "정", "yunjun****", "2020.06.06 19:59", "미륏뽈뜬 쏘롸! 새끄리빠이쓰 미");
+        adapter.addItem(data);
     }
-
 }
