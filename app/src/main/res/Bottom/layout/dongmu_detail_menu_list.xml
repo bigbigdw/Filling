@@ -7,11 +7,9 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:baselineAligned="false"
+        android:layout_height="230dp"
         android:gravity="center_horizontal"
         android:orientation="horizontal"
-        android:padding="8dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -22,9 +20,9 @@
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/Menu1Image"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
+                android:id="@+id/ImgLeft"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
                 android:contentDescription="@string/TODO"
                 app:srcCompat="@drawable/dongmu_detail_menu00" />
 
@@ -33,21 +31,21 @@
                 android:layout_height="wrap_content" />
 
             <TextView
-                android:id="@+id/Menu1Name"
+                android:id="@+id/MenuLeft"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="@string/DongmuDetail_CarouselText1"
+                android:text="@string/DongmuDetail_Menu001"
                 android:textAlignment="center"
                 android:textColor="#333742"
                 android:textSize="15sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/Menu1Price"
+                android:id="@+id/PriceLeft"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/DongmuDetail_CarouselText2"
+                android:text="@string/DongmuDetail_Menu002"
                 android:textAlignment="center"
                 android:textColor="#888888" />
         </LinearLayout>
@@ -55,77 +53,40 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
+            android:layout_marginStart="16dp"
             android:gravity="center"
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/Menu2Image"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
+                android:id="@+id/ImgRight"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
                 android:contentDescription="@string/TODO"
-                app:srcCompat="@drawable/dongmu_detail_menu00" />
+                app:srcCompat="@drawable/dongmu_detail_menu01" />
 
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
             <TextView
-                android:id="@+id/Menu2Name"
+                android:id="@+id/MenuRight"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="@string/DongmuDetail_CarouselText3"
+                android:text="@string/DongmuDetail_Menu011"
                 android:textAlignment="center"
                 android:textColor="#333742"
                 android:textSize="15sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/Menu2Price"
+                android:id="@+id/PriceRight"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/DongmuDetail_CarouselText4"
+                android:text="@string/DongmuDetail_Menu012"
                 android:textAlignment="center"
                 android:textColor="#888888" />
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/Menu3Image"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
-                android:contentDescription="@string/TODO"
-                app:srcCompat="@drawable/dongmu_detail_menu00" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:id="@+id/Menu3Name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="@string/DongmuDetail_CarouselText5"
-                android:textAlignment="center"
-                android:textColor="#333742"
-                android:textSize="15sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/Menu3Price"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/DongmuDetail_CarouselText6"
-                android:textAlignment="center"
-                android:textColor="#888888" />
-        </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

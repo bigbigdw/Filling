@@ -32,4 +32,9 @@
         <item name="windowNoTitle">true</item>
         <item name="android:textColorHint">#000000</item>
     </style>
+
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">#ffffff</item>
+        <item name="colorControlActivated">#FFBD0B</item>
+    </style>
 </resources>

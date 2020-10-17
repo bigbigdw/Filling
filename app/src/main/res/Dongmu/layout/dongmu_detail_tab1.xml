@@ -27,8 +27,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
+                android:breakStrategy="high_quality"
                 android:text="@string/DongmuDetail_Intro"
-                android:textAlignment="center"
                 android:textColor="#333742"
                 android:textSize="15sp" />
 
@@ -36,6 +36,56 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="36dp"
+                android:layout_marginBottom="4dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:text="@string/DongmuDetail_TitleTime1"
+                android:textColor="#333742"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#DBDBDB"
+                android:orientation="vertical" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="24dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:text="@string/DongmuDetail_TitleTime2" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:text="@string/DongmuDetail_TitleLocation1"
+                android:textColor="#333742"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#DBDBDB"
+                android:orientation="vertical" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="24dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:text="@string/DongmuDetail_TitleLocatio2" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginBottom="4dp"
                 android:paddingLeft="8dp"
                 android:paddingRight="8dp"
@@ -143,16 +193,33 @@
                 android:layout_marginTop="4dp"
                 android:paddingLeft="8dp"
                 android:paddingRight="8dp"
-                android:text="@string/DongmuDetail_IntroText5" />
+                android:text="@string/DongmuDetail_IntroText11" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:layout_marginBottom="24dp"
                 android:paddingLeft="8dp"
                 android:paddingRight="8dp"
-                android:text="@string/DongmuDetail_IntroText6" />
+                android:text="@string/DongmuDetail_IntroText12" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:text="@string/DongmuDetail_IntroText13" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:text="@string/DongmuDetail_IntroText14" />
+
+
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>

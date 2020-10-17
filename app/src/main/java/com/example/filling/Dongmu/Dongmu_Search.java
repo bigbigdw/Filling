@@ -12,6 +12,7 @@ import android.widget.BaseAdapter;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -31,7 +32,7 @@ public class Dongmu_Search extends AppCompatActivity {
     Dongmu_Search.DongmuAdapter adapter;
     EditText DongmuSearchText;
     LinearLayout SearchResult;
-    NestedScrollView DongmuSearchScroll;
+    TextView textview_address;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,9 +84,13 @@ public class Dongmu_Search extends AppCompatActivity {
             startActivity(intent);
         });
 
+        Intent intent = getIntent();
+        String SentCash = intent.getStringExtra("textview_address");
+        textview_address = findViewById(R.id.Address);
+        textview_address.setText(SentCash);
+
         DongmuSearchText = findViewById(R.id.DongmuSearchText);
         SearchResult = findViewById(R.id.SearchResult);
-//        DongmuSearchScroll = findViewById(R.id.DongmuSearchScroll);
 
         DongmuSearchText.setOnKeyListener((v, keyCode, event) -> {
             if ((event.getAction() == KeyEvent.ACTION_DOWN) && (keyCode == KeyEvent.KEYCODE_ENTER)) {

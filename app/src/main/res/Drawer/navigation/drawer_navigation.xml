@@ -22,7 +22,11 @@
         android:id="@+id/Bottom_Coupon"
         android:name="com.example.filling.Bottom.Coupon.Bottom_CouponFragment"
         android:label=""
-        tools:layout="@layout/bottom_coupon" />
+        tools:layout="@layout/bottom_coupon" >
+        <action
+            android:id="@+id/action_Bottom_Coupon_to_Drawer_FAQ"
+            app:destination="@id/Drawer_FAQ" />
+    </fragment>
 
     <fragment
         android:id="@+id/Bottom_Myinfo"
@@ -34,7 +38,11 @@
         android:id="@+id/Bottom_Dongmu"
         android:name="com.example.filling.Bottom.Dongmu.Bottom_DongmuFragment"
         android:label=""
-        tools:layout="@layout/bottom_dongmu" />
+        tools:layout="@layout/bottom_dongmu" >
+        <action
+            android:id="@+id/action_Bottom_Dongmu_to_Drawer_FAQ"
+            app:destination="@id/Drawer_FAQ" />
+    </fragment>
 
     <fragment
         android:id="@+id/Drawer_Policy"

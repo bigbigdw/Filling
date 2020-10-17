@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#FFFFFF">
+    android:layout_height="match_parent">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbar"
@@ -36,7 +34,7 @@
                     android:layout_marginTop="55dp"
                     android:contentDescription="@string/TODO"
                     android:scaleType="fitXY"
-                    android:src="@drawable/dongmu_detail_ex01" />
+                    android:src="@drawable/dongmu_detail_ex00" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -46,44 +44,27 @@
                         android:layout_width="match_parent"
                         android:layout_height="200dp"
                         android:background="#99333742"
+                        android:gravity="center"
                         android:orientation="vertical"
                         android:padding="16dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent">
 
-                        <TextView
+                        <include
+                            layout="@layout/dongmu_detail_star"
                             android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/DongmuDetail_TitleMarket"
-                            android:textAlignment="center"
+                            android:layout_marginTop="16dp"
+                            android:text="@string/DongmuDetail_TitleTag"
                             android:textColor="#FFFFFF"
-                            android:textSize="29sp"
+                            android:textSize="14sp"
                             android:textStyle="bold" />
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="24dp"
-                            android:text="@string/DongmuDetail_TitleLocation"
-                            android:textAlignment="center"
-                            android:textColor="#FFFFFF" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:text="@string/DongmuDetail_TitleTime"
-                            android:textAlignment="center"
-                            android:textColor="#FFFFFF" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:text="@string/DongmuDetail_TitleTag"
-                            android:textAlignment="center"
-                            android:textColor="#ffffff" />
                     </LinearLayout>
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </FrameLayout>
@@ -111,45 +92,48 @@
     </com.google.android.material.appbar.AppBarLayout>
 
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <LinearLayout
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior"
-            android:orientation="vertical">
+            android:background="#FFFFFF"
+            app:itemBackground="@android:color/transparent"
+            app:itemIconTint="@color/drawer_item"
+            app:itemTextColor="@color/drawer_item"
+            app:tabIndicatorColor="#4971EF"
+            app:tabSelectedTextColor="#4971EF"
+            app:tabTextColor="#000000" />
 
-            <com.google.android.material.tabs.TabLayout
-                android:id="@+id/tabs"
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/View"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            android:fillViewport="true">
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#FFFFFF"
-                app:itemBackground="@android:color/transparent"
-                app:itemIconTint="@color/drawer_item"
-                app:itemTextColor="@color/drawer_item"
-                app:tabIndicatorColor="#4971EF"
-                app:tabSelectedTextColor="#4971EF"
-                app:tabTextColor="#000000" />
+                android:orientation="vertical">
 
-            <androidx.core.widget.NestedScrollView
-                android:id="@+id/View"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:fillViewport="true">
-
-                <LinearLayout
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/view_pager"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:layout_height="820dp"
+                    android:background="#FFFFFF"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
 
-                    <androidx.viewpager.widget.ViewPager
-                        android:id="@+id/view_pager"
-                        android:layout_width="match_parent"
-                        android:layout_height="820dp"
-                        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
-                </LinearLayout>
-            </androidx.core.widget.NestedScrollView>
-
-        </LinearLayout>
+    </LinearLayout>
 
     <!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
     <!--        android:layout_width="wrap_content"-->

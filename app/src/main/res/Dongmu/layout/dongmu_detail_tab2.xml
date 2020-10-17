@@ -24,7 +24,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="21dp"
-                android:layout_marginBottom="19dp"
+                android:layout_marginBottom="8dp"
                 android:gravity="center_horizontal"
                 android:orientation="horizontal">
 
@@ -57,7 +57,7 @@
             <com.synnapps.carouselview.CarouselView
                 android:id="@+id/Dongmu_Detail_carousel"
                 android:layout_width="match_parent"
-                android:layout_height="170dp"
+                android:layout_height="200dp"
                 app:disableAutoPlayOnUserInteraction="false"
                 app:fillColor="#00FFFFFF"
                 app:pageColor="#00000000"
@@ -68,8 +68,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="21dp"
-                android:layout_marginBottom="19dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 android:gravity="center_horizontal"
                 android:orientation="horizontal">
 
@@ -81,7 +81,20 @@
                     android:textSize="25sp" />
             </LinearLayout>
 
-            <include layout="@layout/dongmu_detail_menu" />
+<!--            <ListView-->
+<!--                android:id="@+id/Dongmu_Detail_Menu"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="4600dp"-->
+<!--                android:background="#FFFFFF"-->
+<!--                android:drawSelectorOnTop="true"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/Dongmu_Detail_Menu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF" />
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>

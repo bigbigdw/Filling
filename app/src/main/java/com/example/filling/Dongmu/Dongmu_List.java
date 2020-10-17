@@ -8,8 +8,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.HorizontalScrollView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TableLayout;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -35,6 +37,7 @@ public class Dongmu_List extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+        TextView textview_address;
 
         listView = findViewById(R.id.Dongmu_Bottom_List);
         adapter = new Dongmu_List.DongmuAdapter();
@@ -77,6 +80,11 @@ public class Dongmu_List extends AppCompatActivity {
             Intent intent = new Intent(getApplicationContext(), Dongmu_Detail.class);
             startActivity(intent);
         });
+
+        Intent intent = getIntent();
+        String SentCash = intent.getStringExtra("textview_address");
+        textview_address = findViewById(R.id.Address);
+        textview_address.setText(SentCash);
 
         ScrollBefore = findViewById(R.id.ScrollBefore);
         ScrollAfter = findViewById(R.id.ScrollAfter);

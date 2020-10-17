@@ -49,7 +49,6 @@
             </LinearLayout>
 
             <ImageView
-                android:id="@+id/imageView20"
                 android:layout_width="28dp"
                 android:layout_height="28dp"
                 android:layout_alignParentTop="true"
@@ -96,13 +95,14 @@
                             android:orientation="horizontal">
 
                             <ImageView
-                                android:id="@+id/imageView18"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
                                 android:layout_marginEnd="8dp"
                                 android:contentDescription="@string/TODO"
                                 android:fillColor="#ffffff"
-                                app:srcCompat="@drawable/ic_icon_message" />
+                                app:srcCompat="@drawable/ic_icon_recommend" />
+
+
 
                             <TextView
                                 android:id="@+id/Dongmu_Lower_Comment"
@@ -113,13 +113,12 @@
                                 android:textColor="#FFFFFF" />
 
                             <ImageView
-                                android:id="@+id/imageView19"
-                                android:layout_width="24dp"
-                                android:layout_height="24dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
                                 android:layout_marginEnd="8dp"
                                 android:contentDescription="@string/TODO"
                                 android:fillColor="#ffffff"
-                                app:srcCompat="@drawable/ic_icon_recommend" />
+                                app:srcCompat="@drawable/ic_icon_message" />
 
                             <TextView
                                 android:id="@+id/Dongmu_Lower_Recommend"

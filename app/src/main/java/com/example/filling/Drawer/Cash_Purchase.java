@@ -30,12 +30,12 @@ public class Cash_Purchase extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.cash_purchase);
-        Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar mToolbar =  findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
-        Done = (LinearLayout) findViewById(R.id.RegisterDone);
-        Before = (LinearLayout) findViewById(R.id.RegisterBefore);
+        Done = findViewById(R.id.RegisterDone);
+        Before =  findViewById(R.id.RegisterBefore);
         onClickNext = findViewById(R.id.onClickNext);
         onClickDone =  findViewById(R.id.onClickDone);
         pwSecond = findViewById(R.id.pwSecond);
@@ -54,7 +54,7 @@ public class Cash_Purchase extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == android.R.id.home) {//toolbar의 back키 눌렀을 때 동작
+        if (item.getItemId() == android.R.id.home) {
             finish();
             return true;
         }

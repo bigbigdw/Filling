@@ -7,6 +7,7 @@ import android.location.Address;
 import android.location.Geocoder;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.text.Editable;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -26,7 +27,9 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.fragment.NavHostFragment;
 
+import com.example.filling.Bottom.Filling.Bottom_FillingFragment;
 import com.example.filling.Dongmu.Dongmu_Detail;
 import com.example.filling.Dongmu.Dongmu_List;
 import com.example.filling.Dongmu.Dongmu_Search;
@@ -38,6 +41,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+import java.util.Objects;
 
 import static android.content.Context.LOCATION_SERVICE;
 
@@ -45,22 +49,22 @@ public class Bottom_DongmuFragment extends Fragment {
 
     private GpsTracker gpsTracker;
     TextView textview_address, DongmuSearchText;
+
     private static final int GPS_ENABLE_REQUEST_CODE = 2001;
     private static final int PERMISSIONS_REQUEST_CODE = 100;
     String[] REQUIRED_PERMISSIONS = {Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION};
 
     ListView listView;
     Bottom_DongmuFragment.DongmuAdapter adapter;
-
+    ImageView FillingAD, FAQImg;
     HorizontalScrollView ScrollBefore;
     TableLayout ScrollAfter;
-    LinearLayout onClickUnfold, onClickFold, DongmuList01, DongmuSearch, Weather;
+    LinearLayout onClickUnfold, onClickFold, DongmuList01, DongmuSearch, Weather, Location;
 
     CarouselView Dongmu_Lower_carousel;
-    ImageView ShowLocationButton;
 
     int[] LowerImages = {R.drawable.dongmu_lower_ex12, R.drawable.dongmu_lower_ex11, R.drawable.dongmu_lower_ex01, R.drawable.dongmu_lower_ex02, R.drawable.dongmu_lower_ex03, R.drawable.dongmu_lower_ex04, R.drawable.dongmu_lower_ex05, R.drawable.dongmu_lower_ex06, R.drawable.dongmu_lower_ex07, R.drawable.dongmu_lower_ex08, R.drawable.dongmu_lower_ex09, R.drawable.dongmu_lower_ex10};
-    String[] MarkText = {"분위기갑","유명맛집","해장국", "밥집", "횟집", "맥주", "분위기맛집", "중화요리", "밥집", "전국맛집", "고기맛집", "파스타"};
+    String[] MarkText = {"분위기갑","유명맛집","해장국", "밥집", "횟집", "맥주", "분위기굿", "중화요리", "밥집", "전국맛집", "고기맛집", "파스타"};
     String[] Title = {"스미스가좋아하는한옥", "한옥달", "진짜해장국", "뚝도시장", "보물선", "을지맥옥", "뇨끼바", "무탄", "온천집", "마이클바이해비치", "몽탄", "라구"};
     String[] Comment = {"1511","5651","1562", "452", "4651", "489", "1465", "1651", "1562", "452", "4651", "489", "1465", "1651"};
     String[] Recommend = {"6226","1515","12", "626", "132", "151", "6262", "6262", "12", "626", "132", "151", "6262", "6262"};
@@ -82,16 +86,18 @@ public class Bottom_DongmuFragment extends Fragment {
             checkRunTimePermission();
         }
 
-        ShowLocationButton = root.findViewById(R.id.ShowLocationButton);
+        gpsTracker = new GpsTracker(getActivity());
+
+        double latitude = gpsTracker.getLatitude();
+        double longitude = gpsTracker.getLongitude();
+
+        String address = getCurrentAddress(latitude, longitude);
+
+        Location = root.findViewById(R.id.Location);
         textview_address = root.findViewById(R.id.Address);
         Weather = root.findViewById(R.id.Weather);
-        ShowLocationButton.setOnClickListener(v -> {
-            gpsTracker = new GpsTracker(getActivity());
+        Location.setOnClickListener(v -> {
 
-            double latitude = gpsTracker.getLatitude();
-            double longitude = gpsTracker.getLongitude();
-
-            String address = getCurrentAddress(latitude, longitude);
             textview_address.setText(address);
             Weather.setVisibility(View.GONE);
             Toast.makeText(requireContext().getApplicationContext(), "현재위치 \n위도 " + latitude + "\n경도 " + longitude, Toast.LENGTH_LONG).show();
@@ -126,8 +132,14 @@ public class Bottom_DongmuFragment extends Fragment {
             startActivity(intent);
         });
 
+
         ScrollBefore = root.findViewById(R.id.ScrollBefore);
         ScrollAfter = root.findViewById(R.id.ScrollAfter);
+        ScrollAfter.setOnClickListener(v -> {
+            Intent intent = new Intent(requireContext().getApplicationContext(), Dongmu_List.class);
+            intent.putExtra("textview_address",String.format("%s", address));
+            startActivity(intent);
+        });
         onClickUnfold = root.findViewById(R.id.onClickUnfold);
         onClickUnfold.setOnClickListener(v -> {
             ScrollBefore.setVisibility(View.GONE);
@@ -141,18 +153,28 @@ public class Bottom_DongmuFragment extends Fragment {
         DongmuList01 = root.findViewById(R.id.DongmuList01);
         DongmuList01.setOnClickListener(v -> {
             Intent intent = new Intent(requireContext().getApplicationContext(), Dongmu_List.class);
+            intent.putExtra("textview_address",String.format("%s", address));
             startActivity(intent);
         });
 
         DongmuSearch = root.findViewById(R.id.DongmuSearch);
         DongmuSearch.setOnClickListener(v -> {
             Intent intent = new Intent(requireContext().getApplicationContext(), Dongmu_Search.class);
+            intent.putExtra("textview_address",String.format("%s", address));
             startActivity(intent);
         });
 
         DongmuSearchText = root.findViewById(R.id.DongmuSearchText);
         DongmuSearchText.setClickable(false);
         DongmuSearchText.setFocusable(false);
+
+
+        FillingAD = root.findViewById(R.id.FillingAD);
+        FAQImg = root.findViewById(R.id.FAQImg);
+        root.findViewById(R.id.FillingAD).setOnClickListener(view -> Toast.makeText(requireContext().getApplicationContext(), "이젠 든든하지 않습니다." , Toast.LENGTH_SHORT).show());
+
+        root.findViewById(R.id.FAQImg).setOnClickListener(view -> NavHostFragment.findNavController(Bottom_DongmuFragment.this)
+                .navigate(R.id.action_Bottom_Dongmu_to_Drawer_FAQ));
 
         return root;
     }
