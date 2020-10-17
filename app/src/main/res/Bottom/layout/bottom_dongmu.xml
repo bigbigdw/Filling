@@ -21,9 +21,6 @@
             android:orientation="vertical"
             android:visibility="visible">
 
-
-
-
             <include layout="@layout/dongmu_main_horizontal_scroll" />
 
             <include
@@ -66,10 +63,23 @@
                     android:textSize="25sp" />
             </LinearLayout>
 
+
+            <LinearLayout
+                android:id="@+id/Fake"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:orientation="vertical">
+
+                <include
+                    layout="@layout/dongmu_main_lower_carousel" />
+
+            </LinearLayout>
+
             <com.synnapps.carouselview.CarouselView
                 android:id="@+id/Dongmu_Lower_carousel"
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
+                android:visibility="gone"
                 app:disableAutoPlayOnUserInteraction="false"
                 app:fillColor="#00FFFFFF"
                 app:pageColor="#00000000"
@@ -142,15 +152,17 @@
 
             </LinearLayout>
 
-            <ListView
+
+            <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/Dongmu_Bottom_List"
                 android:layout_width="match_parent"
-                android:layout_height="1260dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:background="#FFFFFF"
-                android:drawSelectorOnTop="true"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <ImageView
                 android:id="@+id/FillingAD"

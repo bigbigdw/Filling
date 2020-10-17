@@ -68,16 +68,16 @@
     <string name="DongmuListItem_Tag4">#파스타맛집</string>
     <string name="DongmuListItem_Location">서울특별시 강남구 테헤란로 1…</string>
     <!--동무마트 아래쪽 캐러셀-->
-    <string name="DongmuLowerCarosel_Mark">단골맛집</string>
-    <string name="DongmuLowerCarosel_Title">꼬꼬치킨</string>
-    <string name="DongmuLowerCarosel_Recommend">115</string>
-    <string name="DongmuLowerCarosel_Comment">463</string>
+    <string name="DongmuLowerCarosel_Mark">분위기갑</string>
+    <string name="DongmuLowerCarosel_Title">스미스가좋아하는한옥</string>
+    <string name="DongmuLowerCarosel_Recommend">1511</string>
+    <string name="DongmuLowerCarosel_Comment">6226</string>
     <string name="DongmuLowerCarosel_Category">맛집</string>
     <string name="DongmuLowerCarosel_Bar">|</string>
-    <string name="DongmuLowerCarosel_Tag1">#맛집</string>
-    <string name="DongmuLowerCarosel_Tag2">#앙념치킨</string>
-    <string name="DongmuLowerCarosel_Tag3">#마늘치킨</string>
-    <string name="DongmuLowerCarosel_Tag4">#간장치킨</string>
+    <string name="DongmuLowerCarosel_Tag1">#삼청동</string>
+    <string name="DongmuLowerCarosel_Tag2">#스미스가좋아하는한옥</string>
+    <string name="DongmuLowerCarosel_Tag3">#고급진데</string>
+    <string name="DongmuLowerCarosel_Tag4">#겁나 비싸보임</string>
     <!--모바일 상품권-->
     <string name="Coupon_Category01">아이스크림</string>
     <string name="Coupon_Category02">피자</string>

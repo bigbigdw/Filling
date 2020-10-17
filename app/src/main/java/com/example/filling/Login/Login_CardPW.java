@@ -66,7 +66,7 @@ public class Login_CardPW extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == android.R.id.home) {//toolbar의 back키 눌렀을 때 동작
+        if (item.getItemId() == android.R.id.home) {
             finish();
             return true;
         }

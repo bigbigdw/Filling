@@ -23,7 +23,7 @@
                 android:layout_height="fill_parent"
                 android:contentDescription="@string/TODO"
                 android:scaleType="centerCrop"
-                android:src="@drawable/dongmu_lower_ex01" />
+                android:src="@drawable/dongmu_lower_ex12" />
 
             <LinearLayout
                 android:layout_width="45dp"
@@ -164,7 +164,7 @@
                             android:id="@+id/Dongmu_Lower_Tag4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/DongmuLowerCarosel_Tag3"
+                            android:text="@string/DongmuLowerCarosel_Tag4"
                             android:textColor="#EEEEEE" />
 
                     </LinearLayout>

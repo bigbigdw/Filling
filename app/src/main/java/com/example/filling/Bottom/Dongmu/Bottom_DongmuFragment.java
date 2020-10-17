@@ -7,6 +7,7 @@ import android.location.Address;
 import android.location.Geocoder;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.Editable;
 import android.util.Log;
 import android.view.Gravity;
@@ -28,10 +29,16 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.filling.Bottom.Filling.Bottom_FillingFragment;
 import com.example.filling.Dongmu.Dongmu_Detail;
+import com.example.filling.Dongmu.Dongmu_Detail_MenuAdapter;
+import com.example.filling.Dongmu.Dongmu_Detail_MenuData;
 import com.example.filling.Dongmu.Dongmu_List;
+import com.example.filling.Dongmu.Dongmu_ListAdapter;
+import com.example.filling.Dongmu.Dongmu_ListData;
 import com.example.filling.Dongmu.Dongmu_Search;
 import com.example.filling.R;
 import com.synnapps.carouselview.CarouselView;
@@ -50,16 +57,16 @@ public class Bottom_DongmuFragment extends Fragment {
     private GpsTracker gpsTracker;
     TextView textview_address, DongmuSearchText;
 
+    Dongmu_ListAdapter adapter;
+
     private static final int GPS_ENABLE_REQUEST_CODE = 2001;
     private static final int PERMISSIONS_REQUEST_CODE = 100;
     String[] REQUIRED_PERMISSIONS = {Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION};
 
-    ListView listView;
-    Bottom_DongmuFragment.DongmuAdapter adapter;
     ImageView FillingAD, FAQImg;
     HorizontalScrollView ScrollBefore;
     TableLayout ScrollAfter;
-    LinearLayout onClickUnfold, onClickFold, DongmuList01, DongmuSearch, Weather, Location;
+    LinearLayout onClickUnfold, onClickFold, DongmuList01, DongmuSearch, Weather, Location, Fake;
 
     CarouselView Dongmu_Lower_carousel;
 
@@ -103,35 +110,43 @@ public class Bottom_DongmuFragment extends Fragment {
             Toast.makeText(requireContext().getApplicationContext(), "현재위치 \n위도 " + latitude + "\n경도 " + longitude, Toast.LENGTH_LONG).show();
         });
 
-        listView = root.findViewById(R.id.Dongmu_Bottom_List);
-        adapter = new Bottom_DongmuFragment.DongmuAdapter();
-        adapter.addItem(new Dongmu_Bottom_ListItem(R.drawable.dongmu_main_bottom_ex01, "#태극당 #팥빙수", "15M", "태극당", "서울 중구 장충동 동호로24길 7", R.drawable.dongmu_bottomlist_ad_on, R.drawable.dongmu_bottomlist_coupon_red, R.drawable.dongmu_bottomlist_donation_on, R.drawable.dongmu_bottomlist_present_on));
-        adapter.addItem(new Dongmu_Bottom_ListItem(R.drawable.dongmu_main_bottom_ex02, "#샤로수길 #중동닭발떡볶이 #닭발 #조하", "651M", "중동닭발떡볶이", "서울 관악구 봉천동 1612-51", R.drawable.dongmu_bottomlist_ad_red, R.drawable.dongmu_bottomlist_coupon_on, R.drawable.dongmu_bottomlist_donation_red, R.drawable.dongmu_bottomlist_present_on));
-        adapter.addItem(new Dongmu_Bottom_ListItem(R.drawable.dongmu_main_bottom_ex03, "#샤로수길 #이태리파파 #피자성애자 #념념념", "150M", "혜화돌쇠아저씨", "서울 종로구 명륜4가 23", R.drawable.dongmu_bottomlist_ad_on, R.drawable.dongmu_bottomlist_coupon_on, R.drawable.dongmu_bottomlist_donation_off, R.drawable.dongmu_bottomlist_present_red));
-        adapter.addItem(new Dongmu_Bottom_ListItem(R.drawable.dongmu_main_bottom_ex04, "#민정식당 #수육", "145M", "민정식당", "서울 광진구 자양동 232-35", R.drawable.dongmu_bottomlist_ad_off, R.drawable.dongmu_bottomlist_coupon_off, R.drawable.dongmu_bottomlist_donation_off, R.drawable.dongmu_bottomlist_present_red));
-        adapter.addItem(new Dongmu_Bottom_ListItem(R.drawable.dongmu_main_bottom_ex05, "#건대입구 #해피니스디저트", "561M", "해피니스디저트", "서울 광진구 자양4동 뚝섬로27길 60", R.drawable.dongmu_bottomlist_ad_on, R.drawable.dongmu_bottomlist_coupon_off, R.drawable.dongmu_bottomlist_donation_red, R.drawable.dongmu_bottomlist_present_off));
-        adapter.addItem(new Dongmu_Bottom_ListItem(R.drawable.dongmu_main_bottom_ex06, "#서울대입구역 #봉천동양대창", "198M", "봉천동양대창", "서울 관악구 봉천동 번지 1층 1601-16", R.drawable.dongmu_bottomlist_ad_on, R.drawable.dongmu_bottomlist_coupon_red, R.drawable.dongmu_bottomlist_donation_on, R.drawable.dongmu_bottomlist_present_on));
-        adapter.addItem(new Dongmu_Bottom_ListItem(R.drawable.dongmu_main_bottom_ex07, "#송리단길 #콘메", "19M", "콘메", "서울 송파구 송파동 백제고분로42길 6-30", R.drawable.dongmu_bottomlist_ad_red, R.drawable.dongmu_bottomlist_coupon_on, R.drawable.dongmu_bottomlist_donation_red, R.drawable.dongmu_bottomlist_present_on));
-        adapter.addItem(new Dongmu_Bottom_ListItem(R.drawable.dongmu_main_bottom_ex08, "#서울대입구역 #행운동조개 #조개구이 #해물라면 #김치존맛", "165M", "행운동조개", "서울 관악구 봉천동 1666-21번지 1층", R.drawable.dongmu_bottomlist_ad_on, R.drawable.dongmu_bottomlist_coupon_on, R.drawable.dongmu_bottomlist_donation_off, R.drawable.dongmu_bottomlist_present_red));
-        adapter.addItem(new Dongmu_Bottom_ListItem(R.drawable.dongmu_main_bottom_ex09, "#송파역 #대원정육식당 #치마살 #육사시미", "169M", "대원정육식당", "서울 송파구 송파대로37길 70", R.drawable.dongmu_bottomlist_ad_off, R.drawable.dongmu_bottomlist_coupon_off, R.drawable.dongmu_bottomlist_donation_off, R.drawable.dongmu_bottomlist_present_red));
-        adapter.addItem(new Dongmu_Bottom_ListItem(R.drawable.dongmu_main_bottom_ex10, "#소프트쉘크랩커리 #쏨땀 #팟타이", "91M", "쏭타이치앙마이", "서울 용산구 한강로2가 한강대로40길 39-5", R.drawable.dongmu_bottomlist_ad_on, R.drawable.dongmu_bottomlist_coupon_off, R.drawable.dongmu_bottomlist_donation_red, R.drawable.dongmu_bottomlist_present_off));
 
-        listView.setAdapter(adapter);
+//        listView.setOnItemClickListener((adapterView, view, position, id) -> {
+//            Intent intent = new Intent(requireContext().getApplicationContext(), Dongmu_Detail.class);
+//            startActivity(intent);
+//        });
 
-        listView.setOnItemClickListener((adapterView, view, position, id) -> {
-            Intent intent = new Intent(requireContext().getApplicationContext(), Dongmu_Detail.class);
-            startActivity(intent);
-        });
+
+
+
+        Fake = root.findViewById(R.id.Fake);
+
+        RecyclerView recyclerView = root.findViewById(R.id.Dongmu_Bottom_List);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(requireContext().getApplicationContext());
+        recyclerView.setLayoutManager(linearLayoutManager);
+        adapter = new Dongmu_ListAdapter();
+        recyclerView.setAdapter(adapter);
+
+        new android.os.Handler().postDelayed(
+                new Runnable() {
+                    public void run() {
+                        recyclerView.setVisibility(View.VISIBLE);
+                        Dongmu_Lower_carousel.setVisibility(View.VISIBLE);
+                        Fake.setVisibility(View.GONE);
+                    }
+                },
+                300);
+
+        getData();
+
 
         Dongmu_Lower_carousel = root.findViewById(R.id.Dongmu_Lower_carousel);
         Dongmu_Lower_carousel.setPageCount(LowerImages.length);
         Dongmu_Lower_carousel.setViewListener(viewListener);
-
         Dongmu_Lower_carousel.setImageClickListener(position -> {
             Intent intent = new Intent(requireContext().getApplicationContext(), Dongmu_Detail.class);
             startActivity(intent);
         });
-
 
         ScrollBefore = root.findViewById(R.id.ScrollBefore);
         ScrollAfter = root.findViewById(R.id.ScrollAfter);
@@ -177,6 +192,30 @@ public class Bottom_DongmuFragment extends Fragment {
                 .navigate(R.id.action_Bottom_Dongmu_to_Drawer_FAQ));
 
         return root;
+    }
+
+
+    private void getData(){
+        Dongmu_ListData data = new Dongmu_ListData(R.drawable.dongmu_main_bottom_ex01, "#태극당 #팥빙수", "15M", "태극당", "서울 중구 장충동 동호로24길 7", R.drawable.dongmu_bottomlist_ad_on, R.drawable.dongmu_bottomlist_coupon_red, R.drawable.dongmu_bottomlist_donation_on, R.drawable.dongmu_bottomlist_present_on);
+        adapter.addItem(data);
+        data = new Dongmu_ListData(R.drawable.dongmu_main_bottom_ex02, "#샤로수길 #중동닭발떡볶이 #닭발 #조하", "651M", "중동닭발떡볶이", "서울 관악구 봉천동 1612-51", R.drawable.dongmu_bottomlist_ad_red, R.drawable.dongmu_bottomlist_coupon_on, R.drawable.dongmu_bottomlist_donation_red, R.drawable.dongmu_bottomlist_present_on);
+        adapter.addItem(data);
+        data = new Dongmu_ListData(R.drawable.dongmu_main_bottom_ex03, "#샤로수길 #이태리파파 #피자성애자 #념념념", "150M", "혜화돌쇠아저씨", "서울 종로구 명륜4가 23", R.drawable.dongmu_bottomlist_ad_on, R.drawable.dongmu_bottomlist_coupon_on, R.drawable.dongmu_bottomlist_donation_off, R.drawable.dongmu_bottomlist_present_red);
+        adapter.addItem(data);
+        data = new Dongmu_ListData(R.drawable.dongmu_main_bottom_ex04, "#민정식당 #수육", "145M", "민정식당", "서울 광진구 자양동 232-35", R.drawable.dongmu_bottomlist_ad_off, R.drawable.dongmu_bottomlist_coupon_off, R.drawable.dongmu_bottomlist_donation_off, R.drawable.dongmu_bottomlist_present_red);
+        adapter.addItem(data);
+        data = new Dongmu_ListData(R.drawable.dongmu_main_bottom_ex05, "#건대입구 #해피니스디저트", "561M", "해피니스디저트", "서울 광진구 자양4동 뚝섬로27길 60", R.drawable.dongmu_bottomlist_ad_on, R.drawable.dongmu_bottomlist_coupon_off, R.drawable.dongmu_bottomlist_donation_red, R.drawable.dongmu_bottomlist_present_off);
+        adapter.addItem(data);
+        data = new Dongmu_ListData(R.drawable.dongmu_main_bottom_ex06, "#서울대입구역 #봉천동양대창", "198M", "봉천동양대창", "서울 관악구 봉천동 번지 1층 1601-16", R.drawable.dongmu_bottomlist_ad_on, R.drawable.dongmu_bottomlist_coupon_red, R.drawable.dongmu_bottomlist_donation_on, R.drawable.dongmu_bottomlist_present_on);
+        adapter.addItem(data);
+        data = new Dongmu_ListData(R.drawable.dongmu_main_bottom_ex07, "#송리단길 #콘메", "19M", "콘메", "서울 송파구 송파동 백제고분로42길 6-30", R.drawable.dongmu_bottomlist_ad_red, R.drawable.dongmu_bottomlist_coupon_on, R.drawable.dongmu_bottomlist_donation_red, R.drawable.dongmu_bottomlist_present_on);
+        adapter.addItem(data);
+        data = new Dongmu_ListData(R.drawable.dongmu_main_bottom_ex08, "#서울대입구역 #행운동조개 #조개구이 #해물라면 #김치존맛", "165M", "행운동조개", "서울 관악구 봉천동 1666-21번지 1층", R.drawable.dongmu_bottomlist_ad_on, R.drawable.dongmu_bottomlist_coupon_on, R.drawable.dongmu_bottomlist_donation_off, R.drawable.dongmu_bottomlist_present_red);
+        adapter.addItem(data);
+        data = new Dongmu_ListData(R.drawable.dongmu_main_bottom_ex09, "#송파역 #대원정육식당 #치마살 #육사시미", "169M", "대원정육식당", "서울 송파구 송파대로37길 70", R.drawable.dongmu_bottomlist_ad_off, R.drawable.dongmu_bottomlist_coupon_off, R.drawable.dongmu_bottomlist_donation_off, R.drawable.dongmu_bottomlist_present_red);
+        adapter.addItem(data);
+        data = new Dongmu_ListData(R.drawable.dongmu_main_bottom_ex10, "#소프트쉘크랩커리 #쏨땀 #팟타이", "91M", "쏭타이치앙마이", "서울 용산구 한강로2가 한강대로40길 39-5", R.drawable.dongmu_bottomlist_ad_on, R.drawable.dongmu_bottomlist_coupon_off, R.drawable.dongmu_bottomlist_donation_red, R.drawable.dongmu_bottomlist_present_off);
+        adapter.addItem(data);
     }
 
     /*
@@ -377,44 +416,5 @@ public class Bottom_DongmuFragment extends Fragment {
         }
     };
 
-    class DongmuAdapter extends BaseAdapter {
-        ArrayList<Dongmu_Bottom_ListItem> items = new ArrayList<>();
 
-        @Override
-        public int getCount() {
-            return items.size();
-        }
-
-        public void addItem(Dongmu_Bottom_ListItem item) {
-            items.add(item);
-        }
-
-        @Override
-        public Object getItem(int position) {
-            return items.get(position);
-        }
-
-        @Override
-        public long getItemId(int position) {
-            return position;
-        }
-
-        @Override
-        public View getView(int position, View convertView, ViewGroup viewGroup) {
-            Dongmu_Bottom_List view = new Dongmu_Bottom_List(requireContext().getApplicationContext());
-
-            Dongmu_Bottom_ListItem item = items.get(position);
-            view.setFoodImgresId(item.getFoodImgresId());
-
-            view.setCategory(item.getCategory());
-            view.setDistance(item.getDistance());
-            view.setTitle(item.getTitle());
-            view.setLocation(item.getLocation());
-            view.setImgTag1resId(item.getImgTag1resId());
-            view.setImgTag2resId(item.getImgTag2resId());
-            view.setImgTag3resId(item.getImgTag3resId());
-            view.setImgTag4resId(item.getImgTag4resId());
-            return view;
-        }
-    }
 }
