@@ -81,15 +81,6 @@
                     android:textSize="25sp" />
             </LinearLayout>
 
-<!--            <ListView-->
-<!--                android:id="@+id/Dongmu_Detail_Menu"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="4600dp"-->
-<!--                android:background="#FFFFFF"-->
-<!--                android:drawSelectorOnTop="true"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintTop_toTopOf="parent" />-->
-
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/Dongmu_Detail_Menu"
                 android:layout_width="match_parent"
