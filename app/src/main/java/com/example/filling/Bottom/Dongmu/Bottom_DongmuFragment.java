@@ -110,21 +110,14 @@ public class Bottom_DongmuFragment extends Fragment {
             Toast.makeText(requireContext().getApplicationContext(), "현재위치 \n위도 " + latitude + "\n경도 " + longitude, Toast.LENGTH_LONG).show();
         });
 
-
-//        listView.setOnItemClickListener((adapterView, view, position, id) -> {
-//            Intent intent = new Intent(requireContext().getApplicationContext(), Dongmu_Detail.class);
-//            startActivity(intent);
-//        });
-
-
-
-
         Fake = root.findViewById(R.id.Fake);
 
         RecyclerView recyclerView = root.findViewById(R.id.Dongmu_Bottom_List);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(requireContext().getApplicationContext());
         recyclerView.setLayoutManager(linearLayoutManager);
         adapter = new Dongmu_ListAdapter();
+
+
         recyclerView.setAdapter(adapter);
 
         new android.os.Handler().postDelayed(

@@ -27,7 +27,6 @@ public class Dongmu_ListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
         ((Dongmu_ListViewHolder) holder).onBind(listData.get(position));
-
     }
 
     @Override
@@ -39,5 +38,6 @@ public class Dongmu_ListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
         // 외부에서 item을 추가시킬 함수입니다.
         listData.add(data);
     }
+
 }
 
