@@ -29,7 +29,7 @@ public class Dongmu_ListViewHolder extends  RecyclerView.ViewHolder {
         Item = itemView.findViewById(R.id.Item);
 
         Item.setOnClickListener(v -> {
-            Toast.makeText(v.getContext(), "Item is clicked", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(v.getContext(), "Item is clicked", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent (v.getContext(), Dongmu_Detail.class);
             v.getContext().startActivity(intent);
         });

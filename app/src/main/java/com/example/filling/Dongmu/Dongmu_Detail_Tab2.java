@@ -26,15 +26,15 @@ public class Dongmu_Detail_Tab2 extends Fragment {
     Dongmu_Detail_MenuAdapter adapter;
 
     CarouselView Dongmu_Detail_carousel;
-    int[] Menu1Image = {R.drawable.dongmu_detail_menu00, R.drawable.dongmu_detail_menu04, R.drawable.dongmu_detail_menu10};
-    int[] Menu2Image = {R.drawable.dongmu_detail_menu07, R.drawable.dongmu_detail_menu06, R.drawable.dongmu_detail_menu07};
-    int[] Menu3Image = {R.drawable.dongmu_detail_menu00, R.drawable.dongmu_detail_menu00, R.drawable.dongmu_detail_menu00};
-    String[] MenuName1 = {"샤오롱빠오", "카페라떼", "카페라떼"};
-    String[] MenuName2 = {"팬케이크", "팬케이크", "팬케이크"};
-    String[] MenuName3 = {"티라미슈", "티라미슈", "티라미슈"};
-    String[] MenuPrice1 = {"16,000원(10개)", "4500원", "4500원"};
-    String[] MenuPrice2 = {"6500원", "6500원", "6500원"};
-    String[] MenuPrice3 = {"6000원", "6000원", "6000원"};
+    int[] Menu1Image = {R.drawable.dongmu_detail_menu00, R.drawable.dongmu_detail_menu04, R.drawable.dongmu_detail_menu10, R.drawable.dongmu_detail_menu16, R.drawable.dongmu_detail_menu18, R.drawable.dongmu_detail_menu14};
+    int[] Menu2Image = {R.drawable.dongmu_detail_menu28, R.drawable.dongmu_detail_menu24, R.drawable.dongmu_detail_menu26,R.drawable.dongmu_detail_menu35, R.drawable.dongmu_detail_menu31, R.drawable.dongmu_detail_menu30};
+    int[] Menu3Image = {R.drawable.dongmu_detail_menu41, R.drawable.dongmu_detail_menu48, R.drawable.dongmu_detail_menu46,R.drawable.dongmu_detail_menu56, R.drawable.dongmu_detail_menu52, R.drawable.dongmu_detail_menu55};
+    String[] MenuName1 = {"샤오롱빠오 샘플러", "매운 게살 샤오마이", "고기부추따바오","매운 새우완탕", "매운 새우완탕면", "새우 완탕스프"};
+    String[] MenuName2 = {"라웨이황과", "굴소스 청경채볶음", "비타민볶음","XO게살볶음밥", "꿔바로우", "깐풍기"};
+    String[] MenuName3 = {"파이구 볶음밥", "우육탕면", "소고기탕면","디저트미니바오콤보", "중국식냉면", "미니단팥바오"};
+    String[] MenuPrice1 = {"16,000원(10개)", "16,000원(10개)", "5,000원(2개)","9,000원", "11,500원", "10,000원"};
+    String[] MenuPrice2 = {"6,000원(중)", "12,000원", "11,000원","15,000원", "28,000원(중)", "26,000원"};
+    String[] MenuPrice3 = {"14,000원(중)", "12,000원", "12,000원","5,000원(4개)", "12,000원", "8,000원(10개)"};
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -87,7 +87,7 @@ public class Dongmu_Detail_Tab2 extends Fragment {
         adapter.addItem(data);
         data = new Dongmu_Detail_MenuData(R.drawable.dongmu_detail_menu26, R.drawable.dongmu_detail_menu27,"비타민볶음", "11,000원","새우야채춘권", "6,000원(2개)");
         adapter.addItem(data);
-        data = new Dongmu_Detail_MenuData(R.drawable.dongmu_detail_menu28, R.drawable.dongmu_detail_menu29,"라웨이황과", "6,000(중)","멘보샤", "10,000원(5개)");
+        data = new Dongmu_Detail_MenuData(R.drawable.dongmu_detail_menu28, R.drawable.dongmu_detail_menu29,"라웨이황과", "6,000원(중)","멘보샤", "10,000원(5개)");
         adapter.addItem(data);
 
         data = new Dongmu_Detail_MenuData(R.drawable.dongmu_detail_menu30, R.drawable.dongmu_detail_menu31,"깐풍기", "26,000원","꿔바로우", "28,000원(중)");
