@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -13,84 +14,90 @@
         app:layout_constraintTop_toTopOf="parent">
 
 
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:visibility="gone">
 
-            <androidx.viewpager.widget.ViewPager
-                android:id="@+id/view_pager"
+        </androidx.viewpager.widget.ViewPager>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#DBDBDB"
+            android:orientation="vertical"
+            tools:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp"
+            tools:visibility="gone">
+
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="210dp"
-                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/CouponDetail_GoodsInfo1"
+                android:textColor="#333742"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
-            </androidx.viewpager.widget.ViewPager>
-
-            <LinearLayout
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#DBDBDB"
-                android:orientation="vertical" />
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/CouponDetail_GoodsInfo2"
+                android:textColor="#888888"
+                android:textSize="14sp" />
 
-            <LinearLayout
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:padding="16dp">
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/CouponDetail_GoodsInfo3"
+                android:textColor="#333742"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:text="@string/CouponDetail_GoodsInfo1"
-                    android:textColor="#333742"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:text="@string/CouponDetail_GoodsInfo2"
-                    android:textColor="#888888"
-                    android:textSize="14sp" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:text="@string/CouponDetail_GoodsInfo3"
-                    android:textColor="#333742"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:text="@string/CouponDetail_GoodsInfo4"
-                    android:textColor="#888888"
-                    android:textSize="14sp" />
-            </LinearLayout>
-
-            <LinearLayout
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#DBDBDB"
-                android:orientation="vertical" />
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/CouponDetail_GoodsInfo4"
+                android:textColor="#888888"
+                android:textSize="14sp" />
+        </LinearLayout>
 
-            <LinearLayout
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#DBDBDB"
+            android:orientation="vertical"
+            tools:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            tools:visibility="gone">
+
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:gravity="center_vertical"
-                android:orientation="vertical"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp">
+                android:layout_height="wrap_content"
+                android:text="@string/CouponDetail_UseInfo_Title"
+                android:textColor="#333742" />
+        </LinearLayout>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/CouponDetail_UseInfo_Title"
-                    android:textColor="#333742" />
-            </LinearLayout>
-
-            <include layout="@layout/coupon_detail_expand" />
+        <include
+            layout="@layout/coupon_detail_expand"
+            tools:visibility="gone" />
 
 
             <LinearLayout
@@ -114,7 +121,13 @@
                     android:textColor="#333742" />
             </LinearLayout>
 
-            <include layout="@layout/coupon_detail_horizontal" />
+<!--            <include layout="@layout/coupon_detail_horizontal" />-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/Coupon_Item_List"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="#FFFFFF" />
 
         </LinearLayout>
 

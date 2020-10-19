@@ -68,7 +68,9 @@ public class Dongmu_Detail_Tab3 extends Fragment {
         adapter.addItem(data);
         data = new Dongmu_Detail_CommentData(R.drawable.dongmu_detail_member02, "정", "hyuck****", "2020.08.06 08:15", "주문했습니다 하자없는 상품 부탁드립니다.");
         adapter.addItem(data);
-        data = new Dongmu_Detail_CommentData(R.drawable.dongmu_detail_member04, "신", "xxial****", "2020.07.28 05:15", "아아 이것은 [댓글]이리는 것이다. 그것이 댓글이니깐.");
+        data = new Dongmu_Detail_CommentData(R.drawable.dongmu_detail_member04, "신", "xxial****", "2020.07.28 05:15", "아아 이것은 [댓글]이라는 것이다. 그것이 댓글이니깐.");
+        adapter.addItem(data);
+        data = new Dongmu_Detail_CommentData(R.drawable.dongmu_detail_member05, "최", "jongho****", "2020.07.16 15:52", "♚♚히어로즈 오브 더 스☆톰♚♚가입시$$전원 카드팩☜☜뒷면100%증정※ ♜월드오브 워크래프트♜펫 무료증정￥ 특정조건 §§디아블로3§§★공허의유산★초상화획득기회@@@ 즉시이동http://kr.battle.net/heroes/ko/");
         adapter.addItem(data);
         data = new Dongmu_Detail_CommentData(R.drawable.dongmu_detail_member03, "유", "bin****", "2020.06.29 23:09", "테스형도 이게 무슨 앱인지 모르겠다는데요?");
         adapter.addItem(data);

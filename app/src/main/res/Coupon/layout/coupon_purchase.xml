@@ -63,7 +63,11 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <include layout="@layout/coupon_purchase_list" />
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/Coupon_Item_List"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#FFFFFF" />
 
                     <LinearLayout
                         android:layout_width="match_parent"

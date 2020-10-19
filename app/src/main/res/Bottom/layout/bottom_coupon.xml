@@ -10,6 +10,7 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#FFFFFF"
         android:fillViewport="true"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -121,17 +122,21 @@
 
             </LinearLayout>
 
-            <include layout="@layout/coupon_main_table" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/Coupon_Item_List"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF" />
 
             <ImageView
-                android:id="@+id/imageView14"
+                android:id="@+id/FillingAD"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:contentDescription="@string/TODO"
                 app:srcCompat="@drawable/filling_ad11" />
 
             <ImageView
-                android:id="@+id/imageView17"
+                android:id="@+id/FAQImg"
                 android:layout_width="match_parent"
                 android:layout_height="140dp"
                 android:contentDescription="@string/TODO"

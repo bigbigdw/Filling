@@ -1,17 +1,14 @@
 package com.example.filling.Dongmu;
 
-import android.content.Context;
 import android.content.Intent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.filling.Bottom.Dongmu.OnViewHolderItemClickListener;
 import com.example.filling.R;
 
 public class Dongmu_ListViewHolder extends  RecyclerView.ViewHolder {
@@ -19,13 +16,11 @@ public class Dongmu_ListViewHolder extends  RecyclerView.ViewHolder {
     ImageView FoodImg, ImgTag1, ImgTag2, ImgTag3, ImgTag4;
     TextView Category, Distance, Title, Location;
     LinearLayout Item;
-    OnViewHolderItemClickListener onViewHolderItemClickListener;
 
 
     public Dongmu_ListViewHolder(@NonNull View itemView) {
         super(itemView);
 
-        Item = itemView.findViewById(R.id.Item);
         Item = itemView.findViewById(R.id.Item);
 
         Item.setOnClickListener(v -> {

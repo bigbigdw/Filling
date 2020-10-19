@@ -13,7 +13,6 @@ import java.util.ArrayList;
 
 public class Dongmu_Detail_MenuAdapter  extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-    // adapter에 들어갈 list 입니다.
     private ArrayList<Dongmu_Detail_MenuData> listData = new ArrayList<>();
 
     @NonNull
@@ -34,7 +33,6 @@ public class Dongmu_Detail_MenuAdapter  extends RecyclerView.Adapter<RecyclerVie
     }
 
     void addItem(Dongmu_Detail_MenuData data) {
-        // 외부에서 item을 추가시킬 함수입니다.
         listData.add(data);
     }
 }

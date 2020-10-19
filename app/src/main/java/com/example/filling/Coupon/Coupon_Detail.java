@@ -16,6 +16,8 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import com.example.filling.Dongmu.Dongmu_Detail;
@@ -35,6 +37,7 @@ public class Coupon_Detail extends AppCompatActivity {
 
     private TabLayout tabLayout;
     private ViewPager viewPager;
+    Coupon_MarketAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,12 +52,34 @@ public class Coupon_Detail extends AppCompatActivity {
 
         tabLayout = findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
+        init();
+        getData();
+    }
 
+    private void init(){
+        RecyclerView recyclerView = findViewById(R.id.Coupon_Item_List);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        recyclerView.setLayoutManager(linearLayoutManager);
+        adapter = new Coupon_MarketAdapter();
+        recyclerView.setAdapter(adapter);
+    }
+
+    private void getData(){
+        Coupon_MarketData data = new Coupon_MarketData(R.drawable.mycoupon_ex11, R.drawable.mycoupon_ex12,"플레인 요거트", "매머드커피","4,500원", "블루베리 요거트", "매머드커피", "4,800원");
+        adapter.addItem(data);
+        data = new Coupon_MarketData(R.drawable.mycoupon_ex13, R.drawable.mycoupon_ex14,"딸기 요거트", "매머드커피","4,800원", "복숭아 요거트", "매머드커피", "4,800원");
+        adapter.addItem(data);
+        data = new Coupon_MarketData(R.drawable.mycoupon_ex15, R.drawable.mycoupon_ex16,"솜사탕 쉐이크", "매머드커피","3,900원", "쿠앤크 프라페", "매머드커피", "4,800원");
+        adapter.addItem(data);
+        data = new Coupon_MarketData(R.drawable.mycoupon_ex17, R.drawable.mycoupon_ex18,"자바칩 프라페", "매머드커피","4,800원", "그린티 프라페", "매머드커피", "4,800원");
+        adapter.addItem(data);
+        data = new Coupon_MarketData(R.drawable.mycoupon_ex19, R.drawable.mycoupon_ex20,"스트로베리 프라페", "매머드커피","4,800원", "피스타치오 프라페", "매머드커피", "3,700원");
+        adapter.addItem(data);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == android.R.id.home) {//toolbar의 back키 눌렀을 때 동작
+        if (item.getItemId() == android.R.id.home) {
             finish();
             return true;
         }

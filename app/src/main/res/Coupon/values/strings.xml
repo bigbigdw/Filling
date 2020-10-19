@@ -26,13 +26,13 @@
     <string name="CouponSearch_Title">상품권 검색</string>
     <!--매장 정보-->
     <string name="CouponMart_Title">매장 상세정보</string>
-    <string name="CouponMart_IntroText1">스타벅스</string>
-    <string name="CouponMart_IntroText2">특별한 경험, 스타벅스 커피</string>
-    <string name="CouponMart_IntroText3">당신의 취향에 맞는 최고 품질의 커피를 오직 스타벅스에서만 맛보실 수 있습니다.</string>
+    <string name="CouponMart_IntroText1">매머드커피</string>
+    <string name="CouponMart_IntroText2">맛, 멋 그리고 진심</string>
+    <string name="CouponMart_IntroText3">당신의 취향에 맞는 최고 품질의 커피를 오직 매머드커피에서만 맛보실 수 있습니다.</string>
     <!--상품권 상세-->
     <string name="CouponDetail_Title">필링 상품권</string>
     <string name="CouponDetail_TitleText1">커피/음료</string>
-    <string name="CouponDetail_TitleText2">아이스 카페아메리카노 Tall</string>
+    <string name="CouponDetail_TitleText2">콜드브루</string>
     <string name="CouponDetail_TitleText3">4,100원</string>
     <string name="CouponDetail_Tab1Text1">물품교환형 상품의 기본 유효기간은 3개월입니다.</string>
     <string name="CouponDetail_Tab1Text2">상품 특성에 따라 유효기간이 상이 할 수 있으니 전송받은 모바일 상품권의 유효기간을 꼭 확인 부탁드립니다.</string>
@@ -42,7 +42,7 @@
     <string name="CouponDetail_Tab3Text1">유효기간 이내에 사용하지 못하신 경우, 5년 이내에 환불이 가능하며 결제 금액의 90%를 환불해드립니다.</string>
     <string name="CouponDetail_Tab3Text2">특정 이벤트 상품 및 필링 Cash 결제를 통한 상품의 경우, 환불이 불가합니다.</string>
     <string name="CouponDetail_GoodsInfo1">상품설명</string>
-    <string name="CouponDetail_GoodsInfo2">스타벅스의 깔끔한 맛을 자랑하는 커피로, 스타벅스 파트너들이 가장 좋아하는 커피입니다.</string>
+    <string name="CouponDetail_GoodsInfo2">부드러운 맛을 느낄 수 있는 브라질 피베리 콜드브루 커피입니다.</string>
     <string name="CouponDetail_GoodsInfo3">사용불가매장</string>
     <string name="CouponDetail_GoodsInfo4">용산미8군점, 용산타운하우스점, 오산에어베이스점, 평택험프리점, 평택험프리트룹몰점, 대구캠프워커점, 군산에어베이스점, 캠프캐롤점, 캠프케이시점, 오션월드점, 오션월드입구점, 설악워터피아점 등</string>
     <string name="CouponDetail_UseInfo_Title">이용 방법</string>

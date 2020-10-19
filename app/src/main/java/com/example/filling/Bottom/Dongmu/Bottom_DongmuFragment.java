@@ -121,12 +121,10 @@ public class Bottom_DongmuFragment extends Fragment {
         recyclerView.setAdapter(adapter);
 
         new android.os.Handler().postDelayed(
-                new Runnable() {
-                    public void run() {
-                        recyclerView.setVisibility(View.VISIBLE);
-                        Dongmu_Lower_carousel.setVisibility(View.VISIBLE);
-                        Fake.setVisibility(View.GONE);
-                    }
+                () -> {
+                    recyclerView.setVisibility(View.VISIBLE);
+                    Dongmu_Lower_carousel.setVisibility(View.VISIBLE);
+                    Fake.setVisibility(View.GONE);
                 },
                 300);
 
