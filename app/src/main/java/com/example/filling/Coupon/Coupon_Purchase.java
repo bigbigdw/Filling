@@ -8,6 +8,7 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -17,6 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.filling.R;
 import com.google.android.material.textfield.TextInputLayout;
 
+import java.util.ArrayList;
 import java.util.Objects;
 
 
@@ -24,9 +26,9 @@ public class Coupon_Purchase extends AppCompatActivity {
     Coupon_PurchaseAdapter adapter;
     LinearLayout Cash, CashMileage;
     TextInputLayout CashText1, ResultText1, CashText2,MileageText,ResultText2;
-    TextView Count;
-    String num1, num2;
-    Integer result;
+
+    ArrayList<Integer> Total = new ArrayList();
+    int sum = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +38,6 @@ public class Coupon_Purchase extends AppCompatActivity {
         setSupportActionBar(toolbar);
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
-        Count = findViewById(R.id.Count);
 
         CashText1 = findViewById(R.id.CashText1);
         ResultText1 = findViewById(R.id.ResultText1);
@@ -45,6 +46,7 @@ public class Coupon_Purchase extends AppCompatActivity {
         ResultText2 = findViewById(R.id.ResultText2);
 
         EditText EditCashText1 = CashText1.getEditText();
+
         EditText EditResultText1 = ResultText1.getEditText();
         EditText EditCashText2 = CashText2.getEditText();
         EditText EditMileageText = MileageText.getEditText();
@@ -81,27 +83,47 @@ public class Coupon_Purchase extends AppCompatActivity {
         });
         init();
         getData();
+
+        for (int i = 0; i < Total.size(); i++) {
+            sum += Total.get(i);
+        }
+
+        EditCashText1.setText(String.format("%s", sum));
+        EditResultText1.setText(String.format("%s", sum));
+        EditCashText2.setText(String.format("%s", sum));
+        EditMileageText.setText(String.format("%s", sum));
+        EditResultText2.setText(String.format("%s", sum));
     }
 
     private void init(){
+
         RecyclerView recyclerView = findViewById(R.id.Coupon_Item_List);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(linearLayoutManager);
         adapter = new Coupon_PurchaseAdapter();
         recyclerView.setAdapter(adapter);
+
+
+
     }
 
     private void getData(){
-        Coupon_PurchaseData data = new Coupon_PurchaseData(R.drawable.mycoupon_ex02, "레몬앤오렌지", "매머드커피","3,700원", "1");
+        Coupon_PurchaseData data = new Coupon_PurchaseData(R.drawable.mycoupon_ex02, "레몬앤오렌지", "매머드커피","3700", "1");
         adapter.addItem(data);
-        data = new Coupon_PurchaseData(R.drawable.mycoupon_ex03, "캐모마일", "매머드커피","3,400원", "4");
+        Total.add(Integer.parseInt(data.Price) * Integer.parseInt(data.Count));
+        data = new Coupon_PurchaseData(R.drawable.mycoupon_ex03, "캐모마일", "매머드커피","3400", "4");
         adapter.addItem(data);
-        data = new Coupon_PurchaseData(R.drawable.mycoupon_ex09, "딸기스무디", "매머드커피","4,500원", "2");
+        Total.add(Integer.parseInt(data.Price) * Integer.parseInt(data.Count));
+        data = new Coupon_PurchaseData(R.drawable.mycoupon_ex09, "딸기스무디", "매머드커피","4500", "2");
         adapter.addItem(data);
-        data = new Coupon_PurchaseData(R.drawable.mycoupon_ex08, "오렌지 아일랜드 티", "매머드커피","3,700원", "5");
+        Total.add(Integer.parseInt(data.Price) * Integer.parseInt(data.Count));
+        data = new Coupon_PurchaseData(R.drawable.mycoupon_ex08, "오렌지 아일랜드 티", "매머드커피","3700", "5");
         adapter.addItem(data);
-        data = new Coupon_PurchaseData(R.drawable.mycoupon_ex06, "리얼레몬티", "매머드커피","3,700원", "6");
+        Total.add(Integer.parseInt(data.Price) * Integer.parseInt(data.Count));
+        data = new Coupon_PurchaseData(R.drawable.mycoupon_ex06, "리얼레몬티", "매머드커피","3700", "6");
         adapter.addItem(data);
+        Total.add(Integer.parseInt(data.Price) * Integer.parseInt(data.Count));
+
     }
 
     public void onClickPurchase(View v) {

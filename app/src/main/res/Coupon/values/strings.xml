@@ -58,7 +58,7 @@
     <string name="CouponDetail_RecommendTitle">비슷한 상품 찾아보기</string>
     <string name="CouponDetail_Buy">구매하기</string>
     <!--구매하기-->
-    <string name="CouponPurchase_Title">구매하기</string>
+    <string name="CouponPurchase_Title">내 장바구니</string>
     <string name="CouponPurchase_Btn">결제하기</string>
     <string name="CouponPurchase_Btn_Plus">+</string>
     <string name="CouponPurchase_Btn_Minus">-</string>
@@ -73,7 +73,7 @@
     <string name="CouponPurchase_RadioPurchaseCash5">총 결제금액</string>
     <string name="CouponPurchase_RadioPurchaseMileage1">※ 1milleage  =  10원</string>
     <string name="CouponPurchase_RadioPurchaseMileage2">110</string>
-    <string name="CouponPurchase_Purchase">4100원</string>
+    <string name="CouponPurchase_Purchase">4100</string>
     <!--결제하기-->
     <string name="CouponPurchasePW_Title">쿠폰 결제하기</string>
     <string name="CouponPurchasePW_Text1">구매하신 상품권은 ‘내 쿠폰함’에서 확인하실 수있습니다.  </string>

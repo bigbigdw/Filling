@@ -16,7 +16,7 @@ public class Coupon_PurchaseViewHolder extends  RecyclerView.ViewHolder {
 
     TextView Market, Name, Price, Count;
     ImageView Img;
-    String num1, num2;
+    String num;
     Button CountMinus, CountPlus;
     Integer result;
 
@@ -24,31 +24,31 @@ public class Coupon_PurchaseViewHolder extends  RecyclerView.ViewHolder {
         super(itemView);
 
         Count = itemView.findViewById(R.id.Count);
-        CountMinus = itemView.findViewById(R.id.CountMinus);
-        CountPlus = itemView.findViewById(R.id.CountPlus);
-
-
-        CountMinus.setOnClickListener(v -> {
-            num2 = Count.getText().toString();
-            if(Integer.parseInt(num2) < 100){
-                result = Integer.parseInt(num2) + 1;
-                Count.setText(String.format("%s", result));
-            }
-        });
-
-        CountPlus.setOnClickListener(v -> {
-            num2 = Count.getText().toString();
-            if(Integer.parseInt(num2) < 100){
-                result = Integer.parseInt(num2) + 1;
-                Count.setText(String.format("%s", result));
-            }
-        });
-
         Img = itemView.findViewById(R.id.Img);
         Market = itemView.findViewById(R.id.Market);
         Name = itemView.findViewById(R.id.Name);
         Price = itemView.findViewById(R.id.Price);
         Count = itemView.findViewById(R.id.Count);
+        CountMinus = itemView.findViewById(R.id.CountMinus);
+        CountPlus = itemView.findViewById(R.id.CountPlus);
+
+        CountMinus.setOnClickListener(v -> {
+            num = Count.getText().toString();
+            if(Integer.parseInt(num) > 1){
+                result = Integer.parseInt(num) - 1;
+                Count.setText(String.format("%s", result));
+            }
+        });
+
+        CountPlus.setOnClickListener(v -> {
+            num = Count.getText().toString();
+            if(Integer.parseInt(num) < 100){
+                result = Integer.parseInt(num) + 1;
+                Count.setText(String.format("%s", result));
+            }
+        });
+
+
     }
 
     public void onBind(Coupon_PurchaseData data){
