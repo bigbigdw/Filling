@@ -18,7 +18,7 @@ public class Coupon_PurchaseViewHolder extends  RecyclerView.ViewHolder {
     ImageView Img;
     String num;
     Button CountMinus, CountPlus;
-    Integer result;
+    Integer result, Total;
 
     public Coupon_PurchaseViewHolder(@NonNull View itemView) {
         super(itemView);
@@ -37,6 +37,9 @@ public class Coupon_PurchaseViewHolder extends  RecyclerView.ViewHolder {
             if(Integer.parseInt(num) > 1){
                 result = Integer.parseInt(num) - 1;
                 Count.setText(String.format("%s", result));
+                System.out.println(Count.getText().toString());
+                Total = result * Integer.parseInt( Price.getText().toString());
+                System.out.println(String.format("%s", Total));
             }
         });
 
@@ -45,10 +48,11 @@ public class Coupon_PurchaseViewHolder extends  RecyclerView.ViewHolder {
             if(Integer.parseInt(num) < 100){
                 result = Integer.parseInt(num) + 1;
                 Count.setText(String.format("%s", result));
+                System.out.println(Count.getText().toString());
+                Total = result * Integer.parseInt( Price.getText().toString());
+                System.out.println(String.format("%s", Total));
             }
         });
-
-
     }
 
     public void onBind(Coupon_PurchaseData data){
