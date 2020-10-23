@@ -28,7 +28,7 @@ public class Coupon_Purchase extends AppCompatActivity {
     TextInputLayout CashText1, ResultText1, CashText2, MileageText, ResultText2;
 
     ArrayList<Integer> Total = new ArrayList();
-    int sum = 0;
+    int sum, TotalSum = 0;
 
 
     @Override
@@ -94,6 +94,18 @@ public class Coupon_Purchase extends AppCompatActivity {
         EditCashText2.setText(String.format("%s", sum));
         EditMileageText.setText(String.format("%s", sum));
         EditResultText2.setText(String.format("%s", sum));
+
+        adapter.setOnItemClicklistener((holder, view, position, Count) -> {
+            Coupon_PurchaseData item = adapter.getItem(position);
+//            Toast.makeText(getApplicationContext(), "아이템 선택 " + item.getPrice() + String.format("%s", Count),
+//                    Toast.LENGTH_SHORT).show();
+            TotalSum += Count;
+            EditCashText1.setText(String.format("%s", sum + TotalSum));
+            EditResultText1.setText(String.format("%s", sum + TotalSum));
+            EditCashText2.setText(String.format("%s", sum + TotalSum));
+            EditMileageText.setText(String.format("%s", sum + TotalSum));
+            EditResultText2.setText(String.format("%s", sum + TotalSum));
+        });
     }
 
     private void init() {
@@ -101,8 +113,8 @@ public class Coupon_Purchase extends AppCompatActivity {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(linearLayoutManager);
         adapter = new Coupon_PurchaseAdapter();
-
         recyclerView.setAdapter(adapter);
+
     }
 
     private void getData() {

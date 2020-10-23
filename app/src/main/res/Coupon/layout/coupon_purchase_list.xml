@@ -16,8 +16,8 @@
         android:baselineAligned="false"
         android:gravity="center_horizontal|center_vertical"
         android:orientation="horizontal"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
         tools:ignore="UselessParent">
 
         <LinearLayout
@@ -47,7 +47,7 @@
 
             <TextView
                 android:id="@+id/Market"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
@@ -57,7 +57,7 @@
 
             <TextView
                 android:id="@+id/Name"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:text="@string/MyCoupon_GoodsName"
@@ -88,7 +88,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="100dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal">
