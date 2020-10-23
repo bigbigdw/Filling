@@ -29,7 +29,7 @@ import java.util.Objects;
 public class Drawer_CashExchangeFragment extends Fragment {
 
     LinearLayout Before,After,BtnBefore,BtnAfter;
-    TextInputLayout EditCharge, TransCharge, PurchaseCharge, PurchaseCoin;
+    TextInputLayout EditCharge,  PurchaseCharge, PurchaseCoin;
     Editable EditChargeString;
     Button onClickNext, onClickCancel, onClickPurchase;
     TextView CashCount,PurchaseCount;
@@ -44,7 +44,6 @@ public class Drawer_CashExchangeFragment extends Fragment {
         CashCount = root.findViewById(R.id.CashCount);
         PurchaseCount = root.findViewById(R.id.PurchaseCount);
         EditCharge = root.findViewById(R.id.EditCharge);
-        TransCharge = root.findViewById(R.id.TransCharge);
         PurchaseCharge = root.findViewById(R.id.PurchaseCharge);
         PurchaseCoin = root.findViewById(R.id.PurchaseCoin);
 
@@ -73,12 +72,9 @@ public class Drawer_CashExchangeFragment extends Fragment {
 
 
         EditText EditChargeText = EditCharge.getEditText();
-        EditText TransChargeText = TransCharge.getEditText();
         EditText PurchaseChargeText = PurchaseCharge.getEditText();
         EditText PurchaseCoinText = PurchaseCoin.getEditText();
 
-        TransChargeText.setClickable(false);
-        TransChargeText.setFocusable(false);
         PurchaseChargeText.setClickable(false);
         PurchaseChargeText.setFocusable(false);
         PurchaseCoinText.setClickable(false);
@@ -90,22 +86,21 @@ public class Drawer_CashExchangeFragment extends Fragment {
         EditChargeText.addTextChangedListener(new TextWatcher() {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                // 입력되는 텍스트에 변화가 있을 때
-                TransChargeText.setText(EditChargeString.toString());
-                PurchaseChargeText.setText(EditChargeString.toString());
-                PurchaseCoinText.setText(EditChargeString.toString());
-                CashCount.setText(String.format("%s Coin", EditChargeString));
-                PurchaseCount.setText(String.format("%s원", EditChargeString));
+
+                PurchaseChargeText.setText(String.format("%s", Integer.parseInt(EditChargeString.toString())*100));
+                PurchaseCoinText.setText(String.format("%s", Integer.parseInt(EditChargeString.toString())/1000));
+                CashCount.setText(String.format("%s"+"Coin", Integer.parseInt(EditChargeString.toString())/1000));
+                PurchaseCount.setText(String.format("%s원", Integer.parseInt(EditChargeString.toString())*100));
             }
 
             @Override
             public void afterTextChanged(Editable arg0) {
-                // 입력이 끝났을 때
+
             }
 
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                // 입력하기 전에
+
             }
         });
 
@@ -119,13 +114,8 @@ public class Drawer_CashExchangeFragment extends Fragment {
             return false;
         });
 
-        root.findViewById(R.id.TooolbarBack).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                NavHostFragment.findNavController(Drawer_CashExchangeFragment.this)
-                        .navigate(R.id.action_Drawer_CashExchange_to_bottom_filling);
-            }
-        });
+        root.findViewById(R.id.TooolbarBack).setOnClickListener(view -> NavHostFragment.findNavController(Drawer_CashExchangeFragment.this)
+                .navigate(R.id.action_Drawer_CashExchange_to_bottom_filling));
 
         return root;
     }

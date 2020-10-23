@@ -19,8 +19,23 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:visibility="visible">
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/GetPerson"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:text="@string/CashDone_sendTitle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/CashDone_sendName"
+                android:maxLines="1"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
         <TextView
-            android:id="@+id/textView25"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/CashCharge_RechargeTitle"
@@ -73,20 +88,6 @@
                 android:textStyle="bold" />
         </com.google.android.material.textfield.TextInputLayout>
 
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="20dp"
-            android:text="@string/CashDone_sendTitle">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/CashDone_sendName"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp" />
-        </com.google.android.material.textfield.TextInputLayout>
 
     </LinearLayout>
 

@@ -212,7 +212,7 @@
                     android:layout_height="53dp"
                     android:layout_marginTop="8dp"
                     app:suffixText="@string/CashCharge_RechargeCashCount"
-                    android:hint="@string/CashCharge_Cash"
+                    android:hint="@string/CashCharge_Cash1"
                     android:textAlignment="textStart"
                     app:suffixTextColor="#4971EF">
 

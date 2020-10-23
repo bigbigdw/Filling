@@ -96,7 +96,7 @@ public class Drawer_CashGiftFragment extends Fragment {
         EditChargeText.addTextChangedListener(new TextWatcher() {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                PurchaseChargeText.setText(EditChargeString.toString());
+                PurchaseChargeText.setText(String.format("%s", Integer.parseInt(EditChargeString.toString())*10));
             }
 
             @Override

@@ -23,13 +23,14 @@
     <string name="CashCharge_CoinTile">이더리움비트코인</string>
     <string name="CashCharge_Coin">2,450,000.00</string>
     <string name="CashCharge_CoinCount">원</string>
-    <string name="CashCharge_Rate">1coin  =  10원  /  4,500,000원  /  A +</string>
+    <string name="CashCharge_Rate">1coin  =  10000원   /  A +</string>
     <string name="CashCharge_RechargeTitle">충전 액수</string>
     <string name="CashCharge_Cash">충전할 Cash</string>
+    <string name="CashCharge_Cash1">선물할 Cash</string>
     <string name="CashCharge_RechargeCashCount">Cash</string>
     <string name="CashCharge_RechargedCoin">환전된 Coin</string>
     <string name="CashCharge_Won">원</string>
-    <string name="CashCharge_PurchasedCoin">원</string>
+    <string name="CashCharge_PurchasedCoin">Coin</string>
     <string name="CashCharge_BtnContinue">계속하기</string>
     <string name="CashCharge_PurchaseCoin">결제할 금액</string>
     <string name="CashDone_PurchaseCoin">Coin으로 충전</string>
@@ -38,11 +39,13 @@
     <string name="CashCharge_AccountTile">내 통장</string>
     <string name="CashCharge_Account">45,521,000</string>
     <string name="CashCharge_WonCount">원</string>
-    <string name="CashCharge_PurchaseAccount">결제할 금액</string>
+    <string name="CashCharge_PurchaseAccount">결제할 금액은</string>
     <string name="CashDone_Account">2,000 Cash</string>
     <string name="CashDone_AccountWon">2,000 원</string>
     <string name="CashDone_PurchaseAccount">무통장 입금</string>
+    <string name="CashDone_PurchaseAccount2">김대우</string>
     <string name="CashDone_ExchangeAccount">결제 방법은</string>
+    <string name="CashDone_ExchangeAccount2">송금자는</string>
     <string name="CashDone_sendTitle">송금자 정보 입력</string>
     <string name="CashDone_sendName">송금자명 입력</string>
     <string name="CashDone_sendCopy">계좌복사</string>
@@ -51,14 +54,14 @@
     <!--Cash 충전 마일리지-->
     <string name="CashCharge_RechargedMileage">환전된 마일리지</string>
     <string name="CashCharge_PurchaseMilage">결제할 마일리지</string>
-    <string name="CashCharge_MileageTip">마일리지는 최소 10,000 포인트에서 환전 가능하며, 1000포인트씩 환전할 수 있습니다.</string>
-    <string name="CashCharge_RateMileage">1point  =  10원</string>
+    <string name="CashCharge_MileageTip">마일리지는 최소 1,000 포인트에서 환전 가능하며, 1,000포인트씩 환전할 수 있습니다.</string>
+    <string name="CashCharge_RateMileage">1cash  =  100points / 1cash  =  1000원</string>
     <string name="CashCharge_Mileage">14,952,000</string>
     <string name="CashCharge_Points">Points</string>
     <string name="CashCharge_UseMileage">사용 마일리지는</string>
     <string name="CashCharge_PurchaseMileage">결제할 코인</string>
     <string name="CashDone_PurchaseMileage"> 마일리지로 충전</string>
-    <string name="CashDone_ExchangeMileage">결제 마일리지는</string>
+    <string name="CashDone_ExchangeMileage">충전될 Cash는</string>
     <string name="CashCharge_MileageTile">내 마일리지</string>
     <!--Cash 선물 팝업-->
     <string name="CashGift_PopupTitle">Cash 선물이 도착했습니다!</string>
@@ -73,8 +76,8 @@
     <string name="CashGift_CashTitle">나의 Cash</string>
     <string name="CashGift_CashMount">12,325,000</string>
     <string name="CashGift_CashCount">Cash</string>
-    <string name="CashGift_CashRate">1cash = 10원</string>
-    <string name="CashGift_CashSectionTitle">1cash = 10원</string>
+    <string name="CashGift_CashRate">1cash  =  1000원 / 100points / 10000원</string>
+    <string name="CashGift_CashSectionTitle">1cash = 10000원</string>
     <string name="CashGift_CashMessage">메세지를 입력해주세요</string>
     <!--Cash 선물 결제-->
     <string name="CashGift_PurchaseTitle">Cash 선물 결제</string>
@@ -98,7 +101,7 @@
     <string name="CashExchange_AfterTitle">환전 내역 확인</string>
     <string name="CashExchange_AfterText1">Revive Cash의</string>
     <string name="CashExchange_AfterText2">2,000 Cash</string>
-    <string name="CashExchange_AfterText3"> 를</string>
+    <string name="CashExchange_AfterText3">을</string>
     <string name="CashExchange_AfterText4">이더리움 비트코인의</string>
     <string name="CashExchange_AfterText5">20,000 Coin</string>
     <string name="CashExchange_AfterText6">으로,</string>

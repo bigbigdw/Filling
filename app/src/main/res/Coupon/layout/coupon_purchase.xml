@@ -123,8 +123,8 @@
                                 android:id="@+id/CashText1"
                                 android:layout_width="match_parent"
                                 android:layout_height="53dp"
-                                app:prefixText="@string/CouponPurchase_RadioPurchaseCash4"
-                                app:suffixText="@string/CashCharge_RechargeCashCount"
+                                app:prefixText="@string/CouponPurchase_RadioPurchaseCash6"
+                                app:suffixText="@string/CashCharge_Won"
                                 app:suffixTextColor="#333742">
 
                                 <com.google.android.material.textfield.TextInputEditText
@@ -133,7 +133,7 @@
                                     android:inputType="number"
                                     android:paddingLeft="10dp"
                                     android:paddingRight="10dp"
-                                    android:text="@string/CouponPurchase_RadioPurchaseCash2"
+                                    android:text="@string/CouponPurchase_RadioPurchaseCash3"
                                     android:textAlignment="textEnd"
                                     android:textColor="#333742"
                                     android:textColorLink="#333742"
@@ -144,9 +144,9 @@
                                 android:id="@+id/ResultText1"
                                 android:layout_width="match_parent"
                                 android:layout_height="53dp"
-                                app:prefixText="@string/CouponPurchase_RadioPurchaseCash5"
+                                app:prefixText="@string/CouponPurchase_RadioPurchaseCash4"
                                 app:prefixTextColor="#4971EF"
-                                app:suffixText="@string/CashCharge_Won"
+                                app:suffixText="@string/CashCharge_RechargeCashCount"
                                 app:suffixTextColor="#4971EF">
 
                                 <com.google.android.material.textfield.TextInputEditText
@@ -156,7 +156,7 @@
                                     android:inputType="number"
                                     android:paddingLeft="10dp"
                                     android:paddingRight="10dp"
-                                    android:text="@string/CouponPurchase_RadioPurchaseCash3"
+                                    android:text="@string/CouponPurchase_RadioPurchaseCash2"
                                     android:textAlignment="textEnd"
                                     android:textColor="#4971EF"
                                     android:textColorLink="#4971EF"
@@ -181,6 +181,28 @@
                             android:visibility="gone"
                             tools:visibility="visible">
 
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/ResultText2"
+                                android:layout_width="match_parent"
+                                android:layout_height="53dp"
+                                app:prefixText="@string/CouponPurchase_RadioPurchaseCash6"
+                                app:suffixTextColor="#333742"
+                                app:suffixText="@string/CashCharge_Won">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+
+                                    android:inputType="number"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:text="@string/CouponPurchase_RadioPurchaseCash3"
+                                    android:textAlignment="textEnd"
+                                    android:textColor="#333742"
+                                    android:textColorLink="#333742"
+                                    android:textStyle="bold" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -191,9 +213,11 @@
                                 android:id="@+id/CashText2"
                                 android:layout_width="match_parent"
                                 android:layout_height="53dp"
+                                app:prefixTextColor="#4971EF"
+                                app:suffixTextColor="#4971EF"
                                 app:prefixText="@string/CouponPurchase_RadioPurchaseCash4"
                                 app:suffixText="@string/CashCharge_RechargeCashCount"
-                                app:suffixTextColor="#333742">
+>
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:layout_width="match_parent"
@@ -203,8 +227,9 @@
                                     android:paddingRight="10dp"
                                     android:text="@string/CouponPurchase_RadioPurchaseCash2"
                                     android:textAlignment="textEnd"
-                                    android:textColor="#333742"
-                                    android:textColorLink="#333742"
+                                    android:backgroundTint="#4971EF"
+                                    android:textColor="#4971EF"
+                                    android:textColorLink="#4971EF"
                                     android:textStyle="bold" />
                             </com.google.android.material.textfield.TextInputLayout>
 
@@ -220,8 +245,9 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="53dp"
                                 app:prefixText="@string/CashCharge_PurchaseMilage"
-                                app:suffixText="@string/Drawer_Mileage"
-                                app:suffixTextColor="#333742">
+                                app:prefixTextColor="#4971EF"
+                                app:suffixTextColor="#4971EF"
+                                app:suffixText="@string/Drawer_Mileage">
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:layout_width="match_parent"
@@ -231,32 +257,13 @@
                                     android:paddingRight="10dp"
                                     android:text="@string/CouponPurchase_RadioPurchaseMileage2"
                                     android:textAlignment="textEnd"
-                                    android:textColor="#333742"
-                                    android:textStyle="bold" />
-                            </com.google.android.material.textfield.TextInputLayout>
-
-                            <com.google.android.material.textfield.TextInputLayout
-                                android:id="@+id/ResultText2"
-                                android:layout_width="match_parent"
-                                android:layout_height="53dp"
-                                app:prefixText="@string/CouponPurchase_RadioPurchaseCash5"
-                                app:prefixTextColor="#4971EF"
-                                app:suffixText="@string/CashCharge_Won"
-                                app:suffixTextColor="#4971EF">
-
-                                <com.google.android.material.textfield.TextInputEditText
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
                                     android:backgroundTint="#4971EF"
-                                    android:inputType="number"
-                                    android:paddingLeft="10dp"
-                                    android:paddingRight="10dp"
-                                    android:text="@string/CouponPurchase_RadioPurchaseCash3"
-                                    android:textAlignment="textEnd"
                                     android:textColor="#4971EF"
                                     android:textColorLink="#4971EF"
                                     android:textStyle="bold" />
                             </com.google.android.material.textfield.TextInputLayout>
+
+
                         </LinearLayout>
                     </RadioGroup>
                 </LinearLayout>

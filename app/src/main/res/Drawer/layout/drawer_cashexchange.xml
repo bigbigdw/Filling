@@ -163,49 +163,27 @@
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/TransCharge"
+                        android:id="@+id/PurchaseCharge"
                         android:layout_width="match_parent"
                         android:layout_height="53dp"
-                        android:hint="@string/CashExchange_Exchanged"
-                        android:textAlignment="textStart"
-                        android:layout_marginTop="20dp"
+                        android:hint="@string/CashExchange_ExchangedCost"
                         android:textColorHint="#DBDBDB"
-                        app:suffixText="@string/CashCharge_RechargeCashCount"
-                        app:suffixTextColor="#DBDBDB">
+                        app:suffixTextColor="#DBDBDB"
+                        android:layout_marginTop="20dp"
+
+                        app:suffixText="@string/CashCharge_Won"
+  >
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:backgroundTint="#DBDBDB"
-                            android:textAlignment="textEnd"
-                            android:inputType="none"
-                            android:paddingLeft="10dp"
-                            android:paddingRight="10dp"
-                            android:textColor="#DBDBDB"
-                            android:textStyle="bold"
-                            app:suffixText="@string/CashCharge_PurchasedCoin" />
-                    </com.google.android.material.textfield.TextInputLayout>
-
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/PurchaseCharge"
-                        android:layout_width="match_parent"
-                        android:layout_height="53dp"
-                        android:hint="@string/CashExchange_ExchangedCost"
-                        android:layout_marginTop="20dp"
-                        android:textColorHint="#E24F39"
-                        app:suffixText="@string/CashCharge_Won"
-                        app:suffixTextColor="#E24F39">
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:backgroundTint="#E24F39"
                             android:foregroundTint="#FFFFFF"
                             android:textAlignment="textEnd"
                             android:inputType="none"
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
-                            android:textColor="#E24F39"
+                            android:textColor="#DBDBDB"
                             android:textStyle="bold" />
                     </com.google.android.material.textfield.TextInputLayout>
 

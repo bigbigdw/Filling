@@ -82,20 +82,17 @@ public class CashChargeFragment_Mileage extends Fragment {
         EditChargeText.addTextChangedListener(new TextWatcher() {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                // 입력되는 텍스트에 변화가 있을 때
-                PurchaseChargeText.setText(EditChargeString.toString());
-                CashCount.setText(String.format("%s Points", EditChargeString));
-                PurchaseCount.setText(String.format("%s원", EditChargeString));
+                PurchaseChargeText.setText(String.format("%s", Integer.parseInt(EditChargeString.toString())*100));
+                CashCount.setText(String.format("%s" + "Points", Integer.parseInt(EditChargeString.toString())*100));
+                PurchaseCount.setText(String.format("%s" + "Cash", EditChargeString));
             }
 
             @Override
             public void afterTextChanged(Editable arg0) {
-                // 입력이 끝났을 때
             }
 
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                // 입력하기 전에
             }
         });
 

@@ -28,10 +28,10 @@ import java.util.Objects;
 public class CashChargeFragment_Account extends Fragment {
 
     LinearLayout Before, After, BtnBefore, BtnAfter;
-    TextInputLayout EditCharge, PurchaseCharge, Copy;
-    Editable EditChargeString;
+    TextInputLayout EditCharge, PurchaseCharge, Copy, GetPerson;
+    Editable EditChargeString, PersonString;
     Button onClickNext, onClickCancel, onClickPurchase, onClickCopy;
-    TextView CashCount, PurchaseCount;
+    TextView CashCount, PurchaseCount, Person;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -45,7 +45,9 @@ public class CashChargeFragment_Account extends Fragment {
         CashCount = root.findViewById(R.id.CashCount);
         PurchaseCount = root.findViewById(R.id.PurchaseCount);
         EditCharge = root.findViewById(R.id.EditCharge);
+        GetPerson = root.findViewById(R.id.GetPerson);
         PurchaseCharge = root.findViewById(R.id.PurchaseCharge);
+        Person = root.findViewById(R.id.Person);
         Copy = root.findViewById(R.id.Copy);
 
         onClickNext = root.findViewById(R.id.onClickNext);
@@ -86,6 +88,7 @@ public class CashChargeFragment_Account extends Fragment {
 
 
         EditText EditChargeText = EditCharge.getEditText();
+        EditText GetEditTextPerson = GetPerson.getEditText();
         EditText PurchaseChargeText = PurchaseCharge.getEditText();
 
         PurchaseChargeText.setClickable(false);
@@ -94,14 +97,15 @@ public class CashChargeFragment_Account extends Fragment {
         Copy.setFocusable(false);
 
         EditChargeString = Objects.requireNonNull(EditCharge.getEditText()).getText();
+        PersonString = Objects.requireNonNull(GetPerson.getEditText()).getText();
 
         assert EditChargeText != null;
         EditChargeText.addTextChangedListener(new TextWatcher() {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                PurchaseChargeText.setText(EditChargeString.toString());
+                PurchaseChargeText.setText(String.format("%s", Integer.parseInt(EditChargeString.toString())*100));
                 CashCount.setText(String.format("%s원", EditChargeString));
-                PurchaseCount.setText(String.format("%s원", EditChargeString));
+                PurchaseCount.setText(String.format("%s원", Integer.parseInt(EditChargeString.toString())*100));
             }
 
             @Override
@@ -111,6 +115,31 @@ public class CashChargeFragment_Account extends Fragment {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
             }
+        });
+
+        assert GetEditTextPerson != null;
+        GetEditTextPerson.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                Person.setText(String.format("%s", PersonString));
+            }
+
+            @Override
+            public void afterTextChanged(Editable arg0) {
+            }
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+        });
+
+        GetEditTextPerson.setOnKeyListener((v, keyCode, event) -> {
+            if ((event.getAction() == KeyEvent.ACTION_DOWN) && (keyCode == KeyEvent.KEYCODE_ENTER)) {
+                InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Activity.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(GetEditTextPerson.getWindowToken(), 0);
+                return true;
+            }
+            return false;
         });
 
         EditChargeText.setOnKeyListener((v, keyCode, event) -> {

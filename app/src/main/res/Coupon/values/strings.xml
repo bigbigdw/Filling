@@ -65,13 +65,14 @@
     <string name="CouponPurchase_Btn_Number">1</string>
     <string name="CouponPurchase_RadioTitle">결제 수단 선택</string>
     <string name="CouponPurchase_RadioPurchase1">Cash 결제</string>
-    <string name="CouponPurchase_RadioPurchase2">마일리지 + Cash 결제</string>
-    <string name="CouponPurchase_RadioPurchaseCash1">※ 1cash  =  10원</string>
+    <string name="CouponPurchase_RadioPurchase2">마일리지(50%) + Cash 결제(50%)</string>
+    <string name="CouponPurchase_RadioPurchaseCash1">※ 1cash  =  1000원</string>
     <string name="CouponPurchase_RadioPurchaseCash2">410</string>
     <string name="CouponPurchase_RadioPurchaseCash3">4,100</string>
-    <string name="CouponPurchase_RadioPurchaseCash4">결제금액</string>
-    <string name="CouponPurchase_RadioPurchaseCash5">총 결제금액</string>
-    <string name="CouponPurchase_RadioPurchaseMileage1">※ 1milleage  =  10원</string>
+    <string name="CouponPurchase_RadioPurchaseCash4">결제할 Cash</string>
+    <string name="CouponPurchase_RadioPurchaseCash5">결제할 마일리지</string>
+    <string name="CouponPurchase_RadioPurchaseCash6">결제할 금액</string>
+    <string name="CouponPurchase_RadioPurchaseMileage1">※ 1milleage  =  100원</string>
     <string name="CouponPurchase_RadioPurchaseMileage2">110</string>
     <string name="CouponPurchase_Purchase">4100</string>
     <!--결제하기-->
