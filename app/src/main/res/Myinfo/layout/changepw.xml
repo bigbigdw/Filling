@@ -59,12 +59,13 @@
                 android:textStyle="bold" />
 
             <com.google.android.material.textfield.TextInputLayout
-                android:layout_marginTop="24dp"
+                android:id="@+id/CurrentPW"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColorHint="#70888888"
                 android:layout_marginLeft="22dp"
+                android:layout_marginTop="24dp"
                 android:layout_marginRight="22dp"
+                android:textColorHint="#70888888"
                 app:startIconDrawable="@drawable/ic_icon_password"
                 app:startIconTint="#888888">
 
@@ -91,12 +92,13 @@
 
 
             <com.google.android.material.textfield.TextInputLayout
-                android:layout_marginTop="24dp"
+                android:id="@+id/NewPW"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColorHint="#70888888"
                 android:layout_marginLeft="22dp"
+                android:layout_marginTop="24dp"
                 android:layout_marginRight="22dp"
+                android:textColorHint="#70888888"
                 app:startIconDrawable="@drawable/ic_icon_password"
                 app:startIconTint="#888888">
 
@@ -111,6 +113,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/NewPWCheck"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="22dp"
@@ -147,7 +150,7 @@
                     <Button
                         android:id="@+id/BtnApply"
                         style="@style/Widget.AppCompat.Button"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="#4F9BF0"

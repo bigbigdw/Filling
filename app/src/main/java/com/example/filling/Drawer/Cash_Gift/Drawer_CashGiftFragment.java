@@ -13,7 +13,6 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -23,8 +22,6 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.filling.Drawer.CashGift_Purchase;
-import com.example.filling.Drawer.Cash_Purchase;
-import com.example.filling.Myinfo.MyInfo;
 import com.example.filling.R;
 import com.google.android.material.textfield.TextInputLayout;
 

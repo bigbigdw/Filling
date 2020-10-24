@@ -93,7 +93,7 @@ public class Coupon_Purchase extends AppCompatActivity {
         EditResultText1.setText(String.format("%s", (sum + TotalSum) / 1000));
         EditResultText2.setText(String.format("%s", sum + TotalSum));
         EditCashText2.setText(String.format("%s", (sum + TotalSum) / 2000));
-        EditMileageText.setText(String.format("%s", (sum + TotalSum) * 200));
+        EditMileageText.setText(String.format("%s", (sum + TotalSum) / 200));
 
         adapter.setOnItemClicklistener((holder, view, position, Count) -> {
             Coupon_PurchaseData item = adapter.getItem(position);
@@ -103,7 +103,7 @@ public class Coupon_Purchase extends AppCompatActivity {
             EditCashText1.setText(String.format("%s", sum + TotalSum));
             EditResultText1.setText(String.format("%s", (sum + TotalSum) / 1000));
             EditResultText2.setText(String.format("%s", sum + TotalSum));
-            EditMileageText.setText(String.format("%s", (sum + TotalSum) * 200));
+            EditMileageText.setText(String.format("%s", (sum + TotalSum) / 200));
             EditCashText2.setText(String.format("%s", (sum + TotalSum) / 2000));
         });
     }

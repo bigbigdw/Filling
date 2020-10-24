@@ -3,6 +3,8 @@ package com.example.filling.Login;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
@@ -44,14 +46,60 @@ public class Login_CardPW extends AppCompatActivity {
         onClickNext = findViewById(R.id.onClickNext);
         onClickDone =  findViewById(R.id.onClickDone);
 
-        pwSecond.setOnFocusChangeListener((v, hasFocus) -> {
-            if (hasFocus) {
-                PwText1.setVisibility(View.GONE);
-                pwFirst.setVisibility(View.GONE);
-                PwText2.setVisibility(View.VISIBLE);
-                onClickNext.setVisibility(View.VISIBLE);
+        Objects.requireNonNull(pwFirst).addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence text, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence text, int start, int before, int count) {
+                if (text.length() == 6) {
+                    pwSecond.setOnFocusChangeListener((v, hasFocus) -> {
+                        if (hasFocus) {
+                            PwText1.setVisibility(View.GONE);
+                            pwFirst.setVisibility(View.GONE);
+                            PwText2.setVisibility(View.VISIBLE);
+                        }
+                    });
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
             }
         });
+
+        Objects.requireNonNull(pwSecond).addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence text, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence text, int start, int before, int count) {
+                if (text.length() == 6 && text.toString().equals(pwFirst.getText().toString())) {
+                    onClickNext.setVisibility(View.VISIBLE);
+                } else if(text.length() == 6) {
+                    Toast.makeText(getApplicationContext(), "비밀번호가 일치하지 않습니다", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+//        pwSecond.setOnFocusChangeListener((v, hasFocus) -> {
+//            if (hasFocus) {
+//                PwText1.setVisibility(View.GONE);
+//                pwFirst.setVisibility(View.GONE);
+//                PwText2.setVisibility(View.VISIBLE);
+//                onClickNext.setVisibility(View.VISIBLE);
+//            }
+//        });
 
         pwSecond.setOnKeyListener((v, keyCode, event) -> {
             if ((event.getAction() == KeyEvent.ACTION_DOWN) && (keyCode == KeyEvent.KEYCODE_ENTER)) {

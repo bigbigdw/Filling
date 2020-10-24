@@ -21,7 +21,7 @@
             android:layout_marginBottom="28dp">
 
             <LinearLayout
-                android:id="@+id/MyInfo"
+                android:id="@+id/MyCart"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -33,7 +33,7 @@
                     android:layout_height="40dp"
                     android:layout_marginBottom="10dp"
                     android:contentDescription="@string/TODO"
-                    app:srcCompat="@drawable/myinfo_myinfo" />
+                    app:srcCompat="@drawable/icon_filling_shopping" />
 
                 <Space
                     android:layout_width="match_parent"
@@ -42,7 +42,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/Myinfo_Text1"
+                    android:text="@string/Filling_Shopping"
                     android:textAlignment="center"
                     android:textColor="#000000"
                     android:textStyle="bold" />
@@ -194,33 +194,6 @@
                     android:textStyle="bold" />
             </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/MyCart"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginBottom="10dp"
-                    android:contentDescription="@string/TODO"
-                    app:srcCompat="@drawable/icon_filling_shopping" />
-
-                <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/Filling_Shopping"
-                    android:textAlignment="center"
-                    android:textColor="#000000"
-                    android:textStyle="bold" />
-            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -228,9 +201,16 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:orientation="vertical"
-                tools:ignore="UselessLeaf">
+                tools:ignore="UselessLeaf"/>
 
-            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:ignore="UselessLeaf"/>
+
 
         </TableRow>
     </TableLayout>

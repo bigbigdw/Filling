@@ -55,7 +55,7 @@
     <string name="CashCharge_RechargedMileage">환전된 마일리지</string>
     <string name="CashCharge_PurchaseMilage">결제할 마일리지</string>
     <string name="CashCharge_MileageTip">마일리지는 최소 1,000 포인트에서 환전 가능하며, 1,000포인트씩 환전할 수 있습니다.</string>
-    <string name="CashCharge_RateMileage">1cash  =  100points / 1cash  =  1000원</string>
+    <string name="CashCharge_RateMileage">1cash  =  100points / 1000원</string>
     <string name="CashCharge_Mileage">14,952,000</string>
     <string name="CashCharge_Points">Points</string>
     <string name="CashCharge_UseMileage">사용 마일리지는</string>
@@ -74,7 +74,7 @@
     <!--Cash 선물-->
     <string name="CashGift_Title">Cash 선물하기</string>
     <string name="CashGift_CashTitle">나의 Cash</string>
-    <string name="CashGift_CashMount">12,325,000</string>
+    <string name="CashGift_CashMount">12,325</string>
     <string name="CashGift_CashCount">Cash</string>
     <string name="CashGift_CashRate">1cash  =  1000원 / 100points / 10000원</string>
     <string name="CashGift_CashSectionTitle">1cash = 10000원</string>

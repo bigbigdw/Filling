@@ -14,16 +14,16 @@
     <string name="MyCoupon_MyInfoTitle">내 쿠폰함</string>
     <string name="MyCoupon_MyInfoTip">※ 내 쿠폰함은 최근 한달 내에 구매한 쿠폰들만 표시됩니다.</string>
     <string name="MyCoupon_ViewDetail">상세보기</string>
-    <string name="MyCoupon_Title">스타벅스</string>
-    <string name="MyCoupon_GoodsName">아이스 카페아메리카노 Tall</string>
+    <string name="MyCoupon_Title">매머드커피</string>
+    <string name="MyCoupon_GoodsName">스트로베리 프라페</string>
     <string name="MyCoupon_Date">2019.01.07</string>
     <!--내 쿠폰함 팝업-->
     <string name="MyCouponPopup_Title">쿠폰 상세 정보</string>
-    <string name="MyCouponPopup_Price">4100원</string>
+    <string name="MyCouponPopup_Price">4,800원</string>
     <string name="MyCouponPopup_BuyDate">구매날짜:</string>
-    <string name="MyCouponPopup_Date">2019.01.03</string>
+    <string name="MyCouponPopup_Date">2020.03.10</string>
     <string name="MyCouponPopup_UseDate">사용날짜:</string>
-    <string name="MyCouponPopup_Use">2019.01.10</string>
+    <string name="MyCouponPopup_Use">2019.04.06</string>
     <!--비밀번호 변경-->
     <string name="ChagePW_Title">비밀번호 변경</string>
     <string name="ChagePW_CurrentPW">현재 비밀번호 입력</string>

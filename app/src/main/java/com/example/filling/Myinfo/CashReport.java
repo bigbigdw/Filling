@@ -41,9 +41,9 @@ public class CashReport extends AppCompatActivity {
 
     private void setupViewPager(ViewPager viewPager) {
         CashReport.ViewPagerAdapter adapter = new CashReport.ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new CashReport_Tab(), "1개월");
-        adapter.addFragment(new CashReport_Tab(), "3개월");
-        adapter.addFragment(new CashReport_Tab(), "전체");
+        adapter.addFragment(new CashReport_Tab_1Month(), "1개월");
+        adapter.addFragment(new CashReport_Tab_3Month(), "3개월");
+        adapter.addFragment(new CashReport_Tab_All(), "전체");
         viewPager.setAdapter(adapter);
     }
 

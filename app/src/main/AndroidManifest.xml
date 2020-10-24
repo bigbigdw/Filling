@@ -64,10 +64,6 @@
             android:label=""
             android:theme="@style/FindTheme" />
         <activity
-            android:name=".Myinfo.MyInfo"
-            android:label=""
-            android:theme="@style/FindTheme" />
-        <activity
             android:name=".Dongmu.Dongmu_Detail"
             android:label=""
             android:theme="@style/FindTheme" />

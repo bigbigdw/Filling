@@ -7,12 +7,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.filling.Bottom.Filling.Bottom_FillingFragment;
 import com.example.filling.Coupon.Coupon_List;
 import com.example.filling.Coupon.Coupon_MarketAdapter;
 import com.example.filling.Coupon.Coupon_MarketData;
@@ -56,6 +59,11 @@ public class Bottom_CouponFragment extends Fragment {
         CouponSearchText = root.findViewById(R.id.CouponSearchText);
         CouponSearchText.setClickable(false);
         CouponSearchText.setFocusable(false);
+
+        root.findViewById(R.id.FillingAD).setOnClickListener(view -> Toast.makeText(requireContext().getApplicationContext(), "이젠 든든하지 않습니다." , Toast.LENGTH_SHORT).show());
+
+        root.findViewById(R.id.FAQImg).setOnClickListener(view -> NavHostFragment.findNavController(Bottom_CouponFragment.this)
+                .navigate(R.id.action_Bottom_Coupon_to_Drawer_FAQ));
 
         RecyclerView recyclerView = root.findViewById(R.id.Coupon_Item_List);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(requireContext().getApplicationContext());

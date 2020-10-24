@@ -41,9 +41,9 @@ public class MileageReport extends AppCompatActivity {
 
     private void setupViewPager(ViewPager viewPager) {
         MileageReport.ViewPagerAdapter adapter = new MileageReport.ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new Mileage_Tab(), "1개월");
-        adapter.addFragment(new Mileage_Tab(), "3개월");
-        adapter.addFragment(new Mileage_Tab(), "전체");
+        adapter.addFragment(new Mileage_Tab_1Month(), "1개월");
+        adapter.addFragment(new Mileage_Tab_3Month(), "3개월");
+        adapter.addFragment(new Mileage_Tab_All(), "전체");
         viewPager.setAdapter(adapter);
     }
 

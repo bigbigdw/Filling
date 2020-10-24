@@ -6,7 +6,7 @@
     <!--드로워 상단-->
     <string name="Drawer_ID">kdw0310@ajou.ac.kr</string>
     <string name="Drawer_Cash">Cash</string>
-    <string name="Drawer_Cash_Count">12,325,000 Cash</string>
+    <string name="Drawer_Cash_Count">12,325 Cash</string>
     <string name="Drawer_Mileage">마일리지</string>
     <string name="Drawer_Mileage_Count">14,952,000 Points</string>
     <string name="Drawer_Logout">로그아웃</string>

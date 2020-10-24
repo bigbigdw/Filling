@@ -34,17 +34,29 @@ public class MyCoupon extends AppCompatActivity {
 
         listView = findViewById(R.id.Coupon_List);
         adapter = new MyCoupon.MyCouponAdapter();
-        adapter.addItem(new MyCoupon_ListItem("스타벅스", "아이스 아메리카노 TALL", "2019.03.10", R.drawable.mycoupon_ex01));
-        adapter.addItem(new MyCoupon_ListItem("스타벅스", "아이스 아메리카노 TALL", "2019.03.10", R.drawable.mycoupon_ex01));
-        adapter.addItem(new MyCoupon_ListItem("스타벅스", "아이스 아메리카노 TALL", "2019.03.10", R.drawable.mycoupon_ex01));
-        adapter.addItem(new MyCoupon_ListItem("스타벅스", "아이스 아메리카노 TALL", "2019.03.10", R.drawable.mycoupon_ex01));
-        adapter.addItem(new MyCoupon_ListItem("스타벅스", "아이스 아메리카노 TALL", "2019.03.10", R.drawable.mycoupon_ex01));
-        adapter.addItem(new MyCoupon_ListItem("스타벅스", "아이스 아메리카노 TALL", "2019.03.10", R.drawable.mycoupon_ex01));
-        adapter.addItem(new MyCoupon_ListItem("스타벅스", "아이스 아메리카노 TALL", "2019.03.10", R.drawable.mycoupon_ex01));
-        adapter.addItem(new MyCoupon_ListItem("스타벅스", "아이스 아메리카노 TALL", "2019.03.10", R.drawable.mycoupon_ex01));
-        adapter.addItem(new MyCoupon_ListItem("스타벅스", "아이스 아메리카노 TALL", "2019.03.10", R.drawable.mycoupon_ex01));
-        adapter.addItem(new MyCoupon_ListItem("스타벅스", "아이스 아메리카노 TALL", "2019.03.10", R.drawable.mycoupon_ex01));
-        adapter.addItem(new MyCoupon_ListItem("스타벅스", "아이스 아메리카노 TALL", "2019.03.10", R.drawable.mycoupon_ex01));
+        adapter.addItem(new MyCoupon_ListItem("매머드커피", "카라멜 마끼야또", "2020.11.06", R.drawable.mycoupon_ex87));
+        adapter.addItem(new MyCoupon_ListItem("매머드커피", "리얼레몬티", "2020.11.02", R.drawable.mycoupon_ex05));
+        adapter.addItem(new MyCoupon_ListItem("매머드커피", "쿠앤크 프라페", "2020.10.24", R.drawable.mycoupon_ex16));
+        adapter.addItem(new MyCoupon_ListItem("매머드커피", "레몬앤오렌지", "2020.10.10", R.drawable.mycoupon_ex02));
+        adapter.addItem(new MyCoupon_ListItem("매머드커피", "솜사탕 쉐이크", "2020.09.03", R.drawable.mycoupon_ex15));
+        adapter.addItem(new MyCoupon_ListItem("매머드커피", "카푸치노", "2020.08.13", R.drawable.mycoupon_ex82));
+        adapter.addItem(new MyCoupon_ListItem("매머드커피", "매머드커피", "2020.07.10", R.drawable.mycoupon_ex91));
+        adapter.addItem(new MyCoupon_ListItem("매머드커피", "플레인 요거트", "2020.06.17", R.drawable.mycoupon_ex11));
+        adapter.addItem(new MyCoupon_ListItem("매머드커피", "자바칩 프라페", "2020.05.26", R.drawable.mycoupon_ex17));
+        adapter.addItem(new MyCoupon_ListItem("매머드커피", "아몬드 아메리카노", "2020.05.13", R.drawable.mycoupon_ex85));
+        adapter.addItem(new MyCoupon_ListItem("매머드커피", "페퍼민트 라임티", "2020.04.06", R.drawable.mycoupon_ex07));
+
+        adapter.addItem(new MyCoupon_ListItem("매머드커피", "카페라떼", "2020.04.05", R.drawable.mycoupon_ex81));
+        adapter.addItem(new MyCoupon_ListItem("매머드커피", "스트로베리 프라페", "2020.03.10", R.drawable.mycoupon_ex19));
+        adapter.addItem(new MyCoupon_ListItem("매머드커피", "페퍼민트", "2020.02.10", R.drawable.mycoupon_ex04));
+        adapter.addItem(new MyCoupon_ListItem("매머드커피", "카페모카", "2020.01.18", R.drawable.mycoupon_ex82));
+        adapter.addItem(new MyCoupon_ListItem("매머드커피", "자바칩 프라페", "2020.01.05", R.drawable.mycoupon_ex17));
+        adapter.addItem(new MyCoupon_ListItem("매머드커피", "캐모마일", "2019.12.24", R.drawable.mycoupon_ex03));
+        adapter.addItem(new MyCoupon_ListItem("매머드커피", "딸기스무디", "2019.12.18", R.drawable.mycoupon_ex09));
+        adapter.addItem(new MyCoupon_ListItem("매머드커피", "복숭아 요거트", "2019.12.10", R.drawable.mycoupon_ex14));
+        adapter.addItem(new MyCoupon_ListItem("매머드커피", "밀크티", "2019.12.02", R.drawable.mycoupon_ex05));
+        adapter.addItem(new MyCoupon_ListItem("매머드커피", "쿠앤크 프라페", "2018.11.30", R.drawable.mycoupon_ex15));
+        adapter.addItem(new MyCoupon_ListItem("매머드커피", "블루베리 요거트", "2018.11.16", R.drawable.mycoupon_ex12));
         listView.setAdapter(adapter);
 
         listView.setOnItemClickListener((adapterView, view, position, id) -> {

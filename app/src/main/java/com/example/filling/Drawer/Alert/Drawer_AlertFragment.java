@@ -32,10 +32,10 @@ public class Drawer_AlertFragment extends Fragment {
 
         listView = root.findViewById(R.id.Alert_List);
         adapter = new AlertAdapter();
-        adapter.addItem(new Drawer_Alert_ListItem("[공지] 더필홀딩스 서비스공지", "20.02.25"));
-        adapter.addItem(new Drawer_Alert_ListItem("[안내] 3/27(화), (구)단체ID 서비스가 종료됨을 알려드립니...", "20.03.06"));
-        adapter.addItem(new Drawer_Alert_ListItem("[공지] 개인정보 열람 및 수정에 대한 안내", "20.03.10"));
+        adapter.addItem(new Drawer_Alert_ListItem("[공지] 개인정보 열람 및 수정에 대한 안내", "20.09.03"));
         adapter.addItem(new Drawer_Alert_ListItem("[당첨자발표] Summer Festival 8월 쿠폰증정 당첨자 ....", "20.04.06"));
+        adapter.addItem(new Drawer_Alert_ListItem("[안내] 3/27(화), (구)단체ID 서비스가 종료됨을 알려드립니...", "20.03.10"));
+        adapter.addItem(new Drawer_Alert_ListItem("[공지] 더필홀딩스 서비스공지", "20.02.25"));
         adapter.addItem(new Drawer_Alert_ListItem("[안내] 사용되지 않는 (구)단체 아이디 정리에 대한 안내", "20.09.03"));
         adapter.addItem(new Drawer_Alert_ListItem("[공지] 채용관련 보이스피싱 등 금융사고 등에 주의 부탁드...", "20.11.02"));
         adapter.addItem(new Drawer_Alert_ListItem("[공지] 전시스템 정비 작업", "20.12.02"));

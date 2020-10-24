@@ -79,23 +79,20 @@
         <androidx.core.widget.NestedScrollView
             android:id="@+id/View"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:background="#FFFFFF"
             android:fillViewport="true"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <LinearLayout
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/Coupon_Item_List"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:orientation="vertical"
-                android:visibility="visible">
-
-                <include layout="@layout/coupon_list_item" />
-
-                <include layout="@layout/coupon_list_item" />
-            </LinearLayout>
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="#FFFFFF" />
         </androidx.core.widget.NestedScrollView>
 
         <LinearLayout

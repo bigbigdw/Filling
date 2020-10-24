@@ -47,9 +47,9 @@ public class Bottom_FillingFragment extends Fragment {
 
         listView = root.findViewById(R.id.filling_list);
         adapter = new SingerAdapter();
-        adapter.addItem(new Bottom_Filling_ListItem("[공지] 개인정보 열람 및 수정에 대한 안내", "20.03.10"));
+        adapter.addItem(new Bottom_Filling_ListItem("[공지] 개인정보 열람 및 수정에 대한 안내", "20.09.03"));
         adapter.addItem(new Bottom_Filling_ListItem("[당첨자 발표] Summer Festival 8월 쿠폰 당첨자 발표 (1차)", "20.04.06"));
-        adapter.addItem(new Bottom_Filling_ListItem("[안내] 3/27 화, (구) 단체 ID 서비스가 종료됨을 알려드립니다.", "20.09.03"));
+        adapter.addItem(new Bottom_Filling_ListItem("[안내] 3/27 화, (구) 단체 ID 서비스가 종료됨을 알려드립니다.", "20.03.10"));
 
         listView.setAdapter(adapter);
 

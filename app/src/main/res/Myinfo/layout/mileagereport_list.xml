@@ -7,8 +7,9 @@
     android:gravity="center"
     android:orientation="vertical"
     android:paddingLeft="16dp"
-    android:paddingTop="8dp"
-    android:paddingRight="16dp">
+    android:paddingTop="4dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="4dp">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card"
