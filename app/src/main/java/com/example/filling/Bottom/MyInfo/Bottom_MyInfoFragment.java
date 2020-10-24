@@ -10,7 +10,9 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.fragment.NavHostFragment;
 
+import com.example.filling.Bottom.Coupon.Bottom_CouponFragment;
 import com.example.filling.Coupon.Coupon_Purchase;
 import com.example.filling.Myinfo.CashReport;
 import com.example.filling.Myinfo.ChangeCardPW;
@@ -69,6 +71,11 @@ public class Bottom_MyInfoFragment extends Fragment {
             Intent intent = new Intent(requireContext().getApplicationContext(), MileageReport.class);
             startActivity(intent);
         });
+
+        root.findViewById(R.id.FillingAD).setOnClickListener(view -> Toast.makeText(requireContext().getApplicationContext(), "이젠 든든하지 않습니다." , Toast.LENGTH_SHORT).show());
+
+        root.findViewById(R.id.FAQImg).setOnClickListener(view -> NavHostFragment.findNavController(Bottom_MyInfoFragment.this)
+                .navigate(R.id.action_Bottom_Myinfo_to_Drawer_FAQ));
 
         return root;
     }

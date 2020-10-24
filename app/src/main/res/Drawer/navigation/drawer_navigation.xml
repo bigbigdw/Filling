@@ -32,7 +32,11 @@
         android:id="@+id/Bottom_Myinfo"
         android:name="com.example.filling.Bottom.MyInfo.Bottom_MyInfoFragment"
         android:label=""
-        tools:layout="@layout/bottom_myinfo" />
+        tools:layout="@layout/bottom_myinfo" >
+        <action
+            android:id="@+id/action_Bottom_Myinfo_to_Drawer_FAQ"
+            app:destination="@id/Drawer_FAQ" />
+    </fragment>
 
     <fragment
         android:id="@+id/Bottom_Dongmu"

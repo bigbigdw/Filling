@@ -15,6 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
+import com.example.filling.Coupon.Coupon_List;
 import com.example.filling.Drawer.Alert.Alert_Detail;
 import com.example.filling.Drawer.SystemInfo.Drawer_SystemInfoFragment;
 import com.example.filling.R;
@@ -64,7 +65,7 @@ public class Bottom_FillingFragment extends Fragment {
 
         root.findViewById(R.id.FillingItem).setOnClickListener(view -> Toast.makeText(requireContext().getApplicationContext(), "서비스 준비중입니다." , Toast.LENGTH_SHORT).show());
 
-        filling_carousel.setImageClickListener(position -> Toast.makeText(requireContext().getApplicationContext(), "서비스 준비중입니다." , Toast.LENGTH_SHORT).show());
+        filling_carousel.setImageClickListener(position -> Toast.makeText(requireContext().getApplicationContext(), "지금은 참여가 불가능합니다." , Toast.LENGTH_SHORT).show());
 
         root.findViewById(R.id.FillingAD).setOnClickListener(view -> Toast.makeText(requireContext().getApplicationContext(), "이젠 든든하지 않습니다." , Toast.LENGTH_SHORT).show());
 
@@ -76,6 +77,7 @@ public class Bottom_FillingFragment extends Fragment {
                     .navigate(R.id.action_bottom_filling_to_Drawer_Alert);
             Toast.makeText(requireContext().getApplicationContext(), "공지사항 페이지로 이동합니다" , Toast.LENGTH_SHORT).show();
         });
+
         return root;
 
     }

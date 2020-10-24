@@ -20,6 +20,7 @@ import com.example.filling.Coupon.Coupon_List;
 import com.example.filling.Coupon.Coupon_MarketAdapter;
 import com.example.filling.Coupon.Coupon_MarketData;
 import com.example.filling.Coupon.Coupon_Search;
+import com.example.filling.Dongmu.Dongmu_Detail;
 import com.example.filling.R;
 import com.synnapps.carouselview.CarouselView;
 import com.synnapps.carouselview.ImageListener;
@@ -71,6 +72,11 @@ public class Bottom_CouponFragment extends Fragment {
         adapter = new Coupon_MarketAdapter();
         recyclerView.setAdapter(adapter);
         getData();
+
+        Coupon_Carousel.setImageClickListener(position -> {
+            Intent intent = new Intent(requireContext().getApplicationContext(), Coupon_List.class);
+            startActivity(intent);
+        });
 
         return root;
     }
