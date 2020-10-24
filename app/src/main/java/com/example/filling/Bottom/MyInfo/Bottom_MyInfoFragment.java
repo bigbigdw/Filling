@@ -72,11 +72,6 @@ public class Bottom_MyInfoFragment extends Fragment {
             startActivity(intent);
         });
 
-        root.findViewById(R.id.FillingAD).setOnClickListener(view -> Toast.makeText(requireContext().getApplicationContext(), "이젠 든든하지 않습니다." , Toast.LENGTH_SHORT).show());
-
-        root.findViewById(R.id.FAQImg).setOnClickListener(view -> NavHostFragment.findNavController(Bottom_MyInfoFragment.this)
-                .navigate(R.id.action_Bottom_Myinfo_to_Drawer_FAQ));
-
         return root;
     }
 }
