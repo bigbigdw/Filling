@@ -57,7 +57,6 @@ public class Dongmu_List extends AppCompatActivity {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(linearLayoutManager);
         adapter = new Dongmu_ListAdapter();
-
         recyclerView.setAdapter(adapter);
     }
 

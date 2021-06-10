@@ -97,8 +97,8 @@ public class Coupon_Purchase extends AppCompatActivity {
 
         adapter.setOnItemClicklistener((holder, view, position, Count) -> {
             Coupon_PurchaseData item = adapter.getItem(position);
-//            Toast.makeText(getApplicationContext(), "아이템 선택 " + item.getPrice() + String.format("%s", Count),
-//                    Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "아이템 선택 " + item.getPrice() + String.format("%s", Count),
+                    Toast.LENGTH_SHORT).show();
             TotalSum += Count;
             EditCashText1.setText(String.format("%s", sum + TotalSum));
             EditResultText1.setText(String.format("%s", (sum + TotalSum) / 1000));
