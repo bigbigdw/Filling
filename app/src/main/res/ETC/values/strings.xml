@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--공지사항-->
+    <string name="Alert_Title">공지사항</string>
+    <!--공지사항 상세-->
+    <string name="AlertDetail_Title">[공지] 개인정보 열람 및 수정에 관한 안내</string>
+    <string name="AlertDetail_Date">2020–09–19 06:41</string>
+    <string name="AlertDetail1">개인정보 열림 및 수정에 관한 안내입니다.</string>
+    <string name="AlertDetail2">동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세 무궁화 삼천리 화려 강산 대한 사람 대한으로 길이 보전하세 남산 위에 저 소나무 철갑을 두른 듯 바람 서리 불변함은 우리 기상일세 무궁화 삼천리 화려 강산
+    대한 사람 대한으로 길이 보전하세</string>
+    <string name="AlertDetail3">가을 하늘 공활한데 높고 구름 없이 밝은 달은 우리 가슴 일편단심일세
+    무궁화 삼천리 화려 강산 대한 사람 대한으로 길이 보전하세 이 기상과 이 맘으로 충성을 다하여 괴로우나 즐거우나 나라 사랑하세 무궁화 삼천리 화려 강산 대한 사람 대한으로
+    길이 보전하세</string>
+    <string name="AlertDetail4">동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세 무궁화 삼천리 화려 강산 대한 사람 대한으로 길이 보전하세 남산 위에 저 소나무 철갑을 두른 듯 바람 서리
+    불변함은 우리 기상일세 무궁화 삼천리 화려 강산
+    대한 사람 대한으로 길이 보전하세</string>
+    <string name="AlertDetail5">가을 하늘 공활한데 높고 구름 없이 밝은 달은 우리 가슴 일편단심일세
+    무궁화 삼천리 화려 강산 대한 사람 대한으로 길이 보전하세 이 기상과 이 맘으로 충성을 다하여 괴로우나 즐거우나 나라 사랑하세 무궁화 삼천리 화려 강산 대한 사람 대한으로
+    길이 보전하세</string>
+    <string name="AlertDetail6">감사합니다.</string>
+    <!--불편신고-->
+    <string name="Complain_Title">불편신고</string>
+    <string name="Complain_Tip1Accent">더필홀딩스</string>
+    <string name="Complain_Tip1">사용 시 불편사항을 신고해주세요.</string>
+    <string name="Complain_Tip2">등록하신 사항에 대한 답편은 최대한 빠른 시일에 처리해 드리겠습니다.</string>
+    <string name="Complain_Hint">불편사항을 적어주세요</string>
+    <string name="Complain_HintTitle">제목</string>
+    <string name="Complain_BtnResult">문의 결과 보기</string>
+    <string name="Complain_BtnSubmit">접수하기</string>
+    <!--FAQ-->
+    <string name="FAQ_Title">FAQ</string>
+    <string name="FAQ_Title1">회원가입이 되지 않습니다.</string>
+    <string name="FAQ_Title2">회원아이디는 변경할 수 없나요?</string>
+    <string name="FAQ_Title3">비밀번호 찾기는 어떻게 해야하나요?</string>
+    <string name="FAQ_Title4">회원탈퇴는 어디서 신청하나요?</string>
+    <string name="FAQ_Title5">가맹점 문의는 어디서 하나요?</string>
+    <string name="FAQ_Title6">내 코인은 어디서 확인 할 수 있나요?</string>
+    <string name="FAQ_Title7">회원정보를 변경하시려면 어떻게 해야 하나요?</string>
+    <string name="FAQ_Contents1">회원가입 시 꼭 필요한 정보를 모두 기입하셨는지 확인 하시고, 가능한 특수 문자 등은 피해주시기 바랍니다.</string>
+    <string name="FAQ_Contents2">네. 낙장불입입니다. 정 바꾸시고 싶으면 탈퇴 후 새로 가입하세요</string>
+    <string name="FAQ_Contents3">비밀번호 찾기는 로그인 화면 비밀번호 입력란 우측 아래에 있습니다. </string>
+    <string name="FAQ_Contents4">회원 탈퇴는 내 정보 -> 회원탈퇴로 들어가셔서 하면 됩니다.</string>
+    <string name="FAQ_Contents5">글쎄요...회사가 망해서 가맹점 문의가 될려나 모르겠습니다.</string>
+    <string name="FAQ_Contents6">코인의 경우 지갑별로 종류가 다양하긴 한데 이건 내가 비트코인을 몰라서 모르겠다.</string>
+    <string name="FAQ_Contents7">회원정보 변경은 내 정보에서 비밀번호, 카드 비밀번호 등을 수정 할 수 있습니다.</string>
+    <!--이용약관-->
+    <string name="Policy_Title">이용약관</string>
+    <string name="Policy_Text1">본 약관(이하 ‘본 약관’이라 함)은 더필홀딩스(이하 ‘당사’라 함)가 제공하는 더필홀딩스에 관한 모든 제품 및 서비스(이하 ‘본 서비스’라 함)의 이용에 관한 조건에 대해 본 서비스를 이용하는 고객(이하 ‘고객’이라 함)과 당사간에 정하는 것입니다.</string>
+    <string name="Policy_Text2">1. 정의</string>
+    <string name="Policy_Text3">본 약관에서는 다음 용어를 사용합니다.</string>
+    <string name="Policy_Text4">1.1. ‘콘텐츠’란 문장, 음성, 음악, 이미지, 동영상, 소프트웨어, 프로그램, 코드 기타 정보를 말합니다.</string>
+    <string name="Policy_Text5">1.2. ‘본 콘텐츠’란 본 서비스를 통해 접속할 수 있는 콘텐츠를 말합니다.</string>
+    <string name="Policy_Text6">1.3. ‘투고 콘텐츠’란 고객이 본 서비스에 투고, 송신, 업로드한 콘텐츠를 말합니다.</string>
+    <string name="Policy_Text7">1.4. ‘코인’이란 본 서비스가 유상으로 제공하는 서비스 또는 콘텐츠와 교환 가능한 전자적 가상통화를 말합니다.</string>
+    <string name="Policy_Text8">1.5. ‘개별 이용약관’이란 본 서비스에 관하여 본 약관과는 별도로 ‘약관’, 가이드라인’, ‘정책’ 등의 명칭으로 당사가 배포 또는 게시한 문서를 말합니다.</string>
+    <string name="Policy_Text9"> 2. 약관 동의</string>
+    <string name="Policy_Text10">2.1 고객은 본 약관의 규정에 따라 본 서비스를 이용해야 합니다. 고객은 본 약관에 대해 유효하고 취소 불가능한 동의를 했을 경우에 한하여 본 서비스를 이용할 수 있습니다.</string>
+    <string name="Policy_Text11">2.2. 고객이 미성년자일 경우에는 친권자 등 법정대리인의 동의를 얻은 후 본 서비스를 이용하십시오. 또한 고객이 본 서비스를 사업자를 위해 이용할 경우에는 당해 사업자 역시 본 약관에 동의한 후, 본 서비스를 이용하십시오.</string>
+    <string name="Policy_Text12">2.3. 고객은 본 서비스를 실제로 이용함으로써 본 약관에 대해 유효하고 취소 불가능한 동의를 한 것으로 간주됩니다.</string>
+    <string name="Policy_Text13">2.4. 본 서비스에 개별 이용약관이 존재할 경우, 고객은 본 약관 외에 개별 이용약관의 규정에 따라 본 서비스를 이용해야 합니다.</string>
+    <!--시스템 정보-->
+    <string name="SystemInfo_Title">시스템 정보</string>
+    <string name="SystemInfo_Text">Copyright ⓒ2020 Daewoo Kim</string>
+    <string name="SystemInfo_Text2">All rights reserved</string>
+</resources>
