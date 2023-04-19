@@ -11,91 +11,113 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/logo_round"
         android:supportsRtl="true"
+        android:exported="true"
         android:theme="@style/AppTheme">
 
         <activity
             android:name=".Main"
             android:label="@string/app_name"
+            android:exported="true"
             android:theme="@style/AppTheme.NoActionBar">
 
         </activity>
         <activity
             android:name=".Coupon.Coupon_PurchasePW"
             android:label=""
+            android:exported="true"
             android:theme="@style/FindTheme" />
         <activity
             android:name=".Coupon.Coupon_Purchase"
             android:label=""
+            android:exported="true"
             android:theme="@style/FindTheme" />
         <activity
             android:name=".Coupon.Coupon_Detail"
             android:label=""
+            android:exported="true"
             android:theme="@style/FindTheme" />
         <activity
             android:name=".Coupon.Coupon_Mart"
             android:label=""
+            android:exported="true"
             android:theme="@style/FindTheme" />
         <activity
             android:name=".Coupon.Coupon_Search"
             android:label=""
+            android:exported="true"
             android:theme="@style/FindTheme" />
         <activity
             android:name=".Coupon.Coupon_List"
             android:label=""
+            android:exported="true"
             android:theme="@style/FindTheme" />
         <activity
             android:name=".Myinfo.MileageReport"
             android:label=""
+            android:exported="true"
             android:theme="@style/FindTheme" />
         <activity
             android:name=".Myinfo.CashReport"
             android:label=""
+            android:exported="true"
             android:theme="@style/FindTheme" />
         <activity
             android:name=".Myinfo.ChangeCardPW"
             android:label=""
+            android:exported="true"
             android:theme="@style/FindTheme" />
         <activity
             android:name=".Myinfo.ChangePW"
             android:label=""
+            android:exported="true"
             android:theme="@style/FindTheme" />
         <activity
             android:name=".Myinfo.MyCoupon"
             android:label=""
+            android:exported="true"
             android:theme="@style/FindTheme" />
         <activity
             android:name=".Dongmu.Dongmu_Detail"
             android:label=""
+            android:exported="true"
             android:theme="@style/FindTheme" />
         <activity
             android:name=".Dongmu.Dongmu_Search"
             android:label=""
+            android:exported="true"
             android:theme="@style/FindTheme" />
         <activity
             android:name=".Dongmu.Dongmu_List"
             android:label=""
+            android:exported="true"
             android:theme="@style/FindTheme" />
         <activity
             android:name=".Policy.Policy"
             android:label=""
+            android:exported="true"
             android:theme="@style/FindTheme" />
         <activity
             android:name=".Drawer.Alert.Alert_Detail"
             android:label=""
+            android:exported="true"
             android:theme="@style/FindTheme" />
         <activity
             android:name=".Drawer.CashGift_Purchase"
             android:label=""
+            android:exported="true"
             android:theme="@style/FindTheme" />
         <activity
             android:name=".Drawer.Cash_Purchase"
             android:label=""
+            android:exported="true"
             android:theme="@style/FindTheme" />
         <activity
             android:name=".Test"
+            android:exported="true"
             android:theme="@style/LoginTheme" />
         <activity
             android:name=".Login.Login"
+            android:exported="true"
             android:theme="@style/LoginTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -105,21 +127,26 @@
         <activity
             android:name=".Login.Login_CardPW"
             android:label=""
+            android:exported="true"
             android:theme="@style/FindTheme" />
         <activity
             android:name=".Login.Login_FindPW"
             android:label=""
+            android:exported="true"
             android:theme="@style/FindTheme" />
         <activity
             android:name=".Login.Login_FindID"
             android:label=""
+            android:exported="true"
             android:theme="@style/FindTheme" />
         <activity
             android:name=".Login.Login_Register"
             android:label=""
+            android:exported="true"
             android:theme="@style/FindTheme" />
         <activity
             android:name=".Splash"
+            android:exported="true"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
     </application>
 
