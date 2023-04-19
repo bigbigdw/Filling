@@ -25,4 +25,538 @@
 
     <string name="TODO"> </string>
     <string name="Test">TEST</string>
+
+    <!-- 로그인 화면 -->
+    <string name="LoginMain_Logo_title">세상의 모든 가치를 담는다</string>
+    <string name="LoginMain_ID">아이디</string>
+    <string name="LoginMain_ID_Error">올바른 아이디가 아닙니다</string>
+    <string name="LoginMain_PW">비밀번호</string>
+    <string name="LoginMain_PW_Error">비밀번호가 맞지 않습니다</string>
+    <string name="LoginMain_AutoLogin">자동 로그인</string>
+    <string name="LoginMain_Find">ID/PW찾기</string>
+    <string name="LoginMain_LoginBtn">로그인</string>
+    <string name="Register">회원가입</string>
+    <!-- 회원가입 화면 -->
+    <string name="Register_Welcome">필링은 처음이신가요? 환영합니다!</string>
+    <string name="Register_PWCheck">비밀번호 확인</string>
+    <string name="Register_Promise">"세상의 가치를 담는다 - 필링' 을 이용하시기 위해서는 반드시 아래 약관에 동의하셔야 합니다.</string>
+    <string name="Register_Checkbox1">이용약관에 동의합니다</string>
+    <string name="Register_Checkbox_Detail">상세보기</string>
+    <string name="Register_Checkbox2">개인정보 수집 및 이용에 동의합니다</string>
+    <string name="Register_IDCheck_Message">이미 사용중인 아이디입니다</string>
+    <string name="Register_PWCheck_Message">비밀번호가 일치하지 않습니다</string>
+    <string name="Register_Continue">계속하기</string>
+    <!-- 카드 비밀번호 설정 -->
+    <string name="CardPW_Title">결제 비밀번호 설정</string>
+    <string name="CardPW_PWinput">결제 비밀번호 6자리를 설정해주세요</string>
+    <string name="CardPW_PWinput2">다시 한번 비밀번호 6자리를 입력해주세요</string>
+    <string name="CardPW_PWinput3">가입이 완료되었습니다!</string>
+    <string name="CardPW_PWinput4">확인 버튼을 누르시면 로그인 페이지로 돌아갑니다</string>
+    <!-- ID/PW 설정 -->
+    <string name="Find_FindBar">|</string>
+    <string name="Find_InputPhone">휴대폰 번호 입력</string>
+    <string name="Find_InputPhone_NO">올바른 핸드폰 번호가 아닙니다.</string>
+    <string name="Find_InputNum">인증번호 입력</string>
+    <string name="Find_InputNum_NO">인증번호가 틀렸습니다</string>
+    <string name="Find_YourID">회원님의 아이디는</string>
+    <string name="Find_ID">kdw0310@ajou.ac.kr</string>
+    <string name="Find_SendTempPW">임시비밀번호 보내기</string>
+    <!-- 아이디 찾기 -->
+    <string name="Find_FindID">아이디 찾기</string>
+    <string name="FindID_Guide">※ 회원가입 시 등록한 휴대폰 번호를 입력해주세요.</string>
+    <string name="FindID_ID">등록한 아이디</string>
+    <string name="FindID_IDInvalid">유효하지 않은 아이디입니다.</string>
+    <!-- 비밀번호 찾기 -->
+    <string name="Find_FindPW">비밀번호 찾기</string>
+    <string name="FindPW_Guide">※ 회원가입 시 등록한 아이디를 입력해주세요.</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <!--드로워 상단-->
+    <string name="Drawer_ID">kdw0310@ajou.ac.kr</string>
+    <string name="Drawer_Cash">Cash</string>
+    <string name="Drawer_Cash_Count">12,325 Cash</string>
+    <string name="Drawer_Mileage">마일리지</string>
+    <string name="Drawer_Mileage_Count">14,952,000 Points</string>
+    <string name="Drawer_Logout">로그아웃</string>
+    <!--드로워 메뉴-->
+    <string name="Drawer_Menu_Revive">Revive Cash</string>
+    <string name="Drawer_Menu_CashCharge">Cash 충전</string>
+    <string name="Drawer_Menu_CashPresent">Cash 선물</string>
+    <string name="Drawer_Menu_CashExchange">Cash 환전</string>
+    <string name="Drawer_Menu_Etc">안내</string>
+    <string name="Drawer_Menu_Alert">불편신고</string>
+    <string name="Drawer_Menu_Info">공지사항</string>
+    <string name="Drawer_Menu_FAQ">FAQ</string>
+    <string name="Drawer_Menu_System">시스템 정보</string>
+    <string name="Drawer_Menu_Policy">이용약관</string>
+
+    <!--동무마트 리스트-->
+    <string name="Dongmu_List">필링마트 리스트</string>
+    <string name="Dongmu_Search">필링마트 검색</string>
+    <string name="Dongmu_SearchHint">찾으시는 매장을 검색해 주세요</string>
+    <string name="Dongmu_SearchResult">검색 결과가 없습니다.</string>
+    <string name="Dongmu_SearchResult1">￮ 단어의 철자가 정확한지 확인해주세요.</string>
+    <string name="Dongmu_SearchResult2">￮ 검색 단어 수를 줄이거나, 다른 검색어로 검색해주세요.</string>
+    <string name="Dongmu_SearchResult3">￮ 보다 일반적인 검색어로 다시 검색해보세요.</string>
+    <!--동무마트 리스트-->
+    <string name="DongmuDetail_Title">딘타이펑</string>
+    <string name="DongmuDetail_TitleMarket">딘타이펑</string>
+    <string name="DongmuDetail_TitleLocation1">가게 위치</string>
+    <string name="DongmuDetail_TitleLocatio2">서울 서초구 서초대로 73길 12 세계빌딩 2층</string>
+    <string name="DongmuDetail_TitleTime1">영업시간</string>
+    <string name="DongmuDetail_TitleTime2">11:00 ~ 23:00</string>
+    <string name="DongmuDetail_TitleTag">#딤섬 #딤섬맛집 #샤오롱바오 #슈마이 #단단면 </string>
+    <string name="DongmuDetail_Intro">저희 딘타이펑은 30년 전통의 비법을 5대째 전수받아 원조 감자탕의 명성을 이어가고있습니다. 매일 새벽에 들어오는 신선한 돼지 감자 뼈와 24시간 우려낸 커피를 사용합니다. 딘타이펑은 “크고 풍요로운 솥”이라는 뜻으로 딤섬 전문 장인들이 정성을 담아 푸짐하고 맛있게 대접하고자 하는 딘타이펑의 마음을 담았습니다.</string>
+    <string name="DongmuDetail_Intro1">주차</string>
+    <string name="DongmuDetail_Intro2">휴무일</string>
+    <string name="DongmuDetail_Intro3">사업자 정보</string>
+    <string name="DongmuDetail_Intro4">수상 경력</string>
+    <string name="DongmuDetail_IntroText1">2시간 무료 / 상가 내 지하주차장 2,3층 이용가능</string>
+    <string name="DongmuDetail_IntroText2">매주 월요일 휴무 </string>
+    <string name="DongmuDetail_IntroText3">대표자명 : 김대우</string>
+    <string name="DongmuDetail_IntroText4">사업자번호 : 123–120–10292–10202</string>
+    <string name="DongmuDetail_IntroText11">뉴욕타임즈 선정“세계 10대 레스토랑</string>
+    <string name="DongmuDetail_IntroText12">미슐랭 스타 3년 연속 선정</string>
+    <string name="DongmuDetail_IntroText13">포브스지 선정 “세계 최고의 레스토랑”</string>
+    <string name="DongmuDetail_IntroText14">아시아 베스트 레스토랑 1위 선정</string>
+    <string name="DongmuDetail_RecommendTex1">오늘의</string>
+    <string name="DongmuDetail_RecommendTex2">추천</string>
+    <string name="DongmuDetail_RecommendTex3">메뉴</string>
+    <string name="DongmuDetail_CarouselText1">카페라떼</string>
+    <string name="DongmuDetail_CarouselText2">4,500원</string>
+    <string name="DongmuDetail_CarouselText3">팬케이크</string>
+    <string name="DongmuDetail_CarouselText4">6,500원</string>
+    <string name="DongmuDetail_CarouselText5">티라미수</string>
+    <string name="DongmuDetail_CarouselText6">6,000원</string>
+    <string name="DongmuDetail_Star">평균 4.5점</string>
+    <string name="DongmuDetail_Star11">7월</string>
+    <string name="DongmuDetail_Star12">4.5</string>
+    <string name="DongmuDetail_Star21">8월</string>
+    <string name="DongmuDetail_Star22">3.0</string>
+    <string name="DongmuDetail_Star31">9월</string>
+    <string name="DongmuDetail_Star32">4.0</string>
+    <string name="DongmuDetail_Star41">10월</string>
+    <string name="DongmuDetail_Star42">3.0</string>
+    <string name="DongmuDetail_Star51">11월</string>
+    <string name="DongmuDetail_Star52">4.5</string>
+
+    <string name="DongmuDetail_Menu001">샤오롱빠오 샘플러</string>
+    <string name="DongmuDetail_Menu002">16,000원(10개)</string>
+    <string name="DongmuDetail_Menu011">새우 샤오롱빠오</string>
+    <string name="DongmuDetail_Menu012">16,000원(10개)</string>
+
+    <string name="DongmuDetail_ReviewGuide">관련없는 글 (비방, 홍보, 도배 등)은 삭제됩니다.</string>
+    <string name="DongmuDetail_ReviewBtn">작성하기</string>
+    <string name="DongmuDetail_Member01">김</string>
+
+    <string name="DongmuDetail_Comment">리뷰를 작성해주세요</string>
+
+    <!--바텀 네비게이션-->
+    <string name="Bottom_Filling">필링</string>
+    <string name="Bottom_Dongmu">필링마트</string>
+    <string name="Bottom_Coupon">상품권</string>
+    <string name="Bottom_Info">내 정보</string>
+    <!--필링-->
+    <string name="Filling_Dongmu">필링마트</string>
+    <string name="Filling_Coupon">모바일 상품권</string>
+    <string name="Filling_Shopping">내 장바구니</string>
+    <string name="Filling_Drive">대리운전</string>
+    <string name="Filling_Lecture">강좌</string>
+    <string name="Filling_Media">동영상</string>
+    <string name="Filling_Webtoon">웹툰</string>
+    <string name="Filling_News">뉴스</string>
+    <string name="Filling_Flower">꽃배달</string>
+    <string name="Filling_Talk">전문상담</string>
+    <string name="Filling_Donation">기부</string>
+    <string name="Filling_Fund">펀드</string>
+    <string name="Filling_Free">무료충전</string>
+    <string name="Filling_AD">광고</string>
+    <string name="Filling_Alert">공지사항</string>
+    <string name="Filling_Alert_More">더보기</string>
+    <string name="Filling_PopupBtn1">다시 보지 않기</string>
+    <string name="Filling_PopupBtn2">닫기</string>
+    <!--푸터-->
+    <string name="Footer_Section1">사업자 정보확인</string>
+    <string name="Footer_Section2">이용약관</string>
+    <string name="Footer_Section3">개인정보처리방침</string>
+    <string name="Footer_Middle1">대표자명 : 김대우 | 이메일 : kdw0310@ajou.ac.kr</string>
+    <string name="Footer_Middle2">통신판매업신고 : 현재는 회사가 도망가서 없어용</string>
+    <string name="Footer_Middle3">사업자등록번호 : 123–45–65478 | 고객센터 : 1588–1234</string>
+    <string name="Footer_Middle4">오전9시~오후6시, 토/공휴일 휴무</string>
+    <string name="Footer_Bottom1">필링은 통신판매중개자도 아니고 통신판매의 당사자가 아닙니다.</string>
+    <string name="Footer_Bottom2">이에 필링은 상품거래정보 및 거래에 대하여 책임을 지지 않습니다.</string>
+    <string name="Footer_Bottom3">Copyright ⓒ2020 Daewoo Kim. All rights reserved.</string>
+    <!--동무마트-->
+    <string name="Dongmu_Location">서울시 구로구 구로동 디지털로</string>
+    <string name="Dongmu_Weather1">흐림 미세먼지</string>
+    <string name="Dongmu_Weather2">보통</string>
+    <string name="Dongmu_Category01">음식/맛집</string>
+    <string name="Dongmu_Category02">식품</string>
+    <string name="Dongmu_Category03">건강/미용</string>
+    <string name="Dongmu_Category04">애완동물</string>
+    <string name="Dongmu_Category05">사무/문구</string>
+    <string name="Dongmu_Category06">교육/레저</string>
+    <string name="Dongmu_Category07">오락/유흥</string>
+    <string name="Dongmu_Category08">여행</string>
+    <string name="Dongmu_Category09">이사/화물</string>
+    <string name="Dongmu_Category10">펼쳐보기</string>
+    <string name="Dongmu_Category11">접기</string>
+    <string name="Dongmu_Category00">전체보기</string>
+    <string name="Dongmu_Bottom1Text1">오늘은</string>
+    <string name="Dongmu_Bottom1Text2">여기</string>
+    <string name="Dongmu_Bottom1Text3">어때?</string>
+    <string name="Dongmu_Bottom1Text4">필링</string>
+    <string name="Dongmu_Bottom1Text5">추천</string>
+    <string name="Dongmu_Bottom1Text6">마트</string>
+    <string name="Dongmu_SearchText">찾으시는 매장을 검색해보세요</string>
+    <!--동무마트 리스트 아이템-->
+    <string name="DongmuListItem_Fav">맛집</string>
+    <string name="DongmuListItem_Distance">35M</string>
+    <string name="DongmuListItem_Title">브리쉘</string>
+    <string name="DongmuListItem_Tag1">#알리올리오</string>
+    <string name="DongmuListItem_Tag2">#먹물리조또</string>
+    <string name="DongmuListItem_Tag3">#종로맛집</string>
+    <string name="DongmuListItem_Tag4">#파스타맛집</string>
+    <string name="DongmuListItem_Location">서울특별시 강남구 테헤란로 1…</string>
+    <!--동무마트 아래쪽 캐러셀-->
+    <string name="DongmuLowerCarosel_Mark">분위기갑</string>
+    <string name="DongmuLowerCarosel_Title">스미스가좋아하는한옥</string>
+    <string name="DongmuLowerCarosel_Recommend">1511</string>
+    <string name="DongmuLowerCarosel_Comment">6226</string>
+    <string name="DongmuLowerCarosel_Category">맛집</string>
+    <string name="DongmuLowerCarosel_Bar">|</string>
+    <string name="DongmuLowerCarosel_Tag1">#삼청동</string>
+    <string name="DongmuLowerCarosel_Tag2">#스미스가좋아하는한옥</string>
+    <string name="DongmuLowerCarosel_Tag3">#고급진데</string>
+    <string name="DongmuLowerCarosel_Tag4">#겁나 비싸보임</string>
+    <!--모바일 상품권-->
+    <string name="Coupon_Category01">아이스크림</string>
+    <string name="Coupon_Category02">피자</string>
+    <string name="Coupon_Category03">편의점</string>
+    <string name="Coupon_Category04">KT</string>
+    <string name="Coupon_Category05">주방</string>
+    <string name="Coupon_Category06">도넛</string>
+    <string name="Coupon_Category07">커피</string>
+    <string name="Coupon_Category08">건강/식품</string>
+    <string name="Coupon_Category09">영화</string>
+    <string name="Coupon_Category10">화장품</string>
+    <string name="Coupon_Category11">치킨</string>
+    <string name="Coupon_Category12">햄버거</string>
+    <string name="Coupon_Category13">음악</string>
+    <string name="Coupon_Category14">도서</string>
+    <string name="Coupon_Category15">외식</string>
+    <string name="Coupon_Category16">용역</string>
+    <string name="Coupon_BestText1">베스트</string>
+    <string name="Coupon_BestText2">상품권</string>
+    <string name="Coupon_BestText3">브랜드</string>
+    <string name="Coupon_BestText4">카테고리</string>
+    <string name="Coupon_CategoryList">스타벅스</string>
+    <string name="Coupon_CategoryListTitle">아이스 카페아메리카노 Tall</string>
+    <string name="Coupon_CategoryListPrice">4100원</string>
+    <!--내 정보-->
+    <string name="Myinfo_Text1">내 정보</string>
+    <string name="Myinfo_Text2">비밀번호</string>
+    <string name="Myinfo_Text3">결제 비밀번호</string>
+    <string name="Myinfo_Text4">내 쿠폰함</string>
+    <string name="Myinfo_Text5">Cash 내역</string>
+    <string name="Myinfo_Text6">마일리지 내역</string>
+
+    <!--공지사항-->
+    <string name="Alert_Title">공지사항</string>
+    <!--공지사항 상세-->
+    <string name="AlertDetail_Title">[공지] 개인정보 열람 및 수정에 관한 안내</string>
+    <string name="AlertDetail_Date">2020–09–19 06:41</string>
+    <string name="AlertDetail1">개인정보 열림 및 수정에 관한 안내입니다.</string>
+    <string name="AlertDetail2">동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세 무궁화 삼천리 화려 강산 대한 사람 대한으로 길이 보전하세 남산 위에 저 소나무 철갑을 두른 듯 바람 서리 불변함은 우리 기상일세 무궁화 삼천리 화려 강산
+    대한 사람 대한으로 길이 보전하세</string>
+    <string name="AlertDetail3">가을 하늘 공활한데 높고 구름 없이 밝은 달은 우리 가슴 일편단심일세
+    무궁화 삼천리 화려 강산 대한 사람 대한으로 길이 보전하세 이 기상과 이 맘으로 충성을 다하여 괴로우나 즐거우나 나라 사랑하세 무궁화 삼천리 화려 강산 대한 사람 대한으로
+    길이 보전하세</string>
+    <string name="AlertDetail4">동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세 무궁화 삼천리 화려 강산 대한 사람 대한으로 길이 보전하세 남산 위에 저 소나무 철갑을 두른 듯 바람 서리
+    불변함은 우리 기상일세 무궁화 삼천리 화려 강산
+    대한 사람 대한으로 길이 보전하세</string>
+    <string name="AlertDetail5">가을 하늘 공활한데 높고 구름 없이 밝은 달은 우리 가슴 일편단심일세
+    무궁화 삼천리 화려 강산 대한 사람 대한으로 길이 보전하세 이 기상과 이 맘으로 충성을 다하여 괴로우나 즐거우나 나라 사랑하세 무궁화 삼천리 화려 강산 대한 사람 대한으로
+    길이 보전하세</string>
+    <string name="AlertDetail6">감사합니다.</string>
+    <!--불편신고-->
+    <string name="Complain_Title">불편신고</string>
+    <string name="Complain_Tip1Accent">더필홀딩스</string>
+    <string name="Complain_Tip1">사용 시 불편사항을 신고해주세요.</string>
+    <string name="Complain_Tip2">등록하신 사항에 대한 답편은 최대한 빠른 시일에 처리해 드리겠습니다.</string>
+    <string name="Complain_Hint">불편사항을 적어주세요</string>
+    <string name="Complain_HintTitle">제목</string>
+    <string name="Complain_BtnResult">문의 결과 보기</string>
+    <string name="Complain_BtnSubmit">접수하기</string>
+    <!--FAQ-->
+    <string name="FAQ_Title">FAQ</string>
+    <string name="FAQ_Title1">회원가입이 되지 않습니다.</string>
+    <string name="FAQ_Title2">회원아이디는 변경할 수 없나요?</string>
+    <string name="FAQ_Title3">비밀번호 찾기는 어떻게 해야하나요?</string>
+    <string name="FAQ_Title4">회원탈퇴는 어디서 신청하나요?</string>
+    <string name="FAQ_Title5">가맹점 문의는 어디서 하나요?</string>
+    <string name="FAQ_Title6">내 코인은 어디서 확인 할 수 있나요?</string>
+    <string name="FAQ_Title7">회원정보를 변경하시려면 어떻게 해야 하나요?</string>
+    <string name="FAQ_Contents1">회원가입 시 꼭 필요한 정보를 모두 기입하셨는지 확인 하시고, 가능한 특수 문자 등은 피해주시기 바랍니다.</string>
+    <string name="FAQ_Contents2">네. 낙장불입입니다. 정 바꾸시고 싶으면 탈퇴 후 새로 가입하세요</string>
+    <string name="FAQ_Contents3">비밀번호 찾기는 로그인 화면 비밀번호 입력란 우측 아래에 있습니다. </string>
+    <string name="FAQ_Contents4">회원 탈퇴는 내 정보 -> 회원탈퇴로 들어가셔서 하면 됩니다.</string>
+    <string name="FAQ_Contents5">글쎄요...회사가 망해서 가맹점 문의가 될려나 모르겠습니다.</string>
+    <string name="FAQ_Contents6">코인의 경우 지갑별로 종류가 다양하긴 한데 이건 내가 비트코인을 몰라서 모르겠다.</string>
+    <string name="FAQ_Contents7">회원정보 변경은 내 정보에서 비밀번호, 카드 비밀번호 등을 수정 할 수 있습니다.</string>
+    <!--이용약관-->
+    <string name="Policy_Title">이용약관</string>
+    <string name="Policy_Text1">본 약관(이하 ‘본 약관’이라 함)은 더필홀딩스(이하 ‘당사’라 함)가 제공하는 더필홀딩스에 관한 모든 제품 및 서비스(이하 ‘본 서비스’라 함)의 이용에 관한 조건에 대해 본 서비스를 이용하는 고객(이하 ‘고객’이라 함)과 당사간에 정하는 것입니다.</string>
+    <string name="Policy_Text2">1. 정의</string>
+    <string name="Policy_Text3">본 약관에서는 다음 용어를 사용합니다.</string>
+    <string name="Policy_Text4">1.1. ‘콘텐츠’란 문장, 음성, 음악, 이미지, 동영상, 소프트웨어, 프로그램, 코드 기타 정보를 말합니다.</string>
+    <string name="Policy_Text5">1.2. ‘본 콘텐츠’란 본 서비스를 통해 접속할 수 있는 콘텐츠를 말합니다.</string>
+    <string name="Policy_Text6">1.3. ‘투고 콘텐츠’란 고객이 본 서비스에 투고, 송신, 업로드한 콘텐츠를 말합니다.</string>
+    <string name="Policy_Text7">1.4. ‘코인’이란 본 서비스가 유상으로 제공하는 서비스 또는 콘텐츠와 교환 가능한 전자적 가상통화를 말합니다.</string>
+    <string name="Policy_Text8">1.5. ‘개별 이용약관’이란 본 서비스에 관하여 본 약관과는 별도로 ‘약관’, 가이드라인’, ‘정책’ 등의 명칭으로 당사가 배포 또는 게시한 문서를 말합니다.</string>
+    <string name="Policy_Text9"> 2. 약관 동의</string>
+    <string name="Policy_Text10">2.1 고객은 본 약관의 규정에 따라 본 서비스를 이용해야 합니다. 고객은 본 약관에 대해 유효하고 취소 불가능한 동의를 했을 경우에 한하여 본 서비스를 이용할 수 있습니다.</string>
+    <string name="Policy_Text11">2.2. 고객이 미성년자일 경우에는 친권자 등 법정대리인의 동의를 얻은 후 본 서비스를 이용하십시오. 또한 고객이 본 서비스를 사업자를 위해 이용할 경우에는 당해 사업자 역시 본 약관에 동의한 후, 본 서비스를 이용하십시오.</string>
+    <string name="Policy_Text12">2.3. 고객은 본 서비스를 실제로 이용함으로써 본 약관에 대해 유효하고 취소 불가능한 동의를 한 것으로 간주됩니다.</string>
+    <string name="Policy_Text13">2.4. 본 서비스에 개별 이용약관이 존재할 경우, 고객은 본 약관 외에 개별 이용약관의 규정에 따라 본 서비스를 이용해야 합니다.</string>
+    <!--시스템 정보-->
+    <string name="SystemInfo_Title">시스템 정보</string>
+    <string name="SystemInfo_Text">Copyright ⓒ2020 Daewoo Kim</string>
+    <string name="SystemInfo_Text2">All rights reserved</string>
+
+    <!--상품권 리스트-->
+    <string name="CouponList_Title">상품권 리스트</string>
+    <string name="CouponList_List01">아이스크림</string>
+    <string name="CouponList_List02">피자</string>
+    <string name="CouponList_List03">편의점</string>
+    <string name="CouponList_List04">KT</string>
+    <string name="CouponList_List05">주방</string>
+    <string name="CouponList_List06">도넛</string>
+    <string name="CouponList_List07">커피/음료</string>
+    <string name="CouponList_List08">건강/식품</string>
+    <string name="CouponList_List09">영화</string>
+    <string name="CouponList_List10">화장품</string>
+    <string name="CouponList_List11">치킨</string>
+    <string name="CouponList_List12">햄버거</string>
+    <string name="CouponList_List13">음악</string>
+    <string name="CouponList_List14">도서</string>
+    <string name="CouponList_List15">외식</string>
+    <string name="CouponList_List16">용역</string>
+    <string name="CouponList_Item1">스타벅스</string>
+    <string name="CouponList_Item2">투썸플레이스</string>
+    <string name="CouponList_Item3">할리스커피</string>
+    <string name="CouponList_Item4">이디야커피</string>
+    <!--상품권 검색-->
+    <string name="CouponSearch_Title">상품권 검색</string>
+    <!--매장 정보-->
+    <string name="CouponMart_Title">매장 상세정보</string>
+    <string name="CouponMart_IntroText1">매머드커피</string>
+    <string name="CouponMart_IntroText2">맛, 멋 그리고 진심</string>
+    <string name="CouponMart_IntroText3">당신의 취향에 맞는 최고 품질의 커피를 오직 매머드커피에서만 맛보실 수 있습니다.</string>
+    <!--상품권 상세-->
+    <string name="CouponDetail_Title">필링 상품권</string>
+    <string name="CouponDetail_TitleText1">커피/음료</string>
+    <string name="CouponDetail_TitleText2">콜드브루</string>
+    <string name="CouponDetail_TitleText3">4,100원</string>
+    <string name="CouponDetail_Tab1Text1">물품교환형 상품의 기본 유효기간은 3개월입니다.</string>
+    <string name="CouponDetail_Tab1Text2">상품 특성에 따라 유효기간이 상이 할 수 있으니 전송받은 모바일 상품권의 유효기간을 꼭 확인 부탁드립니다.</string>
+    <string name="CouponDetail_Tab2Text1">구매일로부터 7일 이내에는 구매 취소가 가능하며, 주문 취소를 신청한 경우 결제 승인을 취소합니다.</string>
+    <string name="CouponDetail_Tab2Text2">단, 결제 수단 및 취소 시점에 따라 승인 취소가 불가능할 수 있으며, 이 경우 금액의 포인트 적립 또는 인증된 계좌로 현금 환급을 신청하실 수 있습니다.</string>
+    <string name="CouponDetail_Tab2Text3">단, 특정 이벤트 상품 및 필링 Cash 결제를 통한 구매 상품의 경우 구매 취소가 불가합니다.</string>
+    <string name="CouponDetail_Tab3Text1">유효기간 이내에 사용하지 못하신 경우, 5년 이내에 환불이 가능하며 결제 금액의 90%를 환불해드립니다.</string>
+    <string name="CouponDetail_Tab3Text2">특정 이벤트 상품 및 필링 Cash 결제를 통한 상품의 경우, 환불이 불가합니다.</string>
+    <string name="CouponDetail_GoodsInfo1">상품설명</string>
+    <string name="CouponDetail_GoodsInfo2">부드러운 맛을 느낄 수 있는 브라질 피베리 콜드브루 커피입니다.</string>
+    <string name="CouponDetail_GoodsInfo3">사용불가매장</string>
+    <string name="CouponDetail_GoodsInfo4">용산미8군점, 용산타운하우스점, 오산에어베이스점, 평택험프리점, 평택험프리트룹몰점, 대구캠프워커점, 군산에어베이스점, 캠프캐롤점, 캠프케이시점, 오션월드점, 오션월드입구점, 설악워터피아점 등</string>
+    <string name="CouponDetail_UseInfo_Title">이용 방법</string>
+    <string name="CouponDetail_UseInfo_Text11">모바일 상품권 선택</string>
+    <string name="CouponDetail_UseInfo_Text12">구매할 상품권을 선택하고, 구매 버튼을 선택합니다</string>
+    <string name="CouponDetail_UseInfo_Text21">선택한 모바일 상품권 구매</string>
+    <string name="CouponDetail_UseInfo_Text22">받을 분의 핸드폰 번호, 상품 수량을 입력 후 결제를 완료합니다</string>
+    <string name="CouponDetail_UseInfo_Text31">모바일 상품권 수신</string>
+    <string name="CouponDetail_UseInfo_Text32">받으실 분의 핸드폰 or 내 보관함으로 모바일 상품권이 전송됩니다.</string>
+    <string name="CouponDetail_UseInfo_Text41">교환처에서 실물 교환</string>
+    <string name="CouponDetail_UseInfo_Text42">전송된 상품권은 해당 교환처로 가시면 실물로 교환하실 수 있습니다.</string>
+    <!--상품권 상세-->
+    <string name="CouponDetail_RecommendTitle">비슷한 상품 찾아보기</string>
+    <string name="CouponDetail_Buy">구매하기</string>
+    <!--구매하기-->
+    <string name="CouponPurchase_Title">내 장바구니</string>
+    <string name="CouponPurchase_Btn">결제하기</string>
+    <string name="CouponPurchase_Btn_Plus">+</string>
+    <string name="CouponPurchase_Btn_Minus">-</string>
+    <string name="CouponPurchase_Btn_Number">1</string>
+    <string name="CouponPurchase_RadioTitle">결제 수단 선택</string>
+    <string name="CouponPurchase_RadioPurchase1">Cash 결제</string>
+    <string name="CouponPurchase_RadioPurchase2">마일리지(50%) + Cash 결제(50%)</string>
+    <string name="CouponPurchase_RadioPurchaseCash1">※ 1cash  =  1000원</string>
+    <string name="CouponPurchase_RadioPurchaseCash2">410</string>
+    <string name="CouponPurchase_RadioPurchaseCash3">4,100</string>
+    <string name="CouponPurchase_RadioPurchaseCash4">결제할 Cash</string>
+    <string name="CouponPurchase_RadioPurchaseCash5">결제할 마일리지</string>
+    <string name="CouponPurchase_RadioPurchaseCash6">결제할 금액</string>
+    <string name="CouponPurchase_RadioPurchaseMileage1">※ 1milleage  =  100원</string>
+    <string name="CouponPurchase_RadioPurchaseMileage2">110</string>
+    <string name="CouponPurchase_Purchase">4100</string>
+    <!--결제하기-->
+    <string name="CouponPurchasePW_Title">쿠폰 결제하기</string>
+    <string name="CouponPurchasePW_Text1">구매하신 상품권은 ‘내 쿠폰함’에서 확인하실 수있습니다.  </string>
+
+    <!--Cash-->
+    <string name="Cash_Default">0</string>
+    <string name="CashDone_Tile">충전 내역 확인</string>
+    <string name="CashDone_Use">충전할 Cash는</string>
+    <string name="CashDone_Coin">2,000 Cash</string>
+    <string name="CashDone_And">이며,</string>
+    <string name="CashDone_Won">20,000 원</string>
+    <string name="CashDone_And2">이고,</string>
+    <string name="CashDone_Purchase">결제 방법은</string>
+    <string name="CashDone_Done"> 입니다.</string>
+    <string name="CashDone_BtnCancel">취소</string>
+    <string name="CashDone_BtnDone">결제하기</string>
+    <!--Cash 결제-->
+    <string name="CashPurchase_Page">Cash 결제</string>
+    <string name="CashPurchase_Title">결제 비밀번호</string>
+    <string name="CashPurchase_Text">결제 비밀번호 6자리를 입력해주세요</string>
+    <string name="CashPurchase_TitleDone">결제가 완료되었습니다</string>
+    <string name="CashPurchase_TextDone">확인 버튼을 누르면 메인 페이지로 이동합니다</string>
+    <!--Cash 충전-->
+    <string name="CashCharge_Tile">Cash 충전</string>
+    <string name="CashCharge_CoinTile">이더리움비트코인</string>
+    <string name="CashCharge_Coin">2,450,000.00</string>
+    <string name="CashCharge_CoinCount">원</string>
+    <string name="CashCharge_Rate">1coin  =  10000원   /  A +</string>
+    <string name="CashCharge_RechargeTitle">충전 액수</string>
+    <string name="CashCharge_Cash">충전할 Cash</string>
+    <string name="CashCharge_Cash1">선물할 Cash</string>
+    <string name="CashCharge_RechargeCashCount">Cash</string>
+    <string name="CashCharge_RechargedCoin">환전된 Coin</string>
+    <string name="CashCharge_Won">원</string>
+    <string name="CashCharge_PurchasedCoin">Coin</string>
+    <string name="CashCharge_BtnContinue">계속하기</string>
+    <string name="CashCharge_PurchaseCoin">결제할 금액</string>
+    <string name="CashDone_PurchaseCoin">Coin으로 충전</string>
+    <string name="CashDone_ExchangeCoin">환전 Coin은</string>
+    <!--Cash 충전 무통장-->
+    <string name="CashCharge_AccountTile">내 통장</string>
+    <string name="CashCharge_Account">45,521,000</string>
+    <string name="CashCharge_WonCount">원</string>
+    <string name="CashCharge_PurchaseAccount">결제할 금액은</string>
+    <string name="CashDone_Account">2,000 Cash</string>
+    <string name="CashDone_AccountWon">2,000 원</string>
+    <string name="CashDone_PurchaseAccount">무통장 입금</string>
+    <string name="CashDone_PurchaseAccount2">김대우</string>
+    <string name="CashDone_ExchangeAccount">결제 방법은</string>
+    <string name="CashDone_ExchangeAccount2">송금자는</string>
+    <string name="CashDone_sendTitle">송금자 정보 입력</string>
+    <string name="CashDone_sendName">송금자명 입력</string>
+    <string name="CashDone_sendCopy">계좌복사</string>
+    <string name="CashDone_sendNum">우리은행 1002–645–41002 김대우</string>
+    <string name="CashDone_sendTip">송금이 확인되는 즉시 해당 거래가 완료되고 처리결과가 문자로 발송됩니다.</string>
+    <!--Cash 충전 마일리지-->
+    <string name="CashCharge_RechargedMileage">환전된 마일리지</string>
+    <string name="CashCharge_PurchaseMilage">결제할 마일리지</string>
+    <string name="CashCharge_MileageTip">마일리지는 최소 1,000 포인트에서 환전 가능하며, 1,000포인트씩 환전할 수 있습니다.</string>
+    <string name="CashCharge_RateMileage">1cash  =  100points / 1000원</string>
+    <string name="CashCharge_Mileage">14,952,000</string>
+    <string name="CashCharge_Points">Points</string>
+    <string name="CashCharge_UseMileage">사용 마일리지는</string>
+    <string name="CashCharge_PurchaseMileage">결제할 코인</string>
+    <string name="CashDone_PurchaseMileage"> 마일리지로 충전</string>
+    <string name="CashDone_ExchangeMileage">충전될 Cash는</string>
+    <string name="CashCharge_MileageTile">내 마일리지</string>
+    <!--Cash 선물 팝업-->
+    <string name="CashGift_PopupTitle">Cash 선물이 도착했습니다!</string>
+    <string name="CashGift_To">To.김대우</string>
+    <string name="CashGift_Contents">동해물과 백두산이 마르고 닳도록 하나님이 보우하사 우리 나라 만세</string>
+    <string name="CashGift_Cash">+ 5,000 Cash를</string>
+    <string name="CashGift_Given">선물하셨습니다</string>
+    <string name="CashGift_BtnLeft">확인</string>
+    <string name="CashGift_BtnRight">지금 받기</string>
+    <!--Cash 선물-->
+    <string name="CashGift_Title">Cash 선물하기</string>
+    <string name="CashGift_CashTitle">나의 Cash</string>
+    <string name="CashGift_CashMount">12,325</string>
+    <string name="CashGift_CashCount">Cash</string>
+    <string name="CashGift_CashRate">1cash  =  1000원 / 100points / 10000원</string>
+    <string name="CashGift_CashSectionTitle">1cash = 10000원</string>
+    <string name="CashGift_CashMessage">메세지를 입력해주세요</string>
+    <!--Cash 선물 결제-->
+    <string name="CashGift_PurchaseTitle">Cash 선물 결제</string>
+    <string name="CashGift_PurchaseText1">선물 대상자는</string>
+    <string name="CashGift_PurchaseText2">010–3304–9425 (김대우)</string>
+    <string name="CashGift_PurchaseText3">이며</string>
+    <string name="CashGift_PurchaseText4">선물할 Cash는</string>
+    <string name="CashGift_PurchaseText5">0 원</string>
+    <string name="CashGift_PurchaseText6">입니다.</string>
+    <string name="CashGift_PurchaseText7">전송할 메세지는</string>
+    <string name="CashGift_PurchaseText8">동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세</string>
+    <string name="CashGift_PurchaseText9">입니다.</string>
+    <string name="CashGift_PurchaseDone">언제나 필링을 이용해주셔서 감사합니다</string>
+    <!--Cash 환전-->
+    <string name="CashExchange_Title">Cash 환전하기</string>
+    <string name="CashExchange_Exchange">환전할 Cash</string>
+    <string name="CashExchange_Exchanged">환전된 Cash</string>
+    <string name="CashExchange_ExchangedCost">환전된 금액</string>
+    <string name="CashExchange_ExchangedCoin">환전된 Coin</string>
+    <string name="CashExchange_Coin">Coin</string>
+    <string name="CashExchange_AfterTitle">환전 내역 확인</string>
+    <string name="CashExchange_AfterText1">Revive Cash의</string>
+    <string name="CashExchange_AfterText2">2,000 Cash</string>
+    <string name="CashExchange_AfterText3">을</string>
+    <string name="CashExchange_AfterText4">이더리움 비트코인의</string>
+    <string name="CashExchange_AfterText5">20,000 Coin</string>
+    <string name="CashExchange_AfterText6">으로,</string>
+    <string name="CashExchange_AfterText7">환전을 신청합니다</string>
+    <string name="CashExchange_BtnExchange">환전하기</string>
+
+    <!--내 정보-->
+    <string name="MyInfo_MyInfoTitle">내 정보</string>
+    <string name="MyInfo_MyInfoText1">kdw0310@ajou.ac.kr</string>
+    <string name="MyInfo_MyInfoText2">01033049425</string>
+    <string name="MyInfo_MyInfoBtnL">로그아웃</string>
+    <string name="MyInfo_MyInfoBtnR">적용</string>
+    <string name="MyInfo_MyInfoRankTitle">고객님의 등급은</string>
+    <string name="MyInfo_MyInfoRank">필링마스터</string>
+    <string name="MyInfo_MyInfoRankText1">입니다</string>
+    <string name="MyInfo_MyInfoRankText2">제일 높은 등급은 -마스터-등급입니다</string>
+    <!--내 쿠폰함-->
+    <string name="MyCoupon_MyInfoTitle">내 쿠폰함</string>
+    <string name="MyCoupon_MyInfoTip">※ 내 쿠폰함은 최근 한달 내에 구매한 쿠폰들만 표시됩니다.</string>
+    <string name="MyCoupon_ViewDetail">상세보기</string>
+    <string name="MyCoupon_Title">매머드커피</string>
+    <string name="MyCoupon_GoodsName">스트로베리 프라페</string>
+    <string name="MyCoupon_Date">2019.01.07</string>
+    <!--내 쿠폰함 팝업-->
+    <string name="MyCouponPopup_Title">쿠폰 상세 정보</string>
+    <string name="MyCouponPopup_Price">4,800원</string>
+    <string name="MyCouponPopup_BuyDate">구매날짜:</string>
+    <string name="MyCouponPopup_Date">2020.03.10</string>
+    <string name="MyCouponPopup_UseDate">사용날짜:</string>
+    <string name="MyCouponPopup_Use">2019.04.06</string>
+    <!--비밀번호 변경-->
+    <string name="ChagePW_Title">비밀번호 변경</string>
+    <string name="ChagePW_CurrentPW">현재 비밀번호 입력</string>
+    <string name="ChagePW_NewPW">새로운 비밀번호 설정</string>
+    <!--카드 비밀번호 변경-->
+    <string name="ChageCardPW_Title">카드 비밀번호 변경</string>
+    <string name="ChageCardPW_Text1">기존 비밀번호 6자리를 입력해주세요</string>
+    <string name="ChageCardPW_Text2">새 비밀번호 6자리를 입력해주세요</string>
+    <string name="ChageCardPW_Text3">다시 한번 새 비밀번호 6자리를 입력해주세요</string>
+    <string name="ChageCardPW_DoneText1">카드 비밀번호가 변경되었습니다!</string>
+    <string name="ChageCardPW_DoneText2">확인 버튼을 누르시면 메인 페이지로 돌아갑니다</string>
+    <!--내 Cash 내역-->
+    <string name="CashReport_Title">내 Cash내역</string>
+    <string name="Report_Title">Cash 충전</string>
+    <string name="Report_Date">17:23:06</string>
+    <string name="Report_Count">1,050</string>
+    <string name="Report_CountText">Cash</string>
+    <string name="Report_RestText">잔액</string>
+    <string name="Report_Rest">265,215,525</string>
+    <!--내 마일리지 내역-->
+    <string name="CashReport_MileageTitle">내 마일리지 내역</string>
+    <string name="Report_CountTextMileage">마일리지</string>
 </resources>
