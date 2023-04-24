@@ -54,16 +54,16 @@
                     android:textSize="25sp" />
             </LinearLayout>
 
-            <com.synnapps.carouselview.CarouselView
-                android:id="@+id/Dongmu_Detail_carousel"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                app:disableAutoPlayOnUserInteraction="false"
-                app:fillColor="#00FFFFFF"
-                app:pageColor="#00000000"
-                app:radius="6dp"
-                app:strokeColor="#00777777"
-                app:strokeWidth="1dp" />
+<!--            <com.synnapps.carouselview.CarouselView-->
+<!--                android:id="@+id/Dongmu_Detail_carousel"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="200dp"-->
+<!--                app:disableAutoPlayOnUserInteraction="false"-->
+<!--                app:fillColor="#00FFFFFF"-->
+<!--                app:pageColor="#00000000"-->
+<!--                app:radius="6dp"-->
+<!--                app:strokeColor="#00777777"-->
+<!--                app:strokeWidth="1dp" />-->
 
             <LinearLayout
                 android:layout_width="match_parent"

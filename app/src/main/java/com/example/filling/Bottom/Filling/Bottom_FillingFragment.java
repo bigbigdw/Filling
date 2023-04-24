@@ -19,9 +19,6 @@ import com.example.filling.Coupon.Coupon_List;
 import com.example.filling.Drawer.Alert.Alert_Detail;
 import com.example.filling.Drawer.SystemInfo.Drawer_SystemInfoFragment;
 import com.example.filling.R;
-import com.synnapps.carouselview.CarouselView;
-import com.synnapps.carouselview.ImageClickListener;
-import com.synnapps.carouselview.ImageListener;
 
 import java.util.ArrayList;
 
@@ -34,7 +31,7 @@ public class Bottom_FillingFragment extends Fragment {
     TableLayout FillingItem;
     ImageView FillingAD, FAQImg;
 
-    CarouselView filling_carousel;
+//    CarouselView filling_carousel;
     int[] sampleImages = {R.drawable.filling_ad01, R.drawable.filling_ad02, R.drawable.filling_ad03};
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -42,9 +39,9 @@ public class Bottom_FillingFragment extends Fragment {
         super.onCreate(savedInstanceState);
         View root = inflater.inflate(R.layout.bottom_filling, container, false);
 
-        filling_carousel = root.findViewById(R.id.filling_carousel);
-        filling_carousel.setPageCount(sampleImages.length);
-        filling_carousel.setImageListener(imageListener);
+//        filling_carousel = root.findViewById(R.id.filling_carousel);
+//        filling_carousel.setPageCount(sampleImages.length);
+//        filling_carousel.setImageListener(imageListener);
 
         listView = root.findViewById(R.id.filling_list);
         adapter = new SingerAdapter();
@@ -65,7 +62,7 @@ public class Bottom_FillingFragment extends Fragment {
 
         root.findViewById(R.id.FillingItem).setOnClickListener(view -> Toast.makeText(requireContext().getApplicationContext(), "서비스 준비중입니다." , Toast.LENGTH_SHORT).show());
 
-        filling_carousel.setImageClickListener(position -> Toast.makeText(requireContext().getApplicationContext(), "지금은 참여가 불가능합니다." , Toast.LENGTH_SHORT).show());
+//        filling_carousel.setImageClickListener(position -> Toast.makeText(requireContext().getApplicationContext(), "지금은 참여가 불가능합니다." , Toast.LENGTH_SHORT).show());
 
         root.findViewById(R.id.FillingAD).setOnClickListener(view -> Toast.makeText(requireContext().getApplicationContext(), "이젠 든든하지 않습니다." , Toast.LENGTH_SHORT).show());
 
@@ -116,5 +113,5 @@ public class Bottom_FillingFragment extends Fragment {
         }
     }
 
-    ImageListener imageListener = (position, imageView) -> imageView.setImageResource(sampleImages[position]);
+//    ImageListener imageListener = (position, imageView) -> imageView.setImageResource(sampleImages[position]);
 }

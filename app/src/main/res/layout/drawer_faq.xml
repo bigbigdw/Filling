@@ -77,23 +77,23 @@
                 android:background="#DBDBDB"
                 android:orientation="vertical" />
 
-            <com.github.aakira.expandablelayout.ExpandableRelativeLayout
-                android:id="@+id/Expand1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#EEEEEE"
-                android:padding="16dp"
-                app:ael_duration="400"
-                app:ael_expanded="false"
-                app:ael_interpolator="accelerate"
-                app:ael_orientation="vertical">
+<!--            <com.github.aakira.expandablelayout.ExpandableRelativeLayout-->
+<!--                android:id="@+id/Expand1"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:background="#EEEEEE"-->
+<!--                android:padding="16dp"-->
+<!--                app:ael_duration="400"-->
+<!--                app:ael_expanded="false"-->
+<!--                app:ael_interpolator="accelerate"-->
+<!--                app:ael_orientation="vertical">-->
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="80dp"
-                    android:text="@string/FAQ_Contents1"
-                    android:textColor="#888888" />
-            </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="80dp"-->
+<!--                    android:text="@string/FAQ_Contents1"-->
+<!--                    android:textColor="#888888" />-->
+<!--            </com.github.aakira.expandablelayout.ExpandableRelativeLayout>-->
 
             <LinearLayout
                 android:id="@+id/Btn2"
@@ -117,23 +117,23 @@
                 android:background="#DBDBDB"
                 android:orientation="vertical" />
 
-            <com.github.aakira.expandablelayout.ExpandableRelativeLayout
-                android:id="@+id/Expand2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#EEEEEE"
-                android:padding="16dp"
-                app:ael_duration="400"
-                app:ael_expanded="false"
-                app:ael_interpolator="accelerate"
-                app:ael_orientation="vertical">
+<!--            <com.github.aakira.expandablelayout.ExpandableRelativeLayout-->
+<!--                android:id="@+id/Expand2"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:background="#EEEEEE"-->
+<!--                android:padding="16dp"-->
+<!--                app:ael_duration="400"-->
+<!--                app:ael_expanded="false"-->
+<!--                app:ael_interpolator="accelerate"-->
+<!--                app:ael_orientation="vertical">-->
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="80dp"
-                    android:text="@string/FAQ_Contents2"
-                    android:textColor="#888888" />
-            </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="80dp"-->
+<!--                    android:text="@string/FAQ_Contents2"-->
+<!--                    android:textColor="#888888" />-->
+<!--            </com.github.aakira.expandablelayout.ExpandableRelativeLayout>-->
 
             <LinearLayout
                 android:id="@+id/Btn3"
@@ -157,23 +157,23 @@
                 android:background="#DBDBDB"
                 android:orientation="vertical" />
 
-            <com.github.aakira.expandablelayout.ExpandableRelativeLayout
-                android:id="@+id/Expand3"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#EEEEEE"
-                android:padding="16dp"
-                app:ael_duration="400"
-                app:ael_expanded="false"
-                app:ael_interpolator="accelerate"
-                app:ael_orientation="vertical">
+<!--            <com.github.aakira.expandablelayout.ExpandableRelativeLayout-->
+<!--                android:id="@+id/Expand3"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:background="#EEEEEE"-->
+<!--                android:padding="16dp"-->
+<!--                app:ael_duration="400"-->
+<!--                app:ael_expanded="false"-->
+<!--                app:ael_interpolator="accelerate"-->
+<!--                app:ael_orientation="vertical">-->
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="80dp"
-                    android:text="@string/FAQ_Contents3"
-                    android:textColor="#888888" />
-            </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="80dp"-->
+<!--                    android:text="@string/FAQ_Contents3"-->
+<!--                    android:textColor="#888888" />-->
+<!--            </com.github.aakira.expandablelayout.ExpandableRelativeLayout>-->
 
             <LinearLayout
                 android:id="@+id/Btn4"
@@ -197,23 +197,23 @@
                 android:background="#DBDBDB"
                 android:orientation="vertical" />
 
-            <com.github.aakira.expandablelayout.ExpandableRelativeLayout
-                android:id="@+id/Expand4"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#EEEEEE"
-                android:padding="16dp"
-                app:ael_duration="400"
-                app:ael_expanded="false"
-                app:ael_interpolator="accelerate"
-                app:ael_orientation="vertical">
+<!--            <com.github.aakira.expandablelayout.ExpandableRelativeLayout-->
+<!--                android:id="@+id/Expand4"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:background="#EEEEEE"-->
+<!--                android:padding="16dp"-->
+<!--                app:ael_duration="400"-->
+<!--                app:ael_expanded="false"-->
+<!--                app:ael_interpolator="accelerate"-->
+<!--                app:ael_orientation="vertical">-->
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="80dp"
-                    android:text="@string/FAQ_Contents4"
-                    android:textColor="#888888" />
-            </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="80dp"-->
+<!--                    android:text="@string/FAQ_Contents4"-->
+<!--                    android:textColor="#888888" />-->
+<!--            </com.github.aakira.expandablelayout.ExpandableRelativeLayout>-->
 
             <LinearLayout
                 android:id="@+id/Btn5"
@@ -237,23 +237,23 @@
                 android:background="#DBDBDB"
                 android:orientation="vertical" />
 
-            <com.github.aakira.expandablelayout.ExpandableRelativeLayout
-                android:id="@+id/Expand5"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#EEEEEE"
-                android:padding="16dp"
-                app:ael_duration="400"
-                app:ael_expanded="false"
-                app:ael_interpolator="accelerate"
-                app:ael_orientation="vertical">
+<!--            <com.github.aakira.expandablelayout.ExpandableRelativeLayout-->
+<!--                android:id="@+id/Expand5"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:background="#EEEEEE"-->
+<!--                android:padding="16dp"-->
+<!--                app:ael_duration="400"-->
+<!--                app:ael_expanded="false"-->
+<!--                app:ael_interpolator="accelerate"-->
+<!--                app:ael_orientation="vertical">-->
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="80dp"
-                    android:text="@string/FAQ_Contents5"
-                    android:textColor="#888888" />
-            </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="80dp"-->
+<!--                    android:text="@string/FAQ_Contents5"-->
+<!--                    android:textColor="#888888" />-->
+<!--            </com.github.aakira.expandablelayout.ExpandableRelativeLayout>-->
 
             <LinearLayout
                 android:id="@+id/Btn6"
@@ -277,23 +277,23 @@
                 android:background="#DBDBDB"
                 android:orientation="vertical" />
 
-            <com.github.aakira.expandablelayout.ExpandableRelativeLayout
-                android:id="@+id/Expand6"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#EEEEEE"
-                android:padding="16dp"
-                app:ael_duration="400"
-                app:ael_expanded="false"
-                app:ael_interpolator="accelerate"
-                app:ael_orientation="vertical">
+<!--            <com.github.aakira.expandablelayout.ExpandableRelativeLayout-->
+<!--                android:id="@+id/Expand6"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:background="#EEEEEE"-->
+<!--                android:padding="16dp"-->
+<!--                app:ael_duration="400"-->
+<!--                app:ael_expanded="false"-->
+<!--                app:ael_interpolator="accelerate"-->
+<!--                app:ael_orientation="vertical">-->
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="80dp"
-                    android:text="@string/FAQ_Contents6"
-                    android:textColor="#888888" />
-            </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="80dp"-->
+<!--                    android:text="@string/FAQ_Contents6"-->
+<!--                    android:textColor="#888888" />-->
+<!--            </com.github.aakira.expandablelayout.ExpandableRelativeLayout>-->
 
             <LinearLayout
                 android:id="@+id/Btn7"
@@ -318,24 +318,24 @@
                 android:orientation="vertical"
                 />
 
-            <com.github.aakira.expandablelayout.ExpandableRelativeLayout
-                android:id="@+id/Expand7"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#EEEEEE"
-                android:padding="16dp"
-                app:ael_duration="400"
-                app:ael_expanded="false"
-                app:ael_interpolator="accelerate"
-                android:layout_marginBottom="100dp"
-                app:ael_orientation="vertical">
+<!--            <com.github.aakira.expandablelayout.ExpandableRelativeLayout-->
+<!--                android:id="@+id/Expand7"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:background="#EEEEEE"-->
+<!--                android:padding="16dp"-->
+<!--                app:ael_duration="400"-->
+<!--                app:ael_expanded="false"-->
+<!--                app:ael_interpolator="accelerate"-->
+<!--                android:layout_marginBottom="100dp"-->
+<!--                app:ael_orientation="vertical">-->
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="80dp"
-                    android:text="@string/FAQ_Contents7"
-                    android:textColor="#888888" />
-            </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="80dp"-->
+<!--                    android:text="@string/FAQ_Contents7"-->
+<!--                    android:textColor="#888888" />-->
+<!--            </com.github.aakira.expandablelayout.ExpandableRelativeLayout>-->
 
         </LinearLayout>
     </ScrollView>

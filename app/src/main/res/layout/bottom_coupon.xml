@@ -20,17 +20,17 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <com.synnapps.carouselview.CarouselView
-                android:id="@+id/Coupon_Carousel"
-                android:layout_width="match_parent"
-                android:layout_height="175dp"
-                android:background="#F44336"
-                app:disableAutoPlayOnUserInteraction="false"
-                app:fillColor="#00FFFFFF"
-                app:pageColor="#00000000"
-                app:radius="6dp"
-                app:strokeColor="#00777777"
-                app:strokeWidth="1dp" />
+<!--            <com.synnapps.carouselview.CarouselView-->
+<!--                android:id="@+id/Coupon_Carousel"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="175dp"-->
+<!--                android:background="#F44336"-->
+<!--                app:disableAutoPlayOnUserInteraction="false"-->
+<!--                app:fillColor="#00FFFFFF"-->
+<!--                app:pageColor="#00000000"-->
+<!--                app:radius="6dp"-->
+<!--                app:strokeColor="#00777777"-->
+<!--                app:strokeWidth="1dp" />-->
 
             <LinearLayout
                 android:id="@+id/CouponSearch"

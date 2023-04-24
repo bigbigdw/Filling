@@ -22,12 +22,12 @@ import com.example.filling.Coupon.Coupon_MarketData;
 import com.example.filling.Coupon.Coupon_Search;
 import com.example.filling.Dongmu.Dongmu_Detail;
 import com.example.filling.R;
-import com.synnapps.carouselview.CarouselView;
-import com.synnapps.carouselview.ImageListener;
+//import com.synnapps.carouselview.CarouselView;
+//import com.synnapps.carouselview.ImageListener;
 
 public class Bottom_CouponFragment extends Fragment {
 
-    CarouselView Coupon_Carousel;
+//    CarouselView Coupon_Carousel;
     EditText CouponSearchText;
     LinearLayout CouponList, CouponSearch;
 
@@ -41,9 +41,9 @@ public class Bottom_CouponFragment extends Fragment {
 
         View root = inflater.inflate(R.layout.bottom_coupon, container, false);
 
-        Coupon_Carousel = root.findViewById(R.id.Coupon_Carousel);
-        Coupon_Carousel.setPageCount(UpperImages.length);
-        Coupon_Carousel.setImageListener(imageListener);
+//        Coupon_Carousel = root.findViewById(R.id.Coupon_Carousel);
+//        Coupon_Carousel.setPageCount(UpperImages.length);
+//        Coupon_Carousel.setImageListener(imageListener);
 
         CouponList = root.findViewById(R.id.View);
         CouponList.setOnClickListener(v -> {
@@ -73,10 +73,10 @@ public class Bottom_CouponFragment extends Fragment {
         recyclerView.setAdapter(adapter);
         getData();
 
-        Coupon_Carousel.setImageClickListener(position -> {
-            Intent intent = new Intent(requireContext().getApplicationContext(), Coupon_List.class);
-            startActivity(intent);
-        });
+//        Coupon_Carousel.setImageClickListener(position -> {
+//            Intent intent = new Intent(requireContext().getApplicationContext(), Coupon_List.class);
+//            startActivity(intent);
+//        });
 
         return root;
     }
@@ -94,5 +94,5 @@ public class Bottom_CouponFragment extends Fragment {
         adapter.addItem(data);
     }
 
-    ImageListener imageListener = (position, imageView) -> imageView.setImageResource(UpperImages[position]);
+//    ImageListener imageListener = (position, imageView) -> imageView.setImageResource(UpperImages[position]);
 }

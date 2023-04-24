@@ -41,8 +41,6 @@ import com.example.filling.Dongmu.Dongmu_ListAdapter;
 import com.example.filling.Dongmu.Dongmu_ListData;
 import com.example.filling.Dongmu.Dongmu_Search;
 import com.example.filling.R;
-import com.synnapps.carouselview.CarouselView;
-import com.synnapps.carouselview.ViewListener;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -68,7 +66,7 @@ public class Bottom_DongmuFragment extends Fragment {
     TableLayout ScrollAfter;
     LinearLayout onClickUnfold, onClickFold, DongmuList01, DongmuSearch, Weather, Location, Fake;
 
-    CarouselView Dongmu_Lower_carousel;
+//    CarouselView Dongmu_Lower_carousel;
 
     int[] LowerImages = {R.drawable.dongmu_lower_ex12, R.drawable.dongmu_lower_ex11, R.drawable.dongmu_lower_ex01, R.drawable.dongmu_lower_ex02, R.drawable.dongmu_lower_ex03, R.drawable.dongmu_lower_ex04, R.drawable.dongmu_lower_ex05, R.drawable.dongmu_lower_ex06, R.drawable.dongmu_lower_ex07, R.drawable.dongmu_lower_ex08, R.drawable.dongmu_lower_ex09, R.drawable.dongmu_lower_ex10};
     String[] MarkText = {"분위기갑","유명맛집","해장국", "밥집", "횟집", "맥주", "분위기굿", "중화요리", "밥집", "전국맛집", "고기맛집", "파스타"};
@@ -120,24 +118,24 @@ public class Bottom_DongmuFragment extends Fragment {
 
         recyclerView.setAdapter(adapter);
 
-        new android.os.Handler().postDelayed(
-                () -> {
-                    recyclerView.setVisibility(View.VISIBLE);
-                    Dongmu_Lower_carousel.setVisibility(View.VISIBLE);
-                    Fake.setVisibility(View.GONE);
-                },
-                300);
+//        new android.os.Handler().postDelayed(
+//                () -> {
+//                    recyclerView.setVisibility(View.VISIBLE);
+//                    Dongmu_Lower_carousel.setVisibility(View.VISIBLE);
+//                    Fake.setVisibility(View.GONE);
+//                },
+//                300);
 
         getData();
 
 
-        Dongmu_Lower_carousel = root.findViewById(R.id.Dongmu_Lower_carousel);
-        Dongmu_Lower_carousel.setPageCount(LowerImages.length);
-        Dongmu_Lower_carousel.setViewListener(viewListener);
-        Dongmu_Lower_carousel.setImageClickListener(position -> {
-            Intent intent = new Intent(requireContext().getApplicationContext(), Dongmu_Detail.class);
-            startActivity(intent);
-        });
+//        Dongmu_Lower_carousel = root.findViewById(R.id.Dongmu_Lower_carousel);
+//        Dongmu_Lower_carousel.setPageCount(LowerImages.length);
+//        Dongmu_Lower_carousel.setViewListener(viewListener);
+//        Dongmu_Lower_carousel.setImageClickListener(position -> {
+//            Intent intent = new Intent(requireContext().getApplicationContext(), Dongmu_Detail.class);
+//            startActivity(intent);
+//        });
 
         ScrollBefore = root.findViewById(R.id.ScrollBefore);
         ScrollAfter = root.findViewById(R.id.ScrollAfter);
@@ -375,37 +373,37 @@ public class Bottom_DongmuFragment extends Fragment {
     }
 
 
-    ViewListener viewListener = new ViewListener() {
-        @Override
-        public View setViewForPosition(int position) {
-
-            View customView = getLayoutInflater().inflate(R.layout.dongmu_main_lower_carousel, null);
-
-            TextView Dongmu_Lower_MarkText = customView.findViewById(R.id.Dongmu_Lower_MarkText);
-            TextView Dongmu_Lower_Comment = customView.findViewById(R.id.Dongmu_Lower_Comment);
-            TextView Dongmu_Lower_Recommend = customView.findViewById(R.id.Dongmu_Lower_Recommend);
-            TextView Dongmu_Lower_Title = customView.findViewById(R.id.Dongmu_Lower_Title);
-            TextView Dongmu_Lower_Tag1 = customView.findViewById(R.id.Dongmu_Lower_Tag1);
-            TextView Dongmu_Lower_Tag2 = customView.findViewById(R.id.Dongmu_Lower_Tag2);
-            TextView Dongmu_Lower_Tag3 = customView.findViewById(R.id.Dongmu_Lower_Tag3);
-            TextView Dongmu_Lower_Tag4 = customView.findViewById(R.id.Dongmu_Lower_Tag4);
-            ImageView Images = customView.findViewById(R.id.Dongmu_Lower_Img);
-
-            Images.setImageResource(LowerImages[position]);
-            Dongmu_Lower_Title.setText(Title[position]);
-            Dongmu_Lower_MarkText.setText(MarkText[position]);
-            Dongmu_Lower_Comment.setText(Comment[position]);
-            Dongmu_Lower_Recommend.setText(Recommend[position]);
-            Dongmu_Lower_Tag1.setText(Tag1[position]);
-            Dongmu_Lower_Tag2.setText(Tag2[position]);
-            Dongmu_Lower_Tag3.setText(Tag3[position]);
-            Dongmu_Lower_Tag4.setText(Tag4[position]);
-
-            Dongmu_Lower_carousel.setIndicatorGravity(Gravity.CENTER_HORIZONTAL | Gravity.TOP);
-
-            return customView;
-        }
-    };
+//    ViewListener viewListener = new ViewListener() {
+//        @Override
+//        public View setViewForPosition(int position) {
+//
+//            View customView = getLayoutInflater().inflate(R.layout.dongmu_main_lower_carousel, null);
+//
+//            TextView Dongmu_Lower_MarkText = customView.findViewById(R.id.Dongmu_Lower_MarkText);
+//            TextView Dongmu_Lower_Comment = customView.findViewById(R.id.Dongmu_Lower_Comment);
+//            TextView Dongmu_Lower_Recommend = customView.findViewById(R.id.Dongmu_Lower_Recommend);
+//            TextView Dongmu_Lower_Title = customView.findViewById(R.id.Dongmu_Lower_Title);
+//            TextView Dongmu_Lower_Tag1 = customView.findViewById(R.id.Dongmu_Lower_Tag1);
+//            TextView Dongmu_Lower_Tag2 = customView.findViewById(R.id.Dongmu_Lower_Tag2);
+//            TextView Dongmu_Lower_Tag3 = customView.findViewById(R.id.Dongmu_Lower_Tag3);
+//            TextView Dongmu_Lower_Tag4 = customView.findViewById(R.id.Dongmu_Lower_Tag4);
+//            ImageView Images = customView.findViewById(R.id.Dongmu_Lower_Img);
+//
+//            Images.setImageResource(LowerImages[position]);
+//            Dongmu_Lower_Title.setText(Title[position]);
+//            Dongmu_Lower_MarkText.setText(MarkText[position]);
+//            Dongmu_Lower_Comment.setText(Comment[position]);
+//            Dongmu_Lower_Recommend.setText(Recommend[position]);
+//            Dongmu_Lower_Tag1.setText(Tag1[position]);
+//            Dongmu_Lower_Tag2.setText(Tag2[position]);
+//            Dongmu_Lower_Tag3.setText(Tag3[position]);
+//            Dongmu_Lower_Tag4.setText(Tag4[position]);
+//
+//            Dongmu_Lower_carousel.setIndicatorGravity(Gravity.CENTER_HORIZONTAL | Gravity.TOP);
+//
+//            return customView;
+//        }
+//    };
 
 
 }

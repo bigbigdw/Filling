@@ -16,8 +16,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.filling.R;
-import com.synnapps.carouselview.CarouselView;
-import com.synnapps.carouselview.ViewListener;
 
 import java.util.ArrayList;
 
@@ -25,7 +23,7 @@ public class Dongmu_Detail_Tab2 extends Fragment {
 
     Dongmu_Detail_MenuAdapter adapter;
 
-    CarouselView Dongmu_Detail_carousel;
+//    CarouselView Dongmu_Detail_carousel;
     int[] Menu1Image = {R.drawable.dongmu_detail_menu00, R.drawable.dongmu_detail_menu04, R.drawable.dongmu_detail_menu10, R.drawable.dongmu_detail_menu16, R.drawable.dongmu_detail_menu18, R.drawable.dongmu_detail_menu14};
     int[] Menu2Image = {R.drawable.dongmu_detail_menu28, R.drawable.dongmu_detail_menu24, R.drawable.dongmu_detail_menu26,R.drawable.dongmu_detail_menu35, R.drawable.dongmu_detail_menu31, R.drawable.dongmu_detail_menu30};
     int[] Menu3Image = {R.drawable.dongmu_detail_menu41, R.drawable.dongmu_detail_menu48, R.drawable.dongmu_detail_menu46,R.drawable.dongmu_detail_menu56, R.drawable.dongmu_detail_menu52, R.drawable.dongmu_detail_menu55};
@@ -40,9 +38,9 @@ public class Dongmu_Detail_Tab2 extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.dongmu_detail_tab2, container, false);
 
-        Dongmu_Detail_carousel = root.findViewById(R.id.Dongmu_Detail_carousel);
-        Dongmu_Detail_carousel.setPageCount(Menu1Image.length);
-        Dongmu_Detail_carousel.setViewListener(viewListener);
+//        Dongmu_Detail_carousel = root.findViewById(R.id.Dongmu_Detail_carousel);
+//        Dongmu_Detail_carousel.setPageCount(Menu1Image.length);
+//        Dongmu_Detail_carousel.setViewListener(viewListener);
 
 
         RecyclerView recyclerView = root.findViewById(R.id.Dongmu_Detail_Menu);
@@ -122,37 +120,37 @@ public class Dongmu_Detail_Tab2 extends Fragment {
         adapter.addItem(data);
     }
 
-    ViewListener viewListener = new ViewListener() {
-        @Override
-        public View setViewForPosition(int position) {
-
-            View customView = getLayoutInflater().inflate(R.layout.dongmu_detail_carousel, null);
-
-            ImageView Menu1Img = customView.findViewById(R.id.Menu1Image);
-            ImageView Menu2Img = customView.findViewById(R.id.Menu2Image);
-            ImageView Menu3Img = customView.findViewById(R.id.Menu3Image);
-            TextView Menu1Name = customView.findViewById(R.id.Menu1Name);
-            TextView Menu2Name = customView.findViewById(R.id.Menu2Name);
-            TextView Menu3Name = customView.findViewById(R.id.Menu3Name);
-            TextView Menu1Price = customView.findViewById(R.id.Menu1Price);
-            TextView Menu2Price = customView.findViewById(R.id.Menu2Price);
-            TextView Menu3Price = customView.findViewById(R.id.Menu3Price);
-
-            Menu1Img.setImageResource(Menu1Image[position]);
-            Menu2Img.setImageResource(Menu2Image[position]);
-            Menu3Img.setImageResource(Menu3Image[position]);
-            Menu1Name.setText(MenuName1[position]);
-            Menu2Name.setText(MenuName2[position]);
-            Menu3Name.setText(MenuName3[position]);
-            Menu1Price.setText(MenuPrice1[position]);
-            Menu2Price.setText(MenuPrice2[position]);
-            Menu3Price.setText(MenuPrice3[position]);
-
-            Dongmu_Detail_carousel.setIndicatorGravity(Gravity.CENTER_HORIZONTAL | Gravity.TOP);
-
-            return customView;
-        }
-    };
+//    ViewListener viewListener = new ViewListener() {
+//        @Override
+//        public View setViewForPosition(int position) {
+//
+//            View customView = getLayoutInflater().inflate(R.layout.dongmu_detail_carousel, null);
+//
+//            ImageView Menu1Img = customView.findViewById(R.id.Menu1Image);
+//            ImageView Menu2Img = customView.findViewById(R.id.Menu2Image);
+//            ImageView Menu3Img = customView.findViewById(R.id.Menu3Image);
+//            TextView Menu1Name = customView.findViewById(R.id.Menu1Name);
+//            TextView Menu2Name = customView.findViewById(R.id.Menu2Name);
+//            TextView Menu3Name = customView.findViewById(R.id.Menu3Name);
+//            TextView Menu1Price = customView.findViewById(R.id.Menu1Price);
+//            TextView Menu2Price = customView.findViewById(R.id.Menu2Price);
+//            TextView Menu3Price = customView.findViewById(R.id.Menu3Price);
+//
+//            Menu1Img.setImageResource(Menu1Image[position]);
+//            Menu2Img.setImageResource(Menu2Image[position]);
+//            Menu3Img.setImageResource(Menu3Image[position]);
+//            Menu1Name.setText(MenuName1[position]);
+//            Menu2Name.setText(MenuName2[position]);
+//            Menu3Name.setText(MenuName3[position]);
+//            Menu1Price.setText(MenuPrice1[position]);
+//            Menu2Price.setText(MenuPrice2[position]);
+//            Menu3Price.setText(MenuPrice3[position]);
+//
+//            Dongmu_Detail_carousel.setIndicatorGravity(Gravity.CENTER_HORIZONTAL | Gravity.TOP);
+//
+//            return customView;
+//        }
+//    };
 
 }
 
